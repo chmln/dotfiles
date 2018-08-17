@@ -1,0 +1,37 @@
+Xcursor.theme: Win8
+Xcursor.size: 16
+
+!XTerm.vt100.scrollBar: true
+!XTerm.vt100.scrollbar.width: 8
+
+XTerm.vt100.translations: #override \n\
+	<Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
+	Ctrl <Key>V: insert-selection(CLIPBOARD) \n\
+	Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
+
+XTerm.VT100.faceName: Source Code Pro for Powerline:Semibold
+XTerm.VT100.faceSize: 14
+!XTerm.vt100.font: 7x14
+
+XTerm.vt100.foreground: #f3f3f3
+XTerm.vt100.background: #282C34
+XTerm.vt100.color0: #222D32
+XTerm.vt100.color8: #95a5a6
+XTerm.vt100.color1: #e74c3c
+XTerm.vt100.color9: #e74c3c
+XTerm.vt100.color2: #2ecc71
+XTerm.vt100.color10: #2ecc71
+XTerm.vt100.color3: #f1c40f
+XTerm.vt100.color11: #f1c40f
+XTerm.vt100.color4: #3498db
+XTerm.vt100.color12 #3498db
+XTerm.vt100.color5: #9b59b6
+XTerm.vt100.color13: #9b59b6
+XTerm.vt100.color6: #1abc9c
+XTerm.vt100.color14: #1abc9c
+XTerm.vt100.color7: #e0e0e0
+XTerm.vt100.color15: #ecf0f1
+Xterm*borderWidth:0
+XTerm*transparent: true
+XTerm.vt100.internalBorder: 0
+XTerm*trimSelection: true

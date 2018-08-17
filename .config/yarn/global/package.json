@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@angular/cli": "^6.0.0-beta.4",
+    "@cloudant/couchbackup": "^2.2.0",
+    "http-server": "^0.10.0",
+    "javascript-typescript-langserver": "^2.9.1",
+    "livereload": "^0.7.0",
+    "nodemon": "^1.14.12",
+    "npm-check-updates": "^2.14.2",
+    "pkgpurge": "^0.0.4",
+    "pug-cli": "^1.0.0-alpha6",
+    "torus-cli": "^0.29.0",
+    "ts-node": "^4.0.1",
+    "typescript": "^2.8.0-dev.20180316",
+    "typescript-language-server": "^0.1.5",
+    "vue-language-server": "^0.0.28"
+  }
+}

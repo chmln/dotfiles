@@ -1,0 +1,22 @@
+#!/bin/bash
+
+max=65535
+min=0
+
+brightness=`xbrightness | grep -m 1 -oE "([0-9]{1,})" | head  -1`
+change=$1
+
+new=$(("$brightness$change"))
+
+
+if [ $new -lt $min ]; then
+  new=$min
+
+else
+  if [ $new -gt $max ]; then
+    new=$max
+  fi
+fi
+
+echo $new
+xbrightness "$new"

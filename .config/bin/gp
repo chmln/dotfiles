@@ -1,0 +1,2 @@
+#!/usr/bin/fish
+git commit -a -m $argv[1]; git push -u origin (git rev-parse --abbrev-ref HEAD)

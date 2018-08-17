@@ -1,0 +1,2 @@
+#!/usr/bin/fish
+identify $argv[1] | cut -f 3 -d " "
