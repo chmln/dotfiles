@@ -150,6 +150,9 @@ augroup VCenterCursor
 augroup END
 
 " ====== PLUGINS ====== "
+let g:ale_completion_delay = 100
+let g:ale_lint_delay = 100
+let g:ale_loclist_msg_format = "%s"
 let g:ale_completion_enabled = 1
 let g:ale_completion_max_suggestions = 10
 let g:ale_linters = {
