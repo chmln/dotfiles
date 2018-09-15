@@ -1,9 +1,0 @@
-#!/usr/bin/fish
-
-set currenttime (date "+%H%M")
-
-if test $currenttime -ge 1900 -o $currenttime -lt 0600
-    redshift -O 3600
-else
-    redshift -O 6600
-end

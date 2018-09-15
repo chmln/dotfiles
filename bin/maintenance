@@ -1,2 +1,0 @@
-#!/bin/sh
-sudo paccache -ruk0 && sudo pacman -Rns $(pacman -Qtdq)
