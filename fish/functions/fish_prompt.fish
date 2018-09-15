@@ -1,1 +1,1 @@
-/home/greg/.local/share/omf/themes/agnoster/fish_prompt.fish
+/home/greg/.config/fisherman/agnoster/fish_prompt.fish

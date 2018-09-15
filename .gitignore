@@ -1,0 +1,4 @@
+fish/conf.d
+fish/fishd*
+fish/completions
+fish_universal_variables
