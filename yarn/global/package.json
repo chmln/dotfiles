@@ -1,18 +1,19 @@
 {
   "dependencies": {
-    "@angular/cli": "^6.0.0-beta.4",
-    "@cloudant/couchbackup": "^2.2.0",
-    "http-server": "^0.10.0",
-    "javascript-typescript-langserver": "^2.9.1",
-    "livereload": "^0.7.0",
-    "nodemon": "^1.14.12",
-    "npm-check-updates": "^2.14.2",
+    "http-server": "^0.11.1",
+    "javascript-typescript-langserver": "^2.10.0",
+    "live-server": "^1.2.0",
+    "npm-check": "^5.7.1",
     "pkgpurge": "^0.0.4",
+    "prettier": "^1.14.2",
     "pug-cli": "^1.0.0-alpha6",
-    "torus-cli": "^0.29.0",
-    "ts-node": "^4.0.1",
-    "typescript": "^2.8.0-dev.20180316",
-    "typescript-language-server": "^0.1.5",
-    "vue-language-server": "^0.0.28"
+    "schemats": "^3.0.3",
+    "stylelint": "^9.4.0",
+    "ts-node": "^7.0.1",
+    "ts-unused-exports": "^2.0.11",
+    "typescript": "^3.1.0-dev.20180914",
+    "typescript-language-server": "^0.1.14",
+    "vscode-json-languageserver": "^1.0.1",
+    "yarn-check": "^0.0.3"
   }
 }
