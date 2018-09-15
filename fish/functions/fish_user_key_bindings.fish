@@ -9,7 +9,7 @@ end
 
 function fzf_edit 
   set target (fzf_selector "$argv")
-	if [ -n "$target" ]
+	if test -n "$target"
     eval "$EDITOR $target"
   end
   restore_state
@@ -17,7 +17,7 @@ end
 
 function fzf_cd
   set target (fzf_selector "d")
-	if [ -n "$target" ]
+	if test -n "$target"
     cd "$target"
   end
   restore_state
@@ -25,7 +25,7 @@ end
 
 function fzf_branch
   set target (git branch | sed 's/*/ /g' | sed 's/  //g' | fzf)
-	if [ -n "$target" ]
+	if test -n "$target"
     git checkout "$target"
   end
   restore_state
