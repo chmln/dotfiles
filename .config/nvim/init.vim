@@ -1,6 +1,11 @@
 set nocompatible
 
-call plug#begin('~/.local/share/nvim/plugged')
+if has("nvim")
+  call plug#begin('~/.local/share/nvim/plugged')
+else
+  call plug#begin('~/.vim/plugged')
+endif
+
 Plug 'usr/bin/fzf'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -11,6 +16,7 @@ Plug 'Valloric/MatchTagAlways'
 Plug 'airblade/vim-rooter'
 Plug 'scrooloose/nerdtree'
 Plug 'w0rp/ale'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 Plug 'schickling/vim-bufonly'
 Plug 'joshdick/onedark.vim'
@@ -43,6 +49,8 @@ set noshiftround
 set backspace=indent,eol,start
 set laststatus=2
 set relativenumber
+set nowrap
+set nohlsearch
 
 set clipboard=unnamedplus
 let g:yankring_clipboard_monitor=0
@@ -51,7 +59,7 @@ let g:yankring_clipboard_monitor=0
 set encoding=utf-8
 
 " Highlight matching search patterns
-set hlsearch
+"set hlsearch
 " Enable incremental search
 set incsearch
 " Include matching uppercase words with lowercase search term
@@ -108,11 +116,12 @@ let g:lightline = {
     \  'linter_errors': 'error',
     \  'linter_ok': 'left',
   \ },
-  \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
-  \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
 \}
-let g:lightline#bufferline#shorten_path = 1
-let g:lightline#bufferline#filename_modifier = ':t'
+"  \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+"  \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
+
+let g:lightline#bufferline#shorten_path = 0
+let g:lightline#bufferline#filename_modifier = ':.:s?src/??:s?components/??:s?routes/??'
 
 function! LightlineGitBranch()
   return "\ue0a0 ".gitbranch#name()
@@ -120,14 +129,18 @@ endfunction
 
 " ====== TWEAKS ====== "
 
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
+
+set timeoutlen=1000 ttimeoutlen=0
+
 " Disable netrw
 let g:loaded_netrw       = 1
 let g:loaded_netrwPlugin = 1
 
 " Disable folding because it's annoying.
 set nofoldenable
-
-set shortmess=filnxtToOc
 
 " Keep cursor vertically centered
 augroup VCenterCursor
@@ -162,7 +175,7 @@ let g:mta_filetypes = {
 
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)"')"
 
-command! Files call fzf#run(fzf#wrap({'source': 'fd --type f', 'options': '--reverse'}))
+command! Files call fzf#run(fzf#wrap({'source': 'fd -H --type f -E .git', 'options': '--reverse'}))
 
 " Tab autocomplete
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -187,6 +200,10 @@ let g:NERDTreeShowHidden=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd BufReadPre,FileReadPre * :NERDTreeClose
 
+" spell check markdown files
+autocmd BufRead,BufNewFile *.md setlocal spell
+
+
 " ====== KEYMAPS ====== "
 noremap <Leader>q :bd<CR>
 noremap <Leader>l :bn<CR>
@@ -203,7 +220,7 @@ noremap <F10> :ALENextWrap<CR>
 noremap K :ALEHover<CR>
 
 noremap <silent> <F4> :silent !nohup xterm &<CR>
-noremap <silent> <Esc> :noh<CR>
+"noremap <silent> <Esc> :noh<CR>
 noremap <silent> <C-s> :w!<CR>
 
 map <Left> <Nop>

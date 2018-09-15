@@ -5,7 +5,7 @@ set PATH -g /home/greg/.cargo/bin/ $PATH
 set PATH -g /home/greg/.local/lib/python3.6/site-packages $PATH
 set PATH -g /home/greg/.local/bin/ $PATH
 
-set EDITOR "nvim"
+set EDITOR "vim"
 set -gx FZF_DEFAULT_COMMAND 'fd --type f'
 
 set fish_greeting ""
