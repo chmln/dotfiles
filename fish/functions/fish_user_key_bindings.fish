@@ -33,7 +33,7 @@ end
 
 function fzf_kill
   set target (ps ax | fzf | cut -f1 -d ' ')
-  if [ -n "$target" ]
+  if test -n "$target"
     sudo kill "$target"
   end
   restore_state
