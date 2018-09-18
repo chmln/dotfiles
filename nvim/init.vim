@@ -30,8 +30,6 @@ Plug 'soywod/typescript.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'iloginow/vim-stylus'
 Plug 'pangloss/vim-javascript'
-Plug 'posva/vim-vue'
-Plug 'digitaltoad/vim-pug'
 Plug 'dag/vim-fish'
 
 call plug#end()
@@ -40,7 +38,6 @@ syntax on
 set hidden
 filetype plugin indent on
 set number
-set formatoptions=tcqrn1
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -58,8 +55,6 @@ let g:yankring_clipboard_monitor=0
 " Encoding
 set encoding=utf-8
 
-" Highlight matching search patterns
-"set hlsearch
 " Enable incremental search
 set incsearch
 " Include matching uppercase words with lowercase search term
@@ -150,11 +145,9 @@ augroup VCenterCursor
 augroup END
 
 " ====== PLUGINS ====== "
-let g:ale_completion_delay = 100
-let g:ale_lint_delay = 100
 let g:ale_loclist_msg_format = "%s"
 let g:ale_completion_enabled = 1
-let g:ale_completion_max_suggestions = 10
+let g:ale_completion_max_suggestions = 15
 let g:ale_linters = {
 \  'javascript': [],
 \  'rust': ['rls']
