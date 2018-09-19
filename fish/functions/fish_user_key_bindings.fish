@@ -1,5 +1,5 @@
 function fzf_selector
-  fd -t "$argv" -H --exclude "node_modules" --exclude ".git" --exclude ".npm" --exclude ".rustup" | fzf --reverse --height=40%
+  fd -t "$argv" -H -L --exclude "node_modules" --exclude ".git" --exclude ".npm" --exclude ".rustup" | fzf --reverse --height=40%
 end
 
 function restore_state 
@@ -8,9 +8,9 @@ function restore_state
 end
 
 function fzf_edit 
-  set target (fzf_selector "$argv")
+  set target (fzf_selector "$argv[1]")
 	if test -n "$target"
-    eval "$EDITOR $target"
+    eval "$argv[2] $target"
   end
   restore_state
 end
@@ -40,12 +40,12 @@ function fzf_kill
 end
 
 function duplicate_term
-  nohup xterm >/dev/null 2>&1
+  nohup xterm >/dev/null 2>&1 &
 end
 
 function fish_user_key_bindings
-	bind \co 'fzf_edit d'
-	bind \cp 'fzf_edit f'
+	bind \co 'fzf_edit d nvim'
+	bind \cp 'fzf_edit f xdg-open'
 	bind \cn duplicate_term
 	bind \cg fzf_cd
 	bind \cb fzf_branch

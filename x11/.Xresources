@@ -13,7 +13,7 @@ XTerm.VT100.faceName: Source Code Pro for Powerline:Semibold
 XTerm.VT100.faceSize: 14
 !XTerm.vt100.font: 7x14
 
-!XTerm.vt100.foreground: #f3f3f3
+XTerm.vt100.foreground: #f3f3f3
 !XTerm.vt100.background: #282C34
 !XTerm.vt100.color0: #222D32
 !XTerm.vt100.color8: #95a5a6
@@ -32,7 +32,6 @@ XTerm.VT100.faceSize: 14
 !XTerm.vt100.color7: #e0e0e0
 !XTerm.vt100.color15: #ecf0f1
 Xterm*borderWidth:0
-XTerm*transparent: true
 XTerm.vt100.internalBorder: 0
 XTerm*trimSelection: true
 
@@ -53,16 +52,11 @@ XTerm*trimSelection: true
 #define base0A #e5c07b
 #define base0B #98c379
 #define base0C #56b6c2
-#define base0D #61afef
+#define base0D #94BFF3
 #define base0E #c678dd
 #define base0F #be5046
 
-*foreground:  #f3f3f3 
-#ifdef background_opacity
-*background:   [background_opacity]base00
-#else
-*background:   base00
-#endif
+*background:   #000000
 *cursorColor:  base05
 
 *color0:       base00
