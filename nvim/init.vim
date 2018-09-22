@@ -19,7 +19,7 @@ Plug 'w0rp/ale'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 Plug 'schickling/vim-bufonly'
-Plug 'joshdick/onedark.vim'
+Plug 'chmln/onedark.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'mgee/lightline-bufferline'
 Plug 'maximbaz/lightline-ale'

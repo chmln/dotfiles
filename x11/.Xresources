@@ -1,17 +1,17 @@
-Xcursor.theme: Win8
-Xcursor.size: 16
-
-!XTerm.vt100.scrollBar: true
-!XTerm.vt100.scrollbar.width: 8
-
-XTerm.vt100.translations: #override \n\
+*Xcursor.theme: Win8
+*Xcursor.size: 16
+*
+*!XTerm.vt100.scrollBar: true
+*!XTerm.vt100.scrollbar.width: 8
+*
+*XTerm.vt100.translations: #override \n\
 	<Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
 	Ctrl <Key>V: insert-selection(CLIPBOARD) \n\
 	Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 
-XTerm.VT100.faceName: Source Code Pro for Powerline:Semibold
-XTerm.VT100.faceSize: 14
-!XTerm.vt100.font: 7x14
+*XTerm.VT100.faceName: Source Code Pro for Powerline:Semibold
+*XTerm.VT100.faceSize: 14
+*!XTerm.vt100.font: 7x14
 
 XTerm.vt100.foreground: #f3f3f3
 !XTerm.vt100.background: #282C34
@@ -31,15 +31,15 @@ XTerm.vt100.foreground: #f3f3f3
 !XTerm.vt100.color14: #1abc9c
 !XTerm.vt100.color7: #e0e0e0
 !XTerm.vt100.color15: #ecf0f1
-Xterm*borderWidth:0
-XTerm.vt100.internalBorder: 0
-XTerm*trimSelection: true
+*Xterm*borderWidth:0
+*XTerm.vt100.internalBorder: 0
+*XTerm*trimSelection: true
 
 
 ! Base16 OneDark
 ! Scheme: Lalit Magant (http://github.com/tilal6991)
 
-#define base00 #282c34
+#define base00 #000000
 #define base01 #353b45
 #define base02 #3e4451
 #define base03 #545862
