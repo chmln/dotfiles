@@ -52,3 +52,5 @@ function fish_user_key_bindings
 	bind \ck fzf_kill
 end
 
+function fish_right_prompt
+end

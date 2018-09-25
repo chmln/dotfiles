@@ -64,7 +64,7 @@ prompt_git() {
       ref="$DETACHED ${ref/.../}"
     fi
     prompt_segment $color $PRIMARY_FG
-    print -n " $ref"
+    print -n " $ref "
   fi
 }
 
@@ -99,3 +99,4 @@ prompt_agnoster_setup() {
 }
 
 prompt_agnoster_setup "$@"
+

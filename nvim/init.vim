@@ -10,6 +10,8 @@ Plug 'usr/bin/fzf'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
+Plug 'brooth/far.vim'
+
 Plug 'romainl/vim-qf'
 Plug 'Valloric/MatchTagAlways'
 
@@ -19,7 +21,7 @@ Plug 'w0rp/ale'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 Plug 'schickling/vim-bufonly'
-Plug 'chmln/onedark.vim'
+Plug 'joshdick/onedark.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'mgee/lightline-bufferline'
 Plug 'maximbaz/lightline-ale'
@@ -69,7 +71,7 @@ set noshowcmd
 
 " ====== APPEARANCE ====== "
 set termguicolors
-let g:onedark_termcolors = 256
+"let g:onedark_termcolors = 256
 colorscheme onedark
 
 " show buffer line
@@ -123,6 +125,7 @@ function! LightlineGitBranch()
 endfunction
 
 " ====== TWEAKS ====== "
+let g:far#source="rg"
 
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
@@ -181,9 +184,6 @@ if has("nvim")
   au TermOpen * setlocal nonumber norelativenumber
 endif
 
-" reload buffer on outside changes
-au CursorHold * checktime
-
 " NERDTREE
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeDirArrows = 1
@@ -225,3 +225,6 @@ map <Up> <Nop>
 map <Down> <Nop>
 
 tnoremap <Esc> <C-\><C-n>
+if !has("nvim")
+  imap <C-v> <ESC>"+pa
+endif
