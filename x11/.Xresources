@@ -1,21 +1,18 @@
 Xcursor.theme: Win8
 Xcursor.size: 16
 
-*!XTerm.vt100.scrollBar: true
-*!XTerm.vt100.scrollbar.width: 8
-
-*XTerm.vt100.translations: #override \n\
+*.vt100.translations: #override \n\
 	<Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
 	Ctrl <Key>V: insert-selection(CLIPBOARD) \n\
 	Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 
-*XTerm.VT100.faceName: Source Code Pro for Powerline:Semibold
+*.VT100.faceName: Source Code Pro for Powerline:Semibold
 *XTerm.VT100.faceSize: 14
 *!XTerm.vt100.font: 7x14
 
-XTerm.vt100.foreground: #f3f3f3
-*Xterm*borderWidth:0
-*XTerm.vt100.internalBorder: 0
+*.vt100.foreground: #f3f3f3
+*borderWidth:0
+*.vt100.internalBorder: 0
 *XTerm*trimSelection: true
 
 #define base00 #282c34
@@ -46,7 +43,6 @@ XTerm.vt100.foreground: #f3f3f3
 *color5:       base0E
 *color6:       base0C
 *color7:       base05
-
 *color8:       base03
 *color9:       base08
 *color10:      base0B
@@ -55,9 +51,6 @@ XTerm.vt100.foreground: #f3f3f3
 *color13:      base0E
 *color14:      base0C
 *color15:      base07
-
-! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
-! use 'shell' template to set these if necessary
 *color16:      base09
 *color17:      base0F
 *color18:      base01

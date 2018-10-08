@@ -75,3 +75,5 @@ bind \cn "nohup xterm >/dev/null 2>&1"
 bind \cg 'cd (fd -t d --exclude "node_modules" | fzf --reverse --height=40%)'
 bind \cb "git co (git branch | sed 's/*/ /g' | sed 's/  //g' | fzf)"
 bind \ck "sudo kill (ps ax | fzf | cut -f1 -d ' ')"
+
+source /home/greg/.dotfiles/sick-launcher/run.fish

@@ -1,14 +1,17 @@
 {
   "dependencies": {
+    "ajv-cli": "^3.0.0",
     "http-server": "^0.11.1",
     "javascript-typescript-langserver": "^2.10.0",
     "live-server": "^1.2.0",
     "npm-check": "^5.7.1",
     "pkgpurge": "^0.0.4",
+    "pnpm": "^2.16.2",
     "prettier": "^1.14.2",
     "pug-cli": "^1.0.0-alpha6",
     "schemats": "^3.0.3",
     "stylelint": "^9.4.0",
+    "toml-cli": "^1.0.1",
     "ts-node": "^7.0.1",
     "ts-unused-exports": "^2.0.11",
     "typescript": "^3.1.0-dev.20180914",

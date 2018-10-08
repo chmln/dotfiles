@@ -43,13 +43,18 @@ function duplicate_term
   nohup xterm >/dev/null 2>&1 &
 end
 
+function keybind
+  bind $argv[1] $argv[2]
+  bind -M insert $argv[1] $argv[2]
+end
+
 function fish_user_key_bindings
-	bind \co 'fzf_edit d nvim'
-	bind \cp 'fzf_edit f xdg-open'
-	bind \cn duplicate_term
-	bind \cg fzf_cd
-	bind \cb fzf_branch
-	bind \ck fzf_kill
+  keybind \co 'fzf_edit d vim'
+	keybind \cp 'fzf_edit f xdg-open'
+	keybind \cn duplicate_term
+	keybind \cg fzf_cd
+	keybind \cb fzf_branch
+	keybind \ck fzf_kill
 end
 
 function fish_right_prompt

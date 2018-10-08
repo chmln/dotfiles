@@ -33,6 +33,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'iloginow/vim-stylus'
 Plug 'pangloss/vim-javascript'
 Plug 'dag/vim-fish'
+Plug 'cespare/vim-toml'
 
 call plug#end()
 
@@ -125,7 +126,7 @@ function! LightlineGitBranch()
 endfunction
 
 " ====== TWEAKS ====== "
-let g:far#source="rg"
+"let g:far#source="rg"
 
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
@@ -215,7 +216,7 @@ noremap <F11> :ALEDetail<CR>
 noremap <F10> :ALENextWrap<CR>
 noremap K :ALEHover<CR>
 
-noremap <silent> <F4> :silent !nohup xterm &<CR>
+noremap <silent> <F4> :silent !nohup xterm >/dev/null 2>&1 &<CR>
 "noremap <silent> <Esc> :noh<CR>
 noremap <silent> <C-s> :w!<CR>
 

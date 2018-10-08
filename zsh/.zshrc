@@ -1,10 +1,6 @@
 DOTS="/home/greg/.dotfiles/zsh"
 source "$DOTS/constants.zsh"
 
-# ====== Plugins
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # ====== Autocomplete
 CASE_SENSITIVE="false"
@@ -29,6 +25,13 @@ source "$DOTS/vim_mode.zsh"
 source "$DOTS/keybinds.zsh"
 source "$DOTS/abbreviations.zsh"
 
+source "$DOTS/../sick-launcher/run.sh"
+
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx
 fi
+
+# ====== Plugins
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
