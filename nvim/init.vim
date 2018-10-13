@@ -229,3 +229,6 @@ tnoremap <Esc> <C-\><C-n>
 if !has("nvim")
   imap <C-v> <ESC>"+pa
 endif
+
+nnoremap Q q
+nmap <silent> q :pclose<bar>:cclose<CR>

@@ -1,4 +1,4 @@
-#files: 906	version: 5.6.2
+#files: 907	version: 5.6.2
 
 _comps=(
 '-' '_precommand'
@@ -324,6 +324,7 @@ _comps=(
 'fab' '_fab'
 'fakeroot' '_fakeroot'
 'false' '_nothing'
+'fast-theme' '_fast-theme'
 'fc' '_fc'
 'fc-list' '_xft_fonts'
 'fc-match' '_xft_fonts'
@@ -1894,7 +1895,7 @@ autoload -Uz _ack _afew _android _ansible _ansible-galaxy \
             _vars _wait _which _widgets _zargs \
             _zattr _zcalc _zcalc_line _zcompile _zed \
             _zftp _zle _zmodload _zmv _zpty \
-            _zsh-mime-handler _zsocket _zstyle _ztodo
+            _zsh-mime-handler _zsocket _zstyle _ztodo _fast-theme
 autoload -Uz +X _call_program
 
 typeset -gUa _comp_assocs

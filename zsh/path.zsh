@@ -5,4 +5,3 @@ path+=('/home/greg/.cargo/bin/')
 path+=('/home/greg/.local/lib/python3.6/site-packages') 
 path+=('/home/greg/.local/bin/') 
 
-export EDITOR=nvim
