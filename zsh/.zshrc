@@ -14,9 +14,12 @@ SAVEHIST=10000
 HISTSIZE=10000
 setopt APPEND_HISTORY
 
-# Keybinds
+# Vim mode 
 source "$DOTS/vim_mode.zsh"
+
+# Keyboard shortcuts
 source "$DOTS/keybinds.zsh"
+
 source "$DOTS/abbreviations.zsh"
 
 # Start X on login
