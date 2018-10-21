@@ -1,5 +1,5 @@
 function fzf_selector
-  fd -t "$argv" -H -L --exclude "node_modules" --exclude ".git" --exclude ".npm" --exclude ".rustup" | fzf --reverse --height=40%
+  fd -t "$argv" -H -F -p --max-depth 10 | fzf --reverse --height=40%
 end
 
 function restore_state 
@@ -9,7 +9,7 @@ end
 
 function fzf_edit 
   set target (fzf_selector "$argv[1]")
-	if test -n "$target"
+	if [ -n "$target" ]
     eval "$argv[2] $target"
   end
   restore_state
@@ -17,7 +17,7 @@ end
 
 function fzf_cd
   set target (fzf_selector "d")
-	if test -n "$target"
+	if [ -n "$target" ]
     cd "$target"
   end
   restore_state
@@ -25,7 +25,7 @@ end
 
 function fzf_branch
   set target (git branch | sed 's/*/ /g' | sed 's/  //g' | fzf)
-	if test -n "$target"
+	if [ -n "$target" ]
     git checkout "$target"
   end
   restore_state
@@ -33,7 +33,7 @@ end
 
 function fzf_kill
   set target (ps ax | fzf | cut -f1 -d ' ')
-  if test -n "$target"
+  if [ -n "$target" ]
     sudo kill "$target"
   end
   restore_state
@@ -49,7 +49,7 @@ function keybind
 end
 
 function fish_user_key_bindings
-  keybind \co 'fzf_edit d vim'
+  keybind \co 'fzf_edit d $EDITOR'
 	keybind \cp 'fzf_edit f xdg-open'
 	keybind \cn duplicate_term
 	keybind \cg fzf_cd

@@ -24,3 +24,8 @@ alias mp3="lame --preset insane"
 
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
+l () {
+  exa -1a --group-directories-first "$@"
+}
+
+zle -N l

@@ -1,0 +1,11 @@
+[Unit]
+Description=Empty stale trash
+
+[Timer]
+# run 15 mins after boot
+OnBootSec=15min
+# also run daily
+OnUnitActiveSec=1day
+
+[Install]
+WantedBy=timers.target

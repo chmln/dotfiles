@@ -1,7 +1,7 @@
 zstyle :plugin:fast-syntax-highlighting theme "theme"
 typeset -g FAST_THEME_NAME="theme"
 : ${FAST_HIGHLIGHT_STYLES[themedefault]:=none}
-: ${FAST_HIGHLIGHT_STYLES[themeunknown-token]:=fg=124,bold}
+: ${FAST_HIGHLIGHT_STYLES[themeunknown-token]:=fg=white}
 : ${FAST_HIGHLIGHT_STYLES[themereserved-word]:=fg=146}
 : ${FAST_HIGHLIGHT_STYLES[themealias]:=fg=109}
 : ${FAST_HIGHLIGHT_STYLES[themesuffix-alias]:=fg=109}

@@ -157,7 +157,7 @@ let g:ale_linters = {
 \  'rust': ['rls']
 \}
 
-let g:ale_rust_rls_toolchain = 'stable'
+let g:ale_rust_rls_toolchain = 'nightly'
 
 let g:ale_fixers = {
 \ 'typescript': ['prettier'],
@@ -199,7 +199,6 @@ autocmd BufReadPre,FileReadPre * :NERDTreeClose
 
 " spell check markdown files
 autocmd BufRead,BufNewFile *.md setlocal spell
-
 
 " ====== KEYMAPS ====== "
 noremap <Leader>q :bd<CR>

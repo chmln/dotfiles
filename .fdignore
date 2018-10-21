@@ -1,0 +1,12 @@
+node_modules
+.git
+.npm
+.rustup
+.cache
+.cargo
+.config/**/Default
+.mozilla
+.thunderbird
+.wine
+.local
+Cache

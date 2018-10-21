@@ -20,6 +20,7 @@ source "$DOTS/vim_mode.zsh"
 # Keyboard shortcuts
 source "$DOTS/keybinds.zsh"
 
+# Aliases
 source "$DOTS/abbreviations.zsh"
 
 # Start X on login
@@ -37,7 +38,14 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.config/zsh/cache
+zstyle ':completion:*' menu select
+
+zmodload zsh/complist
 autoload -U compinit && compinit
+
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'k' vi-up-line-or-history
+# Fish-like suggestions
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=7'
@@ -48,5 +56,6 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 
 # Auto-expand aliases on space
 source "$DOTS/plugins/expand_aliases.zsh"
+source "$DOTS/plugins/shrink-path.zsh"
 
-
+setopt menu_complete

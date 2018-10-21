@@ -1,0 +1,8 @@
+[Unit]
+Description=Empties trash
+
+[Service]
+ExecStart=/usr/bin/trash-empty 7
+
+[Install]
+WantedBy=default.target

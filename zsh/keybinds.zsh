@@ -1,16 +1,16 @@
 fzf_selector () {
-  fd -t "$1" -H -L --exclude "node_modules" --exclude ".git" --exclude ".npm" --exclude ".rustup" | fzf --reverse --height=40%
+  fd -t "$1" -F -p -H --max-depth 10 | fzf --reverse --height=40%
 }
 
 restore_state () {
-vcs_info
+  vcs_info
  zle reset-prompt
 }
 
 fzf_edit () {
   target=$(fzf_selector "$1")
   if [ -n "$target" ]; then
-    eval "$2 $target"
+    $2 $target
   fi 
   restore_state
 }
@@ -34,7 +34,7 @@ fzf_branch() {
 fzf_kill() {
   target=$(ps ax | fzf | cut -f1 -d ' ')
   if [ -n "$target" ]; then
-    sudo kill "$target"
+    kill -s KILL $target
   fi
   restore_state
 }

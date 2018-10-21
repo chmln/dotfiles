@@ -2,7 +2,7 @@
 
 CURRENT_BG='NONE'
 if [[ -z "$PRIMARY_FG" ]]; then
-	PRIMARY_FG=black
+	PRIMARY_FG=white
 fi
 
 # Characters
@@ -63,14 +63,14 @@ prompt_git() {
     else
       ref="$DETACHED ${ref/.../}"
     fi
-    prompt_segment $color $PRIMARY_FG
+    prompt_segment $color black
     print -n " $ref "
   fi
 }
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment blue $PRIMARY_FG ' %~ '
+  prompt_segment black $PRIMARY_FG " $(shrink_path -f)"
 }
 ## Main prompt
 prompt_agnoster_main() {
