@@ -11,8 +11,8 @@ pkill pnmixer
 auto-monitor
 
 # wallpapers
-nitrogen --set-scaled /home/greg/Pictures/1509836073950.jpg --head=0
-nitrogen --set-scaled /home/greg/Pictures/1509836073950.jpg --head=1
+nitrogen --set-scaled ~/.config/wallpaper --head=0
+nitrogen --set-scaled ~/.config/wallpaper --head=1
 
 # bar
 sh /home/greg/.config/i3/polybar.sh

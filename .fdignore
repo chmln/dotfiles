@@ -8,5 +8,4 @@ node_modules
 .mozilla
 .thunderbird
 .wine
-.local
 Cache
