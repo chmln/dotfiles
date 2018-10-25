@@ -148,6 +148,9 @@ augroup VCenterCursor
         \ let &scrolloff=winheight(win_getid())/2
 augroup END
 
+" Update buffer on external changes
+au FocusGained,BufEnter * :silent! !
+
 " ====== PLUGINS ====== "
 let g:ale_loclist_msg_format = "%s"
 let g:ale_completion_enabled = 1
