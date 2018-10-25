@@ -3,14 +3,16 @@ function fzf_selector
 end
 
 function restore_state 
- set fish_bind_mode insert 
  commandline -f repaint
+ set fish_bind_mode insert 
 end
 
 function fzf_edit 
   set target (fzf_selector "$argv[1]")
-	if [ -n "$target" ]
-    eval "$argv[2] $target"
+  begin
+    if [ -n "$target" ]
+      $argv[2] "$target"
+    end
   end
   restore_state
 end

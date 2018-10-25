@@ -154,7 +154,7 @@ let g:ale_completion_enabled = 1
 let g:ale_completion_max_suggestions = 15
 let g:ale_linters = {
 \  'javascript': [],
-\  'rust': ['rls']
+\  'rust': []
 \}
 
 let g:ale_rust_rls_toolchain = 'nightly'
