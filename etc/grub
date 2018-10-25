@@ -1,0 +1,29 @@
+GRUB_DEFAULT=saved
+
+GRUB_TIMEOUT=5
+GRUB_DISTRIBUTOR="Arch"
+GRUB_CMDLINE_LINUX_DEFAULT="resume=UUID=486fd658-1b1d-4e30-b3e4-5964df371235 init=/usr/lib/systemd/systemd"
+GRUB_CMDLINE_LINUX=""
+
+# Preload both GPT and MBR modules so that they are not missed
+GRUB_PRELOAD_MODULES="part_gpt part_msdos"
+
+# Uncomment to use basic console
+#GRUB_TERMINAL_INPUT=console
+
+# Uncomment to disable graphical terminal
+GRUB_TERMINAL_OUTPUT=console
+GRUB_GFXMODE=auto
+
+# Uncomment to allow the kernel use the same resolution used by grub
+#GRUB_GFXPAYLOAD_LINUX=keep
+
+GRUB_DISABLE_RECOVERY=true
+GRUB_DISABLE_SUBMENU=true
+
+#GRUB_COLOR_NORMAL="light-blue/black"
+#GRUB_COLOR_HIGHLIGHT="light-cyan/blue"
+
+#GRUB_THEME="/boot/grub/themes/Archlinux/theme.txt"
+
+GRUB_SAVEDEFAULT="true"
