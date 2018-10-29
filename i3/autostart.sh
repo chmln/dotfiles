@@ -6,6 +6,7 @@ pkill nm-applet
 pkill redshift
 pkill udiskie
 pkill pnmixer
+pkill watchexec
 
 # monitors
 auto-monitor
@@ -35,4 +36,5 @@ nm-applet &
 redshift -c /home/greg/.config/redshift.conf &
 albert &
 udiskie &
+watchexec -w ~/.Xresources -- xrdb ~/.Xresources &
 sleep 5 && slack-auto &

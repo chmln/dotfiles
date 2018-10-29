@@ -81,6 +81,7 @@ bindsym $mod+Next exec brite -10000
 
 bindsym $mod+Shift+s exec screenshot
 bindsym $mod+Return exec xterm
+bindsym $mod+Shift+Return exec xterm -e 'ranger'
 bindsym $mod+d exec "albert show"
 
 # ============ STARTUP

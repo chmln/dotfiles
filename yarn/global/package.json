@@ -18,6 +18,7 @@
     "typescript": "^3.1.0-dev.20180914",
     "typescript-language-server": "^0.1.14",
     "vscode-json-languageserver": "^1.0.1",
+    "vtop": "^0.6.1",
     "yarn-check": "^0.0.3"
   }
 }
