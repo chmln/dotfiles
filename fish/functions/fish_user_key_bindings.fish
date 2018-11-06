@@ -57,6 +57,7 @@ function fish_user_key_bindings
 	keybind \cg fzf_cd
 	keybind \cb fzf_branch
 	keybind \ck fzf_kill
+  keybind \cf ranger
 end
 
 function fish_right_prompt
