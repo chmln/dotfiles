@@ -52,7 +52,7 @@ end
 
 function fish_user_key_bindings
   keybind \co 'fzf_edit d $EDITOR'
-	keybind \cp 'fzf_edit f $EDITOR'
+	keybind \cp 'fzf_edit f rifle'
 	keybind \cn duplicate_term
 	keybind \cg fzf_cd
 	keybind \cb fzf_branch

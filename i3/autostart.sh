@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
 
-pkill albert
 pkill nm-applet
 pkill redshift
 pkill udiskie
@@ -21,7 +20,7 @@ numlockx on &
 #disable mouse accel
 xset m 0 0 &
 # keyboard repeat rate
-xset r rate 300 50
+xset r rate 250 50
 #setxkbmap -option grp:switch,grp:lalt_lshift_toggle us,ru ,phonetic_winkeys &
 
 # apps
@@ -30,7 +29,6 @@ gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh &
 evolution &
 nm-applet &
 redshift -c /home/greg/.config/redshift.conf &
-albert &
 udiskie &
 watchexec -w ~/.Xresources -- xrdb ~/.Xresources &
 sleep 5 && slack-auto &

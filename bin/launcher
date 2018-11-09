@@ -1,0 +1,2 @@
+#!/bin/sh
+rofi -modi drun -show drun -show-icons -drun-icon-theme Arc -sort -lines 5 -font "Source Code Pro Semibold 16" -width 600 -padding 0 -theme-str '#listview { scrollbar: false; } #prompt { enabled: false; }' -bw 0 -fixed-num-lines 5 -disable-history -no-cycle 
