@@ -1,19 +1,16 @@
 #!/usr/bin/env sh
 
-pkill pnmixer
 pkill albert
 pkill nm-applet
 pkill redshift
 pkill udiskie
-pkill pnmixer
 pkill watchexec
 
 # monitors
 auto-monitor
 
 # wallpapers
-nitrogen --set-scaled ~/.config/wallpaper --head=0
-nitrogen --set-scaled ~/.config/wallpaper --head=1
+feh --bg-scale ~/.config/wallpaper ~/.config/wallpaper 
 
 # bar
 sh /home/greg/.config/i3/polybar.sh
@@ -30,7 +27,6 @@ xset r rate 300 50
 # apps
 xrdb /home/greg/.Xresources &
 gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh &
-pnmixer &
 evolution &
 nm-applet &
 redshift -c /home/greg/.config/redshift.conf &
