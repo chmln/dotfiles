@@ -41,19 +41,18 @@ module-margin-left = 1
 module-margin-right = 2
 
 ;font-0 = fixed:pixelsize=11;1
-font-0 = "IBM Plex Mono:size=11:weight=bold;1"
-font-1 = unifont:fontformat=truetype:size=9:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-0 = "SauceCodePro Nerd Font Mono:size=11:weight=bold;1"
+font-1 = "Material Icons:pixelsize=11;2"
 
 modules-left = i3
 modules-center =
-modules-right = battery date
+modules-right = pulseaudio battery date
 
 tray-position = right
 tray-padding = 4
 ;tray-transparent = true
-;tray-background = #0063ff
-tray-maxsize = 22
+;tray-background = #444
+tray-maxsize = 20
 
 ;wm-restack = bspwm
 wm-restack = i3
@@ -174,38 +173,33 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
+format =<label>
+
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 
 label = %date% %time%
 
-[module/volume]
-type = internal/volume
+[module/pulseaudio]
+type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL
-label-volume-foreground = ${root.foreground}
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
 
-format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = sound muted
+use-ui-max = false
 
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+; Interval for volume increase/decrease (in percent points) (unreleased)
+; Default: 5
+interval = 5
+label-muted = 🔇 muted
+label-muted-foreground = #666
+
+format-volume = <ramp-volume> <label-volume>
+
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
 [module/battery]
 type = internal/battery
@@ -214,44 +208,33 @@ adapter = ACAD
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-;format-charging-underline = #ffb52a
 
 format-discharging = <ramp-capacity> <label-discharging>
-;format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 ;format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 =
+ramp-capacity-4 =
+ramp-capacity-5 = 
+ramp-capacity-foreground = ${colors.foreground}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 =
+animation-charging-4 =
+animation-charging-5 = 
+
+;animation-charging-0 = 
+;animation-charging-1 = 
+;animation-charging-2 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
-
-[module/temperature]
-type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
-
-format = <ramp> <label>
-format-underline = #f50a4d
-format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
-
-label = %temperature%
-label-warn = %temperature%
-label-warn-foreground = ${colors.secondary}
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
 type = custom/menu
@@ -284,10 +267,6 @@ menu-2-1-exec = menu-open-0
 
 [settings]
 screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
 
 [global/wm]
 margin-top = 5
