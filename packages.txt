@@ -163,6 +163,7 @@ mdf2iso
 mesa
 mesa-demos
 mesa-vdpau
+minetime
 modemmanager
 moka-icon-theme-git
 mpv
@@ -257,6 +258,7 @@ texlive-bin
 texlive-core
 texlive-latexextra
 texlive-publishers
+thunderbird-nightly
 time
 tokei
 traceroute
@@ -286,6 +288,7 @@ wget
 which
 whois
 wine
+wine-mono
 winetricks
 wireguard-dkms
 wireguard-tools
