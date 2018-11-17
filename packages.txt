@@ -27,6 +27,7 @@ chromium-vaapi-bin
 chromium-widevine
 cifs-utils
 cloc
+cmst
 cmus
 colord
 colordiff
@@ -46,9 +47,11 @@ docker-bin
 docker-compose-bin
 dosfstools
 dtach
+dtrx
 dunst
 e2fsprogs
 efibootmgr
+elementary-icon-theme
 evince
 evolution
 evolution-on-git
@@ -67,7 +70,6 @@ fish-git
 fisherman-git
 flex
 fontconfig
-fontview-git
 freetype2
 fzf
 fzy
@@ -88,6 +90,7 @@ gnome-themes-extra
 go
 google-cloud-sdk
 gotop-bin
+gparted
 grep
 groff
 grub
@@ -128,7 +131,9 @@ jsoncpp
 kcov
 keychain
 kitty
+la-capitaine-icon-theme-git
 less
+lib32-libgtk3-nocsd-git
 libdvdcss
 libgsf
 libmad
@@ -147,6 +152,7 @@ linux-mainline-headers
 logrotate
 lsof
 lvm2
+lxappearance-gtk3
 m4
 maim
 make
@@ -161,6 +167,7 @@ modemmanager
 moka-icon-theme-git
 mpv
 msmtp
+ncdu
 neofetch
 neomutt
 neovim-git
@@ -233,7 +240,6 @@ speedcrunch
 sshfs
 strace
 sudo
-suru-plus-dark-git
 svgcleaner
 swh-plugins
 syncthing
@@ -273,15 +279,16 @@ usbutils
 util-linux
 virtualbox
 virtualbox-host-dkms
-visual-studio-code-insiders
 vulkan-intel
 watchexec
 wd719x-firmware
 wget
 which
 whois
-wireguard-dkms-git
-wireguard-tools-git
+wine
+winetricks
+wireguard-dkms
+wireguard-tools
 wireless_tools
 wmctrl
 xbrightness

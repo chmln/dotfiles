@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-pkill nm-applet
+pkill cmst
 pkill redshift
 pkill udiskie
 pkill watchexec
@@ -27,7 +27,7 @@ xset r rate 250 50
 xrdb /home/greg/.Xresources &
 gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh &
 evolution &
-nm-applet &
+cmst &
 redshift -c /home/greg/.config/redshift.conf &
 udiskie &
 watchexec -w ~/.Xresources -- xrdb ~/.Xresources &
