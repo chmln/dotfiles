@@ -1,0 +1,9 @@
+#!/bin/bash
+youtube-dl \
+  -f bestaudio \
+  -x \
+  --audio-quality 0 \
+  --audio-format mp3 \
+  --add-metadata "$1" \
+  -o "~/Music/%(title)s.%(ext)s"
+
