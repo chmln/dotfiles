@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-pkill cmst
+pkill nm-applet
 pkill redshift
 pkill udiskie
 pkill watchexec
@@ -9,7 +9,7 @@ pkill watchexec
 auto-monitor
 
 # wallpapers
-feh --bg-scale ~/.config/wallpaper ~/.config/wallpaper 
+feh --no-fehbg --bg-scale ~/.config/wallpaper ~/.config/wallpaper 
 
 # bar
 sh /home/greg/.config/i3/polybar.sh
@@ -27,7 +27,7 @@ xset r rate 250 50
 xrdb /home/greg/.Xresources &
 gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh &
 evolution &
-cmst --minimized --wait-time 1 &
+nm-applet &
 redshift -c /home/greg/.config/redshift.conf &
 udiskie &
 watchexec -w ~/.Xresources -- xrdb ~/.Xresources &

@@ -5,7 +5,7 @@ floating_modifier $mod
 # ============ APPEARANCE 
 font pango: Source Code Pro Bold 11
 
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 6
 client.focused $primary_color $primary_color #000000
 
 smart_gaps on

@@ -1,5 +1,5 @@
 function fzf_selector
-  fd -t "$argv" -H -F -p --max-depth 10 | fzf --reverse --height=40%
+  fd -H -F -p --max-depth 10 $argv | fzf --reverse --height=40%
 end
 
 function restore_state 
@@ -8,19 +8,27 @@ function restore_state
 end
 
 function fzf_edit 
-  set target (fzf_selector "$argv[1]")
+  set target (fzf_selector -t $argv[1])
   begin
     if [ -n "$target" ]
-      $argv[2] "$target"
+      eval "$argv[2] $target"
     end
   end
   restore_state
 end
 
 function fzf_cd
-  set target (fzf_selector "d")
+  set target (fzf_selector -t d)
 	if [ -n "$target" ]
     cd "$target"
+  end
+  restore_state
+end
+
+function fzf_autocomplete
+  set target (fzf_selector -t f -t d "" ~)
+	if [ -n "$target" ]
+    commandline -it -- (string escape $target)
   end
   restore_state
 end
@@ -36,7 +44,7 @@ end
 function fzf_kill
   set target (ps ax | fzf | cut -f1 -d ' ')
   if [ -n "$target" ]
-    sudo kill "$target"
+    kill "$target"
   end
   restore_state
 end
@@ -55,6 +63,7 @@ function fish_user_key_bindings
 	keybind \cp 'fzf_edit f rifle'
 	keybind \cn duplicate_term
 	keybind \cg fzf_cd
+	keybind \ca fzf_autocomplete
 	keybind \cb fzf_branch
 	keybind \ck fzf_kill
   keybind \cf ranger
