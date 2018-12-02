@@ -17,6 +17,8 @@ Plug 'Valloric/MatchTagAlways'
 
 Plug 'airblade/vim-rooter'
 Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+
 Plug 'w0rp/ale'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
@@ -26,6 +28,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'mgee/lightline-bufferline'
 Plug 'maximbaz/lightline-ale'
 Plug 'itchyny/vim-gitbranch'
+
+" Markdown
+Plug 'junegunn/goyo.vim'
 
 " Syntax Highlighting
 Plug 'soywod/typescript.vim'

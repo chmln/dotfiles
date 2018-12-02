@@ -11,7 +11,7 @@ function fzf_edit
   set target (fzf_selector -t $argv[1])
   begin
     if [ -n "$target" ]
-      eval "$argv[2] $target"
+      eval $argv[2] "$target"
     end
   end
   restore_state
@@ -26,7 +26,7 @@ function fzf_cd
 end
 
 function fzf_autocomplete
-  set target (fzf_selector -t f -t d "" ~)
+  set target (fzf_selector -t f -t d "" /)
 	if [ -n "$target" ]
     commandline -it -- (string escape $target)
   end
