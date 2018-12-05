@@ -6,9 +6,8 @@ Xcursor.size: 16
 	Ctrl <Key>V: insert-selection(CLIPBOARD) \n\
 	Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 
-*.VT100.faceName: Source Code Pro for Powerline:Semibold
+*faceName: Source Code Pro for Powerline:Semibold
 *XTerm.VT100.faceSize: 14
-*!XTerm.vt100.font: 7x14
 
 *.vt100.foreground: #f3f3f3
 *borderWidth:0

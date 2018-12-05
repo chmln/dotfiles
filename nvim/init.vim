@@ -17,16 +17,15 @@ Plug 'Valloric/MatchTagAlways'
 
 Plug 'airblade/vim-rooter'
 Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
-
-Plug 'w0rp/ale'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'Shougo/echodoc.vim'
 
 Plug 'schickling/vim-bufonly'
 Plug 'joshdick/onedark.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'mgee/lightline-bufferline'
-Plug 'maximbaz/lightline-ale'
 Plug 'itchyny/vim-gitbranch'
 
 " Markdown
@@ -39,6 +38,7 @@ Plug 'iloginow/vim-stylus'
 Plug 'pangloss/vim-javascript'
 Plug 'dag/vim-fish'
 Plug 'cespare/vim-toml'
+Plug 'chr4/nginx.vim'
 
 call plug#end()
 
@@ -92,7 +92,7 @@ let g:lightline = {
   \ },
   \ "active": {
       \ "left": [["mode"], [ "gitbranch"]],
-      \ "right": [['lineinfo', 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]]
+      \ "right": [['cocstatus', 'lineinfo' ]]
     \ },
   \ "tabline": {
     \ "left": [["buffers"]],
@@ -104,20 +104,13 @@ let g:lightline = {
   \ },
   \ "component_expand": {
     \ 'buffers': 'lightline#bufferline#buffers',
-    \  'linter_checking': 'lightline#ale#checking',
-    \  'linter_warnings': 'lightline#ale#warnings',
-    \  'linter_errors': 'lightline#ale#errors',
-    \  'linter_ok': 'lightline#ale#ok',
   \ },
   \ "component_function": {
     \ 'gitbranch': 'LightlineGitBranch',
+    \ 'cocstatus': 'coc#status'
   \ },
   \ "component_type": {
     \ 'buffers': 'tabsel',
-    \  'linter_checking': 'left',
-    \  'linter_warnings': 'warning',
-    \  'linter_errors': 'error',
-    \  'linter_ok': 'left',
   \ },
 \}
 "  \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
@@ -132,6 +125,10 @@ endfunction
 
 " ====== TWEAKS ====== "
 "let g:far#source="rg"
+
+let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'typescript']
+let g:markdown_syntax_conceal = 1
+
 
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
@@ -157,21 +154,6 @@ augroup END
 au FocusGained,BufEnter * :silent! !
 
 " ====== PLUGINS ====== "
-let g:ale_loclist_msg_format = "%s"
-let g:ale_completion_enabled = 1
-let g:ale_completion_max_suggestions = 15
-let g:ale_linters = {
-\  'javascript': [],
-\  'rust': []
-\}
-
-let g:ale_rust_rls_toolchain = 'nightly'
-
-let g:ale_fixers = {
-\ 'typescript': ['prettier'],
-\ 'rust': ['rustfmt']
-\}
-
 let g:mta_filetypes = {
 \ 'javascript.jsx': 1,
 \ 'typescript.tsx': 1,
@@ -213,6 +195,15 @@ autocmd BufReadPre,FileReadPre * :NERDTreeClose
 autocmd BufRead,BufNewFile *.md setlocal spell
 
 " ====== KEYMAPS ====== "
+" Show signature help while editing
+
+autocmd CursorHoldI,CursorMovedI * silent! call CocAction('showSignatureHelp')
+
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
 noremap <Leader>q :bd<CR>
 noremap <Leader>l :bn<CR>
 noremap <Leader>h :bp<CR>
@@ -222,10 +213,10 @@ nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 
 map <C-p> :Files<CR>
 
-noremap <F12> :ALEGoToDefinition<CR>
-noremap <F11> :ALEDetail<CR>
-noremap <F10> :ALENextWrap<CR>
-noremap K :ALEHover<CR>
+nmap <silent> <F12> <Plug>(coc-definition)
+nmap <F11> :call CocAction("diagnosticInfo")<CR>
+nmap <silent> <F10> <Plug>(coc-diagnostic-next)
+nmap K :call CocAction('doHover')<CR>
 
 noremap <silent> <F4> :silent !nohup xterm >/dev/null 2>&1 &<CR>
 "noremap <silent> <Esc> :noh<CR>
@@ -243,3 +234,4 @@ endif
 
 nnoremap Q q
 nmap <silent> q :pclose<bar>:cclose<CR>
+inoremap <silent><expr> <c-space> coc#refresh()

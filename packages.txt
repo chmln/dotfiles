@@ -15,14 +15,12 @@ b43-fwcutter
 baobab
 bash
 bat
-bind-tools
 bison
 bluez
 brave-beta-bin
 breeze-icons
 btrfs-progs
 bzip2
-cargo-watch
 chromium-vaapi-bin
 chromium-widevine
 cifs-utils
@@ -46,6 +44,7 @@ diffutils
 dmraid
 docker-bin
 docker-compose-bin
+dosbox
 dosfstools
 dtach
 dtrx
@@ -67,14 +66,12 @@ ffmpegthumbnailer
 file
 filesystem
 findutils
-firefox-nightly
 fish-git
 fisherman-git
 flex
 fontconfig
 freetype2
 fzf
-fzy
 gamin
 gawk
 gcc
@@ -83,7 +80,6 @@ gd
 gettext
 git
 git-lfs-bin
-glances
 glibc
 gnome-disk-utility
 gnome-font-viewer
@@ -126,6 +122,10 @@ jsoncpp
 kcov
 keychain
 less
+lib32-gnutls
+lib32-libcurl-gnutls
+lib32-libpulse
+lib32-sdl
 libdvdcss
 libgsf
 libmad
@@ -158,7 +158,7 @@ minetime
 modemmanager
 moka-icon-theme-git
 mpd
-mpv
+mpv-light
 msmtp
 mvim-git
 ncdu
@@ -176,7 +176,6 @@ npm
 ntfs-3g
 ntp
 numlockx
-offlineimap
 openssh
 opusfile
 os-prober
@@ -225,6 +224,7 @@ session-desktop-files
 shadow
 simplescreenrecorder
 slack-desktop
+slack-term-bin
 speedcrunch
 sshfs
 sudo
@@ -258,6 +258,7 @@ ttf-roboto-mono
 ttf-ubuntu-font-family
 udiskie
 ufw
+unclutter-xfixes-git
 unrar
 unzip
 upower
@@ -266,11 +267,15 @@ usbutils
 util-linux
 virtualbox
 virtualbox-host-dkms
+vulkan-headers
 vulkan-intel
 watchexec
 wd719x-firmware
 wget
 which
+wine
+wine-mono
+wine_gecko
 wireguard-dkms
 wireguard-tools
 wireless_tools
