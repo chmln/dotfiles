@@ -1,2 +1,2 @@
 #!/bin/sh
-/usr/bin/fd --ignore-file /home/greg/.config/.fdignore
+/usr/bin/fd --ignore-file /home/greg/.config/.fdignore "$@"
