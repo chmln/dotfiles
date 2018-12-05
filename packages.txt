@@ -1,3 +1,4 @@
+acestream-launcher
 acpi
 acpid
 acpilight
