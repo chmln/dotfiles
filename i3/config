@@ -1,16 +1,17 @@
 set $mod Mod1
-set $primary_color #ffcf4b
+set $accent_color #ffcf4b
+set $pulseaudio_sink alsa_output.pci-0000_00_1b.0.analog-stereo
 floating_modifier $mod
 
 # ============ APPEARANCE 
 font pango: Source Code Pro Bold 11
 
 for_window [class="^.*"] border pixel 6
-client.focused $primary_color $primary_color #000000
+client.focused $accent_color $accent_color #000000
 
 smart_gaps on
 smart_borders on
-gaps inner 5
+gaps inner 10
 gaps outer 5
 
 # ============ MOVING AROUND 
@@ -63,24 +64,24 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-bindsym $mod+Shift+1 move container to workspace $ws1 ; workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2 ; workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3 ; workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4 ; workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5 ; workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6 ; workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7 ; workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8 ; workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9 ; workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10 ; workspace $ws10
+bindsym $mod+Shift+1 move container to workspace $ws1 
+bindsym $mod+Shift+2 move container to workspace $ws2 
+bindsym $mod+Shift+3 move container to workspace $ws3 
+bindsym $mod+Shift+4 move container to workspace $ws4 
+bindsym $mod+Shift+5 move container to workspace $ws5 
+bindsym $mod+Shift+6 move container to workspace $ws6 
+bindsym $mod+Shift+7 move container to workspace $ws7 
+bindsym $mod+Shift+8 move container to workspace $ws8 
+bindsym $mod+Shift+9 move container to workspace $ws9 
+bindsym $mod+Shift+0 move container to workspace $ws10
 
 # ============ EXTERNAL KEYBINDINGS
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute 
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume $pulseaudio_sink +2.5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume $pulseaudio_sink -2.5%
+bindsym XF86AudioMute exec pactl set-sink-mute $pulseaudio_sink toggle 
 
 bindsym $mod+Prior exec brite +10000
 bindsym $mod+Next exec brite -10000
@@ -91,4 +92,4 @@ bindsym $mod+Shift+Return exec --no-startup-id xterm -e 'ranger'
 bindsym $mod+d exec launcher
 
 # ============ STARTUP
-exec_always "sh /home/greg/.config/i3/autostart.sh"
+exec_always "sh ~/.config/i3/autostart.sh"

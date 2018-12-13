@@ -39,12 +39,13 @@ Plug 'pangloss/vim-javascript'
 Plug 'dag/vim-fish'
 Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim'
+Plug 'mboughaba/i3config.vim'
 
 call plug#end()
 
 syntax on
 set hidden
-filetype plugin indent on
+"filetype plugin indent on
 set number
 set tabstop=2
 set shiftwidth=2
@@ -183,24 +184,28 @@ let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeHijackNetrw = 0
 let g:NERDTreeShowHidden=1
 
-if isdirectory(expand(".git"))
-  let g:NERDTreeBookmarksFile = '.git/.nerdtree-bookmarks'
-endif
-
 " Close if the only remaining window is a nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd BufReadPre,FileReadPre * :NERDTreeClose
 
 " spell check markdown files
-autocmd BufRead,BufNewFile *.md setlocal spell
+function SetupMarkdown()
+  setlocal spell 
+  setlocal lbr
+  set wrap
+  Goyo 80
+  nnoremap j gj
+  vnoremap j gj
+  nnoremap k gk
+  vnoremap k gk
+endfunction
+
+autocmd BufRead,BufNewFile *.md call SetupMarkdown()
 
 " ====== KEYMAPS ====== "
+
 " Show signature help while editing
-
 autocmd CursorHoldI,CursorMovedI * silent! call CocAction('showSignatureHelp')
-
-" Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)

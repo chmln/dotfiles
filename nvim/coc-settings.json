@@ -1,5 +1,7 @@
 {
   "coc.source.around.enable": false,
+  "coc.preferences.hoverTarget": "echo",
+  "coc.preferences.maxCompleteItemCount": 25,
   "coc.source.buffer.enable": false,
   "coc.source.file.triggerCharacters":["/"],
   "coc.preferences.diagnostic.enableMessage":true,
@@ -14,5 +16,8 @@
   "coc.preferences.diagnostic.infoSign": ">>",
   "coc.preferences.diagnostic.hintSign": ">>",
   "typescript.suggest.autoImports": false,
-  "typescript.referencesCodeLens.enable": false
+  "typescript.referencesCodeLens.enable": false,
+  "typescript.implementationsCodeLens.enable": false,
+  "coc.preferences.echodocSupport": true,
+  "coc.preferences.snippets.enable":false
 }

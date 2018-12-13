@@ -2,7 +2,7 @@
 
 pkill connman-gtk
 pkill redshift
-pkill udiskie
+pkill devmon
 pkill watchexec
 pkill unclutter
 
@@ -19,6 +19,7 @@ numlockx on &
 
 # disable bells
 xset -b
+
 # disable power saving for mice
 xset s off -dpms
 
@@ -34,7 +35,7 @@ gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh &
 evolution &
 connman-gtk --tray &
 redshift -c /home/greg/.config/redshift.conf &
-udiskie &
+devmon &
 watchexec -w ~/.config/x11/xresources -- xrdb ~/.config/x11/xresources &
 
 # hide cursor after timeout
