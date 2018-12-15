@@ -45,14 +45,12 @@ call plug#end()
 
 syntax on
 set hidden
-"filetype plugin indent on
 set number
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
 set noshiftround
-set backspace=indent,eol,start
 set laststatus=2
 set relativenumber
 set nowrap
@@ -64,8 +62,6 @@ let g:yankring_clipboard_monitor=0
 " Encoding
 set encoding=utf-8
 
-" Enable incremental search
-set incsearch
 " Include matching uppercase words with lowercase search term
 set ignorecase
 " Include only uppercase words with uppercase search term
