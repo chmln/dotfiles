@@ -86,7 +86,6 @@ gnome-disk-utility
 gnome-font-viewer
 gnome-keyring
 gnome-themes-extra
-go
 gotop-bin
 grep
 groff
@@ -121,6 +120,7 @@ jre-openjdk
 jsoncpp
 kcov
 keychain
+kitty
 less
 lib32-fluidsynth
 lib32-gnutls
