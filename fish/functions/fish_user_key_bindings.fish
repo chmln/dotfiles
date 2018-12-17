@@ -11,7 +11,10 @@ function fzf_edit
   set target (fzf_selector -t $argv[1])
   begin
     if [ -n "$target" ]
-      eval $argv[2] "$target"
+      set -gx TITLE "$argv[2] $target"
+      commandline -f repaint
+      eval "$argv[2] $target"
+      set -x TITLE
     end
   end
   restore_state

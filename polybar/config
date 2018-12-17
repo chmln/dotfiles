@@ -44,7 +44,7 @@ font-0 = "SauceCodePro Nerd Font Mono:size=11:weight=bold;1"
 font-1 = "Material Icons:pixelsize=11;2"
 
 modules-left = i3
-modules-center =
+modules-center = mpd
 modules-right = pulseaudio battery date
 
 tray-position = right
@@ -101,13 +101,14 @@ label-urgent-padding = 2
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+format-online =  <icon-prev> <toggle> <icon-next> <label-song> 
 
-icon-prev = 
+
+icon-prev = 
 icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+icon-play = 
+icon-pause = 
+icon-next = 
 
 label-song-maxlen = 25
 label-song-ellipsis = true

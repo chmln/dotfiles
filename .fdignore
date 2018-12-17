@@ -11,3 +11,7 @@ node_modules
 .local/share/cargo
 .config/libreoffice
 Cache
+/proc
+/dev
+/sys
+/run
