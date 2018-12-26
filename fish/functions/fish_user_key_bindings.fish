@@ -37,7 +37,7 @@ function fzf_autocomplete
 end
 
 function fzf_branch
-  set target (git branch | sed 's/*/ /g' | sed 's/  //g' | fzf)
+  set target (git branch | sd "[* ]" "" | fzf)
 	if [ -n "$target" ]
     git checkout "$target"
   end

@@ -24,8 +24,6 @@ set -gx QT_QPA_PLATFORMTHEME "qt5ct"
 # disable redundant merge messages
 set -gx GIT_MERGE_AUTOEDIT "no"
 
-set -gx RANGER_LOAD_DEFAULT_RC "FALSE"
-
 set fish_greeting ""
 set fish_cursor_default block
 set fish_cursor_insert line

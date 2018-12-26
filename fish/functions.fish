@@ -30,9 +30,8 @@ end
 
 function updater
   yaourt -Syua $argv
-  if [ -n $argv[2] ]
-    maintenance
-  end
+  maintenance
+  return 0
 end
 
 # disable right prompt, if any
