@@ -1,2 +1,0 @@
-#!/bin/bash
-git log --pretty=format:"%ad%x09%an%x09- %B" --date=short --reverse | grep "$1.*$2" | cut -f3

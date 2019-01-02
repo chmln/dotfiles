@@ -6,7 +6,7 @@ Xcursor.size: 16
 	Ctrl <Key>V: insert-selection(CLIPBOARD) \n\
 	Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 
-*faceName: Source Code Pro for Powerline:Semibold
+*faceName: SauceCodePro Nerd Font Mono: Semibold
 *XTerm.VT100.faceSize: 14
 
 *.vt100.foreground: #f3f3f3

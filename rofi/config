@@ -1,6 +1,6 @@
 rofi.bw: 0
 rofi.disable-history: true
-rofi.drun-icon-theme Arc
+rofi.drun-icon-theme: Arc
 rofi.font: Source Code Pro Semibold 16
 rofi.lines: 5
 rofi.matching: fuzzy 
@@ -11,3 +11,4 @@ rofi.sort: true
 rofi.theme: /usr/share/rofi/themes/Arc-Dark.rasi
 rofi.width: 600
 rofi.tokenize: false
+rofi.sorting-method: fzf

@@ -15,6 +15,10 @@ set -gx RUSTUP_HOME "/home/greg/.local/share/rustup"
 set -gx LESSHISTFILE "/dev/null"
 set -gx NERDTREE_BOOKMARKS "/tmp/.NERDTreeBookmarks"
 
+set -gx FZF_DEFAULT_OPTS "--reverse"
+set -gx FZF_DEFAULT_COMMAND 'fd -t f'
+set -gx BAT_THEME "TwoDark"
+
 # always show scrollbars
 set -gx GTK_OVERLAY_SCROLLING 0
 

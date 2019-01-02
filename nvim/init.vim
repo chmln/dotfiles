@@ -10,13 +10,20 @@ Plug 'usr/bin/fzf'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
+Plug 'yuki-ycino/fzf-preview.vim'
+
 Plug 'brooth/far.vim'
 
 Plug 'romainl/vim-qf'
 Plug 'Valloric/MatchTagAlways'
 
 Plug 'airblade/vim-rooter'
+Plug 'bogado/file-line'
+
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
@@ -42,6 +49,8 @@ Plug 'chr4/nginx.vim'
 Plug 'mboughaba/i3config.vim'
 
 call plug#end()
+
+set shell=/bin/bash
 
 syntax on
 set hidden
@@ -110,8 +119,6 @@ let g:lightline = {
     \ 'buffers': 'tabsel',
   \ },
 \}
-"  \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
-"  \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
 
 let g:lightline#bufferline#shorten_path = 0
 let g:lightline#bufferline#filename_modifier = ':.:s?src/??:s?components/??:s?routes/??'
@@ -121,11 +128,22 @@ function! LightlineGitBranch()
 endfunction
 
 " ====== TWEAKS ====== "
-"let g:far#source="rg"
+let g:fzf_layout = { 'down': '~40%' }
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep('rg --column --no-heading --line-number --color=always '.shellescape(<q-args>),
+  \ 1,
+  \ fzf#vim#with_preview(),
+  \ <bang>0)
+
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>,
+  \ fzf#vim#with_preview(),
+  \ <bang>0)
 
 let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'typescript']
 let g:markdown_syntax_conceal = 1
 
+let g:rustfmt_command = 'rustup run nightly rustfmt'
 
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
@@ -159,10 +177,6 @@ let g:mta_filetypes = {
 \ 'xml' : 1,
 \ 'jinja' : 1,
 \}
-
-command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)"')"
-
-command! Files call fzf#run(fzf#wrap({'source': 'fd -H --type f -E .git', 'options': '--reverse'}))
 
 " Tab autocomplete
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -213,6 +227,7 @@ nmap <Leader>f :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 
 map <C-p> :Files<CR>
+map <C-f> :Rg<CR>
 
 nmap <silent> <F12> <Plug>(coc-definition)
 nmap <F11> :call CocAction("diagnosticInfo")<CR>

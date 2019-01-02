@@ -24,6 +24,7 @@ chromium-widevine
 cifs-utils
 cli-visualizer
 cloc
+cobalt
 colord
 colordiff
 connman-git
@@ -66,6 +67,7 @@ fish-git
 fisherman-git
 flex
 fontconfig
+fontforge
 freetype2
 fzf
 gamin
@@ -80,6 +82,7 @@ git-lfs-bin
 glibc
 gnome-keyring
 gnome-themes-extra
+google-chrome-dev
 gotop-bin
 grep
 groff
@@ -95,7 +98,9 @@ hdparm
 htop
 hugo
 hunspell-en_US
+hyperfine-bin
 i3-gaps
+i7z
 inetutils
 insomnia
 intel-ucode
@@ -123,6 +128,7 @@ lib32-openal
 lib32-sdl
 lib32-sdl2
 libdvdcss
+libgdiplus
 libgsf
 libmad
 libmpcdec
@@ -137,6 +143,8 @@ libvdpau-va-gl
 licenses
 linux
 linux-headers
+linux-lts
+linux-lts-headers
 logrotate
 lsof
 lvm2
@@ -160,7 +168,6 @@ ncdu
 ncmpcpp
 neofetch
 neovim
-nerd-fonts-source-code-pro
 net-tools
 nfs-utils
 ngrok-beta
@@ -175,7 +182,6 @@ openssh
 opusfile
 os-prober
 otf-ibm-plex
-otf-overpass
 otf-san-francisco
 package-query
 pacman
@@ -187,10 +193,12 @@ pavucontrol
 pciutils
 pepper-flash
 perl
+perl-anyevent
 pkgconf
 pkgfile
 polybar-git
 postgresql-libs
+powertop
 procps-ng
 psmisc
 pspg
@@ -234,6 +242,7 @@ texlive-bin
 texlive-core
 texlive-latexextra
 texlive-publishers
+thermald
 time
 traceroute
 trash-cli
@@ -323,4 +332,5 @@ yaourt
 yarn
 youtube-dl
 zip
+zola-bin
 zoom
