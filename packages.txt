@@ -19,8 +19,6 @@ bluez
 breeze-icons
 btrfs-progs
 bzip2
-chromium-vaapi-bin
-chromium-widevine
 cifs-utils
 cli-visualizer
 cloc
@@ -110,6 +108,7 @@ iputils
 ipw2100-fw
 ipw2200-fw
 irssi
+iwatch
 jdk-openjdk
 jfsutils
 jq
