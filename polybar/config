@@ -19,7 +19,7 @@ alert = #bd2c40
 success = #2ECC40
 
 [bar/primary]
-monitor = ${env:MONITOR:eDP-1}
+monitor = ${env:MONITOR:eDP1}
 width = 100%
 height = 27
 ;offset-x = 1%
@@ -45,7 +45,7 @@ font-1 = "Material Icons:pixelsize=11;2"
 
 modules-left = i3
 modules-center = mpd
-modules-right = pulseaudio battery date
+modules-right = alsa battery date
 
 tray-position = right
 tray-padding = 4
@@ -130,13 +130,25 @@ format-prefix-foreground = ${colors.foreground-alt}
 
 label = %date% %time%
 
-[module/pulseaudio]
-type = internal/pulseaudio
+[module/alsa]
+type = internal/alsa
 
-; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
-sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+; Soundcard to be used
+; Usually in the format hw:# where # is the card number
+; You can find the different card numbers in `/proc/asound/cards`
+master-soundcard = hw:0
+speaker-soundcard = hw:0
+headphone-soundcard = hw:0
 
-use-ui-max = false
+; Name of the master, speaker and headphone mixers
+; Use the following command to list available mixer controls:
+; $ amixer scontrols | sed -nr "s/.*'([[:alnum:]]+)'.*/\1/p"
+; If master, speaker or headphone-soundcard isn't the default, 
+; use `amixer -c # scontrols` instead where # is the number 
+; of the master, speaker or headphone soundcard respectively
+;
+; Default: Master
+master-mixer = Master
 
 ; Interval for volume increase/decrease (in percent points) (unreleased)
 ; Default: 5

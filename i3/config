@@ -79,9 +79,9 @@ bindsym $mod+Shift+0 move container to workspace $ws1; workspace $ws10
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume $pulseaudio_sink +2.5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume $pulseaudio_sink -2.5%
-bindsym XF86AudioMute exec pactl set-sink-mute $pulseaudio_sink toggle 
+bindsym XF86AudioRaiseVolume exec amixer set Master 3%+
+bindsym XF86AudioLowerVolume exec amixer set Master 3%- 
+bindsym XF86AudioMute exec amixer sset Master mute
 
 bindsym $mod+Prior exec brite +10000
 bindsym $mod+Next exec brite -10000
