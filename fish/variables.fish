@@ -16,7 +16,7 @@ set -gx LESSHISTFILE "/dev/null"
 set -gx NERDTREE_BOOKMARKS "/tmp/.NERDTreeBookmarks"
 
 set -gx FZF_DEFAULT_OPTS "--reverse"
-set -gx FZF_DEFAULT_COMMAND 'fd -t f'
+set -gx FZF_DEFAULT_COMMAND 'fd -t f --hidden -E .git -E node_modules'
 set -gx BAT_THEME "TwoDark"
 
 # always show scrollbars

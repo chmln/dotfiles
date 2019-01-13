@@ -8,7 +8,7 @@ function ee
 end
 
 function l
-  exa -1a --group-directories-first $argv
+  ls -a -v --group-directories-first --indicator-style=none $argv
 end
 
 function cat
@@ -32,6 +32,11 @@ function updater
   yaourt -Syua $argv
   maintenance
   return 0
+end
+
+function mvp -d "move and create dir if needed"
+  mkdir -p (dirname "$argv[2]")
+  mv "$argv[1]" "$argv[2]"
 end
 
 # disable right prompt, if any

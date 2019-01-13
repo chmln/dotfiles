@@ -45,8 +45,9 @@ function fzf_branch
 end
 
 function fzf_kill
-  set target (ps ax | fzf | cut -f1 -d ' ')
+  set target (ps ax | fzf | sd '^\s+' '' | cut -f1 -d ' ')
   if [ -n "$target" ]
+    echo $target
     kill "$target"
   end
   restore_state
