@@ -32,6 +32,11 @@ set showtabline=2
 set noshowmode
 set timeoutlen=1000 ttimeoutlen=0
 set nofoldenable
+
+" disable status line by default
+set laststatus=0
+set noruler
+
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
 let &t_EI = "\<Esc>[2 q"

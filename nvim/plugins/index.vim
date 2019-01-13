@@ -1,4 +1,8 @@
-call plug#begin('~/.local/share/nvim/plugged')
+if has('nvim')
+  call plug#begin('~/.local/share/nvim/plugged')
+else
+  call plug#begin('~/.local/share/vim/plugged')
+endif
 
 Plug 'usr/bin/fzf'
 Plug 'junegunn/fzf'
@@ -23,8 +27,9 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'Shougo/echodoc.vim'
 
-Plug 'schickling/vim-bufonly'
 Plug 'joshdick/onedark.vim'
+
+Plug 'schickling/vim-bufonly'
 Plug 'itchyny/lightline.vim'
 Plug 'mgee/lightline-bufferline'
 Plug 'itchyny/vim-gitbranch'

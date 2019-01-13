@@ -1,12 +1,12 @@
 let g:lightline = {
-  \ "colorscheme": "one",
+  \ "colorscheme": "onedark",
    \ 'enable': {
   \ 'statusline': 1,
   \ 'tabline': 1
   \ },
   \ "active": {
       \ "left": [["mode"], [ "gitbranch"]],
-      \ "right": [['cocstatus', 'lineinfo' ]]
+      \ "right": [[],[],['cocstatus']]
     \ },
   \ "tabline": {
     \ "left": [["buffers"]],
@@ -34,3 +34,4 @@ let g:lightline#bufferline#filename_modifier = ':.:s?src/??:s?components/??:s?ro
 function! LightlineGitBranch()
   return "\ue0a0 ".gitbranch#name()
 endfunction
+

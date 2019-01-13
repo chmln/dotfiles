@@ -2,7 +2,7 @@
 function WriteMode()
   setlocal spell 
   setlocal lbr
-  set wrap
+  setlocal wrap
   Goyo 80
   nnoremap j gj
   vnoremap j gj
@@ -17,8 +17,10 @@ augroup VCenterCursor
         \ let &scrolloff=winheight(win_getid())/2
 augroup END
 
-" hide line numbers for fzf and other terminal uis
-au TermOpen * setlocal nonumber norelativenumber
+if has("nvim")
+  " hide line numbers for fzf and other terminal uis
+  au TermOpen * setlocal nonumber norelativenumber
+endif
 
 autocmd CursorHoldI,CursorMovedI * silent! call CocAction('showSignatureHelp')
 
