@@ -7,7 +7,7 @@
   "coc.preferences.diagnostic.enableMessage":true,
   "coc.source.file.enable": false,
   "tsserver.enableJavascript": false,
-  "coc.preferences.triggerCompletionWait": 100,
+  "coc.preferences.triggerCompletionWait": 300,
   "coc.preferences.autoTrigger":"always",
   "coc.preferences.diagnostic.enable": true,
   "coc.preferences.diagnostic.signOffset": 1000,

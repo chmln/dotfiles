@@ -64,7 +64,8 @@ end
 
 function fish_user_key_bindings
   keybind \co 'fzf_edit d $EDITOR'
-	keybind \cp 'fzf_edit f rifle'
+	keybind \cp 'fzf_edit f $EDITOR'
+	keybind \cs 'fzf_edit f "run xdg-open"'
 	keybind \cn duplicate_term
 	keybind \cg fzf_cd
 	keybind \ca fzf_autocomplete
