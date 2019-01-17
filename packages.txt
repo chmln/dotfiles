@@ -1,7 +1,6 @@
 acpi
 acpid
 acpilight
-adobe-source-code-pro-fonts
 aic94xx-firmware
 alsa-plugins
 alsa-utils
@@ -46,12 +45,9 @@ evolution
 evolution-on-git
 exa
 exfat-utils
-expac
 fakeroot
 fd
 feh
-fff
-ffmpegthumbnailer
 file
 filesystem
 findutils
@@ -59,6 +55,7 @@ fish-git
 fisherman-git
 flex
 fontconfig
+freeoffice
 freetype2
 fzf
 gamin
@@ -106,7 +103,6 @@ lazygit
 less
 libblockdev-lean
 libcdio-paranoia
-libdvdcss
 libgdiplus
 libgsf
 libmad
@@ -151,7 +147,6 @@ noto-fonts-emoji-blob
 npm
 ntp
 numlockx
-onlyoffice-bin
 openssh
 opusfile
 os-prober
@@ -185,6 +180,7 @@ sed
 session-desktop-files
 shadow
 signal-desktop-bin
+slack-desktop
 smartmontools
 strace
 sudo
@@ -203,11 +199,7 @@ thermald
 time
 transmission-gtk
 trash-cli
-ttf-dejavu
-ttf-liberation
-ttf-material-design-icons
 ttf-ms-win10
-ttf-roboto-mono
 udevil
 ufw
 unclutter-xfixes-git
@@ -230,9 +222,6 @@ xbrightness
 xclip
 xcolor
 xf86-video-intel
-xmeasure
-xorg-bdftopcf
-xorg-font-util
 xorg-fonts-encodings
 xorg-iceauth
 xorg-luit
@@ -252,7 +241,6 @@ xorg-xinit
 xorg-xinput
 xorg-xkbcomp
 xorg-xkbevd
-xorg-xkbutils
 xorg-xmodmap
 xorg-xpr
 xorg-xprop
