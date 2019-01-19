@@ -95,9 +95,7 @@ iputils
 ipw2100-fw
 ipw2200-fw
 irssi
-jdk-openjdk
 jq
-jre-openjdk
 jsoncpp
 lazygit
 less

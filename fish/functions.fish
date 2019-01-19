@@ -8,7 +8,7 @@ function ee
 end
 
 function l
-  ls -a -v --group-directories-first --indicator-style=none $argv
+  exa -a --group-directories-first --classify $argv
 end
 
 function cat
