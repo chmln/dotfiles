@@ -2,20 +2,23 @@ function fzf_selector
   fd -H -F -p --max-depth 10 $argv | fzf --reverse --height=40%
 end
 
-function restore_state 
+function restore_state
  commandline -f repaint
- set fish_bind_mode insert 
+ set fish_bind_mode insert
 end
 
-function fzf_edit 
+function fzf_edit
   set target (fzf_selector -t $argv[1])
   begin
     if [ -n "$target" ]
-      set -gx TITLE "$argv[2] $target"
       commandline -f repaint
       eval "$argv[2] $target"
-      set -x TITLE
     end
+  end
+
+  if [ -n "$argv[3]" ]
+    echo $argv[3]
+    $argv[3]
   end
   restore_state
 end
@@ -63,9 +66,9 @@ function keybind
 end
 
 function fish_user_key_bindings
-  keybind \co 'fzf_edit d $EDITOR'
-	keybind \cp 'fzf_edit f $EDITOR'
-	keybind \cs 'fzf_edit f "run xdg-open"'
+  keybind \co "fzf_edit d $EDITOR"
+	keybind \cp "fzf_edit f $EDITOR"
+	keybind \cs 'fzf_edit f "run xdg-open" "exit"'
 	keybind \cn duplicate_term
 	keybind \cg fzf_cd
 	keybind \ca fzf_autocomplete

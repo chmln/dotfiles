@@ -29,7 +29,7 @@ set -gx BAT_THEME "TwoDark"
 set -gx GTK_OVERLAY_SCROLLING 0
 
 # use gtk theme in qt
-set -gx QT_QPA_PLATFORMTHEME "qt5ct"
+# set -gx QT_QPA_PLATFORMTHEME "qt5ct"
 
 # disable redundant merge messages
 set -gx GIT_MERGE_AUTOEDIT "no"

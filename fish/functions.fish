@@ -8,7 +8,7 @@ function ee
 end
 
 function l
-  exa -a --group-directories-first --classify $argv
+  env COLUMNS=80 exa -a -1 --group-directories-first $argv --color=always | less -FR
 end
 
 function cat

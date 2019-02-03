@@ -3,7 +3,7 @@ set $accent_color #ffcf4b
 set $pulseaudio_sink alsa_output.pci-0000_00_1b.0.analog-stereo
 floating_modifier $mod
 
-# ============ APPEARANCE 
+# ============ APPEARANCE
 font pango: Source Code Pro Bold 11
 
 for_window [class="^.*"] border pixel 6
@@ -14,7 +14,7 @@ smart_borders on
 gaps inner 10
 gaps outer 5
 
-# ============ MOVING AROUND 
+# ============ MOVING AROUND
 bindsym $mod+h focus left
 bindsym $mod+k focus up
 bindsym $mod+j focus down
@@ -64,15 +64,15 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1 
-bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2 
-bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws4 
-bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4 
-bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5 
-bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6 
-bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7 
-bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8 
-bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9 
+bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws4
+bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws1; workspace $ws10
 
 # ============ EXTERNAL KEYBINDINGS
@@ -80,7 +80,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 bindsym XF86AudioRaiseVolume exec amixer set Master 3%+
-bindsym XF86AudioLowerVolume exec amixer set Master 3%- 
+bindsym XF86AudioLowerVolume exec amixer set Master 3%-
 bindsym XF86AudioMute exec amixer sset Master mute
 
 bindsym $mod+Prior exec brite +10000
@@ -92,4 +92,4 @@ bindsym $mod+Shift+Return exec --no-startup-id xterm -e 'ranger'
 bindsym $mod+d exec launcher
 
 # ============ STARTUP
-exec_always "sh ~/.config/i3/autostart.sh"
+exec_always "sh ~/.config/i3/autostart.sh > /tmp/autostart.log"
