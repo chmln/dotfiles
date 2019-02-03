@@ -1,14 +1,6 @@
-;=====================================================
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/jaagr/polybar
-;
-;   The README contains alot of information
-;
-;=====================================================
+; vim:ft=dosini
 
 [colors]
-;background = ${xrdb:color0:#222}
 background = #000
 background-alt = #444
 foreground = #eee
@@ -22,8 +14,6 @@ success = #2ECC40
 monitor = ${env:MONITOR:eDP1}
 width = 100%
 height = 27
-;offset-x = 1%
-;offset-y = 1%
 radius = 0
 fixed-center = false
 bottom = true
@@ -44,35 +34,29 @@ font-0 = "SauceCodePro Nerd Font Mono:size=11:weight=bold;1"
 font-1 = "Material Icons:pixelsize=11;2"
 
 modules-left = i3
-modules-center = 
-modules-right = alsa battery date
+modules-center =
+modules-right = alsa battery network date
 
 tray-position = right
 tray-padding = 4
-;tray-background = #444
 tray-maxsize = 22
 
 wm-restack = i3
 
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
 cursor-click = pointer
-;cursor-scroll = ns-resize
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
 
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
-
-; Only show workspaces on the same output as the bar
-;pin-workspaces = true
 
 label-mode-padding = 0
 label-mode-foreground = #000
@@ -101,8 +85,7 @@ label-urgent-padding = 2
 
 [module/mpd]
 type = internal/mpd
-format-online =  <icon-prev> <toggle> <icon-next> <label-song> 
-
+format-online =  <icon-prev> <toggle> <icon-next> <label-song>
 
 icon-prev = 
 icon-stop = 
@@ -133,34 +116,19 @@ label = %date% %time%
 [module/alsa]
 type = internal/alsa
 
-; Soundcard to be used
-; Usually in the format hw:# where # is the card number
 ; You can find the different card numbers in `/proc/asound/cards`
 master-soundcard = hw:0
 speaker-soundcard = hw:0
 headphone-soundcard = hw:0
 
-; Name of the master, speaker and headphone mixers
-; Use the following command to list available mixer controls:
-; $ amixer scontrols | sed -nr "s/.*'([[:alnum:]]+)'.*/\1/p"
-; If master, speaker or headphone-soundcard isn't the default, 
-; use `amixer -c # scontrols` instead where # is the number 
-; of the master, speaker or headphone soundcard respectively
-;
-; Default: Master
 master-mixer = Master
 
-; Interval for volume increase/decrease (in percent points) (unreleased)
-; Default: 5
 interval = 5
 label-muted = 🔇 muted
 label-muted-foreground = #666
 
 format-volume = <ramp-volume> <label-volume>
 
-; Only applies if <ramp-volume> is used
-; ramp-volume-0 = 
-;ramp-volume-1 = 
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
@@ -179,29 +147,46 @@ format-full-prefix = "   "
 format-full-prefix-foreground = ${colors.foreground}
 ;format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 =
+ramp-capacity-1 =
+ramp-capacity-2 =
 ramp-capacity-3 =
 ramp-capacity-4 =
-ramp-capacity-5 = 
+ramp-capacity-5 =
 ramp-capacity-foreground = ${colors.foreground}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 =
+animation-charging-1 =
+animation-charging-2 =
 animation-charging-3 =
 animation-charging-4 =
-animation-charging-5 = 
+animation-charging-5 =
 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
-[settings]
-screenchange-reload = true
+[module/network]
+type = internal/network
+interface = wlp8s0
 
-[global/wm]
-margin-top = 5
-margin-bottom = 5
+interval = 3.0
 
-; vim:ft=dosini
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+; All labels support the following tokens:
+;   %ifname%    [wireless+wired]
+;   %local_ip%  [wireless+wired]
+;   %local_ip6% [wireless+wired]
+;   %essid%     [wireless]
+;   %signal%    [wireless]
+;   %upspeed%   [wireless+wired]
+;   %downspeed% [wireless+wired]
+;   %linkspeed% [wired]
+
+label-connected = "%{A1:connman-gtk:} %essid% %{A}"
+label-connected-foreground = #eefafafa
+
+; Default: (none)
+label-disconnected = disconnected
+label-disconnected-foreground = #66ffffff
