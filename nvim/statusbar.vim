@@ -1,8 +1,11 @@
+Plug 'itchyny/lightline.vim'
+Plug 'itchyny/vim-gitbranch'
+
 let g:lightline = {
   \ "colorscheme": "onedark",
    \ 'enable': {
   \ 'statusline': 1,
-  \ 'tabline': 1
+  \ 'tabline': 0
   \ },
   \ "active": {
       \ "left": [["mode"], [ "gitbranch"]],
@@ -28,8 +31,6 @@ let g:lightline = {
   \ },
 \}
 
-let g:lightline#bufferline#shorten_path = 0
-let g:lightline#bufferline#filename_modifier = ':.:s?src/??:s?components/??:s?routes/??'
 
 function! LightlineGitBranch()
   return "\ue0a0 ".gitbranch#name()

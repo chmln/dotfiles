@@ -3,11 +3,9 @@
   "coc.preferences.hoverTarget": "echo",
   "coc.preferences.maxCompleteItemCount": 25,
   "coc.source.buffer.enable": false,
-  "coc.source.file.triggerCharacters":["/"],
-  "coc.preferences.diagnostic.enableMessage":true,
+  "coc.preferences.diagnostic.enableMessage": "never",
   "coc.source.file.enable": false,
   "tsserver.enableJavascript": false,
-  "coc.preferences.triggerCompletionWait": 300,
   "coc.preferences.autoTrigger":"always",
   "coc.preferences.diagnostic.enable": true,
   "coc.preferences.diagnostic.signOffset": 1000,
@@ -19,5 +17,9 @@
   "typescript.referencesCodeLens.enable": false,
   "typescript.implementationsCodeLens.enable": false,
   "coc.preferences.echodocSupport": true,
-  "coc.preferences.snippets.enable":false
+  "coc.preferences.snippets.enable":false,
+  "coc.preferences.diagnostic.virtualText": true,
+  "coc.preferences.diagnostic.locationlist": true,
+  "java.format.settings.url": "/home/greg/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml"
+
 }
