@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/bin/mvn --global-settings ~/.config/maven.conf "$@"

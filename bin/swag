@@ -1,0 +1,2 @@
+#!/bin/sh
+neofetch --disable title --disable model --disable theme --disable icons --disable cpu --disable gpu --ascii_distro linux
