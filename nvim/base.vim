@@ -11,11 +11,7 @@ let g:strip_whitespace_on_save=1
 let g:strip_whitelines_at_eof=1
 
 " Keep cursor vertically centered
-augroup VCenterCursor
-  au!
-  au BufEnter,WinEnter,WinNew,VimResized *,*.*
-        \ let &scrolloff=winheight(win_getid())/2
-augroup END
+au BufEnter * let &scrolloff=winheight(win_getid())
 
 " Update buffer on external changes
 au FocusGained,BufEnter * :silent! !
