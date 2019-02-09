@@ -41,6 +41,9 @@ bindsym $mod+Shift+r restart
 
 focus_follows_mouse no
 
+# center all floating windows
+for_window [floating] move position center
+
 # ============ WORKSPACES
 set $ws1 "1"
 set $ws2 "2"

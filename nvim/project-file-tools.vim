@@ -1,6 +1,6 @@
 " infer project working directory
 Plug 'airblade/vim-rooter'
-let g:rooter_patterns = ['.gitignore', 'package.json', 'pom.xml', 'Cargo.toml', '.git/']
+let g:rooter_patterns = ['.gitignore', 'pom.xml', 'Cargo.toml', '.git/']
 
 " FZF
 Plug 'usr/bin/fzf'

@@ -1,0 +1,2 @@
+#!/bin/sh
+gtk-launch $(xdg-settings get default-web-browser | sd -s ".desktop" "")

@@ -13,10 +13,10 @@ b43-fwcutter
 bash
 bat
 birdtray-git
+brave-dev-bin
 bzip2
-chromium-vaapi-bin
+chromium
 cli-visualizer
-cloc
 colord
 connman
 connman-gtk-git
@@ -39,6 +39,7 @@ dunst-git
 e2fsprogs
 earlyoom
 efibootmgr
+electron
 elementary-icon-theme
 evince-light
 exa
@@ -50,7 +51,7 @@ file
 filesystem
 findutils
 fish
-fisherman-git
+fisher
 flex
 fontconfig
 freetype2
@@ -59,9 +60,9 @@ gamin
 gawk
 gcc
 gcc-libs
-gconf
 gd
 gettext
+ghostscript
 git
 git-lfs-bin
 glibc
@@ -113,7 +114,6 @@ linux-headers
 linux-lts
 linux-lts-headers
 linux-mainline
-linux-mainline-headers
 logrotate
 lvm2
 m4
@@ -156,6 +156,7 @@ pciutils
 pepper-flash
 perl
 perl-anyevent
+pkgbrowser
 pkgconf
 pkgfile
 polybar-git
@@ -171,12 +172,15 @@ ranger
 recordmydesktop
 redshift
 reflector
+riot-desktop
+riot-web-develop-bin
 ripgrep
 rofi
 rustup
 sed
 session-desktop-files
 shadow
+signal-desktop-bin
 slack-desktop
 smartmontools
 strace
