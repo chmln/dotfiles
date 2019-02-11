@@ -2,7 +2,14 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'Shougo/echodoc.vim'
 Plug 'bogado/file-line'
 
-autocmd CursorHoldI,CursorMovedI * silent! call CocAction('showSignatureHelp')
+" show function signature
+autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+
+" Remap for do codeAction of current line
+nmap <leader>ac  <Plug>(coc-codeaction)
+
+" Fix autofix problem of current line
+nmap <leader>qf  <Plug>(coc-fix-current)
 
 nmap <leader>rn <Plug>(coc-rename)
 nmap <silent> <F12> <Plug>(coc-definition)
