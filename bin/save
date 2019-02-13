@@ -5,5 +5,4 @@ youtube-dl \
   --audio-quality 0 \
   --audio-format mp3 \
   --add-metadata "$1" \
-  -o "~/.Sync/Music/%(title)s.%(ext)s"
-
+  -o "~/.local/share/syncthing/Music/%(title)s.%(ext)s"

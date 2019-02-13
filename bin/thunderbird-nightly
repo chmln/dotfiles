@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/bin/thunderbird-nightly --profile /home/greg/.config/thunderbird/rzy736nd.default
