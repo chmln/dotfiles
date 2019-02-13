@@ -1,5 +1,5 @@
-Xcursor.theme: Win8
-Xcursor.size: 16
+Xcursor.theme: Hackneyed
+Xcursor.size: 30
 
 *.vt100.translations: #override \n\
 	<Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
