@@ -35,6 +35,7 @@ dmraid
 docker-bin
 docker-compose-bin
 dosfstools
+downgrade
 dunst-git
 e2fsprogs
 earlyoom
@@ -92,7 +93,6 @@ iproute2
 iputils
 ipw2100-fw
 ipw2200-fw
-jdk8-openjdk
 jq
 jsoncpp
 lazygit
@@ -121,18 +121,17 @@ maim
 make
 man-db
 man-pages
-maven
 mdadm
 mesa
 minetime
 moka-icon-theme-git
 mpc
 mpd-light-pulse
+mpg123
 mpv-light
 mvim-git
 ncdu
 ncmpcpp
-neo4j-community
 neofetch
 neovim
 net-tools
@@ -156,7 +155,6 @@ pciutils
 pepper-flash
 perl
 perl-anyevent
-pkgbrowser
 pkgconf
 pkgfile
 polybar-git
@@ -168,7 +166,8 @@ pspg
 python-neovim
 python-virtualenv
 qt5-x11extras
-ranger
+qt5ct
+ranger-git
 recordmydesktop
 redshift
 reflector
@@ -180,7 +179,7 @@ rustup
 sed
 session-desktop-files
 shadow
-signal-desktop-bin
+simplescreenrecorder
 slack-desktop
 smartmontools
 strace
@@ -198,7 +197,7 @@ texlive-core
 texlive-latexextra
 texlive-publishers
 thermald
-thunderbird-beta-bin
+thunderbird-nightly
 time
 transmission-gtk
 trash-cli
@@ -255,3 +254,4 @@ xterm
 yaourt
 youtube-dl
 zip
+zsh
