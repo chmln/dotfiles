@@ -1,1 +1,0 @@
-/home/greg/.config/fisherman/agnoster/fish_prompt.fish

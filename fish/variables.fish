@@ -1,8 +1,11 @@
+# remove ? interpretation as glob
+set -U fish_features qmark-noglob
+
 set PATH -g ~/.local/share/npm/bin $PATH
-set PATH -g /home/greg/.local/share/cargo/bin $PATH
-set PATH -g /home/greg/.local/lib/python3.6/site-packages $PATH
-set PATH -g /home/greg/.local/bin/ $PATH
-set PATH -g /home/greg/.config/bin/ $PATH
+set PATH -g ~/.local/share/cargo/bin $PATH
+set PATH -g ~/.local/lib/python3.6/site-packages $PATH
+set PATH -g ~/.local/bin/ $PATH
+set PATH -g ~/.config/bin/ $PATH
 
 set -gx XDG_DATA_HOME "/home/greg/.local/share"
 set -gx XDG_CACHE_HOME "/home/greg/.cache"
@@ -34,6 +37,6 @@ set -gx GTK_OVERLAY_SCROLLING 0
 # disable redundant merge messages
 set -gx GIT_MERGE_AUTOEDIT "no"
 
-set fish_greeting ""
+set -x fish_greeting
 set fish_cursor_default block
 set fish_cursor_insert line
