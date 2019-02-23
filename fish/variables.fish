@@ -23,6 +23,7 @@ set -gx NERDTREE_BOOKMARKS "/tmp/.NERDTreeBookmarks"
 set -gx GNUPGHOME "/home/greg/.config/gnupg"
 set -gx ANDROID_SDK_HOME "~/.config/android"
 set -gx NPM_CONFIG_USERCONFIG "~/.config/npm/npmrc"
+set -gx NOTMUCH_CONFIG "/home/greg/.config/notmuch/config"
 
 set -gx FZF_DEFAULT_OPTS "--reverse"
 set -gx FZF_DEFAULT_COMMAND 'fd -t f --hidden -E .git -E node_modules'
@@ -36,6 +37,8 @@ set -gx GTK_OVERLAY_SCROLLING 0
 
 # disable redundant merge messages
 set -gx GIT_MERGE_AUTOEDIT "no"
+
+set -gx RUSTC_WRAPPER "sccache"
 
 set -x fish_greeting
 set fish_cursor_default block
