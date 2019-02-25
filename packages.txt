@@ -182,6 +182,7 @@ sed
 session-desktop-files
 shadow
 smartmontools
+spectre-meltdown-checker
 strace
 sudo
 syncthing
