@@ -11,7 +11,7 @@ auto-monitor
 feh --no-fehbg --bg-scale ~/.config/wallpaper ~/.config/wallpaper
 
 # bar
-sh /home/greg/.config/i3/polybar.sh
+sh ~/.config/i3/polybar.sh
 
 # force turn on numlock
 numlockx on &
@@ -28,6 +28,9 @@ xset m 0 0 &
 # keyboard repeat rate
 xset r rate 250 50
 
+# russian keyboard
+setxkbmap -option grp:win_space_toggle us,ru ,phonetic_winkeys &
+
 # blue-light filter
 redshift -c ~/.config/redshift.conf &
 
@@ -39,7 +42,3 @@ devmon &
 
 # hide cursor after timeout
 unclutter &
-
-# if in office, launch slack
-sleep 5 && slack-auto &
-birdtray &
