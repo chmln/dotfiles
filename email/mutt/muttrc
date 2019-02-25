@@ -1,0 +1,77 @@
+set mbox_type   = Maildir
+set sendmail    = /usr/bin/msmtp
+
+unset record
+
+set realname   = "Gregory"
+set mail_check = 0
+set envelope_from
+
+unset move           # gmail does that
+set delete           # don't ask, just do
+unset confirmappend  # don't ask, just do!
+set quit             # don't ask, just do!!
+unset mark_old       # read/new is good enough for me
+
+# sort/threading
+set sort     = reverse-date-received
+set sort_aux = reverse-last-date-received
+set sort_re
+
+# look and feel
+set sleep_time = 0
+set pager_index_lines = 12
+set pager_context     = 5
+set pager_stop
+set menu_scroll
+set smart_wrap
+set tilde
+unset markers
+
+set index_format="%Z %<[y?%<[m?%<[d?%[%H:%M ]&%[%a %d]>&%[%b %d]>&%[%m/%y ]> %-19.19L %s"
+color index_date white default
+color index blue default "~U" # unread messages
+color indicator black white
+color header white default .*
+color status default black
+set status_format=""
+
+
+set help=no
+
+# composing
+set fcc_attach
+unset mime_forward
+set forward_format = "Fwd: %s"
+set include
+set forward_quote
+
+ignore *                               # first, ignore all headers
+unignore from: to: cc: date: subject:  # then, show only these
+hdr_order from: to: cc: date: subject: # and in this order
+
+
+# keybinds
+macro index,pager D "<purge-message><sync-mailbox>"
+bind pager j next-line
+bind pager k previous-line
+bind pager \Cj next-undeleted
+bind pager \Ck previous-undeleted
+
+
+# html/plaintext
+set mailcap_path  = ~/.config/mutt/mailcap
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+bind attach <return>    view-mailcap
+
+# -------------------------
+# NOTMUCH
+# ------------------------
+
+set nm_default_uri = "notmuch:///home/greg/.local/share/mail"
+set folder=/home/greg/.local/share/mail/.notmuch
+set virtual_spoolfile=yes
+
+virtual-mailboxes "UnifiedInbox" "notmuch://?query=tag:inbox&limit=100&type=messages"
+virtual-mailboxes "Sent" "notmuch://?query=tag:sent&limit=100&type=messages"
