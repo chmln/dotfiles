@@ -14,8 +14,8 @@ runtime ./project-file-tools.vim
 runtime ./extras.vim
 runtime ./syntax.vim
 runtime ./terminal.vim
+runtime ./focus.vim
 
 call plug#end()
 
 colorscheme onedark
-
