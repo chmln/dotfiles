@@ -36,7 +36,6 @@ color header white default .*
 color status default black
 set status_format=""
 
-
 set help=no
 
 # composing
@@ -45,6 +44,10 @@ unset mime_forward
 set forward_format = "Fwd: %s"
 set include
 set forward_quote
+
+# properly set the From header based on recipient address
+message-hook '~h gregory.petrosyan@mail.utoronto.ca' "set from=gregory.petrosyan@mail.utoronto.ca"
+message-hook '~h gregory.mkv@gmail.com' "set from=gregory.mkv@gmail.com"
 
 ignore *                               # first, ignore all headers
 unignore from: to: cc: date: subject:  # then, show only these
@@ -58,12 +61,14 @@ bind pager k previous-line
 bind pager \Cj next-undeleted
 bind pager \Ck previous-undeleted
 
+macro index,pager \Cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+macro attach,compose \Cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
 
 # html/plaintext
 set mailcap_path  = ~/.config/mutt/mailcap
 auto_view text/html
 alternative_order text/plain text/enriched text/html
-bind attach <return>    view-mailcap
+bind attach <return> view-mailcap
 
 # -------------------------
 # NOTMUCH
