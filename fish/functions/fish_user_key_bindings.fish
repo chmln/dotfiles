@@ -12,7 +12,7 @@ function fzf_edit
   begin
     if [ -n "$target" ]
       commandline -f repaint
-      eval "$argv[2] $target"
+      $argv[2] "$target"
     end
   end
 
@@ -68,13 +68,15 @@ end
 function fish_user_key_bindings
   keybind \co "fzf_edit d $EDITOR"
 	keybind \cp "fzf_edit f $EDITOR"
-	keybind \cs 'fzf_edit f "run xdg-open" "exit"'
+	keybind \cs "fzf_edit f xdg-open exit"
 	keybind \cn duplicate_term
 	keybind \cg fzf_cd
 	keybind \ca fzf_autocomplete
 	keybind \cb fzf_branch
 	keybind \ck fzf_kill
   keybind \cf ranger
-
 end
 
+# https://github.com/fish-shell/fish-shell/issues/3899
+bind -M insert -k dc delete-char
+bind -M default -k dc delete-char

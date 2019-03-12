@@ -6,6 +6,6 @@ source "$DIR/functions.fish"
 # Start DE/WM at login
 if status --is-login
   if test -z "$DISPLAY" -a $XDG_VTNR = 1
-    exec startx -- -keeptty
+    exec startx /home/greg/.config/x11/xinitrc -- -keeptty
   end
 end

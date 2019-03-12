@@ -29,16 +29,14 @@ set -gx FZF_DEFAULT_OPTS "--reverse"
 set -gx FZF_DEFAULT_COMMAND 'fd -t f --hidden -E .git -E node_modules'
 set -gx BAT_THEME "TwoDark"
 
-# always show scrollbars
 set -gx GTK_OVERLAY_SCROLLING 0
 
 # use gtk theme in qt
 # set -gx QT_QPA_PLATFORMTHEME "qt5ct"
 
-# disable redundant merge messages
 set -gx GIT_MERGE_AUTOEDIT "no"
-
 set -gx RUSTC_WRAPPER "sccache"
+set -gx LESS "-Ri "
 
 set -x fish_greeting
 set fish_cursor_default block
