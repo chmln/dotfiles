@@ -3,3 +3,4 @@ fish/fishd*
 fish/completions
 fish_universal_variables
 fisher.fish
+*.log
