@@ -1,0 +1,5 @@
+#!/usr/bin/env fish
+set -l path (zenity --file-selection --save --file-filter "Screenshot | *.png" --filename "screenshot.png")
+xclip -o -sel clipboard -t image/png > $path
+notify-send "Saved" "$path"
+echo  "$path" | xsel -b
