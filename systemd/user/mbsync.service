@@ -1,0 +1,7 @@
+[Unit]
+Description=Mailbox synchronization service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/mbsync -a --config /home/greg/.config/mbsync/config
+ExecStartPost=/home/greg/.config/mbsync/postsync.sh
