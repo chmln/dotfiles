@@ -2,7 +2,7 @@ function e
    eval $EDITOR $argv
 end
 
-function ee 
+function ee
   set -l path (realpath $argv[1])
   sudo -e $path
 end
@@ -29,7 +29,7 @@ function maintenance
 end
 
 function updater
-  yaourt -Syua $argv
+  pikaur -Syu --noconfirm $argv
   maintenance
   return 0
 end

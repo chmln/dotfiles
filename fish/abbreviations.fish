@@ -1,13 +1,13 @@
 # package management
-abbr -a get "yaourt -S"
+abbr -a get "pikaur -S"
 abbr -a r "sudo pacman -Rn"
 abbr -a rdd "sudo pacman -Rdd"
 abbr -a findpkg "pacman -Qss"
-abbr -a aur "yaourt"
+abbr -a aur "pikaur -Ss"
 abbr -a rmall "sudo rmall"
 abbr -a maintenance "sudo paccache -ruk0; sudo pacman -Rns (pacman -Qtdq)"
 
-# systemd-os 
+# systemd-os
 abbr -a start "sudo systemctl start"
 abbr -a restart "sudo systemctl restart"
 abbr -a stop "sudo systemctl stop"
