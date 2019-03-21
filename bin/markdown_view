@@ -1,0 +1,10 @@
+#!/usr/bin/env fish
+if test -z "$argv[1]"
+  echo "file path must be specified"
+  exit 1
+end
+
+set -l tmpfile (mktemp)
+pandoc --from=gfm "$argv[1]" -o "$tmpfile.pdf"
+xdg-open "$tmpfile.pdf"
+watchexec -w "$argv[1]" --force-poll 1000 -- pandoc --from=gfm "$argv[1]" -o "$tmpfile.pdf"
