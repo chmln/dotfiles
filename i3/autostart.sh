@@ -42,3 +42,6 @@ devmon &
 
 # hide cursor after timeout
 unclutter &
+
+# check for missed email notifications
+~/.config/mbsync/boot.sh &
