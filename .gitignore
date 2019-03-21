@@ -4,3 +4,4 @@ fish/completions
 fish_universal_variables
 fisher.fish
 *.log
+mpd/mpd.db
