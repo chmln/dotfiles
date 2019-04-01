@@ -1,5 +1,9 @@
-" theme
 Plug 'joshdick/onedark.vim'
+
+let g:onedark_color_overrides = {
+\ "black": {"gui": "#000", "cterm": "0", "cterm16": "0" },
+\}
+
 syntax on
 set termguicolors
 
@@ -11,7 +15,6 @@ let g:mta_filetypes = {
 \ 'html' : 1,
 \ 'xhtml' : 1,
 \ 'xml' : 1,
-\ 'jinja' : 1,
 \}
 
 " typescript + tsx
@@ -27,7 +30,3 @@ Plug 'dag/vim-fish'
 Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim'
 Plug 'mboughaba/i3config.vim'
-
-let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'typescript']
-let g:markdown_syntax_conceal = 1
-
