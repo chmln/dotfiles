@@ -2,7 +2,7 @@ GRUB_DEFAULT=saved
 
 GRUB_TIMEOUT=5
 GRUB_DISTRIBUTOR="Arch"
-GRUB_CMDLINE_LINUX_DEFAULT="resume=UUID=486fd658-1b1d-4e30-b3e4-5964df371235 init=/usr/lib/systemd/systemd drm_kms_helper.poll=N noibrs noibpb nopti nospectre_v2 nospectre_v1 pcie_aspm.policy=powersave apparmor=0"
+GRUB_CMDLINE_LINUX_DEFAULT="resume=UUID=486fd658-1b1d-4e30-b3e4-5964df371235 init=/usr/lib/systemd/systemd noibrs noibpb nopti nospectre_v2 nospectre_v1"
 GRUB_CMDLINE_LINUX=""
 
 # Preload both GPT and MBR modules so that they are not missed
