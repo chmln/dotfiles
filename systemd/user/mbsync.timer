@@ -1,9 +1,11 @@
 [Unit]
 Description=Mailbox synchronization timer
+Wants=network-online.target
+After=network-online.target
 
 [Timer]
-OnBootSec=30s
-OnUnitActiveSec=2m
+OnBootSec=0s
+OnUnitActiveSec=1m
 Unit=mbsync.service
 
 [Install]
