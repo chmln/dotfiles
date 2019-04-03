@@ -167,7 +167,7 @@ animation-charging-framerate = 750
 
 [module/network]
 type = internal/network
-interface = wlp2s0
+interface = wlan0
 
 interval = 3.0
 
