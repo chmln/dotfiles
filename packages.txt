@@ -12,7 +12,7 @@ automake
 b43-fwcutter
 bash
 bat
-bitwarden-cli
+bootiso
 bzip2
 chromium
 cli-visualizer
@@ -34,6 +34,7 @@ diffutils
 dmraid
 docker-bin
 docker-compose-bin
+docx2txt
 dosfstools
 downgrade
 dunst-git
@@ -51,9 +52,7 @@ feh
 file
 filesystem
 findutils
-firefox-nightly
-fish
-fisher
+fish-git
 fontconfig
 freetype2
 fzf
@@ -79,7 +78,6 @@ gst-plugins-base
 gtk2
 gtk3-nocsd-git
 gzip
-hblock
 hdparm
 htop
 hugo
@@ -97,6 +95,7 @@ iputils
 ipw2100-fw
 ipw2200-fw
 isync-git
+iwd-git
 jq
 jsoncpp
 lazygit
@@ -105,6 +104,7 @@ libblockdev-lean
 libcdio-paranoia
 libgdiplus
 libgsf
+libinput
 libmad
 libmpcdec
 libmtp
@@ -118,7 +118,7 @@ linux
 linux-headers
 linux-lts
 linux-lts-headers
-linux-mainline
+loggedfs-git
 logrotate
 lostfiles
 lvm2
@@ -143,7 +143,7 @@ ncdu
 ncmpcpp
 neofetch
 neomutt
-neovim
+neovim-git
 net-tools
 nilfs-utils
 nodejs
@@ -152,6 +152,7 @@ noto-fonts-emoji-blob
 npm
 ntp
 numlockx
+odt2txt
 openresolv
 openssh
 opusfile
@@ -165,8 +166,6 @@ patch
 pciutils
 perl
 perl-anyevent
-pikaur-git
-pkgbrowser
 pkgconf
 pkgfile
 polybar
@@ -175,7 +174,7 @@ powertop
 procps-ng
 psmisc
 pspg
-python-neovim
+python-neovim-git
 python-virtualenv
 ranger-git
 redshift-minimal
@@ -208,6 +207,7 @@ tldr++
 transmission-gtk
 trash-cli
 ttf-droid
+ttf-ibm-plex
 udevil
 udisks2
 ufw
@@ -228,7 +228,6 @@ which
 wireguard-tools
 wireless_tools
 wmctrl
-wpa_supplicant
 xbrightness
 xclip
 xcolor
@@ -259,9 +258,10 @@ xorg-xrandr
 xorg-xrdb
 xorg-xset
 xorg-xvinfo
-xorg-xwininfo
 xsel
 xterm
+yaourt
+yay-bin
 youtube-dl
 zathura
 zathura-pdf-mupdf
