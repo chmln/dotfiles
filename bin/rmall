@@ -1,2 +1,2 @@
 #/bin/sh
-pacman -Rn $(pikaur -Qqs $1)
+pacman -Rn $(yaourt -Qqs $1)
