@@ -29,7 +29,7 @@ xset m 0 0 &
 xset r rate 250 50
 
 # russian keyboard
-setxkbmap -option grp:win_space_toggle us,ru ,phonetic_winkeys &
+setxkbmap -option grp:win_space_toggle us,ru,am ,phonetic_winkeys,phonetic &
 
 # blue-light filter
 redshift -c ~/.config/redshift.conf &
