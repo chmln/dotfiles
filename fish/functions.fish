@@ -29,7 +29,7 @@ function maintenance
 end
 
 function updater
-  pikaur -Syu --noconfirm $argv
+  yaourt -Syu $argv
   maintenance
   return 0
 end

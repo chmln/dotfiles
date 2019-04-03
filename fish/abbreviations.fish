@@ -1,9 +1,9 @@
 # package management
-abbr -a get "pikaur -S"
+abbr -a get "yaourt -S"
 abbr -a r "sudo pacman -Rn"
 abbr -a rdd "sudo pacman -Rdd"
 abbr -a findpkg "pacman -Qss"
-abbr -a aur "pikaur -Ss"
+abbr -a aur "yaourt"
 abbr -a rmall "sudo rmall"
 abbr -a maintenance "sudo paccache -ruk0; sudo pacman -Rns (pacman -Qtdq)"
 
