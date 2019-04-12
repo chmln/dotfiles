@@ -18,5 +18,6 @@ abbr -a status "sudo systemctl status"
 # misc
 abbr -a c "clear"
 abbr -a gs "git status"
+abbr -a gd "git diff"
 abbr -a sl "adb sideload"
 abbr -a update-grub "sudo grub-mkconfig -o /boot/grub/grub.cfg"

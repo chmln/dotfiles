@@ -4,7 +4,8 @@ end
 
 function ee
   set -l path (realpath $argv[1])
-  sudo -e $path
+  #sudo -e $path
+  sudoedit $path
 end
 
 function l
