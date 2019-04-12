@@ -78,5 +78,5 @@ set nm_default_uri = "notmuch:///home/greg/.local/share/mail"
 set folder=/home/greg/.local/share/mail/.notmuch
 set virtual_spoolfile=yes
 
-virtual-mailboxes "UnifiedInbox" "notmuch://?query=tag:inbox&limit=100&type=messages"
-virtual-mailboxes "Sent" "notmuch://?query=tag:sent&limit=100&type=messages"
+virtual-mailboxes "UnifiedInbox" "notmuch://?query=tag:inbox&limit=500&type=messages"
+virtual-mailboxes "Sent" "notmuch://?query=tag:sent&limit=500&type=messages"
