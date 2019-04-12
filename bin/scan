@@ -1,0 +1,14 @@
+#!/usr/bin/env fish
+set -l mode (echo -e "JPG\nPDF" | rofi -dmenu)
+set -l ext (echo $mode | tr '[:upper:]' '[:lower:]')
+set -l time (date +%H-%M)
+set -l filename "scan-$time.$ext"
+
+switch $mode
+  case JPG
+    scanimage --format=tiff | convert tiff:- "/tmp/$filename"
+  case PDF
+    scanimage | ps2pdf - "/tmp/$filename"
+end
+
+notify-send "scan complete"
