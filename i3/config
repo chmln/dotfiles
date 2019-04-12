@@ -1,13 +1,14 @@
 set $mod Mod1
 set $accent_color #ffcf4b
-set $pulseaudio_sink alsa_output.pci-0000_00_1b.0.analog-stereo
 floating_modifier $mod
+
+default_orientation auto
 
 # ============ APPEARANCE
 font pango: Source Code Pro Bold 11
 
 for_window [class="^.*"] border pixel 6
-client.focused $accent_color $accent_color #000000
+client.focused $accent_color $accent_color #000000 $accent_color
 
 smart_gaps on
 smart_borders on
@@ -96,3 +97,4 @@ bindsym $mod+d exec launcher
 
 # ============ STARTUP
 exec_always "sh ~/.config/i3/autostart.sh > /tmp/autostart.log"
+exec_always --no-startup-id /home/greg/.config/i3/alternating_layouts.py
