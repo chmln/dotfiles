@@ -1,14 +1,15 @@
 set hidden
 set number
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
 set expandtab
-set noshiftround
 set laststatus=2
 set relativenumber
 set nowrap
 set hlsearch
+
+set autoindent
+set backspace=indent,eol,start
+set complete-=i
+set smarttab
 
 set clipboard=unnamedplus
 let g:yankring_clipboard_monitor=0

@@ -1,11 +1,12 @@
 {
   "coc.source.around.enable": false,
-  "coc.preferences.hoverTarget": "echo",
+  "coc.preferences.hoverTarget": "float",
   "suggest.maxCompleteItemCount": 25,
   "coc.source.buffer.enable": false,
   "diagnostic.enableMessage": "jump",
   "suggest.triggerCompletionWait":300,
   "coc.source.file.enable": false,
+  "coc.preferences.enableFloatHighlight": true,
   "tsserver.enableJavascript": false,
   "suggest.autoTrigger":"always",
   "diagnostic.enable": true,
