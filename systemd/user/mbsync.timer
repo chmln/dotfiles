@@ -4,7 +4,7 @@ Wants=network-online.target
 After=network-online.target
 
 [Timer]
-OnBootSec=0s
+OnBootSec=20s
 OnUnitActiveSec=1m
 Unit=mbsync.service
 

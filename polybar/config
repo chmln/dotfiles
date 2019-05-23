@@ -100,18 +100,18 @@ label-song-ellipsis = true
 type = internal/date
 interval = 5
 
-date =
-date-alt = " %Y-%m-%d"
+date = %A, %B %d
+date-alt = %Y-%m-%d
 
 time = %H:%M
 time-alt = %H:%M:%S
 
-format =<label>
+format =<label>
 
-format-prefix = 
+format-prefix =
 format-prefix-foreground = ${colors.foreground-alt}
 
-label = %date% %time%
+label =  %date%   %time%
 
 [module/alsa]
 type = internal/alsa

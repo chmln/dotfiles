@@ -15,7 +15,7 @@ Xcursor.size: 30
 *XTerm*trimSelection: true
 
 *foreground: #D7D0C7
-*background: #151515
+*background: #0d0d0d
 
 !black
 ! *color0:     #AF875F
@@ -43,3 +43,6 @@ Xcursor.size: 30
 !white
 *color7:     #dddddd
 *color15:    #dddddd
+
+URxvt.perl-ext:
+URxvt.perl-ext-common:
