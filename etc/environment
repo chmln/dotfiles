@@ -1,3 +1,0 @@
-XAUTHORITY=/tmp/.Xauthority
-SSH_AUTH_SOCK DEFAULT="${XDG_RUNTIME_DIR}/ssh-agent.socket"
-ZDOTDIR=/home/greg/.dotfiles/zsh
