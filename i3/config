@@ -1,5 +1,12 @@
+# vim: ft=i3config
+
 set $mod Mod1
-set $accent_color #ffcf4b
+
+#set $accent_color #6694F6
+
+set $active_color #ffffff
+set $inactive_color #333333
+
 floating_modifier $mod
 
 default_orientation auto
@@ -8,7 +15,8 @@ default_orientation auto
 font pango: Source Code Pro Bold 11
 
 for_window [class="^.*"] border pixel 6
-client.focused $accent_color $accent_color #000000 $accent_color
+client.focused $active_color $active_color #000000 $active_color
+client.focused_inactive $inactive_color $inactive_color #000000 $inactive_color
 
 smart_gaps on
 smart_borders on
@@ -27,6 +35,7 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+l move right
 
 bindsym $mod+v split v
+bindsym $mod+n split h
 
 bindsym $mod+s layout stacking
 bindsym $mod+t layout tabbed
@@ -44,6 +53,8 @@ focus_follows_mouse no
 
 # center all floating windows
 for_window [floating] move position center
+
+for_window [instance="skype"] floating disable
 
 # ============ WORKSPACES
 set $ws1 "1"
@@ -80,8 +91,8 @@ bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws1; workspace $ws10
 
 # ============ EXTERNAL KEYBINDINGS
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec --no-startup-id acpi-ease-backlight -d 0.3 inc 1000
+bindsym XF86MonBrightnessDown exec --no-startup-id acpi-ease-backlight -d 0.3 dec 1000
 
 bindsym XF86AudioRaiseVolume exec amixer set Master 3%+
 bindsym XF86AudioLowerVolume exec amixer set Master 3%-

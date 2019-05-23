@@ -26,7 +26,7 @@ xset s off -dpms
 xset m 0 0 &
 
 # keyboard repeat rate
-xset r rate 250 50
+xset r rate 250 75
 
 # russian keyboard
 setxkbmap -option grp:win_space_toggle us,ru,am ,phonetic_winkeys,phonetic &
@@ -38,7 +38,7 @@ redshift -c ~/.config/redshift.conf &
 xrdb ~/.config/x11/xresources &
 
 # auto-mount plugged in usb devices
-devmon &
+devmon --exec-on-drive "notify-send 'Mounted %l at %d'" &
 
 # hide cursor after timeout
 unclutter &
