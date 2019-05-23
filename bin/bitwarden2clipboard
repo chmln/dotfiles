@@ -1,0 +1,11 @@
+#!/usr/bin/env fish
+set -l credentials (bw list items | jq -r '.[] | "\(.name) [\(.login.username)]"' | rofi -dmenu -show | rg '(.*) \[(.*)\]' -r '$1 $2')
+set -l url (echo $credentials | cut -d ' ' -f1 )
+set -l username (echo $credentials | cut -d ' ' -f2)
+set -l password (bw list items --search "$url" | jq -c -r ".[] | select(.login.username == \"$username\") | .login.password" | head -n1)
+
+echo "$username $password" | xsel -b
+notify-send "Copied credentials for $url to clipboard"
+sleep 15
+xsel -cb
+
