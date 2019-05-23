@@ -7,5 +7,6 @@ source "$DIR/functions.fish"
 if status --is-login
   if test -z "$DISPLAY" -a $XDG_VTNR = 1
     exec startx /home/greg/.config/x11/xinitrc -- -keeptty
+    #exec sway -V 2>&1 > /home/greg/.local/share/sway.log
   end
 end

@@ -16,21 +16,15 @@ function cat
   /usr/bin/bat --theme=TwoDark --style plain $argv
 end
 
-#function fish_title
-#  if set -gq TITLE
-#    echo $TITLE
-#  else
-#    echo (status current-command)
-#  end
-#end
-
 function maintenance
   sudo paccache -ruk0
   sudo pacman -Rns --noconfirm (pacman -Qtdq)
 end
 
 function updater
-  yaourt -Syu $argv
+  yay -Syu $argv[1] --noconfirm
+  # circular dependency :(
+  sudo rmall python-sphinx
   maintenance
   return 0
 end
