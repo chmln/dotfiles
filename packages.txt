@@ -55,7 +55,7 @@ ffmpeg
 file
 filesystem
 findutils
-fish-git
+fish
 fontconfig
 freetype2
 fzf
@@ -119,7 +119,6 @@ libvdpau
 licenses
 linux
 linux-lts
-linux-mainline
 logrotate
 lostfiles
 lvm2

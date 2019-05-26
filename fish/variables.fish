@@ -45,5 +45,4 @@ set fish_cursor_insert line
 # Wayland
 #set -gx QT_QPA_PLATFORM "wayland-egl"
 #set -gx CLUTTER_BACKEND "wayland"
-set -gx SDL_VIDEODRIVER "wayland"
-set -gx KITTY_ENABLE_WAYLAND "true"
+#set -gx SDL_VIDEODRIVER "wayland"

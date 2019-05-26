@@ -18,7 +18,7 @@ autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
 " open terminal
-noremap <silent> <F4> :silent !nohup xterm >/dev/null 2>&1 &<CR>
+noremap <silent> <F4> :silent !nohup terminal >/dev/null 2>&1 &<CR>
 noremap <silent> <C-s> :w!<CR>
 
 " disable arrow keys
