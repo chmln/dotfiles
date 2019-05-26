@@ -14,7 +14,7 @@ output * bg /home/greg/.config/wallpaper fill
 #input 1:1:AT_Translated_Set_2_keyboard {
 input type:keyboard {
     repeat_delay 200
-    repeat_rate 50
+    repeat_rate 75
 }
 
 input type:pointer {
