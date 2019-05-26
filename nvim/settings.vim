@@ -6,10 +6,7 @@ set relativenumber
 set nowrap
 set hlsearch
 
-set autoindent
-set backspace=indent,eol,start
 set complete-=i
-set smarttab
 
 set clipboard=unnamedplus
 let g:yankring_clipboard_monitor=0

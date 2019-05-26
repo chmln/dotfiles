@@ -2,6 +2,8 @@ Plug 'lambdalisue/gina.vim'
 Plug 'prettier/vim-prettier', { 'do': 'npm i' }
 Plug 'mattn/emmet-vim'
 
+Plug 'tpope/vim-sleuth'
+
 Plug 'mg979/vim-visual-multi', {'branch': 'test'}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-visual-multi configuration
