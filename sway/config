@@ -1,34 +1,36 @@
 # vi: ft=i3config
 set $mod Mod1
-set $accent_color #ffcf4b
+set $accent_color #ffffff
 floating_modifier $mod
 
 # ============ MONITORS
 
 output eDP-1 pos 320,1440 mode 1920x1080
 output HDMI-A-1 pos 0,0 mode 2560x1440
-output * bg /home/greg/.config/wallpaper fill
+output * bg ~/.config/wallpaper fill
 
 # ============ INPUTS
 
-#input 1:1:AT_Translated_Set_2_keyboard {
 input type:keyboard {
-    repeat_delay 200
+    repeat_delay 225
     repeat_rate 75
 }
 
+input type:touchpad {
+    tap enabled
+}
+
 input type:pointer {
-#input 6899:1:Kingsis_Peripherals_ZOWIE_Gaming_mouse {
   pointer_accel 0
 }
 
 # =========== MODES
 
 mode "resize" {
-    bindsym h left resize shrink width 10px
-    bindsym j resize grow height 10px
-    bindsym k resize shrink height 10px
-    bindsym l resize grow width 10px
+    bindsym h resize shrink width 100px
+    bindsym j resize grow height 100px
+    bindsym k resize shrink height 100px
+    bindsym l resize grow width 100px
 
     # return to default mode
     bindsym Return mode "default"
@@ -112,18 +114,17 @@ bindsym $mod+Shift+0 move container to workspace $ws1
 bindsym XF86MonBrightnessUp exec --no-startup-id acpi-ease-backlight -d 0.3 inc 1000
 bindsym XF86MonBrightnessDown exec --no-startup-id acpi-ease-backlight -d 0.3 dec 1000
 
-bindsym XF86AudioRaiseVolume exec amixer set Master 3%+
-bindsym XF86AudioLowerVolume exec amixer set Master 3%-
-bindsym XF86AudioMute exec amixer sset Master mute
+bindsym XF86AudioRaiseVolume exec amixer set Master 3%+ && pkill -x -RTMIN+11 waybar
+bindsym XF86AudioLowerVolume exec amixer set Master 3%- && pkill -x -RTMIN+11 waybar
 
-bindsym $mod+Prior exec brite +10000
-bindsym $mod+Next exec brite -10000
+bindsym XF86AudioMute exec amixer sset Master mute  && pkill -x -RTMIN+11 waybar
+
+#bindsym $mod+Prior exec brite +10000
+#bindsym $mod+Next exec brite -10000
 
 bindsym $mod+Shift+s exec screenshot
-bindsym $mod+Return exec xterm
+bindsym $mod+Return exec terminal
 bindsym $mod+d exec launcher
 
 # ============ STARTUP
 exec_always "sh ~/.config/sway/autostart.sh > /tmp/autostart.log"
-
-include /etc/sway/config.d/*

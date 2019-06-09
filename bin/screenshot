@@ -1,2 +1,3 @@
 #!/usr/bin/bash
-maim -u -s -m 10 | xclip -selection clipboard -t image/png
+#maim -u -s -m 10 | xclip -selection clipboard -t image/png
+grim -g "$(slurp)" - | wl-copy

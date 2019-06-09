@@ -6,7 +6,7 @@
     "output": "eDP-1",
     "modules-left": ["sway/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["mpd", "network", "battery", "tray"],
+    "modules-right": ["mpd", "custom/alsa", "network", "battery", "tray"],
 
     "sway/window": {
       "max-length": 50
@@ -15,11 +15,11 @@
     "sway/workspaces": {
        "disable-scroll": true,
        "all-outputs": true,
-       "format": "{name}",
+       "format": "{name}{icon}",
        "format-icons": {
-           "urgent": "",
-           "focused": "",
-           "default": ""
+           "urgent": " ",
+           "focused": "",
+           "default": ""
        }
     },
     "mpd": {
@@ -54,7 +54,7 @@
     },
     "clock": {
         "tooltip-format": "{:%Y-%m-%d | %H:%M}",
-        "format": "{:%a %d, %H:%M}",
+        "format": "{:%A, %B %d, %I:%M}",
         "format-alt": "{:%Y-%m-%d}"
     },
     "battery": {
@@ -63,15 +63,25 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
+        "format": "{icon} {capacity}%",
+        "format-good": "", // An empty format will hide the module
+        "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
         // "interface": "wlp2s0", // (Optional) To force the use of this interface
-        "format-wifi": " {essid}",
+        "format-wifi": " {essid}",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-disconnected": "Disconnected ⚠"
+        "format-disconnected": "Disconnected ⚠",
+        "tooltip-format": ""
+    },
+    "custom/alsa": {
+        "exec": "~/.config/bin/alsa.sh",
+        "on-click": "amixer set Master toggle; pkill -x -RTMIN+11 waybar",
+        "on-scroll-up": "amixer set Master 1+; pkill -x -RTMIN+11 waybar",
+        "on-scroll-down": "amixer set Master 1-; pkill -x -RTMIN+11 waybar",
+        "signal": 11,
+        "interval": 10,
+        "tooltip": false
     }
 }

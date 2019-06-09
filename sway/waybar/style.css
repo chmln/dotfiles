@@ -1,9 +1,9 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Source Code Pro;
-    font-weight: bold;
-    font-size: 16px;
+    font-family: IBM Plex Mono, 'Font Awesome 5 Free';
+    font-weight: 500;
+    font-size: 15px;
     min-height: 0;
 }
 
@@ -22,11 +22,11 @@ window#waybar.hidded {
     padding: 0 15px;
     background: transparent;
     color: #ffffff;
-    border-bottom: 3px solid transparent;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-#workspaces button.focused {
-    background: #555;
+#workspaces button.visible {
+    background: #444;
 }
 
 #workspaces button.urgent {
@@ -44,6 +44,7 @@ window#waybar.hidded {
 
 #clock {
     background-color: transparent;
+    font-weight: bold;
 }
 
 #battery {
@@ -84,6 +85,7 @@ label:focus {
 #network {
     background: transparent;
 }
+
 
 #network.disconnected {
     background: #f53c3c;

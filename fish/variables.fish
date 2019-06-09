@@ -31,11 +31,8 @@ set -gx BAT_THEME "TwoDark"
 
 set -gx GTK_OVERLAY_SCROLLING 0
 
-# use gtk theme in qt
-# set -gx QT_QPA_PLATFORMTHEME "qt5ct"
-
 set -gx GIT_MERGE_AUTOEDIT "no"
-set -gx RUSTC_WRAPPER "sccache"
+#set -gx RUSTC_WRAPPER "sccache"
 set -gx LESS "-Ri "
 
 set -x fish_greeting
@@ -43,6 +40,7 @@ set fish_cursor_default block
 set fish_cursor_insert line
 
 # Wayland
-#set -gx QT_QPA_PLATFORM "wayland-egl"
-#set -gx CLUTTER_BACKEND "wayland"
-#set -gx SDL_VIDEODRIVER "wayland"
+if set -q SWAYSOCK
+    set -gx SDL_VIDEODRIVER "wayland"
+    set -gx MOZ_ENABLE_WAYLAND 1
+end
