@@ -4,7 +4,8 @@ set expandtab
 set laststatus=2
 set relativenumber
 set nowrap
-set hlsearch
+
+set nomodeline
 
 set complete-=i
 

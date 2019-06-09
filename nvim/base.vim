@@ -1,9 +1,6 @@
 " tame the quickfix window
 Plug 'romainl/vim-qf'
 
-" better hlsearch
-Plug 'romainl/vim-cool'
-
 " remove trailing whitespace
 Plug 'KorySchneider/vim-trim'
 autocmd BufWritePre * :Trim

@@ -1,2 +1,2 @@
 #!/bin/sh
-run $(mimeo -c x-scheme-handler/http | cut -f1 -d ' ')
+run $(mimeo -c x-scheme-handler/http | sd '(.*)file://.*' '$1')

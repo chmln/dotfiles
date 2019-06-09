@@ -102,8 +102,8 @@ bindsym $mod+Prior exec brite +10000
 bindsym $mod+Next exec brite -10000
 
 bindsym $mod+Shift+s exec screenshot
-bindsym $mod+Return exec --no-startup-id xterm
-bindsym $mod+Shift+Return exec --no-startup-id xterm -e 'ranger'
+bindsym $mod+Return exec --no-startup-id terminal
+bindsym $mod+Shift+Return exec --no-startup-id terminal -e 'ranger'
 bindsym $mod+d exec launcher
 
 # ============ STARTUP
