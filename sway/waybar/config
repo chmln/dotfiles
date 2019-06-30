@@ -1,12 +1,12 @@
 // vi: ft=json5
 {
-    "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    "layer": "top",
+    "position": "bottom",
+    "height": 30,
     "output": "eDP-1",
     "modules-left": ["sway/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["mpd", "custom/alsa", "network", "battery", "tray"],
+    "modules-right": ["mpd", "custom/kbd_layout", "custom/email", "custom/alsa", "network", "battery", "tray"],
 
     "sway/window": {
       "max-length": 50
@@ -64,24 +64,33 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-good": "", // An empty format will hide the module
         "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
         // "interface": "wlp2s0", // (Optional) To force the use of this interface
         "format-wifi": " {essid}",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-disconnected": "Disconnected ⚠",
-        "tooltip-format": ""
+        "format-ethernet": "",
+        "format-disconnected": "Disconnected",
+        "tooltip-format": "",
+        "on-click": "connman-gtk"
     },
-    "custom/alsa": {
-        "exec": "~/.config/bin/alsa.sh",
+    "custom/email": {
+        "exec": "~/.config/bin/unread_emails",
+        "interval": 1,
+        "return-type": "newline"
+    },
+    "custom/kbd_layout": {
+        "exec": "/home/greg/.config/bin/keyboard_layout",
+        "signal": 12,
+        "interval": 10
+        },
+     "custom/alsa": {
+        "exec": "/home/greg/.config/bin/volume.sh",
         "on-click": "amixer set Master toggle; pkill -x -RTMIN+11 waybar",
         "on-scroll-up": "amixer set Master 1+; pkill -x -RTMIN+11 waybar",
         "on-scroll-down": "amixer set Master 1-; pkill -x -RTMIN+11 waybar",
         "signal": 11,
-        "interval": 10,
-        "tooltip": false
+        "interval": 10
     }
 }
