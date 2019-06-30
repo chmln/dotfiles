@@ -1,0 +1,9 @@
+[Unit]
+Description=Blue light filter
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=redshift -c %h/.config/redshift.conf -m wayland
+
+[Install]
+WantedBy=sway-session.target

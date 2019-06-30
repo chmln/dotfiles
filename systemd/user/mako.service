@@ -4,9 +4,8 @@ Documentation=man:mako(1)
 PartOf=graphical-session.target
 
 [Service]
-Type=dbus
-BusName=org.freedesktop.Notifications
+Type=simple
 ExecStart=/usr/bin/mako --background-color #000000EE --border-color #000000 --font Source Code Pro --padding 10 --max-icon-size 32 --default-timeout 5000
 
 [Install]
-WantedBy=default.target
+WantedBy=sway-session.target

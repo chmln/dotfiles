@@ -1,0 +1,10 @@
+[Unit]
+Description=Waybar
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/waybar --config /home/greg/.dotfiles/sway/waybar/config -s /home/greg/.dotfiles/sway/waybar/style.css
+
+[Install]
+WantedBy=sway-session.target

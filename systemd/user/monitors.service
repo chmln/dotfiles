@@ -1,0 +1,9 @@
+[Unit]
+Description=Set up monitors
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=fish %h/.config/sway/monitors.sh
+
+[Install]
+WantedBy=sway-session.target
