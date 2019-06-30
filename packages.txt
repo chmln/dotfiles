@@ -141,6 +141,7 @@ patch
 pciutils
 perl
 pkgconf
+pkgfile
 polkit-no-script-git
 postgresql-libs
 powertop
@@ -153,7 +154,6 @@ reflector
 rhash
 riot-desktop
 ripgrep
-rofi
 rustup
 sccache-bin
 sd
