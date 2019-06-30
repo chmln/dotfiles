@@ -1,10 +1,14 @@
 Plug 'lambdalisue/gina.vim'
+
 Plug 'prettier/vim-prettier', { 'do': 'npm i' }
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
+
 Plug 'mattn/emmet-vim'
 
+"Plug 'xi/vim-indent-detect'
 Plug 'tpope/vim-sleuth'
-
-Plug 'mg979/vim-visual-multi', {'branch': 'test'}
+Plug 'mg979/vim-visual-multi'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-visual-multi configuration
 
@@ -21,3 +25,4 @@ let g:VM_manual_infoline            = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+Plug 'ciaranm/securemodelines'
