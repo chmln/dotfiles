@@ -11,8 +11,14 @@ node_modules
 .local/share/cargo
 .config/libreoffice
 Cache
+cache
 /proc
 /dev
 /sys
 /run
 uoft-archive
+.config/npm
+/var
+/boot
+/usr/include
+/usr/share/licenses
