@@ -1,19 +1,20 @@
 # vi: ft=i3config
+exec_always "systemctl --user import-environment && systemctl --user start sway-session.target"
+
 set $mod Mod1
 set $accent_color #ffffff
 floating_modifier $mod
 
-# ============ MONITORS
-
-output eDP-1 pos 320,1440 mode 1920x1080
-output HDMI-A-1 pos 0,0 mode 2560x1440
 output * bg ~/.config/wallpaper fill
 
-# ============ INPUTS
-
+# ============ Input Settings
 input type:keyboard {
     repeat_delay 225
     repeat_rate 75
+    xkb_numlock enabled
+    xkb_layout "us,ru"
+    xkb_variant ",phonetic_winkeys"
+    xkb_options "grp:win_space_toggle"
 }
 
 input type:touchpad {
@@ -24,8 +25,9 @@ input type:pointer {
   pointer_accel 0
 }
 
-# =========== MODES
+bindsym Mod4+Space exec 'pkill -x -RTMIN+12 waybar'
 
+# =========== Resizing
 mode "resize" {
     bindsym h resize shrink width 100px
     bindsym j resize grow height 100px
@@ -38,7 +40,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# ============ APPEARANCE
+# ============ Appearance
 font pango: Source Code Pro Bold 11
 
 default_border pixel 6
@@ -66,7 +68,6 @@ bindsym $mod+v split v
 bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
-# ============ MISC
 bindsym $mod+Shift+q kill
 bindsym $mod+f fullscreen toggle
 bindsym $mod+a focus parent
@@ -75,6 +76,10 @@ bindsym $mod+Shift+r reload
 focus_follows_mouse no
 
 for_window [floating] move position center
+
+for_window [app_id="alacritty-menu"] floating enable, move position center, border pixel 6
+for_window [title="About Firefox Developer Edition"] floating enable, move position center
+for_window [title="Choose Download Folder"] floating disable, border pixel 6
 
 # ============ WORKSPACES
 set $ws1 "1"
@@ -99,32 +104,24 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws1
+bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
-# ============ EXTERNAL KEYBINDINGS
 bindsym XF86MonBrightnessUp exec --no-startup-id acpi-ease-backlight -d 0.3 inc 1000
 bindsym XF86MonBrightnessDown exec --no-startup-id acpi-ease-backlight -d 0.3 dec 1000
 
 bindsym XF86AudioRaiseVolume exec amixer set Master 3%+ && pkill -x -RTMIN+11 waybar
 bindsym XF86AudioLowerVolume exec amixer set Master 3%- && pkill -x -RTMIN+11 waybar
-
-bindsym XF86AudioMute exec amixer sset Master mute  && pkill -x -RTMIN+11 waybar
-
-#bindsym $mod+Prior exec brite +10000
-#bindsym $mod+Next exec brite -10000
-
 bindsym $mod+Shift+s exec screenshot
 bindsym $mod+Return exec terminal
 bindsym $mod+d exec launcher
+bindsym $mod+Shift+d exec app_launch
 
-# ============ STARTUP
-exec_always "sh ~/.config/sway/autostart.sh > /tmp/autostart.log"
