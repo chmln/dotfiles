@@ -24,7 +24,7 @@ function fzf_edit
 end
 
 function fzf_cd
-  set target (fzf_selector -t d)
+  set target (fzf_selector -t d "" /)
 	if [ -n "$target" ]
     cd "$target"
   end
@@ -57,7 +57,7 @@ function fzf_kill
 end
 
 function duplicate_term
-  nohup xterm >/dev/null 2>&1 &
+  nohup terminal >/dev/null 2>&1 &
 end
 
 function keybind

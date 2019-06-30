@@ -21,7 +21,7 @@ set -gx RUSTUP_HOME "/home/greg/.local/share/rustup"
 set -gx LESSHISTFILE "/dev/null"
 set -gx NERDTREE_BOOKMARKS "/tmp/.NERDTreeBookmarks"
 set -gx GNUPGHOME "/home/greg/.config/gnupg"
-set -gx ANDROID_SDK_HOME "~/.config/android"
+set -gx ANDROID_SDK_HOME "/home/greg/.config/android"
 set -gx NPM_CONFIG_USERCONFIG "~/.config/npm/npmrc"
 set -gx NOTMUCH_CONFIG "/home/greg/.config/notmuch/config"
 
@@ -43,4 +43,5 @@ set fish_cursor_insert line
 if set -q SWAYSOCK
     set -gx SDL_VIDEODRIVER "wayland"
     set -gx MOZ_ENABLE_WAYLAND 1
+    set -gx KITTY_ENABLE_WAYLAND 1
 end

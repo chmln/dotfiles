@@ -14,6 +14,7 @@ abbr -a stop "sudo systemctl stop"
 abbr -a disable "sudo systemctl disable"
 abbr -a enable "sudo systemctl enable"
 abbr -a status "sudo systemctl status"
+abbr -a sysu "systemctl --user"
 
 # misc
 abbr -a c "clear"
