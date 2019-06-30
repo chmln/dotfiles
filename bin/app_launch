@@ -1,0 +1,2 @@
+#!/bin/fish
+alacritty -d 50 10 --position 800 700 --class alacritty-menu -e app_list
