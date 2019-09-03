@@ -1,6 +1,6 @@
 [Unit]
 Description=Waybar
-PartOf=graphical-session.target
+After=sway-session.target
 
 [Service]
 Type=simple

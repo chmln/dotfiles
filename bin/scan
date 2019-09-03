@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
-set -l mode (echo -e "JPG\nPDF" | rofi -dmenu)
+set -l mode "JPG"
 set -l ext (echo $mode | tr '[:upper:]' '[:lower:]')
-set -l time (date +%H-%M)
+set -l time (date +%H-%M-%S)
 set -l filename "scan-$time.$ext"
 
 switch $mode

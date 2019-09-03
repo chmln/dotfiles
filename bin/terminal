@@ -1,2 +1,2 @@
 #!/bin/sh
-env vblank_mode=0 alacritty "$@"
+xterm "$@"

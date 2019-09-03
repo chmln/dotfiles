@@ -43,6 +43,3 @@ Xcursor.size: 30
 !white
 *color7:     #dddddd
 *color15:    #dddddd
-
-URxvt.perl-ext:
-URxvt.perl-ext-common:

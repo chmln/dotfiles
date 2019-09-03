@@ -4,8 +4,6 @@ node_modules
 .rustup
 .cache
 .cargo
-.config/**/Default
-.config/brave
 .mozilla
 .thunderbird
 .local/share/cargo
@@ -22,3 +20,15 @@ uoft-archive
 /boot
 /usr/include
 /usr/share/licenses
+/home/greg/.config/npm/_cacache
+/usr/lib/modules
+CacheStorage
+/home/greg/.local/share/cargo/git
+/home/greg/.local/share/cargo/git2
+/home/greg/.local/share/cargo/registry
+/home/greg/.config/chromium/Default
+/tmp/*
+/usr/share/texfm-dist
+Local\ Storage
+Code\ Cache
+/home/greg/.config/BraveSoftware/Brave-Browser/Default/*

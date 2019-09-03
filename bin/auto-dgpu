@@ -1,0 +1,9 @@
+#!/bin/fish
+if [ (cat /sys/class/drm/card0-HDMI-A-1/status) = "connected" ]
+    echo '\_SB.PCI0.PEG0.PEGP._ON' > /proc/acpi/call
+    modprobe -a nvidia_uvm nvidia_drm nvidia
+else
+    modprobe -r -a nvidia_uvm nvidia_drm nvidia
+    echo '\_SB.PCI0.PEG0.PEGP._OFF' > /proc/acpi/call
+end
+

@@ -32,7 +32,6 @@ set -gx BAT_THEME "TwoDark"
 set -gx GTK_OVERLAY_SCROLLING 0
 
 set -gx GIT_MERGE_AUTOEDIT "no"
-#set -gx RUSTC_WRAPPER "sccache"
 set -gx LESS "-Ri "
 
 set -x fish_greeting

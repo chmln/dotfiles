@@ -1,0 +1,3 @@
+#!/bin/fish
+set -l cmd (mimeo -c -q $argv[1])
+eval "run $cmd"

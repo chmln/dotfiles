@@ -6,7 +6,7 @@
     "output": "eDP-1",
     "modules-left": ["sway/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["mpd", "custom/kbd_layout", "custom/email", "custom/alsa", "network", "battery", "tray"],
+    "modules-right": ["custom/kbd_layout", "custom/email", "custom/alsa", "network", "battery", "tray"],
 
     "sway/window": {
       "max-length": 50
@@ -22,40 +22,15 @@
            "default": ""
        }
     },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
     "tray": {
         // "icon-size": 21,
         "spacing": 10
     },
     "clock": {
         "tooltip-format": "{:%Y-%m-%d | %H:%M}",
-        "format": "{:%A, %B %d, %I:%M}",
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%A, %B %d, %I:%M:%S}",
+        "format-alt": "{:%Y-%m-%d}",
+        "interval": 1
     },
     "battery": {
         "states": {

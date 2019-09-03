@@ -4,11 +4,12 @@
   "suggest.maxCompleteItemCount": 25,
   "coc.source.buffer.enable": false,
   "diagnostic.enableMessage": "jump",
-  "suggest.triggerCompletionWait":300,
+  "suggest.triggerCompletionWait": 300,
   "coc.source.file.enable": false,
+  "suggest.enablePreview": true,
   "coc.preferences.enableFloatHighlight": true,
   "tsserver.enableJavascript": false,
-  "suggest.autoTrigger":"always",
+  "suggest.autoTrigger": "always",
   "diagnostic.enable": true,
   "diagnostic.signOffset": 1000,
   "diagnostic.errorSign": ">>",
@@ -21,12 +22,10 @@
   "suggest.echodocSupport": true,
   "diagnostic.virtualText": false,
   "diagnostic.locationlist": true,
-   "languageserver": {
+  "languageserver": {
     "rust": {
       "command": "ra_lsp_server",
       "filetypes": ["rs", "rust"]
     }
-
-   }
-
+  }
 }

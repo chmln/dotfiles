@@ -27,3 +27,6 @@ map <Down> <Nop>
 " q closes any extra panels
 nnoremap Q q
 nmap <silent> q :pclose<bar>:cclose<CR>
+
+" splits
+nnoremap <Tab> <C-W><C-W>
