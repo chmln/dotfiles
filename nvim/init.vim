@@ -10,9 +10,9 @@ runtime ./file_tree.vim
 runtime ./autocomplete.vim
 runtime ./project-file-tools.vim
 runtime ./extras.vim
+runtime ./focus.vim
 runtime ./syntax.vim
 runtime ./terminal.vim
-runtime ./focus.vim
 
 call plug#end()
 

@@ -2,7 +2,7 @@ Plug 'lambdalisue/gina.vim'
 
 Plug 'prettier/vim-prettier', { 'do': 'npm i' }
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
+autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html Prettier
 
 Plug 'mattn/emmet-vim'
 

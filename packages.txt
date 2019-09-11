@@ -10,7 +10,6 @@ android-tools
 android-udev
 apulse
 arc-icon-theme
-auryo-bin
 autoconf
 automake
 bash
@@ -19,7 +18,6 @@ brave-nightly-bin
 brscan4
 bzip2
 cairo
-calibre-installer
 chromium
 colord
 connman
@@ -115,6 +113,7 @@ lvm2
 lynx
 m4
 mailcap
+mailspring
 maim
 make
 man-db
@@ -123,12 +122,13 @@ mdadm
 mesa
 mesa-demos
 mimeo
+minetime-bin
 moka-icon-theme
 mpv-light
 msmtp
 neofetch
 neomutt
-neovim-git
+neovim-nightly
 nodejs
 notmuch
 noto-fonts-emoji
@@ -190,6 +190,7 @@ thermald
 time
 trash-cli
 ttf-ibm-plex
+typora-bin
 udevil
 udisks2
 ufw

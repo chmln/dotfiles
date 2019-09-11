@@ -27,7 +27,7 @@ xset m 0 0 &
 xset r rate 250 85
 
 # russian keyboard
-setxkbmap -option grp:win_space_toggle us,ru,am ,phonetic_winkeys,phonetic &
+setxkbmap -option grp:win_space_toggle us,ru ,phonetic_winkeys &
 
 # load xresources
 xrdb ~/.config/x11/xresources &
@@ -35,6 +35,5 @@ xrdb ~/.config/x11/xresources &
 redshift -c ~/.config/redshift.conf &
 
 # auto-mount plugged in usb devices
-devmon --exec-on-drive "notify-send 'Mounted %l at %d'" &
-
+devmon &
 

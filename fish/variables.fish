@@ -33,6 +33,7 @@ set -gx GTK_OVERLAY_SCROLLING 0
 
 set -gx GIT_MERGE_AUTOEDIT "no"
 set -gx LESS "-Ri "
+set -gx RUSTC_WRAPPER "sccache"
 
 set -x fish_greeting
 set fish_cursor_default block

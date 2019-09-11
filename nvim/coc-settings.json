@@ -7,7 +7,6 @@
   "suggest.triggerCompletionWait": 300,
   "coc.source.file.enable": false,
   "suggest.enablePreview": true,
-  "coc.preferences.enableFloatHighlight": true,
   "tsserver.enableJavascript": false,
   "suggest.autoTrigger": "always",
   "diagnostic.enable": true,
@@ -21,11 +20,5 @@
   "typescript.implementationsCodeLens.enable": false,
   "suggest.echodocSupport": true,
   "diagnostic.virtualText": false,
-  "diagnostic.locationlist": true,
-  "languageserver": {
-    "rust": {
-      "command": "ra_lsp_server",
-      "filetypes": ["rs", "rust"]
-    }
-  }
+  "diagnostic.locationlist": true
 }
