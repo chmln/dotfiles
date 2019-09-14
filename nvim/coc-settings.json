@@ -20,5 +20,6 @@
   "typescript.implementationsCodeLens.enable": false,
   "suggest.echodocSupport": true,
   "diagnostic.virtualText": false,
-  "diagnostic.locationlist": true
+  "diagnostic.locationlist": true,
+  "rust-analyzer.enableCargoWatchOnStartup": "disabled"
 }
