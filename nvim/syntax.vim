@@ -31,5 +31,4 @@ let g:rustfmt_command = 'rustup run nightly rustfmt'
 let g:rustfmt_autosave_if_config_present = 1
 
 " typescript
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
+Plug 'soywod/typescript.vim'
