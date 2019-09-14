@@ -35,7 +35,7 @@ font-1 = "Material Icons:size=12;3"
 
 modules-left = i3
 modules-center = date
-modules-right = email alsa battery network
+modules-right = email pulseaudio battery network
 
 tray-position = right
 tray-padding = 4
@@ -187,3 +187,16 @@ interval = 1
 ;   %counter%
 ; Command to be executed (using "/usr/bin/env sh -c [command]")
 exec = /home/greg/.config/bin/unread_emails
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+label-muted = 🔇 muted
+label-muted-foreground = #666
+
+format-volume = <ramp-volume> <label-volume>
+
+ramp-volume-0 =
+ramp-volume-1 =
+ramp-volume-2 =
+
