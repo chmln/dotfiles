@@ -1,5 +1,0 @@
-#!/bin/fish
-set -l layout (swaymsg -t get_inputs | jq -rc '.[] | select( .identifier == "1:1:AT_Translated_Set_2_keyboard" ) | .xkb_active_layout_name' | cut -d " " -f1 | colrm 3 | tr [a-z] [A-Z])
-if [ "$layout" != 'EN' ]
-  echo "$layout"
-end

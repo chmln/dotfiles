@@ -3,7 +3,6 @@ acpi_call
 acpid
 acpilight
 aic94xx-firmware
-alacritty
 alsa-plugins
 alsa-utils
 android-tools
@@ -18,7 +17,6 @@ brave-nightly-bin
 brscan4
 bzip2
 cairo
-chromium
 colord
 connman
 connman-gtk
@@ -52,7 +50,6 @@ ffmpeg
 file
 filesystem
 findutils
-firefox-developer-edition
 fish-git
 fisher
 fontconfig
@@ -89,13 +86,11 @@ intel-ucode
 iotop
 iproute2
 iputils
-jq
 lazygit
 less
 libblockdev-lean
 libgsf
 libinput
-libmad
 libmtp
 libtool
 libva-intel-driver
@@ -113,7 +108,6 @@ lvm2
 lynx
 m4
 mailcap
-mailspring
 maim
 make
 man-db
@@ -162,6 +156,8 @@ powertop
 procps-ng
 psmisc
 pspg
+pulseaudio
+pulseaudio-alsa
 python-i3-py
 python-neovim-git
 ranger-git
@@ -171,11 +167,8 @@ riot-desktop
 ripgrep
 rofi
 rustup
-sdl2_image
-sdl2_ttf
 sed
 shadow
-skypeforlinux-stable-bin
 smartmontools
 sudo
 syncthing
@@ -223,7 +216,6 @@ xsel
 xterm
 yay-bin
 youtube-dl
-zathura
-zathura-pdf-poppler
 zenity-git
 zip
+zoom
