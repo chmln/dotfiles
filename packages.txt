@@ -49,7 +49,6 @@ ffmpeg
 file
 filesystem
 findutils
-firefox-developer-edition
 fish-git
 fisher
 fontconfig
