@@ -1,0 +1,8 @@
+[Unit]
+Description=Event Reminder
+
+[Service]
+ExecStart=/home/greg/.dotfiles/bin/gcalcli remind 20
+
+[Install]
+WantedBy=default.target

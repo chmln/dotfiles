@@ -2,8 +2,12 @@
 if [ (cat /sys/class/drm/card0-HDMI-A-1/status) = "connected" ]
     echo '\_SB.PCI0.PEG0.PEGP._ON' > /proc/acpi/call
     modprobe -a nvidia_uvm nvidia_drm nvidia
+    cpupower frequency-set -g performance > /dev/null
+    cpupower set -b 0 > /dev/null
 else
     modprobe -r -a nvidia_uvm nvidia_drm nvidia
     echo '\_SB.PCI0.PEG0.PEGP._OFF' > /proc/acpi/call
+    cpupower frequency-set -g powersave > /dev/null
+    cpupower set -b 10  > /dev/null
 end
 

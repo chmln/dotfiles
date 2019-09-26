@@ -1,2 +1,2 @@
-#!/bin/sh
-~/.local/bin/gcalcli --config-folder ~/.config/gcalcli --lineart ascii "$@"
+#!/bin/bash
+~/.local/bin/gcalcli --config-folder ~/.config/gcalcli "$@"

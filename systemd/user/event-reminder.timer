@@ -1,0 +1,9 @@
+[Unit]
+Description=Event Reminder
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=20min
+
+[Install]
+WantedBy=timers.target

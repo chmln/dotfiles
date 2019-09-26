@@ -54,6 +54,7 @@ focus_follows_mouse no
 # center all floating windows
 for_window [floating] move position center
 
+for_window [instance="center"] floating enable, resize set width 1800px, resize set height 960px, move position center
 for_window [instance="skype"] floating disable
 
 # ============ WORKSPACES
