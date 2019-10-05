@@ -1,0 +1,24 @@
+configuration {
+        bw: 0;
+        disable-history: true;
+        drun-icon-theme: "Arc";
+        font: "Source Code Pro Semibold 16";
+        lines: 5;
+        matching: "fuzzy";
+        no-cycle: true;
+        padding: 0;
+        show-icons: true;
+        sort: true;
+        width: 600;
+        tokenize: false;
+        sorting-method: "fzf";
+        drun-display-format: "{name}";
+        theme: "Arc-Dark";
+}
+
+#prompt {
+        enabled: false;
+}
+#textbox-prompt-colon {
+        enabled: false;
+}
