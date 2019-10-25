@@ -109,4 +109,4 @@ bindsym $mod+d exec launcher
 
 # ============ STARTUP
 exec_always "sh ~/.config/i3/autostart.sh > /tmp/autostart.log"
-exec_always --no-startup-id /home/greg/.config/i3/alternating_layouts.py
+exec_always --no-startup-id i3-auto-layout
