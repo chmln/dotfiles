@@ -48,7 +48,7 @@ primary_email=gregory.mkv@gmail.com
 #
 [new]
 tags=unread;inbox;
-ignore=
+ignore=Junk Email;
 
 # Search configuration
 #

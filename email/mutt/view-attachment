@@ -1,0 +1,6 @@
+#!/bin/fish
+set -l filename (basename $argv[1])
+mkdir -p /tmp/.mutt_attachments
+
+cp "$argv[1]" /tmp/.mutt_attachments/
+xdg-open "/tmp/.mutt_attachments/$filename"
