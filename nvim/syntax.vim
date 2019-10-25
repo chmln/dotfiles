@@ -27,7 +27,8 @@ Plug 'GutenYe/json5.vim'
 
 " rust
 Plug 'rust-lang/rust.vim'
-let g:rustfmt_command = 'rustup run nightly rustfmt'
+let g:rustfmt_command = 'rustfmt +nightly'
+let g:rustfmt_options = '--edition 2018'
 let g:rustfmt_autosave_if_config_present = 1
 
 " typescript
