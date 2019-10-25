@@ -40,3 +40,13 @@ set -x fish_greeting
 set fish_cursor_default block
 set fish_cursor_insert line
 
+# prompt customizations
+set theme_nerd_fonts yes
+set theme_display_vi no
+set theme_color_scheme zenburn
+set theme_display_date no
+set theme_display_hostname no
+set fish_prompt_pwd_dir_length 0
+set theme_display_nvm no
+set theme_display_hg no
+set theme_display_git_master_branch yes

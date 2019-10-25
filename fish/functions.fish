@@ -37,3 +37,6 @@ end
 # disable right prompt, if any
 function fish_right_prompt
 end
+
+function fish_greeting
+end
