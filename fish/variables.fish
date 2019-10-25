@@ -30,6 +30,7 @@ set -gx FZF_DEFAULT_COMMAND 'fd -t f --hidden -E .git -E node_modules'
 set -gx BAT_THEME "TwoDark"
 
 set -gx GTK_OVERLAY_SCROLLING 0
+set -gx QT_QPA_PLATFORMTHEME "qt5ct"
 
 set -gx GIT_MERGE_AUTOEDIT "no"
 set -gx LESS "-Ri "
@@ -39,9 +40,3 @@ set -x fish_greeting
 set fish_cursor_default block
 set fish_cursor_insert line
 
-# Wayland
-if set -q SWAYSOCK
-    set -gx SDL_VIDEODRIVER "wayland"
-    set -gx MOZ_ENABLE_WAYLAND 1
-    set -gx KITTY_ENABLE_WAYLAND 1
-end
