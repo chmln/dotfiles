@@ -1,0 +1,10 @@
+[Unit]
+Description=i3 auto layout
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/home/greg/.local/share/cargo/bin/i3-auto-layout
+Restart=always
+
+[Install]
+WantedBy=graphical.target
