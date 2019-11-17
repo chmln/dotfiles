@@ -17,3 +17,4 @@ if status --is-login
     # exec systemctl --wait --user start sway.service
   end
 end
+

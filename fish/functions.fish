@@ -4,7 +4,6 @@ end
 
 function ee
   set -l path (realpath $argv[1])
-  #sudo -e $path
   sudoedit $path
 end
 
@@ -39,4 +38,9 @@ function fish_right_prompt
 end
 
 function fish_greeting
+end
+
+function bobthefish_colors -S -d 'Define a custom bobthefish color scheme'
+  __bobthefish_colors zenburn
+  set -x color_repo_dirty E1AA5D 333333
 end

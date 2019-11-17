@@ -37,3 +37,4 @@ redshift -c ~/.config/redshift.conf &
 # auto-mount plugged in usb devices
 devmon &
 
+systemctl --user start i3-auto-layout

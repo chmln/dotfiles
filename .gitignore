@@ -5,3 +5,4 @@ fish_universal_variables
 fisher.fish
 *.log
 mpd/mpd.db
+__pycache__

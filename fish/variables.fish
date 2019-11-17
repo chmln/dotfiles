@@ -28,6 +28,7 @@ set -gx NOTMUCH_CONFIG "/home/greg/.config/notmuch/config"
 set -gx FZF_DEFAULT_OPTS "--reverse"
 set -gx FZF_DEFAULT_COMMAND 'fd -t f --hidden -E .git -E node_modules'
 set -gx BAT_THEME "TwoDark"
+set -gx RIPGREP_CONFIG_PATH "/home/greg/.config/ripgrep"
 
 set -gx GTK_OVERLAY_SCROLLING 0
 set -gx QT_QPA_PLATFORMTHEME "qt5ct"

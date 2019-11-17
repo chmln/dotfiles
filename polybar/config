@@ -11,7 +11,7 @@ alert = #bd2c40
 success = #2ECC40
 
 [bar/primary]
-monitor = ${env:MONITOR:eDP-1}
+monitor = ${env:MONITOR:eDP-1-1}
 width = 100%
 height = 27
 radius = 0
@@ -155,7 +155,7 @@ animation-charging-framerate = 750
 
 [module/network]
 type = internal/network
-interface = wlan0
+interface = wlp8s0
 
 interval = 3.0
 
