@@ -25,7 +25,7 @@ set pager_context     = 5
 set pager_stop
 set menu_scroll
 set smart_wrap
-set tilde
+set notilde
 unset markers
 
 set index_format="%Z %<[y?%<[m?%<[d?%[%H:%M ]&%[%a %d]>&%[%b %d]>&%[%m/%y ]> %-19.19L %s"
@@ -37,6 +37,11 @@ color status default black
 set status_format=""
 
 set help=no
+
+# autocomplete emails
+set query_command = "notmuch address from:%s"
+set query_format="%4c %t %-70.70a %-70.70n %?e?(%e)?"
+bind editor <Tab> complete-query
 
 # composing
 set fcc_attach
@@ -69,6 +74,8 @@ set mailcap_path  = ~/.config/mutt/mailcap
 auto_view text/html
 alternative_order text/plain text/enriched text/html
 bind attach <return> view-mailcap
+# hide autoview notices
+set display_filter="sd -p '.*Autoview.*\]\n' ''"
 
 # -------------------------
 # NOTMUCH

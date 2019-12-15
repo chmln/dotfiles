@@ -1,2 +1,3 @@
 text/plain; nvim %s
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
 */*; ~/.dotfiles/email/mutt/view-attachment %s
