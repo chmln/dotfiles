@@ -5,12 +5,12 @@ node_modules
 /home/greg/.local/share/cargo/*
 /home/greg/.config/libreoffice
 /home/greg/.config/libreofficedev
-/home/greg/.mozilla/firefox/*
+/home/greg/.mozilla/firefox
 /proc
 /dev
 /sys
 /run
-/home/greg/Workspace/uoft-archive/*
+/home/greg/Workspace/uoft-archive
 /home/greg/.config/npm
 /var
 /boot
@@ -31,3 +31,12 @@ __pycache__
 /home/greg/.config/BraveSoftware/Brave-Browser
 /home/greg/.config/chromium
 /usr/share/man/*
+/usr/share/texmf-dist
+/usr/share/perl5
+/usr/lib/*
+/usr/share/*
+/home/greg/.local/share/tldr
+/home/greg/.local/share/Trash/*
+/home/greg/.local/share/fish
+/home/greg/.config/Mailspring
+/home/greg/.config/Insomnia
