@@ -18,7 +18,6 @@ autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checkti
 autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
-" open terminal
 noremap <silent> <C-s> :w!<CR>
 
 " disable arrow keys
