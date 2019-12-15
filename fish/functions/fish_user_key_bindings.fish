@@ -1,5 +1,5 @@
 function fzf_selector
-  fd -H -F -p --max-depth 10 $argv | fzf --reverse --height=40%
+  fd -HFp -d 10 $argv | fzf --height 60% --preview "preview {}"
 end
 
 function restore_state
@@ -33,7 +33,7 @@ end
 
 function fzf_autocomplete
   set target (fzf_selector -t f -t d "" /)
-	if [ -n "$target" ]
+  if [ -n "$target" ]
     commandline -it -- (string escape $target)
   end
   restore_state
@@ -66,15 +66,18 @@ function keybind
 end
 
 function fish_user_key_bindings
+  bind -M insert \cl forward-char
+  bind -M visual y fish_clipboard_copy
+  bind -M default v visual_mode
   keybind \co "fzf_edit d $EDITOR"
-	keybind \cp "fzf_edit f $EDITOR"
-	keybind \cs "fzf_edit f xdg-open exit"
-	keybind \cn duplicate_term
-	keybind \cg fzf_cd
-	keybind \ca fzf_autocomplete
-	keybind \cb fzf_branch
-	keybind \ck fzf_kill
-  keybind \cf ranger
+  keybind \cp "fzf_edit f $EDITOR"
+  keybind \cs "fzf_edit f xdg-open exit"
+  keybind \cn duplicate_term
+  keybind \cg fzf_cd
+  keybind \ca fzf_autocomplete
+  keybind \cb fzf_branch
+  keybind \ck fzf_kill
+  keybind \cf lf
 end
 
 # https://github.com/fish-shell/fish-shell/issues/3899
