@@ -135,7 +135,6 @@ pacman-contrib
 pandoc-bin
 pango
 patch
-pavucontrol
 pkgconf
 pkgfile
 polkit-no-script-git
@@ -178,6 +177,7 @@ usb_modeswitch
 vulkan-icd-loader
 vulkan-intel
 w3m
+watchexec
 wget
 which
 wpa_supplicant
