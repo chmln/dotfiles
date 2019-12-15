@@ -2,4 +2,4 @@
 set -l path (zenity --file-selection --save --file-filter "Screenshot | *.png" --filename "screenshot.png")
 xclip -o -sel clipboard > $path
 notify-send "Saved" "$path"
-xsel -b "$path"
+echo "![]($path)" | xsel -b
