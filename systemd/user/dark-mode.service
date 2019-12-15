@@ -1,0 +1,10 @@
+[Unit]
+Description=Dark Mode
+After=default.target
+
+[Service]
+ExecStart=%h/Workspace/linux-utils/auto-gtk-theme/target/release/auto-gtk-theme
+Restart=always
+
+[Install]
+WantedBy=default.target
