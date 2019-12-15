@@ -3,7 +3,7 @@
 pkill devmon
 pkill redshift
 
-auto-monitor
+screens
 
 # wallpapers
 feh --no-fehbg --bg-scale ~/.config/wallpaper ~/.config/wallpaper
@@ -38,3 +38,4 @@ redshift -c ~/.config/redshift.conf &
 devmon &
 
 systemctl --user start i3-auto-layout
+systemctl --user start dark-mode
