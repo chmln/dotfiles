@@ -155,9 +155,10 @@ animation-charging-framerate = 750
 
 [module/network]
 type = internal/network
-interface = wlp8s0
+interface = wlan0
 
 interval = 3.0
+ping-interval = 3
 
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
