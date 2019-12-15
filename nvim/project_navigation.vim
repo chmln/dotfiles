@@ -1,6 +1,10 @@
+" infer project working directory
+Plug 'airblade/vim-rooter'
+let g:rooter_patterns = ['.git/']
+let g:rooter_silent_chdir = 1
+
 " git integration
 Plug 'tpope/vim-fugitive'
-
 
 " ======== FZF ============= "
 Plug 'usr/bin/fzf' | Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'

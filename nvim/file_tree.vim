@@ -24,5 +24,4 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd BufReadPre,FileReadPre * :NERDTreeClose
 
-nmap <Leader>f :NERDTreeToggle<Enter>
-nnoremap <silent> <Leader>v :NERDTreeFind<CR>
+nnoremap <silent> <Leader>f :NERDTreeFind<CR>

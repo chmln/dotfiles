@@ -1,17 +1,6 @@
-Plug 'lambdalisue/gina.vim'
-
-Plug 'prettier/vim-prettier', { 'do': 'npm i' }
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html Prettier
-
-Plug 'mattn/emmet-vim'
-
-"Plug 'xi/vim-indent-detect'
-Plug 'tpope/vim-sleuth'
-Plug 'mg979/vim-visual-multi'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-visual-multi configuration
-
+Plug 'mg979/vim-visual-multi'
 let g:VM_default_mappings           = 1
 let g:VM_mouse_mappings             = 0
 let g:VM_reselect_first_insert      = 0
@@ -25,4 +14,5 @@ let g:VM_manual_infoline            = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-Plug 'ciaranm/securemodelines'
+" generate html
+Plug 'mattn/emmet-vim'

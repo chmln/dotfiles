@@ -8,11 +8,12 @@ runtime ./settings.vim
 runtime ./file_tree.vim
 
 runtime ./autocomplete.vim
-runtime ./project-file-tools.vim
+runtime ./project_navigation.vim
 runtime ./extras.vim
-runtime ./focus.vim
-runtime ./syntax.vim
+runtime ./markdown.vim
+runtime ./lang_support.vim
 runtime ./terminal.vim
+runtime ./text_edit_tools.vim
 
 call plug#end()
 
