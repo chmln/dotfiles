@@ -2,10 +2,13 @@ node_modules
 .git
 .rustup
 .cache
-/home/greg/.local/share/cargo/*
+/home/greg/.local/share/cargo
+/home/greg/.local/share/nvim/plugged
 /home/greg/.config/libreoffice
+/home/greg/.config/MineTime
 /home/greg/.config/libreofficedev
 /home/greg/.mozilla/firefox
+/home/greg/Workspace/linux-utils/nerd-fonts
 /proc
 /dev
 /sys
@@ -27,7 +30,7 @@ cache*
 Cache*
 *Cache
 __pycache__
-/opt/abricotine/resources/app.asar.unpacked
+/opt/*
 /home/greg/.config/BraveSoftware/Brave-Browser
 /home/greg/.config/chromium
 /usr/share/man/*

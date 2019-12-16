@@ -1,5 +1,5 @@
 function fzf_selector
-  fd -HFp -d 10 $argv | fzf --height 60% --preview "preview {}"
+  fd -HF -d 10 $argv | fzf --height 60% --preview "preview {}"
 end
 
 function restore_state
@@ -8,7 +8,7 @@ function restore_state
 end
 
 function fzf_edit
-  set target (fzf_selector -t $argv[1])
+  set target (fzf_selector -t $argv[1] "" /)
   begin
     if [ -n "$target" ]
       commandline -f repaint
@@ -25,7 +25,7 @@ end
 
 function fzf_cd
   set target (fzf_selector -t d "" /)
-	if [ -n "$target" ]
+  if [ -n "$target" ]
     cd "$target"
   end
   restore_state
@@ -50,7 +50,6 @@ end
 function fzf_kill
   set target (ps ax | fzf | sd '^\s+' '' | cut -f1 -d ' ')
   if [ -n "$target" ]
-    echo $target
     kill "$target"
   end
   restore_state
