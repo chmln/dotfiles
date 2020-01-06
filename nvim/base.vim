@@ -7,8 +7,7 @@ let g:rooter_silent_chdir = 1
 Plug 'KorySchneider/vim-trim'
 autocmd BufWritePre * :Trim
 
-" detect indentation
-Plug 'tpope/vim-sleuth'
+Plug 'xi/vim-indent-detect'
 
 " Keep cursor vertically centered
 au BufEnter * let &scrolloff=winheight(win_getid())
@@ -28,7 +27,7 @@ map <Down> <Nop>
 
 " q closes any extra panels
 nnoremap Q q
-nmap <silent> q :pclose<bar>:cclose<CR>
+nmap <silent> q :pclose<CR>
 
 " splits
 nnoremap <Tab> <C-W><C-W>

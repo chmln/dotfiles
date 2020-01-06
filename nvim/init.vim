@@ -18,3 +18,9 @@ runtime ./text_edit_tools.vim
 call plug#end()
 
 colorscheme onedark
+
+"lua << EOF
+"require'nvim_lsp'.rust_analyzer.setup{}
+"require'nvim_lsp'.tsserver.setup{}
+"EOF
+
