@@ -1,0 +1,10 @@
+[Unit]
+Description=Mount plugged-in USB devices
+After=default.target
+
+[Service]
+ExecStart=devmon
+Restart=always
+
+[Install]
+WantedBy=default.target
