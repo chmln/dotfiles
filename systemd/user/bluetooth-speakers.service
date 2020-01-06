@@ -1,0 +1,10 @@
+[Unit]
+Description=Bluetooth Speakers
+After=default.target
+
+[Service]
+ExecStart=bluetoothctl connect 23:54:ED:F6:1D:F1
+Restart=always
+
+[Install]
+WantedBy=default.target
