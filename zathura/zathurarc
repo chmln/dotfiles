@@ -1,8 +1,0 @@
-set default-bg "#ffffff"
-set page-padding 0
-set guioptions ""
-set selection-clipboard clipboard
-set scroll-step 160
-map <C-g> toggle_statusbar
-map <C-r> feedkeys ":set default-bg black<Return>:set recolor<Return>"
-map <C-l> feedkeys ":set default-bg white<Return>:set recolor<Return>"
