@@ -2,8 +2,6 @@
 
 set $mod Mod1
 
-#set $accent_color #6694F6
-
 set $active_color #ffffff
 set $inactive_color #333333
 
@@ -101,7 +99,6 @@ bindsym XF86AudioMute exec amixer sset Master mute
 
 bindsym $mod+Shift+s exec screenshot
 bindsym $mod+Return exec --no-startup-id terminal
-bindsym $mod+Shift+Return exec --no-startup-id terminal -e 'ranger'
 bindsym $mod+d exec launcher
 
 # ============ STARTUP

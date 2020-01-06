@@ -1,8 +1,5 @@
 #!/bin/sh
 
-pkill devmon
-pkill redshift
-
 screens
 
 # wallpapers
@@ -20,9 +17,6 @@ xset -b
 # disable power saving for mice
 xset s off -dpms
 
-#disable mouse accel
-xset m 0 0 &
-
 # keyboard repeat rate
 xset r rate 250 85
 
@@ -32,10 +26,22 @@ setxkbmap -option grp:win_space_toggle us,ru ,phonetic_winkeys &
 # load xresources
 xrdb ~/.config/x11/xresources &
 
-redshift -c ~/.config/redshift.conf &
-
-# auto-mount plugged in usb devices
 devmon &
 
-systemctl --user start i3-auto-layout
-systemctl --user start dark-mode
+# automatic tiling
+systemctl --user start i3-auto-layout &
+
+# set dark gtk theme after sunset
+systemctl --user start dark-mode &
+
+# blue light filter
+systemctl --user start redshift &
+
+# connect to bluetooth speakers
+systemctl --user start bluetooth-speakers &
+
+# remote media control
+systemctl --user start volume-control &
+
+# auto-mount plugged in usb devices
+systemctl --user start devmon &
