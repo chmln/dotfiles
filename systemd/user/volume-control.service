@@ -1,0 +1,11 @@
+[Unit]
+Description=Remote volume control
+After=default.target
+
+[Service]
+ExecStart=/home/greg/Workspace/volume-control/target/release/volume-control
+WorkingDirectory=/home/greg/Workspace/volume-control
+Restart=always
+
+[Install]
+WantedBy=default.target
