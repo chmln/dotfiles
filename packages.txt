@@ -13,11 +13,13 @@ autoconf
 automake
 base
 bat
+bluez-utils
 brave-nightly-bin
 brillo
 brscan4
 cairo
 cargo-tree
+chromium
 colord
 connman-git
 connman-gtk
@@ -25,7 +27,6 @@ coreutils
 cpupower
 crda
 cups
-dbus-broker
 dhcpcd
 diffutils
 dmraid
@@ -45,7 +46,6 @@ feh
 ffmpeg
 file
 filesystem
-firefox-developer-edition
 fish
 fisher
 fontconfig
@@ -82,7 +82,7 @@ isync
 jq
 lazygit
 less
-lf-git
+lf-bin
 libblockdev-lean
 libgsf
 libinput
@@ -93,9 +93,7 @@ libva-mesa-driver
 libva-utils
 libva-vdpau-driver
 libvdpau
-linux-headers
 linux-lts
-linux-lts-headers
 lld
 llpp
 logrotate
@@ -115,6 +113,7 @@ mimeo
 minetime-bin
 moka-icon-theme
 mpv-light
+mpv-mpris
 msmtp
 neofetch
 neomutt
@@ -137,6 +136,7 @@ pango
 patch
 pkgconf
 pkgfile
+playerctl
 polkit-no-script-git
 polybar
 postgresql-libs
@@ -144,6 +144,9 @@ powertop
 pspg
 pulseaudio
 pulseaudio-alsa
+pulseaudio-bluetooth
+python-gobject
+python-pynvim
 redshift-minimal
 reflector
 riot-desktop
@@ -183,6 +186,7 @@ which
 wpa_supplicant
 wps-office
 xclip
+xf86-video-intel
 xorg-fonts-encodings
 xorg-mkfontscale
 xorg-setxkbmap
@@ -201,3 +205,4 @@ yay-bin
 youtube-dl
 zenity-git
 zip
+zola-bin
