@@ -3,3 +3,4 @@ set ratios "2:1"
 set hidden
 
 map D % trash "$fx"
+set previewer preview
