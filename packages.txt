@@ -168,6 +168,7 @@ texlive-core
 thermald
 time
 tldr++
+transmission-gtk
 trash-cli
 ttf-gelasio-ib
 ttf-public-sans
@@ -177,6 +178,7 @@ udisks2
 ufw
 urlscan
 usb_modeswitch
+vidir
 vulkan-icd-loader
 vulkan-intel
 w3m
