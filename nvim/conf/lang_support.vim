@@ -17,7 +17,6 @@ Plug 'prettier/vim-prettier', { 'do': 'npm i' }
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html Prettier
 
-
 Plug 'Valloric/MatchTagAlways'
 let g:mta_filetypes = {
 \ 'javascript.jsx': 1,
@@ -27,6 +26,16 @@ let g:mta_filetypes = {
 \ 'xml' : 1,
 \}
 
+" markdown
+Plug 'SidOfc/mkdx'
+Plug 'junegunn/goyo.vim'
+
+" rust
+Plug 'rust-lang/rust.vim'
+
+" typescript
+Plug 'soywod/typescript.vim'
+
 " misc
 Plug 'iloginow/vim-stylus'
 Plug 'pangloss/vim-javascript'
@@ -35,11 +44,3 @@ Plug 'cespare/vim-toml'
 Plug 'mboughaba/i3config.vim'
 Plug 'GutenYe/json5.vim'
 
-" rust
-Plug 'rust-lang/rust.vim'
-let g:rustfmt_command = 'rustfmt +nightly'
-let g:rustfmt_options = '--edition 2018'
-let g:rustfmt_autosave_if_config_present = 1
-
-" typescript
-Plug 'soywod/typescript.vim'
