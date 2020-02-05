@@ -52,7 +52,7 @@ focus_follows_mouse no
 # center all floating windows
 for_window [floating] move position center
 
-for_window [instance="center"] floating enable, resize set width 1800px, resize set height 960px, move position center
+for_window [instance="center"] floating enable, move position center, resize set width 50%, resize set height 960px
 for_window [instance="skype"] floating disable
 
 # ============ WORKSPACES
@@ -93,8 +93,8 @@ bindsym $mod+Shift+0 move container to workspace $ws1; workspace $ws10
 bindsym XF86MonBrightnessUp exec brillo -A 25% -u 100000
 bindsym XF86MonBrightnessDown exec brillo -U 25% -u 100000
 
-bindsym XF86AudioRaiseVolume exec amixer set Master 3%+
-bindsym XF86AudioLowerVolume exec amixer set Master 3%-
+bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 3%+
+bindsym XF86AudioLowerVolume exec amixer -D pulse set Master 3%-
 bindsym XF86AudioMute exec amixer sset Master mute
 
 bindsym $mod+Shift+s exec screenshot

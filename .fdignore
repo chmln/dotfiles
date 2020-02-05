@@ -16,6 +16,7 @@ Workspace/linux-utils/nerd-fonts
 /sys
 /run
 Workspace/uoft-archive
+/home/greg/Workspace/uoft-archive
 .config/npm
 /var
 /boot
@@ -49,3 +50,4 @@ Trash
 /home/greg/.config/Mailspring
 .config/Insomnia
 .local/share/mail/*
+/home/greg/.local/share/mail/*

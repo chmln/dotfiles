@@ -3,7 +3,7 @@ if [ -f "$argv[1]" ]
     if string match -q -- "*.pdf" $argv[1]
         pdftotext -layout "$argv[1]" -l 1 -
     else
-        cat --color always "$argv[1]"
+        cat "$argv[1]"
     end
 else
     lsd --color always --icon always -1d --group-dirs first (fd -H -d 1 . "$argv[1]")

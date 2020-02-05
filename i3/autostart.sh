@@ -14,14 +14,11 @@ numlockx on &
 # disable bells
 xset -b
 
-# disable power saving for mice
-xset s off -dpms
-
 # keyboard repeat rate
 xset r rate 250 85
 
 # russian keyboard
-setxkbmap -option grp:win_space_toggle us,ru ,phonetic_winkeys &
+setxkbmap -option grp:win_space_toggle us,ru,am ,phonetic_winkeys,phonetic &
 
 # load xresources
 xrdb ~/.config/x11/xresources &

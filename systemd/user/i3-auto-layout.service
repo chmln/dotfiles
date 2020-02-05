@@ -3,7 +3,7 @@ Description=i3 auto layout
 After=graphical-session.target
 
 [Service]
-ExecStart=/home/greg/.local/share/cargo/bin/i3-auto-layout
+ExecStart=/home/greg/Workspace/linux-utils/i3-auto-layout/target/release/i3-auto-layout
 Restart=always
 
 [Install]

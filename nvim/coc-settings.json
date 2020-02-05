@@ -19,7 +19,7 @@
   "typescript.referencesCodeLens.enable": false,
   "typescript.implementationsCodeLens.enable": false,
   "suggest.echodocSupport": true,
-  "diagnostic.virtualText": false,
+  //"diagnostic.virtualText": false,
   "diagnostic.locationlist": true,
   "rust-analyzer.enableCargoWatchOnStartup": "disabled",
   "suggest.completionItemKindLabels": {

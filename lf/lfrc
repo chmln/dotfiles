@@ -3,4 +3,19 @@ set ratios "2:1"
 set hidden
 
 map D % trash "$fx"
+map A % trash "$fx"
 set previewer preview
+
+cmd fzf_jump ${{
+   res="$(fd -H -a -t d '' / | fzf --reverse --header='Jump to location')"
+   lf -remote "send $id cd \"$res\""
+}}
+
+cmd fzf_edit ${{
+   res="$(fd -H -a -t f | fzf --reverse --header='Open file')"
+   lf -remote "send $id nvim \"$res\""
+}}
+
+map <c-g> :fzf_jump
+map <c-p> :fzf_edit
+map <enter> % fish -c 'open "$fx"'

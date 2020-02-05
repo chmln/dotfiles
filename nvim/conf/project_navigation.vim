@@ -13,5 +13,5 @@ let g:clap_no_matches_msg = ''
 let g:clap_disable_run_rooter = v:false
 let g:clap_current_selection_sign = { 'text': "\uf62e", 'texthl': "WarningMsg", "linehl": "ClapCurrentSelection"}
 
-map <silent><C-p> :Clap files<CR>
+map <silent><C-p> :Clap files --hidden<CR>
 map <silent><C-f> :Clap grep<CR>

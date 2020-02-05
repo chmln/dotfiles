@@ -55,6 +55,10 @@ function fzf_kill
   restore_state
 end
 
+function fzf_view
+  fzf_edit f xdg-open exit
+end
+
 function duplicate_term
   nohup terminal >/dev/null 2>&1 &
 end
@@ -70,7 +74,7 @@ function fish_user_key_bindings
   bind -M default v visual_mode
   keybind \co "fzf_edit d $EDITOR"
   keybind \cp "fzf_edit f $EDITOR"
-  keybind \cs "fzf_edit f xdg-open exit"
+  keybind \cs fzf_view
   keybind \cn duplicate_term
   keybind \cg fzf_cd
   keybind \ca fzf_autocomplete
