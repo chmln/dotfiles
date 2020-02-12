@@ -1,4 +1,4 @@
-# vim: ft=i3config
+# vim: set ft=i3config
 
 set $mod Mod1
 
@@ -90,12 +90,14 @@ bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws1; workspace $ws10
 
 # ============ EXTERNAL KEYBINDINGS
-bindsym XF86MonBrightnessUp exec brillo -A 25% -u 100000
-bindsym XF86MonBrightnessDown exec brillo -U 25% -u 100000
+bindsym XF86MonBrightnessUp exec brillo -A 20% -u 100000
+bindsym XF86MonBrightnessDown exec brillo -U 20% -u 100000
 
 bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 3%+
 bindsym XF86AudioLowerVolume exec amixer -D pulse set Master 3%-
 bindsym XF86AudioMute exec amixer sset Master mute
+
+bindsym XF86RFKill exec airplane_mode
 
 bindsym $mod+Shift+s exec screenshot
 bindsym $mod+Return exec --no-startup-id terminal

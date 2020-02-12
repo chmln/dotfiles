@@ -3,6 +3,8 @@ Plug 'airblade/vim-rooter'
 let g:rooter_patterns = ['.git/']
 let g:rooter_silent_chdir = 1
 
+Plug 'ciaranm/securemodelines'
+
 " remove trailing whitespace
 Plug 'KorySchneider/vim-trim'
 autocmd BufWritePre * :Trim

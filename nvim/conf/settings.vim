@@ -6,8 +6,6 @@ set relativenumber
 set nowrap
 set nohlsearch
 
-set nomodeline
-
 set complete-=i
 
 set clipboard=unnamedplus

@@ -17,15 +17,6 @@ Plug 'prettier/vim-prettier', { 'do': 'npm i' }
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html Prettier
 
-Plug 'Valloric/MatchTagAlways'
-let g:mta_filetypes = {
-\ 'javascript.jsx': 1,
-\ 'typescript.tsx': 1,
-\ 'html' : 1,
-\ 'xhtml' : 1,
-\ 'xml' : 1,
-\}
-
 " markdown
 Plug 'SidOfc/mkdx'
 Plug 'junegunn/goyo.vim'

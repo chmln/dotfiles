@@ -1,8 +1,4 @@
 function e
-   eval $EDITOR $argv
-end
-
-function ee
   set -l path (realpath $argv[1])
   sudoedit $path
 end
@@ -17,20 +13,16 @@ end
 
 function maintenance
   sudo paccache -ruk0
-  sudo pacman -Rns --noconfirm (pacman -Qtdq)
+
+  if set -l pkgs (pacman -Qtdq)
+     sudo pacman -Rns --noconfirm $pkgs
+  end
 end
 
 function updater
   yay -Syu $argv[1] --noconfirm
-  # circular dependency :(
-  sudo rmall python-sphinx
   maintenance
   return 0
-end
-
-function mvp -d "move and create dir if needed"
-  mkdir -p (dirname "$argv[2]")
-  mv "$argv[1]" "$argv[2]"
 end
 
 # disable right prompt, if any
@@ -52,7 +44,6 @@ function visual_mode
   set fish_bind_mode visual
   commandline -f begin-selection
 end
-
 
 function fish_clipboard_copy
     set -l cmdline (commandline --current-selection)

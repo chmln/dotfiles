@@ -5,7 +5,6 @@ abbr -a rdd "sudo pacman -Rdd"
 abbr -a findpkg "pacman -Qss"
 abbr -a aur "yay"
 abbr -a rmall "sudo rmall"
-abbr -a maintenance "sudo paccache -ruk0; sudo pacman -Rns (pacman -Qtdq)"
 
 # systemd-os
 abbr -a start "sudo systemctl start"

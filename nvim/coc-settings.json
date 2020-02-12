@@ -21,7 +21,10 @@
   "suggest.echodocSupport": true,
   //"diagnostic.virtualText": false,
   "diagnostic.locationlist": true,
-  "rust-analyzer.enableCargoWatchOnStartup": "disabled",
+  "rust-analyzer.raLspServerPath": "/usr/bin/ra_lsp_server",
+  "rust-analyzer.featureFlags": {
+    "completion.enable-postfix": false
+  },
   "suggest.completionItemKindLabels": {
     "function": "\uf794",
     "method": "\uf6a6",
