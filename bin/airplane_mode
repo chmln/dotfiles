@@ -1,0 +1,8 @@
+#!/bin/fish
+if connmanctl technologies | rg --quiet "Powered = True"
+    connmanctl enable offline
+    notify-send "Airplane mode enabled"
+else
+    connmanctl disable offline
+    notify-send "Airplane mode disabled"
+end
