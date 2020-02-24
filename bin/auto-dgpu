@@ -2,12 +2,20 @@
 if [ (cat /sys/class/power_supply/BAT1/status) = "Discharging" ]
     modprobe -r -a nvidia_uvm nvidia_drm nvidia
     echo '\_SB.PCI0.PEG0.PEGP._OFF' > /proc/acpi/call
+
     cpupower frequency-set -g powersave > /dev/null
     cpupower set -b 10  > /dev/null
+
+    rm -f /etc/X11/xorg.conf.d/20-gpu.conf
+    cp /home/greg/.dotfiles/x11/xorg.conf.d/20-intel.conf /etc/X11/xorg.conf.d/20-gpu.conf
 else
     echo '\_SB.PCI0.PEG0.PEGP._ON' > /proc/acpi/call
     modprobe -a nvidia_uvm nvidia_drm nvidia
+
     cpupower frequency-set -g performance > /dev/null
     cpupower set -b 0 > /dev/null
+
+    rm -f /etc/X11/xorg.conf.d/20-gpu.conf
+    cp /home/greg/.dotfiles/x11/xorg.conf.d/20-nvidia.conf /etc/X11/xorg.conf.d/20-gpu.conf
 end
 

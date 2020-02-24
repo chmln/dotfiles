@@ -93,10 +93,8 @@ bindsym $mod+Shift+0 move container to workspace $ws1; workspace $ws10
 bindsym XF86MonBrightnessUp exec brillo -A 20% -u 100000
 bindsym XF86MonBrightnessDown exec brillo -U 20% -u 100000
 
-bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 3%+
-bindsym XF86AudioLowerVolume exec amixer -D pulse set Master 3%-
-bindsym XF86AudioMute exec amixer sset Master mute
-
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +3%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -3%
 bindsym XF86RFKill exec airplane_mode
 
 bindsym $mod+Shift+s exec screenshot

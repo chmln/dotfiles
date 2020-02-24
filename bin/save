@@ -1,8 +1,8 @@
 #!/bin/bash
-youtube-dl \
+docker run -v ~/.local/share/syncthing/Music:/data vimagick/youtube-dl \
   -f bestaudio \
   -x \
   --audio-quality 0 \
   --audio-format mp3 \
   --add-metadata "$1" \
-  -o "~/.local/share/syncthing/Music/%(title)s.%(ext)s"
+  -o "/data/%(title)s.%(ext)s"
