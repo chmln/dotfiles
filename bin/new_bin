@@ -1,4 +1,0 @@
-#!/bin/sh
-touch /home/greg/.config/bin/$1
-chmod +x /home/greg/.config/bin/$1
-$EDITOR /home/greg/.config/bin/$1

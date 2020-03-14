@@ -1,5 +1,0 @@
-#!/bin/bash
-parent=$(dirname $1)
-filename=$(basename $1)
-mkdir -p $parent
-$EDITOR $1

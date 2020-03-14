@@ -1,0 +1,2 @@
+#!/bin/fish
+aria2c -d ~/.local/media --bt-force-encryption true $argv

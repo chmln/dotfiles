@@ -1,3 +1,0 @@
-#!/bin/fish
-set -l app (bolt | fzf -d "\t" --with-nth 2 --nth 1 | cut -f1)
-run "$app"

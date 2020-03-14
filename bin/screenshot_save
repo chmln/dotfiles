@@ -1,5 +1,9 @@
 #!/usr/bin/env fish
-set -l path (zenity --file-selection --save --file-filter "Screenshot | *.png" --filename "screenshot.png")
-xclip -o -sel clipboard > $path
-notify-send "Saved" "$path"
-echo "![]($path)" | xsel -b
+set -l path (fd -H -t d | rofi -dmenu -i -tokenize)
+if [ -n "$path" ]
+    set -l filename (rofi -dmenu -input /dev/null -p "Enter Text > "  -theme-str 'listview { enabled: false;}')
+    set -l fullpath "$path/$filename.png"
+    xclip -o -sel clipboard > $fullpath
+    notify-send "Saved" "$fullpath"
+    echo "![]($fullpath)" | xsel -b
+end

@@ -1,0 +1,2 @@
+#!/bin/bash
+HOME=/home/greg/.local/share/freeoffice /usr/lib/freeoffice/presentations "$@"

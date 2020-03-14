@@ -1,1 +1,2 @@
-/usr/lib/brave-nightly-bin/brave
+#!/bin/fish
+/usr/lib/brave-nightly-bin/brave $BRAVE_FLAGS $argv

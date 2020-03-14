@@ -1,2 +1,0 @@
-#!/bin/bash
-~/.local/bin/gcalcli --config-folder ~/.config/gcalcli "$@"

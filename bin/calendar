@@ -1,2 +1,0 @@
-#!/bin/fish
-xterm -name center -e 'gcalcli --lineart ascii calw (date +"%d") 2 ; read -p ""'

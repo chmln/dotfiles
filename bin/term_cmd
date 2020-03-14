@@ -1,2 +1,0 @@
-#!/bin/fish
-xterm -name center -e "$argv"

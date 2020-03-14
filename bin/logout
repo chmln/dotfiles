@@ -1,3 +1,2 @@
 #!/bin/sh
-sudo /usr/bin/prime-switch
-i3-msg exit
+systemctl --user stop i3

@@ -1,2 +1,0 @@
-#!/usr/bin/fish
-repo https://github.com/chmln/$argv[1].git master $argv[2]
