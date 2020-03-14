@@ -8,8 +8,7 @@ Plug 'tpope/vim-fugitive'
 autocmd VimEnter * if &ft == '' | call FugitiveDetect(getcwd()) | endif
 
 " ======== FZF ============= "
-Plug 'liuchengxu/vim-clap'
-let g:clap_theme = 'material_design_dark'
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 let g:clap_no_matches_msg = ''
 let g:clap_disable_run_rooter = v:false
 let g:clap_current_selection_sign = { 'text': "\uf62e", 'texthl': "WarningMsg", "linehl": "ClapCurrentSelection"}

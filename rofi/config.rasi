@@ -12,7 +12,6 @@ configuration {
         tokenize: false;
         sorting-method: "fzf";
         drun-display-format: "{name}";
-        theme: "Arc-Dark";
 }
 
 #prompt {

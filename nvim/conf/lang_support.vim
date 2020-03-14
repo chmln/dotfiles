@@ -1,5 +1,6 @@
 " color scheme
 Plug 'joshdick/onedark.vim'
+Plug 'rakr/vim-one'
 
 let g:onedark_hide_endofbuffer = 1
 let g:onedark_color_overrides = {

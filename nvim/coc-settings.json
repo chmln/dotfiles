@@ -19,9 +19,9 @@
   "typescript.referencesCodeLens.enable": false,
   "typescript.implementationsCodeLens.enable": false,
   "suggest.echodocSupport": true,
-  //"diagnostic.virtualText": false,
+  "diagnostic.virtualText": true,
   "diagnostic.locationlist": true,
-  "rust-analyzer.raLspServerPath": "/usr/bin/ra_lsp_server",
+  "rust-analyzer.serverPath": "/usr/bin/rust-analyzer",
   "rust-analyzer.featureFlags": {
     "completion.enable-postfix": false
   },
