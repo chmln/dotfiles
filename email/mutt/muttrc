@@ -33,7 +33,7 @@ color index_date white default
 color index blue default "~U" # unread messages
 color indicator black white
 color header white default .*
-color status default black
+color status default white
 set status_format=""
 
 set help=no
@@ -66,8 +66,8 @@ bind pager k previous-line
 bind pager \Cj next-undeleted
 bind pager \Ck previous-undeleted
 
-macro index,pager \Cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
-macro attach,compose \Cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+macro index,pager \Cb "<pipe-message> urlscan -c<Enter>" "call urlscan to extract URLs out of a message"
+macro attach,compose \Cb "<pipe-entry> urlscan -c<Enter>" "call urlscan to extract URLs out of a message"
 
 # html/plaintext
 set mailcap_path  = ~/.config/mutt/mailcap

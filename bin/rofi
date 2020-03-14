@@ -1,0 +1,7 @@
+#!/bin/fish
+set THEME Arc-Dark
+if $IS_DAY
+    set THEME Arc
+end
+
+/usr/bin/rofi -theme $THEME $argv
