@@ -1,10 +1,8 @@
 configuration {
         bw: 0;
-        drun-icon-theme: "Arc";
         font: "Source Code Pro Semibold 16";
         lines: 5;
         matching: "fuzzy";
-        no-cycle: true;
         padding: 0;
         show-icons: true;
         sort: true;
