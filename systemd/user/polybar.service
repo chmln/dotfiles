@@ -1,0 +1,12 @@
+[Unit]
+Description=Polybar
+After=i3.service
+Requires=i3.service
+
+[Service]
+ExecStartPre=i3 --get-socketpath
+ExecStart=polybar primary
+Restart=always
+
+[Install]
+WantedBy=wm.target

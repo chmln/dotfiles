@@ -1,0 +1,12 @@
+[Unit]
+Description=xsettingsd
+After=i3.service
+Requires=i3.service
+
+[Service]
+ExecStart=xsettingsd
+ExecReload=kill -HUP $MAINPID
+Restart=on-failure
+
+[Install]
+WantedBy=wm.target

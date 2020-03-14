@@ -1,9 +1,11 @@
 [Unit]
-Description=Set up monitors
-PartOf=graphical-session.target
+Description=Setup monitors
+After=xorg.service
+Requires=xorg.service
 
 [Service]
-ExecStart=fish %h/.config/sway/monitors.sh
+ExecStart=xrandr --output eDP-1-1 --mode 1920x1080 --pos 320x1440 --primary --output HDMI-1-1 --mode 2560x1440 --pos 0x0
+Type=oneshot
 
 [Install]
-WantedBy=sway-session.target
+WantedBy=wm.target

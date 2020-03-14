@@ -1,0 +1,13 @@
+[Unit]
+Description=Focus on primary monitor on startup
+After=i3.service
+Requires=i3.service
+
+[Service]
+ExecCondition=i3 --get-socketpath
+ExecStart=i3-msg focus down
+Restart=on-failure
+RestartSec=0.1
+
+[Install]
+WantedBy=wm.target

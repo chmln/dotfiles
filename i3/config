@@ -98,8 +98,5 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -3%
 bindsym XF86RFKill exec airplane_mode
 
 bindsym $mod+Shift+s exec screenshot
-bindsym $mod+Return exec --no-startup-id terminal
+bindsym $mod+Return exec terminal
 bindsym $mod+d exec launcher
-
-# ============ STARTUP
-exec_always "sh ~/.config/i3/autostart.sh > /tmp/autostart.log"

@@ -72,15 +72,16 @@ function fish_user_key_bindings
   bind -M insert \cl forward-char
   bind -M visual y fish_clipboard_copy
   bind -M default v visual_mode
+  keybind \ca fzf_autocomplete
+  keybind \cb fzf_branch
+  keybind \ce nvim .
+  keybind \cf lf
+  keybind \cg fzf_cd
+  keybind \ck fzf_kill
+  keybind \cn duplicate_term
   keybind \co "fzf_edit d $EDITOR"
   keybind \cp "fzf_edit f $EDITOR"
   keybind \cs fzf_view
-  keybind \cn duplicate_term
-  keybind \cg fzf_cd
-  keybind \ca fzf_autocomplete
-  keybind \cb fzf_branch
-  keybind \ck fzf_kill
-  keybind \cf lf
 end
 
 # https://github.com/fish-shell/fish-shell/issues/3899

@@ -1,0 +1,10 @@
+[Unit]
+Description=Window manager target
+Wants=xorg.target
+After=xorg.service
+Requires=dbus.socket
+BindsTo=graphical-session.target
+AllowIsolate=true
+
+[Install]
+Alias=default.target

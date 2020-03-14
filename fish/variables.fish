@@ -1,58 +1,62 @@
 # remove ? interpretation as glob
 set -U fish_features qmark-noglob
 
-set PATH -g ~/.local/share/npm/bin $PATH
-set PATH -g ~/.local/share/cargo/bin $PATH
-set PATH -g ~/.local/lib/python3.6/site-packages $PATH
-set PATH -g ~/.local/bin/ $PATH
-set PATH -g ~/.config/bin/ $PATH
+set -gx IS_DAY true
 
-set -gx XDG_DATA_HOME "/home/greg/.local/share"
 set -gx XDG_CACHE_HOME "/home/greg/.cache"
 set -gx XDG_CONFIG_HOME "/home/greg/.config"
+set -gx XDG_DATA_HOME "/home/greg/.local/share"
 
 set -gx EDITOR "nvim"
-set -gx VISUAL "nvim"
 set -gx SUDO_EDITOR "/usr/bin/nvim"
+set -gx VISUAL "nvim"
 
 # heathens polluting my home directory
+set -gx ANDROID_SDK_HOME "/home/greg/.config/android"
 set -gx CARGO_HOME "/home/greg/.local/share/cargo"
-set -gx RUSTUP_HOME "/home/greg/.local/share/rustup"
+set -gx GIT_SSH_COMMAND "ssh -q -F /etc/ssh/ssh_config"
+set -gx GNUPGHOME "/home/greg/.config/gnupg"
 set -gx LESSHISTFILE "/dev/null"
 set -gx NERDTREE_BOOKMARKS "/tmp/.NERDTreeBookmarks"
-set -gx GNUPGHOME "/home/greg/.config/gnupg"
-set -gx ANDROID_SDK_HOME "/home/greg/.config/android"
-set -gx NPM_CONFIG_USERCONFIG "~/.config/npm/npmrc"
 set -gx NOTMUCH_CONFIG "/home/greg/.config/notmuch/config"
-set -gx GIT_SSH_COMMAND "ssh -q -F /etc/ssh/ssh_config"
+set -gx NPM_CONFIG_USERCONFIG "~/.config/npm/npmrc"
+set -gx RUSTUP_HOME "/home/greg/.local/share/rustup"
 
-set -gx FZF_DEFAULT_OPTS "--reverse"
+if $IS_DAY
+    set -gx BAT_THEME "OneHalfLight"
+    set -gx FZF_DEFAULT_OPTS "--reverse --color=light"
+else
+    set -gx BAT_THEME "TwoDark"
+    set -gx FZF_DEFAULT_OPTS "--reverse"
+end
+
+set -gx BRAVE_FLAGS "--disk-cache-dir=/dev/null --disk-cache-size=1"
 set -gx FZF_DEFAULT_COMMAND 'fd -t f --hidden -E .git -E node_modules'
-set -gx BAT_THEME "TwoDark"
-set -gx RIPGREP_CONFIG_PATH "/home/greg/.config/ripgrep"
-
-set -gx GTK_OVERLAY_SCROLLING 0
-set -gx QT_QPA_PLATFORMTHEME "qt5ct"
-
 set -gx GIT_MERGE_AUTOEDIT "no"
+set -gx GOPATH "/home/greg/.cache/go"
+set -gx GTK_OVERLAY_SCROLLING 0
 set -gx LESS "-Ri "
-#set -gx RUSTC_WRAPPER "sccache"
+set -gx RIPGREP_CONFIG_PATH "/home/greg/.config/ripgrep"
 set -gx RUSTFLAGS "-C link-arg=-fuse-ld=lld"
+
+# nvidia gpu
+set -gx __GL_ExperimentalPerfStrategy 1
+
+# fish customizations
 
 set -x fish_greeting
 set fish_cursor_default block
 set fish_cursor_insert line
 
 # prompt customizations
-set theme_nerd_fonts yes
-set theme_display_vi no
-set theme_color_scheme zenburn
-set theme_display_date no
-set theme_display_hostname no
 set fish_prompt_pwd_dir_length 0
-set theme_display_nvm no
-set theme_display_hg no
+set theme_display_date no
 set theme_display_git_master_branch yes
+set theme_display_hg no
+set theme_display_hostname no
+set theme_display_nvm no
+set theme_display_vi no
+set theme_nerd_fonts yes
 
 set -x LF_ICONS "\
 di=:\

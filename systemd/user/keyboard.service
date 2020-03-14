@@ -1,0 +1,14 @@
+[Unit]
+Description=Set keyboard locales & tweaks
+After=i3.service
+Requires=i3.service
+
+[Service]
+Environment=DISPLAY=:0
+ExecStartPre=numlockx on
+ExecStartPre=xset -b
+ExecStartPre=xset r rate 250 85
+ExecStart=setxkbmap -option grp:win_space_toggle us,ru,am ,phonetic_winkeys,phonetic &
+
+[Install]
+WantedBy=wm.target

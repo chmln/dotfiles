@@ -1,18 +1,3 @@
-Xcursor.theme: Hackneyed
-Xcursor.size: 30
-
-*.vt100.translations: #override \n\
- <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
- Ctrl <Key>V: insert-selection(CLIPBOARD) \n\
- Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
-
-*faceName: SauceCodePro Nerd Font Mono: Semibold
-*faceSize: 14
-
-*borderWidth:0
-*internalBorder: 0
-*trimSelection: true
-
 *foreground: #D7D0C7
 *background: #0d0d0d
 

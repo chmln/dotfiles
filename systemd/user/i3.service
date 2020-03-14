@@ -1,0 +1,11 @@
+[Unit]
+Description=i3 service
+After=xorg.service
+Requires=xorg.service
+
+[Service]
+ExecStart=i3
+ExecStopPost=loginctl terminate-user greg
+
+[Install]
+WantedBy=wm.target

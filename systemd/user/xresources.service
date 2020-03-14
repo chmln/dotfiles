@@ -1,0 +1,9 @@
+[Unit]
+Description=Load Xresources
+After=xorg.service
+
+[Service]
+ExecStart=xrdb %h/.config/x11/xresources
+
+[Install]
+WantedBy=wm.target

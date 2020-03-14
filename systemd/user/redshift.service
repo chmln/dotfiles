@@ -1,9 +1,10 @@
 [Unit]
 Description=Blue light filter
-PartOf=graphical-session.target
+After=i3.service
+Requires=i3.service
 
 [Service]
 ExecStart=redshift -c %h/.config/redshift.conf
 
 [Install]
-WantedBy=default.target
+WantedBy=wm.target
