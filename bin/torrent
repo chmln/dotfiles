@@ -1,2 +1,10 @@
 #!/bin/fish
-aria2c -d ~/.local/media --bt-force-encryption true $argv
+aria2c \
+    -d ~/.local/media \
+    --seed-time 0 \
+    --bt-force-encryption \
+    --listen-port 51413 \
+    -j8 \
+    --summary-interval=0 \
+    --log-level=warn \
+    $argv

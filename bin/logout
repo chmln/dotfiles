@@ -1,2 +1,2 @@
 #!/bin/sh
-systemctl --user stop i3
+systemctl --user stop window-manager

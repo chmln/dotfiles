@@ -1,0 +1,2 @@
+#!/bin/fish
+bspc node -f $argv[1] || bspc monitor -f $argv[1]

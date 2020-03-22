@@ -1,0 +1,14 @@
+#!/bin/fish
+if [ $argv[1] = 'west' -o $argv[1] = 'east' ]
+    bspc node -s $argv[1] --follow
+else
+    if not bspc node -n $argv[1] --follow
+        if not bspc node -m $argv[1] --follow
+            bspc node -s prev.local --follow
+        end
+        #sleep 0.1
+        #notify-send "Focusing on monitor $argv[1]"
+        #bspc monitor -f $argv[1]
+    end
+end
+

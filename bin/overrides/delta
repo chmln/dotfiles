@@ -1,0 +1,3 @@
+#!/bin/fish
+test $IS_DAY = 'true'; and set -l theme --light; or set theme --dark
+/usr/bin/delta $theme $argv
