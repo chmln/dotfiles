@@ -1,12 +1,3 @@
-" color scheme
-Plug 'joshdick/onedark.vim'
-Plug 'rakr/vim-one'
-
-let g:onedark_hide_endofbuffer = 1
-let g:onedark_color_overrides = {
-\ "black": {"gui": "#000", "cterm": "0", "cterm16": "0" },
-\}
-
 " hide tilde signs. using lua to avoid space at the end getting trimmed
 lua vim.api.nvim_command('set fcs=eob:\\ ')
 
@@ -35,4 +26,4 @@ Plug 'dag/vim-fish'
 Plug 'cespare/vim-toml'
 Plug 'mboughaba/i3config.vim'
 Plug 'GutenYe/json5.vim'
-
+Plug 'baskerville/vim-sxhkdrc'

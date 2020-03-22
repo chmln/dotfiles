@@ -1,13 +1,23 @@
-set background=light
-let g:clap_theme = 'material_design_dark'
+" color scheme
+Plug 'sainnhe/edge'
+
+"let g:clap_theme = 'material_design_dark'
+
+if $IS_DAY == 'true'
+    set background=light
+else
+    set background=dark
+endif
+
+let g:edge_transparent_background = 1
+let g:edge_disable_italic_comment = 1
+let g:edge_cursor = 'blue'
 
 function! s:customize_colorscheme()
-    if $IS_DAY
-        call one#highlight('Normal', '', 'white', 'none')
-        call one#highlight('CursorLineNR', '', 'white', 'none')
-    else
-        call one#highlight('Normal', '', 'black', 'none')
-        call one#highlight('CursorLineNR', '', 'black', 'none')
+    hi link rustDerive SpecialComment
+    hi link rustDeriveTrait SpecialComment
+    if $IS_DAY == 'true'
+        hi Visual guibg=darkgray
     endif
 endfunction
 

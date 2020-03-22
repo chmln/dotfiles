@@ -25,6 +25,8 @@ set noshowmode
 set timeoutlen=1000 ttimeoutlen=0
 set nofoldenable
 
+set cursorline
+
 " disable status line by default
 set laststatus=0
 set noruler
