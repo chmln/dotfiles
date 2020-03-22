@@ -187,7 +187,7 @@ interval = 1
 ; Available tokens:
 ;   %counter%
 ; Command to be executed (using "/usr/bin/env sh -c [command]")
-exec = /home/greg/.config/bin/unread_emails
+exec = ~/.dotfiles/polybar/unread_emails
 
 [module/pulseaudio]
 type = internal/pulseaudio

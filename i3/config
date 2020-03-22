@@ -67,6 +67,17 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+workspace $ws1 output eDP-1-1
+workspace $ws3 output eDP-1-1
+workspace $ws5 output eDP-1-1
+workspace $ws7 output eDP-1-1
+workspace $ws9 output eDP-1-1
+workspace $ws2 output HDMI-1-1
+workspace $ws4 output HDMI-1-1
+workspace $ws6 output HDMI-1-1
+workspace $ws8 output HDMI-1-1
+workspace $ws10 output HDMI-1-1
+
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
