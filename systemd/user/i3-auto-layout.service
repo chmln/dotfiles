@@ -1,12 +1,12 @@
 [Unit]
 Description=i3 auto layout
-After=i3.service
-Requires=i3.service
+After=window-manager.service
+Requires=window-manager.service
 
 [Service]
-ExecCondition=i3 --get-socketpath
 ExecStart=/home/greg/Workspace/linux-utils/i3-auto-layout/target/release/i3-auto-layout
 Restart=always
+RestartSec=1
 
 [Install]
 WantedBy=wm.target

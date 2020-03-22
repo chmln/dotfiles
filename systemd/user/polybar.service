@@ -1,10 +1,9 @@
 [Unit]
 Description=Polybar
-After=i3.service
-Requires=i3.service
+After=window-manager.service
+Requires=window-manager.service
 
 [Service]
-ExecStartPre=i3 --get-socketpath
 ExecStart=polybar primary
 Restart=always
 

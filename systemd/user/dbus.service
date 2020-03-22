@@ -1,1 +1,16 @@
-/usr/lib/systemd/user/dbus-broker.service
+[Unit]
+Description=D-Bus User Message Bus
+Documentation=man:dbus-broker-launch(1)
+DefaultDependencies=false
+Before=basic.target shutdown.target
+Requires=dbus.socket
+Conflicts=shutdown.target
+
+[Service]
+Type=notify
+Sockets=dbus.socket
+ExecStart=/usr/bin/dbus-broker-launch --scope user
+ExecReload=/usr/bin/busctl --user call org.freedesktop.DBus /org/freedesktop/DBus org.freedesktop.DBus ReloadConfig
+
+[Install]
+Alias=dbus.service

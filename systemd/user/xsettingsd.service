@@ -1,7 +1,7 @@
 [Unit]
 Description=xsettingsd
-After=i3.service
-Requires=i3.service
+After=window-manager.service
+Requires=window-manager.service
 
 [Service]
 ExecStart=xsettingsd

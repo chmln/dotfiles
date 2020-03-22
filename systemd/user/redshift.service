@@ -1,10 +1,11 @@
 [Unit]
 Description=Blue light filter
-After=i3.service
-Requires=i3.service
+After=xorg.service
+Requires=window-manager.service
 
 [Service]
 ExecStart=redshift -c %h/.config/redshift.conf
+Restart=always
 
 [Install]
 WantedBy=wm.target

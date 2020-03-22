@@ -4,6 +4,7 @@ After=monitors.service
 Requires=monitors.service
 
 [Service]
+ExecStartPre=xsetroot -cursor_name left_ptr
 ExecStart=feh --no-fehbg --bg-scale %h/.config/wallpaper %h/.config/wallpaper
 
 [Install]

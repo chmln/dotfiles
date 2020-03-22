@@ -1,7 +1,7 @@
 [Unit]
-Description=i3 service
-After=xorg.service
-Requires=xorg.service
+Description=Window Manager
+After=monitors.service
+Requires=monitors.service
 
 [Service]
 ExecStart=i3
