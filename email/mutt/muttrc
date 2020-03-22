@@ -32,8 +32,8 @@ set index_format="%Z %<[y?%<[m?%<[d?%[%H:%M ]&%[%a %d]>&%[%b %d]>&%[%m/%y ]> %-1
 color index_date white default
 color index blue default "~U" # unread messages
 color indicator black white
-color header white default .*
-color status default white
+#color header white default .*
+#color status default black
 set status_format=""
 
 set help=no
