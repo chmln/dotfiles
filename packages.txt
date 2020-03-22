@@ -15,6 +15,7 @@ bottom-bin
 brave-nightly-bin
 brillo
 brscan4
+bspwm
 cairo
 cargo-tree
 colord
@@ -32,6 +33,7 @@ docker-bin
 docker-compose-bin
 dos2unix
 dosfstools
+downgrade
 dunst
 earlyoom
 efibootmgr
@@ -57,6 +59,7 @@ git
 git-delta
 git-lfs-bin
 github-cli-bin
+gnome-bluetooth
 gnome-keyring
 grep
 grub
@@ -87,7 +90,6 @@ libva-vdpau-driver
 libvdpau
 linux
 linux-lts
-linux-lts-headers
 lld
 llpp
 logrotate
@@ -148,6 +150,7 @@ sd
 sed
 smartmontools
 sudo
+sxhkd
 syncthing
 tar
 telegram-desktop-bin
@@ -165,7 +168,6 @@ ufw
 urlscan
 usb_modeswitch
 vidir
-vscodium-bin
 vulkan-icd-loader
 w3m
 watchexec
@@ -175,6 +177,7 @@ wpa_supplicant
 xclip
 xcolor
 xdg-utils-mimeo
+xdotool
 xf86-video-intel
 xorg-setxkbmap
 xorg-xauth
@@ -186,6 +189,7 @@ xorg-xprop
 xorg-xrandr
 xorg-xrdb
 xorg-xset
+xorg-xsetroot
 xsel
 xsettingsd
 xterm
