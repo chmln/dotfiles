@@ -2,7 +2,6 @@
 lua vim.api.nvim_command('set fcs=eob:\\ ')
 
 syntax on
-set termguicolors
 
 " code formatting
 Plug 'prettier/vim-prettier', { 'do': 'npm i' }
@@ -26,4 +25,3 @@ Plug 'dag/vim-fish'
 Plug 'cespare/vim-toml'
 Plug 'mboughaba/i3config.vim'
 Plug 'GutenYe/json5.vim'
-Plug 'baskerville/vim-sxhkdrc'

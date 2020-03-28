@@ -1,3 +1,4 @@
+set shell=/bin/sh
 set hidden
 set number
 set expandtab
@@ -32,8 +33,9 @@ set laststatus=0
 set noruler
 
 set autoindent
+set title
 
 " set cursors for xterm
-let &t_SI = "\<Esc>[6 q"
-let &t_SR = "\<Esc>[4 q"
-let &t_EI = "\<Esc>[2 q"
+"let &t_SI = "\<Esc>[6 q"
+"let &t_SR = "\<Esc>[4 q"
+"let &t_EI = "\<Esc>[2 q"

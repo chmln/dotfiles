@@ -25,6 +25,10 @@
   "rust-analyzer.featureFlags": {
     "completion.enable-postfix": false
   },
+  "diagnostic.separateRelatedInformationAsDiagnostics": true,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.virtualTextLines": 3,
+  "coc.preferences.formatOnSaveFiletypes": ["rust"],
   "suggest.completionItemKindLabels": {
     "function": "\uf794",
     "method": "\uf6a6",

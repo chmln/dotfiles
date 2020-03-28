@@ -17,7 +17,7 @@ function! s:customize_colorscheme()
     hi link rustDerive SpecialComment
     hi link rustDeriveTrait SpecialComment
     if $IS_DAY == 'true'
-        hi Visual guibg=darkgray
+        hi Visual ctermbg=darkgray
     endif
 endfunction
 

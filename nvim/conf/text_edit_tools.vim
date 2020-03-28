@@ -13,6 +13,3 @@ let g:VM_exit_on_1_cursor_left      = 1
 let g:VM_manual_infoline            = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" generate html
-Plug 'mattn/emmet-vim'
