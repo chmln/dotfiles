@@ -1,9 +1,8 @@
-#!/bin/fish
-set -l num_unread (notmuch search --format json "tag:unread AND date:7-days..+1mins" | jq 'length')
+#!/bin/bash
+num_unread=`notmuch search --format json "tag:unread AND date:7-days..+1mins" | jq 'length'`
 
-if [ "$num_unread" -gt 0 ]
+if [ "$num_unread" -gt 0 ]; then
   echo -e " $num_unread\n\nunread"
 else
-  echo -e "   \n\nread"
-end
-
+  echo -e "\n\nread"
+fi

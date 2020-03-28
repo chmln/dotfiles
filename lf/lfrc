@@ -18,4 +18,4 @@ cmd fzf_edit ${{
 
 map <c-g> :fzf_jump
 map <c-p> :fzf_edit
-map <enter> % fish -c 'open "$fx"'
+map <enter> % run xdg-open "$fx"

@@ -58,7 +58,6 @@ ignore *                               # first, ignore all headers
 unignore from: to: cc: date: subject:  # then, show only these
 hdr_order from: to: cc: date: subject: # and in this order
 
-
 # keybinds
 macro index,pager D "<purge-message><sync-mailbox>"
 bind pager j next-line

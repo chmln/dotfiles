@@ -6,7 +6,6 @@ acpid
 aic94xx-firmware
 android-tools
 android-udev
-arc-icon-theme
 aria2
 base
 bat
@@ -15,7 +14,6 @@ bottom-bin
 brave-nightly-bin
 brillo
 brscan4
-bspwm
 cairo
 cargo-tree
 colord
@@ -47,7 +45,6 @@ filesystem
 fish
 fisher
 fontconfig
-freeoffice
 freetype2
 fuse2
 fzf
@@ -64,7 +61,6 @@ gnome-keyring
 grep
 grub
 grub-hook
-gst-plugins-base
 gtk3-nocsd-git
 gzip
 harfbuzz-icu
@@ -76,7 +72,8 @@ intel-ucode
 iotop
 isync
 jq
-kitty
+kernel-modules-hook
+kitty-git
 less
 lf-bin
 libblockdev-lean
@@ -94,10 +91,8 @@ lld
 llpp
 logrotate
 lostfiles
-lynx
 m4
 mailcap
-mailspring
 maim
 make
 man-db
@@ -107,7 +102,6 @@ mesa-demos
 mesa-vdpau
 mimeo
 minetime-bin
-moka-icon-theme
 msmtp
 neofetch
 neomutt
@@ -115,6 +109,7 @@ neovim-nightly
 nodejs
 notmuch
 npm
+numix-icon-theme-git
 numlockx
 nvidia
 nvidia-lts
@@ -124,7 +119,6 @@ openssh
 os-prober
 otf-ibm-plex
 pacman-contrib
-pandoc-bin
 pango
 patch
 pkgconf
@@ -146,11 +140,10 @@ ripgrep
 rofi
 rust-analyzer-bin
 rustup
-sd
 sed
 smartmontools
 sudo
-sxhkd
+surfn-icons-git
 syncthing
 tar
 telegram-desktop-bin
@@ -159,7 +152,6 @@ texlive-core
 thermald
 time
 tldr++
-tokei
 trash-cli
 ttf-croscore
 udevil
@@ -177,11 +169,9 @@ wpa_supplicant
 xclip
 xcolor
 xdg-utils-mimeo
-xdotool
 xf86-video-intel
 xorg-setxkbmap
 xorg-xauth
-xorg-xinit
 xorg-xinput
 xorg-xkbcomp
 xorg-xmodmap
@@ -189,8 +179,6 @@ xorg-xprop
 xorg-xrandr
 xorg-xrdb
 xorg-xset
-xorg-xsetroot
 xsel
 xsettingsd
-xterm
 yay-bin
