@@ -56,7 +56,7 @@ function fzf_kill
 end
 
 function fzf_view
-  fzf_edit f xdg-open exit
+  fzf_edit f 'run xdg-open' exit
 end
 
 function duplicate_term

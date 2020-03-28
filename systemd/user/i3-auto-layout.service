@@ -4,7 +4,8 @@ After=window-manager.service
 Requires=window-manager.service
 
 [Service]
-ExecStart=/home/greg/Workspace/linux-utils/i3-auto-layout/target/release/i3-auto-layout
+Environment=RUST_LOG=debug
+ExecStart=%h/Workspace/linux-utils/i3-auto-layout/target/release/i3-auto-layout
 Restart=always
 RestartSec=1
 

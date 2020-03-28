@@ -1,4 +1,4 @@
-#!/bin/fish
+#!/bin/bash
 mkdir -p /tmp/kitty_socket
-set -l tmp_path (env TMPDIR=/tmp/kitty_socket mktemp -u)
-kitty --listen-on=unix:$tmp_path $argv
+tmp_path=$(env TMPDIR=/tmp/kitty_socket mktemp -u)
+kitty --listen-on=unix:$tmp_path "$@"

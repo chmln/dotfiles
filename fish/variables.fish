@@ -1,26 +1,11 @@
 # remove ? interpretation as glob
 set -U fish_features qmark-noglob
 
-set -gx IS_DAY true
-
-set -gx XDG_CACHE_HOME "/home/greg/.cache"
-set -gx XDG_CONFIG_HOME "/home/greg/.config"
-set -gx XDG_DATA_HOME "/home/greg/.local/share"
-
-set -gx EDITOR "nvim"
-set -gx SUDO_EDITOR "/usr/bin/nvim"
-set -gx VISUAL "nvim"
-
-# heathens polluting my home directory
-set -gx ANDROID_SDK_HOME "/home/greg/.config/android"
-set -gx CARGO_HOME "/home/greg/.local/share/cargo"
-set -gx GIT_SSH_COMMAND "ssh -q -F /etc/ssh/ssh_config"
-set -gx GNUPGHOME "/home/greg/.config/gnupg"
-set -gx LESSHISTFILE "/dev/null"
-set -gx NERDTREE_BOOKMARKS "/tmp/.NERDTreeBookmarks"
-set -gx NOTMUCH_CONFIG "/home/greg/.config/notmuch/config"
-set -gx NPM_CONFIG_USERCONFIG "~/.config/npm/npmrc"
-set -gx RUSTUP_HOME "/home/greg/.local/share/rustup"
+if systemctl --user show-environment | rg -q IS_DAY
+    set -gx IS_DAY (systemctl --user show-environment | /home/greg/.local/bin/sd -f s '.*IS_DAY=(\w+).*' '$1')
+else
+    set -gx IS_DAY false
+end
 
 if $IS_DAY
     set -gx BAT_THEME "OneHalfLight"
@@ -30,17 +15,6 @@ else
     set -gx FZF_DEFAULT_OPTS "--reverse"
 end
 
-set -gx BRAVE_FLAGS "--disk-cache-dir=/dev/null --disk-cache-size=1"
-set -gx FZF_DEFAULT_COMMAND 'fd -t f --hidden -E .git -E node_modules'
-set -gx GIT_MERGE_AUTOEDIT "no"
-set -gx GOPATH "/home/greg/.cache/go"
-set -gx GTK_OVERLAY_SCROLLING 0
-set -gx LESS "-Ri "
-set -gx RIPGREP_CONFIG_PATH "/home/greg/.config/ripgrep"
-set -gx RUSTFLAGS "-C link-arg=-fuse-ld=lld"
-
-# nvidia gpu
-set -gx __GL_ExperimentalPerfStrategy 1
 
 # fish customizations
 

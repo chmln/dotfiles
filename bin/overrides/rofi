@@ -1,7 +1,8 @@
-#!/bin/fish
-set THEME Arc-Dark
-if $IS_DAY
-    set THEME Arc
-end
+#!/bin/bash
+if systemctl --user show-environment | rg -q IS_DAY=true; then
+    THEME=Arc
+else
+    THEME=Arc-Dark
+fi
 
-/usr/bin/rofi -theme $THEME $argv
+/usr/bin/rofi -theme $THEME "$@"

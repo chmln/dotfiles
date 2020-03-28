@@ -5,6 +5,7 @@ Requires=xsettingsd.service
 
 [Service]
 Environment=RUST_LOG=debug
+ExecCondition=dump_xsettings
 ExecStart=%h/Workspace/linux-utils/auto-gtk-theme/target/release/auto-gtk-theme
 Restart=on-failure
 RestartSec=1

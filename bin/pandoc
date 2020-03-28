@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run --volume "$PWD:/data" pandoc/latex:latest "$@"

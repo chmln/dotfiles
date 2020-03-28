@@ -1,7 +1,2 @@
-#!/usr/bin/fish
-if set -q SWAYSOCK
-    grim -g (slurp) - | wl-copy
-else
-    maim -u -s -m 10 | xclip -selection clipboard -t image/png
-end
-
+#!/usr/bin/bash
+maim -u -s -m 10 | xclip -selection clipboard -t image/png

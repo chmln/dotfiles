@@ -1,2 +1,2 @@
-#!/bin/sh
-rofi -modi drun -show drun 
+#!/bin/bash
+rofi -modi drun -show drun

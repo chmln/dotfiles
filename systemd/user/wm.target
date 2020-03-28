@@ -6,5 +6,5 @@ Requires=dbus.socket
 BindsTo=graphical-session.target
 AllowIsolate=true
 
-[Install]
-Alias=default.target
+#[Install]
+#Alias=default.target

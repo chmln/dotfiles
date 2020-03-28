@@ -1,9 +1,9 @@
-#!/usr/bin/env fish
-set -l path (fd -H -t d | rofi -dmenu -i -tokenize)
-if [ -n "$path" ]
-    set -l filename (rofi -dmenu -input /dev/null -p "Enter Text > "  -theme-str 'listview { enabled: false;}')
-    set -l fullpath "$path/$filename.png"
+#!/bin/bash
+path=`rofi_path -t d`
+if [ -n "$path" ]; then
+    filename=$(rofi_input "Filename")
+    fullpath="$path/$filename.png"
     xclip -o -sel clipboard > $fullpath
     notify-send "Saved" "$fullpath"
     echo "![]($fullpath)" | xsel -b
-end
+fi
