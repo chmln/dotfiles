@@ -5,7 +5,7 @@ source "$DIR/functions.fish"
 
 # Start DE/WM at login
 if status --is-login
-  if test -z "$DISPLAY" -a $XDG_VTNR = 1
+  if [ -z "$DISPLAY" -a $XDG_VTNR = 1 ]
     systemctl --user start wm.target
   end
 end

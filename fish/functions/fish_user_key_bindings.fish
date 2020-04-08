@@ -12,12 +12,11 @@ function fzf_edit
   begin
     if [ -n "$target" ]
       commandline -f repaint
-      $argv[2] "$target"
+      eval "$argv[2] $target"
     end
   end
 
   if [ -n "$argv[3]" ]
-    echo $argv[3]
     $argv[3]
   end
   restore_state
@@ -69,6 +68,7 @@ function keybind
 end
 
 function fish_user_key_bindings
+  fish_vi_key_bindings
   bind -M insert \cl forward-char
   bind -M visual y fish_clipboard_copy
   bind -M default v visual_mode
