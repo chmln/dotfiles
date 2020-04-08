@@ -6,3 +6,4 @@ fisher.fish
 *.log
 mpd/mpd.db
 __pycache__
+kitty/active_theme.conf

@@ -3,7 +3,7 @@ Description=Load Xresources
 After=xorg.service
 
 [Service]
-ExecStart=xrdb %h/.config/x11/xresources
+ExecStart=xrdb %h/.dotfiles/x11/Xresources
 
 [Install]
 WantedBy=wm.target
