@@ -1,0 +1,5 @@
+#!/bin/sh
+mkdir -p /tmp/nvim_rpc/
+tmp_path=$(env TMPDIR=/tmp/nvim_rpc mktemp -u)
+/usr/bin/nvim --listen "$tmp_path" "$@"
+

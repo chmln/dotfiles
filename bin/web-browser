@@ -1,2 +1,2 @@
 #!/bin/sh
-run $(mimeo -c x-scheme-handler/http | sd '(.*)file://.*' '$1')
+run $(handlr get --json x-scheme-handler/http | jq -r .cmd) "$@"

@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ $IS_DAY ]; then
+if [ "$IS_DAY" == "true" ]; then
     THM="--theme GitHub"
 else
     THM="--dark"

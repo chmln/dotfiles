@@ -1,8 +1,8 @@
 #!/bin/bash
 if systemctl --user show-environment | rg -q IS_DAY=true; then
-    THEME=Arc
+    THEME=~/.dotfiles/rofi/themes/Smoke.rasi
 else
-    THEME=Arc-Dark
+    THEME=~/.dotfiles/rofi/themes/Smoke-Dark.rasi
 fi
 
 /usr/bin/rofi -theme $THEME "$@"

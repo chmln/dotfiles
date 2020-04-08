@@ -1,2 +1,2 @@
-#!/bin/fish
-/usr/lib/brave-nightly-bin/brave $BRAVE_FLAGS $argv
+#!/bin/sh
+/usr/lib/brave-nightly-bin/brave $BRAVE_FLAGS "$@"

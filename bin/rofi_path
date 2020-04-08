@@ -1,2 +1,2 @@
-#!/usr/bin/env fish
-fd -H $argv | rofi -dmenu -i -tokenize
+#!/bin/sh
+fd -H "$@" | rofi -dmenu -i -tokenize -width 800
