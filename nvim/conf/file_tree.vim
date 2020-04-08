@@ -20,8 +20,11 @@ let g:NERDTreeMarkBookmarks = 0
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ""
 let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
 
-" Close if the only remaining window is a nerdtree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-autocmd BufReadPre,FileReadPre * :NERDTreeClose
+augroup nerdtree
+    au!
+    " Close if the only remaining window is a nerdtree
+    au bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+    au BufReadPre,FileReadPre * :NERDTreeClose
+augroup END
 
 nnoremap <silent> <Leader>f :NERDTreeFind<CR>

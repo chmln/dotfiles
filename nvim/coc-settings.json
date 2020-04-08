@@ -28,7 +28,7 @@
   "diagnostic.separateRelatedInformationAsDiagnostics": true,
   "diagnostic.checkCurrentLine": true,
   "diagnostic.virtualTextLines": 3,
-  "coc.preferences.formatOnSaveFiletypes": ["rust"],
+  "coc.preferences.formatOnSaveFiletypes": ["typescript"],
   "suggest.completionItemKindLabels": {
     "function": "\uf794",
     "method": "\uf6a6",

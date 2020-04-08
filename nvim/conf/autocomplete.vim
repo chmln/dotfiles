@@ -1,7 +1,10 @@
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" show function signature
-autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup coc
+    au!
+    " show function signature
+    au User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup END
 
 nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>ac <Plug>(coc-codeaction)

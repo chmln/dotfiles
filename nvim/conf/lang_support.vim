@@ -3,11 +3,6 @@ lua vim.api.nvim_command('set fcs=eob:\\ ')
 
 syntax on
 
-" code formatting
-Plug 'prettier/vim-prettier', { 'do': 'npm i' }
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html Prettier
-
 " markdown
 Plug 'SidOfc/mkdx'
 Plug 'junegunn/goyo.vim'
