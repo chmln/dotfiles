@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Riot
+Exec=brave-nightly --new-window --app=https://riot.im/app
+Terminal=false
+Type=Application
+Icon=/home/greg/.local/share/icons/riot.svg
+Comment=Riot
+Categories=Network;

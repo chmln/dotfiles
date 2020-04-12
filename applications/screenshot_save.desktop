@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Save Screenshot
+Comment=Saves screenshot in a desired location
+Icon=applets-screenshooter
+Exec=screenshot_save
+Categories=Utility;

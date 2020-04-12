@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Web Browser
+Exec=handlr launch x-scheme-handler/http -- %U
+Icon=internet-web-browser
+Type=Application
+Categories=GTK;Network

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Email
+Comment=Launches the mutt email client
+GenericName=Email
+Icon=emblem-mail
+Exec=terminal -e fish -C neomutt
+Categories=Network

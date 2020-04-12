@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Open File
+Exec=rofi_open
+Terminal=false
+Type=Application
+Icon=folder
+Categories=Utilities;

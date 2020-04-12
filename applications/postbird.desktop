@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Postbird
+Exec=/home/greg/.local/apps/postbird.AppImage
+Terminal=false
+Type=Application
+Icon=/home/greg/.local/share/icons/postbird.png
+Categories=Network;

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Discord
+Exec=handlr launch x-scheme-handler/http -- --new-window --app=https://discordapp.com/channels/@me
+Terminal=false
+Type=Application
+Icon=discord
+Categories=Network;

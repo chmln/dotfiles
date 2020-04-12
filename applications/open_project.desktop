@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Open Project
+Exec=rofi_project
+Terminal=false
+Type=Application
+Icon=folder-documents
+Categories=Utilities;
