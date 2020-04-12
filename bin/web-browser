@@ -1,2 +1,0 @@
-#!/bin/sh
-run $(handlr get --json x-scheme-handler/http | jq -r .cmd) "$@"
