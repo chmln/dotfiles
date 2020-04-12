@@ -3,6 +3,12 @@ lua vim.api.nvim_command('set fcs=eob:\\ ')
 
 syntax on
 
+Plug 'sbdchd/neoformat'
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
+
 " markdown
 Plug 'SidOfc/mkdx'
 Plug 'junegunn/goyo.vim'
