@@ -12,7 +12,6 @@ default_orientation auto
 # ============ APPEARANCE
 font pango: Source Code Pro Bold 11
 
-for_window [class="^.*"] border pixel 6
 client.focused $active_color $active_color #000000 $active_color
 client.focused_inactive $inactive_color $inactive_color #000000 $inactive_color
 
@@ -20,6 +19,8 @@ smart_gaps on
 smart_borders on
 gaps inner 10
 gaps outer 5
+
+for_window [class="^.*"] border pixel 4
 
 # ============ MOVING AROUND
 bindsym $mod+h focus left
@@ -106,8 +107,8 @@ bindsym $mod+Shift+0 move container to workspace $ws1; workspace $ws10
 bindsym XF86MonBrightnessUp exec --no-startup-id brillo -A 20% -u 100000
 bindsym XF86MonBrightnessDown exec --no-startup-id brillo -U 20% -u 100000
 
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +3%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -3%
+bindsym XF86AudioRaiseVolume exec amixer sset Master 3+
+bindsym XF86AudioLowerVolume exec amixer sset Master 3-
 bindsym XF86RFKill exec airplane_mode
 
 bindsym $mod+Shift+s exec --no-startup-id screenshot

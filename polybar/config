@@ -35,7 +35,7 @@ font-1 = "Material Icons:size=12;3"
 
 modules-left = i3
 modules-center = date
-modules-right = email pulseaudio battery network
+modules-right = email alsa battery network
 
 tray-position = right
 tray-padding = 4
@@ -102,11 +102,12 @@ label = %date%, %time%
 
 [module/alsa]
 type = internal/alsa
+mapped = true
 
 ; `/proc/asound/cards`
 master-soundcard = hw:0
-speaker-soundcard = hw:0
-headphone-soundcard = hw:0
+; speaker-soundcard = hw:0
+; headphone-soundcard = hw:0
 
 master-mixer = Master
 
