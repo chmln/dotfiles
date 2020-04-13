@@ -8,6 +8,7 @@ android-udev
 aria2
 base
 bat
+bluez-utils
 bottom-bin
 brave-nightly-bin
 brillo

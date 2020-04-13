@@ -4,8 +4,7 @@ After=xorg.service
 Requires=xorg.service
 
 [Service]
-ExecStart=/home/greg/Workspace/linux-utils/screens/target/release/screens -p top
-#ExecStart=xrandr --output eDP-1-1 --mode 1920x1080 --pos 320x1440 --primary --output HDMI-1-1 --mode 2560x1440 --pos 0x0
+ExecStart=/home/greg/Workspace/linux-utils/screens/target/release/enact -p top
 Type=oneshot
 
 [Install]
