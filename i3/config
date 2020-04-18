@@ -2,7 +2,7 @@
 
 set $mod Mod1
 
-set $active_color #ffffff
+set $active_color #3D9970
 set $inactive_color #333333
 
 floating_modifier $mod
@@ -17,10 +17,10 @@ client.focused_inactive $inactive_color $inactive_color #000000 $inactive_color
 
 smart_gaps on
 smart_borders on
-gaps inner 10
-gaps outer 5
+gaps inner 15
+gaps outer 7
 
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 5
 
 # ============ MOVING AROUND
 bindsym $mod+h focus left
