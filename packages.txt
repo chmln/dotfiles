@@ -2,6 +2,7 @@ acpi
 acpi_call-dkms
 acpid
 aic94xx-firmware
+alsa-plugins
 alsa-utils
 android-tools
 android-udev
@@ -84,7 +85,6 @@ linux-clear-headers
 linux-clear-lts2019
 linux-clear-lts2019-headers
 lld
-llpp
 logrotate
 lostfiles
 mailcap
@@ -120,6 +120,7 @@ polkit-no-script-git
 polybar
 postgresql-libs
 powertop
+python-pynvim
 redshift-minimal
 reflector
 ripgrep
@@ -128,14 +129,16 @@ rust-analyzer-bin
 rustup
 sccache-bin
 sed
+shfmt
 smartmontools
+speex
+spotify-dev
 sudo
 syncthing
 tar
 telegram-desktop-bin
 thermald
 time
-tldr++
 trash-cli
 ttf-croscore
 udevil
@@ -160,4 +163,7 @@ xorg-xrdb
 xorg-xset
 xsel
 xsettingsd
+yarn
 yay-bin
+zathura
+zathura-pdf-poppler
