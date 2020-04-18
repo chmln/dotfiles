@@ -95,7 +95,6 @@ man-pages
 mesa
 mesa-demos
 mesa-vdpau
-minetime-bin
 msmtp
 neofetch
 neomutt
