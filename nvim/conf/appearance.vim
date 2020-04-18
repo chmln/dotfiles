@@ -1,6 +1,25 @@
+set number
+set relativenumber
+set nohlsearch
+set showtabline=0
+set noshowcmd
+set noshowmode
+set nofoldenable
+set cursorline
+set laststatus=0
+set noruler
+set title
+
+" hide tilde signs. using lua to avoid space at the end getting trimmed
+lua vim.api.nvim_command('set fcs=eob:\\ ')
+
+" Keep cursor vertically centered
+augroup cursor_centered
+  au BufEnter * let &scrolloff=winheight(win_getid())
+augroup END
+
 " color scheme
 Plug 'sainnhe/edge'
-Plug 'fxn/vim-monochrome'
 set notermguicolors
 
 if $IS_DAY == 'true'

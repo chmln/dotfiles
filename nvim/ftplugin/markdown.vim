@@ -1,7 +1,3 @@
-" distraction-free markdown editing
-Plug 'SidOfc/mkdx'
-Plug 'junegunn/goyo.vim'
-
 let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'typescript']
 let g:markdown_syntax_conceal = 1
 
