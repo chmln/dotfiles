@@ -1,9 +1,8 @@
+set $active_color #555555
+set $inactive_color #bbbbbb
 # vim: set ft=i3config
 
 set $mod Mod1
-
-set $active_color #3D9970
-set $inactive_color #333333
 
 floating_modifier $mod
 
@@ -12,15 +11,16 @@ default_orientation auto
 # ============ APPEARANCE
 font pango: Source Code Pro Bold 11
 
-client.focused $active_color $active_color #000000 $active_color
-client.focused_inactive $inactive_color $inactive_color #000000 $inactive_color
+client.focused $active_color $active_color $inactive_color $active_color
+client.unfocused $inactive_color $inactive_color $active_color $inactive_color
+client.focused_inactive $inactive_color $inactive_color $active_color $inactive_color
 
 smart_gaps on
 smart_borders on
 gaps inner 15
 gaps outer 7
 
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 1
 
 # ============ MOVING AROUND
 bindsym $mod+h focus left

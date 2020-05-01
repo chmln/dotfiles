@@ -1,4 +1,2 @@
 #!/bin/bash
-mkdir -p /tmp/kitty_socket
-tmp_path=$(env TMPDIR=/tmp/kitty_socket mktemp -u)
-kitty --listen-on=unix:$tmp_path "$@"
+kitty "$@"

@@ -14,12 +14,13 @@ augroup autocomplete
 augroup END
 
 " Code formatting
-Plug 'sbdchd/neoformat'
-let g:neoformat_only_msg_on_error = 1
+Plug 'prettier/vim-prettier', { 'do': 'pnpm i' }
+let g:prettier#autoformat = 0
 
 augroup fmt
   autocmd!
-  autocmd BufWritePre * Neoformat
+  autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html PrettierAsync
+  autocmd BufWritePre *.rs RustFmt
 augroup END
 
 " Git

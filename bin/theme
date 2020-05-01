@@ -1,0 +1,9 @@
+#!/bin/fish
+set -l i3 ~/.dotfiles/i3
+if systemctl --user show-environment | rg -q IS_DAY=true
+    cat $i3/config.day $i3/config.base > $i3/config
+else
+    cat $i3/config.night $i3/config.base > $i3/config
+end
+
+i3-msg restart

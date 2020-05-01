@@ -68,7 +68,7 @@ iwd
 jdk11-graalvm-bin
 jq
 kernel-modules-hook
-kitty
+kitty-git
 less
 lf-bin
 libblockdev-lean
@@ -88,6 +88,7 @@ lld
 logrotate
 lostfiles
 mailcap
+mailspring
 maim
 make
 man-db
@@ -112,6 +113,7 @@ pacman-contrib
 pango
 papirus-icon-theme
 patch
+pdfgrep
 pkgconf
 pkgfile
 playerctl
@@ -119,6 +121,7 @@ polkit-no-script-git
 polybar
 postgresql-libs
 powertop
+pspg
 python-pynvim
 redshift-minimal
 reflector
@@ -131,7 +134,7 @@ sed
 shfmt
 smartmontools
 speex
-spotify-dev
+spotify
 sudo
 syncthing
 tar
@@ -145,6 +148,7 @@ udisks2
 ufw
 urlscan
 usb_modeswitch
+viu
 w3m
 watchexec
 wget
@@ -162,6 +166,7 @@ xorg-xrdb
 xorg-xset
 xsel
 xsettingsd
+xwallpaper
 yarn
 yay-bin
 zathura

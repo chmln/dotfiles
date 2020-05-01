@@ -1,0 +1,7 @@
+#!/bin/sh
+path="/home/greg/.dotfiles/wallpapers/daytime"
+if [ "$IS_DAY" == "false" ]; then
+    path="/home/greg/.dotfiles/wallpapers/nighttime"
+fi
+
+xwallpaper --zoom $(shuf -n1 -e $path/*)

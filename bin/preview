@@ -5,6 +5,4 @@ if [ -f "$argv[1]" ]
     else
         cat "$argv[1]"
     end
-else
-    lsd --color always --icon always -1d --group-dirs first (fd -H -d 1 . "$argv[1]")
 end

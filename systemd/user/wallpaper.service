@@ -4,7 +4,7 @@ After=monitors.service
 Requires=monitors.service
 
 [Service]
-ExecStart=feh --no-fehbg --bg-scale %h/.config/wallpaper %h/.config/wallpaper
+ExecStart=/home/greg/.dotfiles/bin/wallpaper
 
 [Install]
 WantedBy=wm.target

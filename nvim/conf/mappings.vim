@@ -9,6 +9,9 @@ nmap <silent> q :pclose<CR>
 noremap <silent> <C-s> :w!<CR>
 nnoremap <Tab> <C-W><C-W>
 
+" Open Terminal
+noremap <silent> <F4> :silent !nohup terminal >/dev/null 2>&1 &<CR>
+
 " LSP
 function! s:check_back_space() abort
     let col = col('.') - 1
@@ -16,7 +19,7 @@ function! s:check_back_space() abort
 endfunction
 
 nnoremap <silent> <F12> <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> <F10> :NextDiagnostic<CR>
+nnoremap <silent> <F10> :NextDiagnosticCycle<CR>
 nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
 inoremap <silent><expr> <TAB>
   \ pumvisible() ? "\<C-n>" :

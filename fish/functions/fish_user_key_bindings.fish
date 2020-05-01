@@ -1,5 +1,5 @@
 function fzf_selector
-  fd -HF -d 10 -p $argv | fzf --height 60% --preview "preview {}"
+  fd -HF -d 10 -p $argv | sd -s '/home/greg' '~' | fzf --height 40% --preview "preview {}" | sd -s '~' '/home/greg'
 end
 
 function restore_state
@@ -12,18 +12,14 @@ function fzf_edit
   begin
     if [ -n "$target" ]
       commandline -f repaint
-      eval "$argv[2] $target"
+      nvim "$target"
     end
-  end
-
-  if [ -n "$argv[3]" ]
-    $argv[3]
   end
   restore_state
 end
 
 function fzf_cd
-  set target (fzf_selector -t d "" /)
+  set target (fzf_selector -t d "" / )
   if [ -n "$target" ]
     cd "$target"
   end
@@ -47,15 +43,11 @@ function fzf_branch
 end
 
 function fzf_kill
-  set target (ps ax | fzf | sd '^\s+' '' | cut -f1 -d ' ')
+  set target (ps ax |  fzf | sd '^\s+' '' | cut -f1 -d ' ')
   if [ -n "$target" ]
     kill "$target"
   end
   restore_state
-end
-
-function fzf_view
-  fzf_edit f 'run xdg-open' exit
 end
 
 function duplicate_term
@@ -79,9 +71,8 @@ function fish_user_key_bindings
   keybind \cg fzf_cd
   keybind \ck fzf_kill
   keybind \cn duplicate_term
-  keybind \co "fzf_edit d $EDITOR"
-  keybind \cp "fzf_edit f $EDITOR"
-  keybind \cs fzf_view
+  keybind \co "fzf_edit d"
+  keybind \cp "fzf_edit f"
 end
 
 # https://github.com/fish-shell/fish-shell/issues/3899

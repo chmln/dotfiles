@@ -2,6 +2,7 @@ set shell=/bin/sh
 set hidden
 set clipboard=unnamedplus
 let g:yankring_clipboard_monitor=0
+set nowrap
 set ignorecase
 set smartcase
 set autoindent
