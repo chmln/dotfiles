@@ -1,0 +1,31 @@
+[push]
+    default = current
+
+[alias]
+    co = checkout
+
+[merge]
+    verbosity = 0
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+
+[core]
+    mergeoptions = --no-edit
+    editor = nvim
+    pager = delta --hunk-style plain | less --tabs=4 -RFX
+
+[user]
+    email = gregory.mkv@gmail.com
+    signingkey = 2E44FAEEDC94B1E2
+
+[commit]
+    gpgsign = true
+
+[mergetool]
+    keepBackup =  false
+[diff]
+	algorithm = histogram

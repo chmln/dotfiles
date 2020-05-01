@@ -1,0 +1,75 @@
+directory:
+  home: "~"
+  normal:
+    style:
+      background: Black
+      foreground: White
+  error:
+    style:
+      background: Red
+      foreground: Black
+  shrink:
+    enabled: true
+    max_len: 15
+
+git_repo:
+  icons:
+    branch: "\uf418" # nf-oct-git_branch
+    tag: "\uf412" # nf-oct-tag
+    commit: "\uf417" # nf-oct-git_commit
+    modified: "…"
+    added: "+"
+    deleted: "-"
+    added_deleted: "±"
+    conflicted: "\uf47f" # nf-oct-git_compare
+    behind: "\uf175" # nf-fa-long_arrow_down
+    ahead: "\uf176" # nf-fa-long_arrow_up
+
+  clean:
+    style:
+      background: Green
+      foreground: Black
+
+  unstaged:
+    style:
+      background: Yellow
+      foreground: Black
+
+  staged:
+    style:
+      background: Green
+      foreground: Black
+
+  conflicted:
+    style:
+      background: Red
+      foreground: Black
+
+  display_master: true
+  display_tag: true
+  commit_hash_len: 6
+
+status:
+  icons:
+    succeeded: "✓"
+    failed: "\uf06a" # nf-fa-exclamation_circle
+    root: "\ue00a" # nf-pom-external_interruption
+    jobs: "\uf013" # nf-fa-gear
+
+  succeeded:
+    style:
+      background: White
+      foreground: Blue
+
+  failed:
+    style:
+      background: Red
+      foreground: White
+    display_exit_status: false
+segment_separators:
+  left_solid: "\ue0b0" # nf-pl-left_hard_divider
+  left_wire: "\ue0b1" # nf-pl-left_soft_divider
+
+segments:
+  - - directory
+    - git_repo
