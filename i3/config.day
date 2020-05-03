@@ -1,2 +1,2 @@
-set $active_color #555555
+set $active_color #000000
 set $inactive_color #bbbbbb

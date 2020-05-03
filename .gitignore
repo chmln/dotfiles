@@ -8,3 +8,5 @@ mpd/mpd.db
 __pycache__
 kitty/active_theme.conf
 i3/config
+fish/fish_variables
+i3/config

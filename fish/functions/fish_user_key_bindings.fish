@@ -62,14 +62,16 @@ end
 function fish_user_key_bindings
   fish_vi_key_bindings
   bind -M insert \cl forward-char
+  bind -M insert \ck history-search-backward
+
   bind -M visual y fish_clipboard_copy
   bind -M default v visual_mode
+
   keybind \ca fzf_autocomplete
   keybind \cb fzf_branch
   keybind \ce nvim .
   keybind \cf lf
   keybind \cg fzf_cd
-  keybind \ck fzf_kill
   keybind \cn duplicate_term
   keybind \co "fzf_edit d"
   keybind \cp "fzf_edit f"

@@ -1,3 +1,5 @@
+almel init fish | source
+
 function e
   sudoedit (realpath $argv[1])
 end
@@ -20,9 +22,9 @@ function updater
   return 0
 end
 
-function fish_prompt
-    almel prompt fish -s$status -j(count (jobs -p)) -d(math $CMD_DURATION / 1000)
-end
+#function fish_prompt
+#    almel prompt fish -s$status -j(count (jobs -p)) -d(math $CMD_DURATION / 1000)
+#end
 
 function fish_right_prompt
 end
