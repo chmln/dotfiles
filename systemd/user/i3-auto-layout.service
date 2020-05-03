@@ -5,7 +5,8 @@ Requires=window-manager.service
 
 [Service]
 Environment=RUST_LOG=debug
-ExecStart=%h/Workspace/linux-utils/i3-auto-layout/target/release/i3-auto-layout
+ExecCondition=i3 --get-socketpath
+ExecStart=%h/workspace/linux-utils/i3-auto-layout/target/release/i3-auto-layout
 Restart=always
 RestartSec=1
 

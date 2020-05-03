@@ -4,8 +4,7 @@ After=monitors.service
 Requires=monitors.service
 
 [Service]
-ExecStart=/home/greg/Workspace/linux-utils/screens/target/release/enact -p top --watch
+ExecStart=enact -p top --watch
 
 [Install]
 WantedBy=wm.target
-

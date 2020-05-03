@@ -4,9 +4,8 @@ After=xorg.service
 Requires=xorg.service
 
 [Service]
-ExecStart=/home/greg/Workspace/linux-utils/screens/target/release/enact -p top
+ExecStart=enact -p top
 Type=oneshot
 
 [Install]
 WantedBy=wm.target
-

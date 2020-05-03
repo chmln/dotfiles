@@ -5,3 +5,6 @@ Description=Mailbox synchronization service
 Type=simple
 ExecStart=fish -c 'mbsync -V -a --config /home/greg/.config/mbsync/config || true'
 ExecStartPost=/usr/bin/fish /home/greg/.DOCS/mbsync/postsync.sh
+
+[Install]
+WantedBy=wm.target
