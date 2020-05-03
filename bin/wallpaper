@@ -1,7 +1,8 @@
 #!/bin/sh
-path="/home/greg/.dotfiles/wallpapers/daytime"
-if [ "$IS_DAY" == "false" ]; then
-    path="/home/greg/.dotfiles/wallpapers/nighttime"
+if systemctl --user show-environment | rg -q IS_DAY=true; then
+    path="daytime"
+else
+    path="nighttime"
 fi
 
-xwallpaper --zoom $(shuf -n1 -e $path/*)
+xwallpaper --zoom $(shuf -n1 -e /home/greg/.dotfiles/wallpapers/$path/*)

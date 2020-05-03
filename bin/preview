@@ -2,6 +2,8 @@
 if [ -f "$argv[1]" ]
     if string match -q -- "*.pdf" $argv[1]
         pdftotext -layout "$argv[1]" -l 1 -
+    else if string match -q -- "*.jpg" $argv[1]
+        viu -t -w 40 "$argv[1]"
     else
         cat "$argv[1]"
     end
