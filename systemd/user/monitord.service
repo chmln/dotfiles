@@ -1,7 +1,7 @@
 [Unit]
 Description=Setup monitors
 After=monitors.service
-Requires=monitors.service
+Wants=monitors.service
 
 [Service]
 ExecStart=enact -p top --watch

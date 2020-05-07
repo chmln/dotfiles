@@ -1,7 +1,5 @@
 [Unit]
 Description=Set wallpapers
-After=monitors.service
-Requires=monitors.service
 
 [Service]
 ExecStart=/home/greg/.dotfiles/bin/wallpaper

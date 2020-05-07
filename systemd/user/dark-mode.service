@@ -1,14 +1,14 @@
 [Unit]
 Description=Dark Mode
 After=xsettingsd.service
-Requires=xsettingsd.service
+Wants=xsettingsd.service
 
 [Service]
 Environment=RUST_LOG=debug
 ExecCondition=dump_xsettings
 ExecStart=%h/workspace/linux-utils/night-mode/target/release/night-mode
 Restart=on-failure
-RestartSec=1
+RestartSec=0.2
 
 [Install]
 WantedBy=wm.target

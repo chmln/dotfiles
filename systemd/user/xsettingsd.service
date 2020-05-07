@@ -1,7 +1,7 @@
 [Unit]
 Description=xsettingsd
 After=window-manager.service
-Requires=window-manager.service
+Wants=window-manager.service
 
 [Service]
 ExecStart=xsettingsd

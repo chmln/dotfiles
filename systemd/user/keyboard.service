@@ -1,7 +1,7 @@
 [Unit]
 Description=Set keyboard locales & tweaks
 After=xorg.service
-Requires=xorg.service
+Wants=xorg.service
 
 [Service]
 ExecStartPre=numlockx on

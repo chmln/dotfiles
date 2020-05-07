@@ -1,0 +1,10 @@
+[Unit]
+Description=Email monitor: %i
+
+[Service]
+ExecStart=/home/greg/.local/share/npm/bin/imapnotify --config %h/.secconf/imapnotify/%i.json
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=wm.target

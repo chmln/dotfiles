@@ -1,12 +1,14 @@
 [Unit]
 Description=Polybar
 After=window-manager.service
-Requires=window-manager.service
+Wants=window-manager.service
 
 [Service]
-ExecCondition=i3 --get-socketpath
+ExecCondition=i3-msg -t get_workspaces
+ExecStartPre=sleep 0
 ExecStart=polybar primary
 Restart=always
+RestartSec=0.2
 
 [Install]
 WantedBy=wm.target

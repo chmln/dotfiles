@@ -1,7 +1,7 @@
 [Unit]
 Description=Window Manager
 After=monitors.service
-Requires=monitors.service
+Wants=monitors.service
 
 [Service]
 ExecStart=i3
