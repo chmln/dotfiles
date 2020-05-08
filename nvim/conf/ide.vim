@@ -1,10 +1,18 @@
 " LSP
 Plug 'neovim/nvim-lsp'
-Plug 'haorenW1025/completion-nvim'
-Plug 'haorenW1025/diagnostic-nvim'
 
+Plug 'haorenW1025/diagnostic-nvim'
+let g:diagnostic_insert_delay = 1
+let g:diagnostic_show_sign = 0
+let g:diagnostic_enable_virtual_text = 0
+let g:diagnostic_trimmed_virtual_text = 0
+set signcolumn=yes
+
+Plug 'haorenW1025/completion-nvim'
 let g:completion_trigger_character = ['.', '::']
-let g:completion_timer_cycle = 200
+let g:completion_timer_cycle = 350
+let g:completion_max_items = 20
+
 set completeopt=menuone,noinsert,noselect
 set shortmess+=c
 
@@ -16,6 +24,8 @@ augroup END
 " Code formatting
 Plug 'prettier/vim-prettier', { 'do': 'pnpm i' }
 let g:prettier#autoformat = 0
+
+let g:rustfmt_options="--edition 2018"
 
 augroup fmt
   autocmd!

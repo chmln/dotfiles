@@ -17,7 +17,8 @@ let g:rooter_patterns = ['.git/']
 let g:rooter_silent_chdir = 1
 
 " extended language support
-Plug 'sheerun/vim-polyglot'
+"Plug 'sheerun/vim-polyglot'
+Plug 'nvim-treesitter/nvim-treesitter'
 
 " zen mode
 Plug 'junegunn/goyo.vim'
