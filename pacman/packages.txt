@@ -132,6 +132,7 @@ rust-analyzer
 rustup
 sccache-bin
 sd
+seahorse
 smartmontools
 speex
 spotify

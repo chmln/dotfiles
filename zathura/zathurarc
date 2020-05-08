@@ -1,0 +1,12 @@
+" vim: ft=vim
+set show-v-scrollbar true
+set scroll-step 350
+
+set adjust-open width
+
+"set guioptions ""
+set selection-clipboard clipboard
+
+set default-bg white
+set index-active-bg white
+set completion-highlight-bg white

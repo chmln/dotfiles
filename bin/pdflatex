@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run --rm -it -w /home/latex -v $PWD:/home/latex aergus/latex pdflatex -halt-on-error $1 >/dev/null
