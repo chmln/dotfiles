@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Reboot
 Exec=systemctl reboot
-Icon=system-log-out
+Icon=system-reboot
 Terminal=false
 Type=Application
 Categories=System;

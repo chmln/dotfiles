@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Monthly Calendar
-Exec=brave-nightly --new-window --app=https://calendar.google.com
-Terminal=false
-Type=Application
-Icon=gnome-calendar
-Comment=Show a three-week calendar
-Categories=Office;
