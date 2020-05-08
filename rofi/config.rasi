@@ -1,6 +1,6 @@
 configuration {
         bw: 0;
-        font: "Source Code Pro Semibold 16";
+        font: "IBM Plex Mono 16";
         lines: 5;
         matching: "fuzzy";
         padding: 0;
@@ -9,7 +9,7 @@ configuration {
         width: 600;
         tokenize: false;
         sorting-method: "fzf";
-        drun-display-format: "{name}";
+        drun-display-format: "<span weight='light'>{name}</span>";
 }
 
 #prompt {
