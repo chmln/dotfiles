@@ -1,2 +1,2 @@
 #!/bin/sh
-rsfetch -Nhlrd@Pesk
+rsfetch -Nhlrd@Pesk -p pacman
