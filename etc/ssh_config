@@ -33,6 +33,7 @@
 #   ConnectTimeout 0
 #   StrictHostKeyChecking ask
    IdentityFile ~/.config/ssh/id_rsa
+   LogLevel FATAL
 #   IdentityFile ~/.ssh/id_dsa
 #   IdentityFile ~/.ssh/id_ecdsa
 #   IdentityFile ~/.ssh/id_ed25519

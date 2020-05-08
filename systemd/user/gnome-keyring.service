@@ -2,8 +2,8 @@
 Description=Gnome Keyring Daemon
 
 [Service]
-ExecStart=gnome-keyring-daemon --start --components=secrets,ssh
-Restart=on-abort
+ExecStart=gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
+Restart=always
 
 [Install]
 WantedBy=default.target
