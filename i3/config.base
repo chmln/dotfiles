@@ -18,7 +18,7 @@ smart_borders on
 gaps inner 15
 gaps outer 7
 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 
 # ============ MOVING AROUND
 bindsym $mod+h focus left
