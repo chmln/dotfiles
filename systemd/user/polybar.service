@@ -4,11 +4,11 @@ After=window-manager.service
 Wants=window-manager.service
 
 [Service]
-ExecCondition=i3-msg -t get_workspaces
-ExecStartPre=sleep 0
+#ExecCondition=bash -c 'test -e $(i3 --get-socketpath)'
+ExecStartPre=sleep 0.1
 ExecStart=polybar primary
 Restart=always
-RestartSec=0.2
+RestartSec=1
 
 [Install]
 WantedBy=wm.target

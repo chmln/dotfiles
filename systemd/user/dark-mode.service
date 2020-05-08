@@ -4,9 +4,10 @@ After=xsettingsd.service
 Wants=xsettingsd.service
 
 [Service]
-Environment=RUST_LOG=debug
+Environment=RUST_LOG=debug:night_mode
 ExecCondition=dump_xsettings
 ExecStart=%h/workspace/linux-utils/night-mode/target/release/night-mode
+ExecStop=bash -c 'rm /tmp/kitty*'
 Restart=on-failure
 RestartSec=0.2
 
