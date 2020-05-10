@@ -1,2 +1,2 @@
-#!/bin/fish
-rofi -dmenu -input /dev/null -p "$argv[1]: "  -theme-str 'listview { enabled: false;} #prompt { enabled: true; }'
+#!/bin/bash
+rofi -dmenu -input /dev/null $2 -p "$1: "  -theme-str 'listview { enabled: false;} #prompt { enabled: true; }'

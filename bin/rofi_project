@@ -1,5 +1,5 @@
 #!/bin/fish
-set -l path (fd -t d --max-depth 3 . ~/workspace | sd "/home/greg/workspace/" "" | rofi -dmenu -tokenize)
+set -l path (fd -t d --max-depth 3 . ~/workspace | sd "/home/greg/workspace/" "" | rofi -i -dmenu -tokenize)
 if [ -n "$path" ]
     terminal -e nvim "/home/greg/workspace/$path"
 end
