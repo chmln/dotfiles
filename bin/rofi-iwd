@@ -1,0 +1,22 @@
+#!/bin/fish
+iwctl station wlan0 scan >/dev/null 2>&1
+set -l wifi (
+    iwctl station wlan0 get-networks | tail -n +5 | head -n -1 \
+    | sed 's/\x1b\[[0-9;]*m//g' \
+    | sort \
+    | sd '^[\s|>]+([\w\d\-_]+)[\s|\t]+psk\s+(.*)$' '$1' \
+    | rofi -i -no-custom -dmenu -p "Select WiFi: " -theme-str '#prompt { enabled: true; }' \
+    | sd '\s+$' '' \
+)
+
+if [ -n "$wifi" ];
+    if iwctl known-networks list | rg -q "$wifi\s+psk"; then
+        iwctl station wlan0 disconnect
+        sleep 1
+        iwctl station wlan0 connect "$wifi"
+    elseif set -l pass (rofi_input "Password" -password)
+            iwctl station wlan0 disconnect
+            sleep 1
+            iwctl station wlan0 connect "$wifi" --passphrase "$pass"
+    end
+end

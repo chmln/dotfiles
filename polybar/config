@@ -157,7 +157,7 @@ animation-charging-framerate = 750
 type = internal/network
 interface = wlan0
 
-interval = 3.0
+interval = 1.0
 ping-interval = 3
 
 format-connected = <label-connected>
@@ -173,7 +173,7 @@ format-disconnected = <label-disconnected>
 ;   %downspeed% [wireless+wired]
 ;   %linkspeed% [wired]
 
-label-connected = "%{A1:connman-gtk:} %essid% %{A}"
+label-connected = "%{A1:rofi-iwd:} %essid% %{A}"
 label-connected-foreground = #eefafafa
 
 ; Default: (none)
