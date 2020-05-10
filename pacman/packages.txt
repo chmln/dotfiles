@@ -18,8 +18,6 @@ cairo
 calibre-installer
 cargo-edit
 cargo-tree
-connman
-connman-gtk
 cpupower
 crda
 cups
@@ -43,6 +41,7 @@ freetype2
 fuse2
 fzf
 gcc
+gcr
 gd
 ghostscript
 git
@@ -64,7 +63,7 @@ isync
 iwd
 jq
 kernel-modules-hook
-kitty-git
+kitty
 lazygit
 lf-bin
 libblockdev-lean
@@ -85,6 +84,7 @@ lld
 logrotate
 lostfiles
 mailcap
+mailspring
 maim
 make
 man-db
@@ -97,13 +97,14 @@ msmtp
 nano
 neofetch
 neomutt
-neovim-nightly
+neovim
 nodejs
 notmuch
 noto-fonts-emoji
 npm
 numlockx
 nvidia-dkms
+openresolv
 openssh
 os-prober
 otf-ibm-plex
@@ -132,7 +133,6 @@ rust-analyzer
 rustup
 sccache-bin
 sd
-seahorse
 smartmontools
 speex
 spotify
@@ -156,6 +156,7 @@ unzip
 urlscan
 usb_modeswitch
 viu
+vscodium-bin
 w3m
 watchexec
 wget

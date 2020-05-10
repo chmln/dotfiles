@@ -1,30 +1,34 @@
-" LSP
-Plug 'neovim/nvim-lsp'
-
-Plug 'haorenW1025/diagnostic-nvim'
-let g:diagnostic_insert_delay = 1
-let g:diagnostic_show_sign = 0
-let g:diagnostic_enable_virtual_text = 0
-let g:diagnostic_trimmed_virtual_text = 0
-set signcolumn=yes
-
-Plug 'haorenW1025/completion-nvim'
-let g:completion_trigger_character = ['.', '::']
-let g:completion_timer_cycle = 350
-let g:completion_max_items = 20
-
-set completeopt=menuone,noinsert,noselect
+Plug 'neoclide/coc.nvim', {'do': 'npm i'}
+set updatetime=300
 set shortmess+=c
+set signcolumn=yes
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-augroup autocomplete
-    au!
-    au BufEnter * lua require'completion'.on_attach()
-augroup END
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+nmap <silent> <F10> <Plug>(coc-diagnostic-next)
+nnoremap <silent> K :call CocActionAsync("doHover")<CR>
+nmap <silent> <F12> <Plug>(coc-definition)
+nmap <leader>ac  <Plug>(coc-codeaction)
+
+augroup mygroup
+  autocmd!
+  autocmd CursorHold * silent call CocActionAsync('highlight')
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
 
 " Code formatting
 Plug 'prettier/vim-prettier', { 'do': 'pnpm i' }
 let g:prettier#autoformat = 0
 
+let g:rustfmt_autosave = 0
 let g:rustfmt_options="--edition 2018"
 
 augroup fmt

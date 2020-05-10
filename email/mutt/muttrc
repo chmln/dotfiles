@@ -65,9 +65,6 @@ bind pager k previous-line
 bind pager \Cj next-undeleted
 bind pager \Ck previous-undeleted
 
-macro index,pager \Cb "<pipe-message> urlscan -c<Enter>" "call urlscan to extract URLs out of a message"
-macro attach,compose \Cb "<pipe-entry> urlscan -c<Enter>" "call urlscan to extract URLs out of a message"
-
 # html/plaintext
 set mailcap_path  = ~/.config/mutt/mailcap
 auto_view text/html
