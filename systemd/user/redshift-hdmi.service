@@ -1,0 +1,11 @@
+[Unit]
+Description=Redshift@HDMI
+After=xorg.service
+Wants=xorg.service
+
+[Service]
+ExecStart=redshift -c %h/.config/redshift.conf -m randr:crtc=1
+Restart=always
+
+[Install]
+WantedBy=wm.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Redshift@eDP
+After=xorg.service
+Wants=xorg.service
+
+[Service]
+ExecStart=redshift -c %h/.config/redshift.conf -m randr:crtc=0 -g 0.8
+Restart=always
+
+[Install]
+WantedBy=wm.target
