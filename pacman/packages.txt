@@ -17,9 +17,11 @@ brscan4
 cairo
 calibre-installer
 cargo-edit
+cargo-release
 cargo-tree
 cpupower
 crda
+cross
 cups
 dbus-broker
 dmraid
@@ -84,7 +86,6 @@ lld
 logrotate
 lostfiles
 mailcap
-mailspring
 maim
 make
 man-db
@@ -117,11 +118,13 @@ pdfgrep
 pkgconf
 pkgfile
 playerctl
+pnpm
 polkit-no-script-git
 polybar
 postgresql-libs
 powertop
 pqiv
+prettier
 pspg
 python-pynvim
 redshift-minimal
@@ -149,6 +152,7 @@ trash-cli
 ttf-croscore
 ttf-material-design-icons
 turbostat
+typescript
 udevil
 udisks2
 ufw
@@ -156,6 +160,7 @@ unzip
 urlscan
 usb_modeswitch
 viu
+vscode-json-languageserver-bin
 vscodium-bin
 w3m
 watchexec
@@ -176,7 +181,6 @@ xorg-xsetroot
 xsel
 xsettingsd
 xwallpaper
-yarn
 yay-bin
 zathura
 zathura-pdf-poppler
