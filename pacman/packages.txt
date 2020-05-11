@@ -1,6 +1,5 @@
 acpi
 acpi_call-dkms
-acpid
 alsa-plugins
 alsa-utils
 android-tools
@@ -39,6 +38,7 @@ fd
 feh
 fish
 fontconfig
+fontforge
 freetype2
 fuse2
 fzf
@@ -58,7 +58,6 @@ gtk3-mushrooms
 hyperfine
 i3-gaps
 imagemagick
-inetutils
 intel-ucode
 intel-undervolt
 isync
@@ -99,6 +98,7 @@ nano
 neofetch
 neomutt
 neovim
+nerd-fonts-roboto-mono
 nodejs
 notmuch
 noto-fonts-emoji
@@ -123,7 +123,6 @@ polkit-no-script-git
 polybar
 postgresql-libs
 powertop
-pqiv
 prettier
 pspg
 python-pynvim
@@ -148,18 +147,13 @@ telegram-desktop-bin
 terraform
 thermald
 time
-trash-cli
 ttf-croscore
 ttf-material-design-icons
-turbostat
 typescript
-udevil
 udisks2
 ufw
-unzip
 urlscan
 usb_modeswitch
-viu
 vscode-json-languageserver-bin
 vscodium-bin
 w3m
@@ -169,7 +163,6 @@ which
 wireguard-tools
 xclip
 xcolor
-xloadimage
 xorg-setxkbmap
 xorg-xauth
 xorg-xkbcomp

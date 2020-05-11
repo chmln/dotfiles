@@ -18,7 +18,6 @@ end
 
 function updater
   yay -Syu $argv[1] --noconfirm
-  maintenance
   return 0
 end
 
