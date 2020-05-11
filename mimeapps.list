@@ -1,5 +1,5 @@
 [Added Associations]
-application/epub+zip=calibre-ebook-viewer.desktop;calibre-gui.desktop;nvim.desktop;
+application/epub+zip=nvim.desktop;
 application/javascript=nvim.desktop;
 application/json=nvim.desktop;
 application/sql=nvim.desktop;
@@ -42,7 +42,6 @@ inode/directory=lf.desktop;
 text/html=brave-nightly-bin.desktop;
 text/markdown=nvim.desktop;
 text/plain=nvim.desktop;
-video/mp4=vlc.desktop;
 video/x-matroska=vlc.desktop;
 x-scheme-handler/http=brave-nightly-bin.desktop;
 x-scheme-handler/https=brave-nightly-bin.desktop;

@@ -1,14 +1,10 @@
 ; vim:ft=dosini
 
 [colors]
-background = #111111
-background-alt = #444
-foreground = #eee
-foreground-alt = #555
-primary = #ffb52a
-secondary = #444
+background = #bb000000
+foreground = #ffffff
+foreground_dim = #66ffffff
 alert = #bd2c40
-success = #2ECC40
 
 [bar/primary]
 width = 100%
@@ -20,7 +16,7 @@ bottom = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 0
+line-size = 1
 line-color = #f00
 
 padding-left = 0
@@ -29,7 +25,7 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = "SauceCodePro Nerd Font Mono:weight=Bold:size=11;2"
+font-0 = "SF Mono:size=11;2"
 font-1 = "Material Icons:size=12;3"
 
 modules-left = i3
@@ -46,6 +42,7 @@ cursor-click = pointer
 
 [settings]
 screenchange-reload = true
+pseudo-transparency = true
 
 [global/wm]
 margin-top = 5
@@ -59,21 +56,20 @@ wrapping-scroll = false
 
 label-mode-padding = 0
 label-mode-foreground = #000
-label-mode-background = ${colors.primary}
+label-mode-background = ${colors.foreground}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colors.secondary}
-label-focused-underline = ${colors.secondary}
+label-focused-underline = ${colors.foreground}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
+label-unfocused-foreground = ${colors.foreground_dim}
 label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
-label-visible-background = ${colors.secondary}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
@@ -95,7 +91,7 @@ time-alt = %H:%M:%S
 format =<label>
 
 format-prefix =
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.foreground}
 
 label = %date%, %time%
 
