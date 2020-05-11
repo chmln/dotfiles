@@ -1,15 +1,15 @@
 configuration {
         bw: 0;
-        font: "IBM Plex Mono 16";
+        font: "SF Mono Light 16";
         lines: 5;
         matching: "fuzzy";
         padding: 0;
         show-icons: true;
         sort: true;
-        width: 600;
+        width: 500;
         tokenize: false;
         sorting-method: "fzf";
-        drun-display-format: "<span weight='light'>{name}</span>";
+        drun-display-format: "{name}";
 }
 
 #prompt {
