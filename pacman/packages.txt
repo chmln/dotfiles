@@ -99,6 +99,7 @@ neofetch
 neomutt
 neovim
 nerd-fonts-roboto-mono
+nerd-fonts-source-code-pro
 nodejs
 notmuch
 noto-fonts-emoji

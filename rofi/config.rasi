@@ -1,6 +1,6 @@
 configuration {
         bw: 0;
-        font: "SF Mono Light 16";
+        font: "Source Code Pro Light 16";
         lines: 5;
         matching: "fuzzy";
         padding: 0;
