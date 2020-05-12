@@ -3,6 +3,6 @@ Name=Riot
 Exec=brave-nightly --new-window --app=https://riot.im/app
 Terminal=false
 Type=Application
-Icon=/home/greg/.local/share/icons/riot.svg
+Icon=riot
 Comment=Riot
 Categories=Network;
