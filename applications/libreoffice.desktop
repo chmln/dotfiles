@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=LibreOffice
+Exec=/home/greg/.local/apps/libreoffice.AppImage %f
+Terminal=false
+Type=Application
+Icon=libreoffice-writer
+Categories=Office;
