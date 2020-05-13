@@ -1,27 +1,27 @@
-set mbox_type   = Maildir
-set sendmail    = /usr/bin/msmtp
+set mbox_type = Maildir
+set sendmail = /usr/bin/msmtp
 
 unset record
 
-set realname   = "Gregory"
+set realname = "Gregory"
 set mail_check = 0
 set envelope_from
 
-unset move           # gmail does that
-set delete           # don't ask, just do
-unset confirmappend  # don't ask, just do!
-set quit             # don't ask, just do!!
-unset mark_old       # read/new is good enough for me
+unset move # gmail does that
+set delete # don't ask, just do
+unset confirmappend # don't ask, just do!
+set quit # don't ask, just do!!
+unset mark_old # read/new is good enough for me
 
 # sort/threading
-set sort     = reverse-date-received
+set sort = reverse-date-received
 set sort_aux = reverse-last-date-received
 set sort_re
 
 # look and feel
 set sleep_time = 0
 set pager_index_lines = 12
-set pager_context     = 5
+set pager_context = 5
 set pager_stop
 set menu_scroll
 set smart_wrap
@@ -54,8 +54,8 @@ set forward_quote
 message-hook '~h gregory.petrosyan@mail.utoronto.ca' "set from=gregory.petrosyan@mail.utoronto.ca"
 message-hook '~h gregory.mkv@gmail.com' "set from=gregory.mkv@gmail.com"
 
-ignore *                               # first, ignore all headers
-unignore from: to: cc: date: subject:  # then, show only these
+ignore * # first, ignore all headers
+unignore from: to: cc: date: subject: # then, show only these
 hdr_order from: to: cc: date: subject: # and in this order
 
 # keybinds
@@ -66,7 +66,7 @@ bind pager \Cj next-undeleted
 bind pager \Ck previous-undeleted
 
 # html/plaintext
-set mailcap_path  = ~/.config/mutt/mailcap
+set mailcap_path = ~/.config/mutt/mailcap
 auto_view text/html
 alternative_order text/plain text/enriched text/html
 bind attach <return> view-mailcap
