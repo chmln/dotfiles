@@ -40,8 +40,6 @@
 /usr/include
 /usr/lib/*
 /usr/lib/modules
-/usr/share/*
-!/usr/share/themes
 /usr/share/licenses
 /usr/share/man/*
 /usr/share/perl5
