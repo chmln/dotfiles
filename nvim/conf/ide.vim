@@ -25,7 +25,7 @@ augroup mygroup
 augroup end
 
 " Code formatting
-Plug 'prettier/vim-prettier', { 'do': 'pnpm i' }
+Plug 'prettier/vim-prettier', { 'do': 'npm i' }
 let g:prettier#autoformat = 0
 
 let g:rustfmt_autosave = 0
@@ -48,6 +48,8 @@ augroup END
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 let g:clap_no_matches_msg = ''
 let g:clap_disable_run_rooter = v:false
+map <silent><C-p> :Clap files --hidden<CR>
+map <silent><C-f> :Clap grep<CR>
 
 " Multiple Cursors
 Plug 'mg979/vim-visual-multi'
@@ -80,6 +82,7 @@ let g:NERDTreeBookmarksFile = "/tmp/nerdtree_bookmarks"
 let g:NERDTreeMarkBookmarks = 0
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ""
 let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
+nnoremap <silent> <Leader>f :NERDTreeFind<CR>
 
 augroup nerdtree
     au!
@@ -87,3 +90,5 @@ augroup nerdtree
     au bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
     au BufReadPre,FileReadPre * :NERDTreeClose
 augroup END
+
+Plug 'vimlab/split-term.vim'

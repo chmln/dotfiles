@@ -35,3 +35,15 @@ augroup misc
   au FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
   au FileChangedShellPost * echo "File changed on disk. Buffer reloaded."
 augroup END
+
+" disable arrow keys
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
+
+nnoremap Q q
+noremap <silent> <C-s> :w!<CR>
+nnoremap <Tab> <C-W><C-W>
+
+noremap <silent> <F4> :silent !nohup terminal >/dev/null 2>&1 &<CR>
