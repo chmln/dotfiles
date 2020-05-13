@@ -3,7 +3,7 @@ Description=Mailbox synchronization service
 
 [Service]
 Type=simple
-ExecStart=fish -c 'mbsync -V -a --config /home/greg/.config/mbsync/config || true'
+ExecStart=fish -C 'mbsync -V -a --config /home/greg/.config/mbsync/config || true'
 ExecStartPost=/usr/bin/fish /home/greg/.secconf/mbsync/postsync.sh
 
 [Install]
