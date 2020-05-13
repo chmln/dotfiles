@@ -1,3 +1,2 @@
-#!/bin/fish
-set -l path (rofi_path -t f -E workspace -E .local/share -E .config)
-xdg-open "$path"
+#!/bin/sh
+xdg-open $(rofi_path -t f -E workspace -E .local/share -E .config)
