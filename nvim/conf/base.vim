@@ -11,6 +11,9 @@ set nobackup
 set noswapfile
 set timeoutlen=1000 ttimeoutlen=0
 
+" unbreak inotify
+set nowritebackup
+
 " set correct working directory
 Plug 'airblade/vim-rooter'
 let g:rooter_patterns = ['.git/']

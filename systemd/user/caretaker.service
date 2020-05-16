@@ -1,0 +1,12 @@
+[Unit]
+Description=Caretaker
+After=dark-mode.service
+Requires=dark-mode.service
+
+[Service]
+ExecStart=%h/.local/share/cargo/bin/caretaker -w %h/.dotfiles/caretaker.toml
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=wm.target

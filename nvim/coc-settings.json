@@ -2,5 +2,6 @@
     "rust-analyzer.serverPath": "rust-analyzer",
     "coc.source.file.enable": false,
     "coc.source.around.enable": false,
-    "rust-analyzer.completion.postfix.enable": false
+    "rust-analyzer.completion.postfix.enable": false,
+    "coc.source.buffer.enable": false
 }

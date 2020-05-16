@@ -102,13 +102,15 @@ bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws1; workspace $ws10
 
 # ============ EXTERNAL KEYBINDINGS
-bindsym XF86MonBrightnessUp exec --no-startup-id brillo -A 20% -u 100000
-bindsym XF86MonBrightnessDown exec --no-startup-id brillo -U 20% -u 100000
+bindsym XF86MonBrightnessUp exec --no-startup-id brightness up
+bindsym XF86MonBrightnessDown exec --no-startup-id brightness down
 
-bindsym XF86AudioRaiseVolume exec amixer sset Master 3+
-bindsym XF86AudioLowerVolume exec amixer sset Master 3-
+bindsym XF86AudioRaiseVolume exec --no-startup-id volume up
+bindsym XF86AudioLowerVolume exec --no-startup-id volume down
 bindsym XF86RFKill exec airplane_mode
 
 bindsym $mod+Shift+s exec --no-startup-id screenshot
 bindsym $mod+Return exec --no-startup-id terminal
 bindsym $mod+d exec launcher
+bindsym $mod+p exec rofi_open
+bindsym $mod+o exec rofi_project
