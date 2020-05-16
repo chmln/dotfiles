@@ -1,13 +1,22 @@
+# ft=fish
+
 set icons
 set ratios "2:1"
 set hidden
 
-map D % trash "$fx"
-map A % trash "$fx"
+map D % rm -rf "$fx"
 set previewer preview
 
+cmd mkdir %{{
+    set -f
+    printf "Folder Name: "
+    read ans
+    [ -n "$ans" ] && mkdir $ans
+}}
+
+
 cmd fzf_jump ${{
-   res="$(fd -H -a -t d '' / | fzf --reverse --header='Jump to location')"
+   res="$(fd -H -a -t d '' / | fzf --height=30% --reverse --header='Jump to location')"
    lf -remote "send $id cd \"$res\""
 }}
 
