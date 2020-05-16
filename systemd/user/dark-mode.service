@@ -1,15 +1,12 @@
 [Unit]
 Description=Dark Mode
-After=xsettingsd.service
-Wants=xsettingsd.service
 
 [Service]
 Environment=RUST_LOG=debug:night_mode
-ExecCondition=dump_xsettings
 ExecStart=%h/workspace/linux-utils/night-mode/target/release/night-mode
-ExecStop=bash -c 'rm /tmp/kitty*'
-Restart=on-failure
-RestartSec=0.2
+ExecStop=bash -c 'rm /tmp/kitty* || true'
+Restart=always
+RestartSec=2
 
 [Install]
 WantedBy=wm.target

@@ -1,0 +1,32 @@
+[[watch]]
+# whoa.........
+name = "caretaker"
+path = "/home/greg/.dotfiles/caretaker.toml"
+command = "systemctl --user restart caretaker"
+
+[[watch]]
+name = "polybar"
+path = "/home/greg/.dotfiles/polybar"
+command = "systemctl --user restart polybar"
+
+[[watch]]
+name = "i3"
+path = "/home/greg/.dotfiles/i3"
+command = "systemctl --user restart dark-mode"
+
+[[watch]]
+name = "nvim"
+path = "/home/greg/.dotfiles/nvim"
+command = "nvim-ctrl \"source ~/.dotfiles/nvim/init.vim\""
+
+#[[watch]]
+#name = "gtk"
+#path = "/home/greg/.dotfiles/gtk-3.0"
+#command = "systemctl --user reload xsettingsd"
+
+[[watch]]
+name = "systemd units"
+path = "/home/greg/.dotfiles/systemd/user"
+command = "systemctl --user daemon-reload"
+
+
