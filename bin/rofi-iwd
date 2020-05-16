@@ -1,5 +1,6 @@
-#!/bin/fish
+#!/usr/bin/fish
 iwctl station wlan0 scan >/dev/null 2>&1
+sleep 2
 set -l wifi (
     iwctl station wlan0 get-networks | tail -n +5 | head -n -1 \
     | sed 's/\x1b\[[0-9;]*m//g' \

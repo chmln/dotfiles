@@ -1,0 +1,13 @@
+#!/usr/bin/fish
+function percent_to_bar
+    set n_bars (math "round($argv[1]* 24 / 100)")
+    set n_spaces (math "24 - $n_bars")
+
+    set bar (string repeat -n $n_bars "─")
+    set spaces (string repeat -n $n_spaces " ")
+    echo "$bar$spaces"
+end
+
+set percentage "$argv[1]"
+set icon "/usr/share/icons/Papirus/32x32/$argv[2]"
+dunstify -i $icon -t 1000 -r $argv[3] (percent_to_bar "$percentage")

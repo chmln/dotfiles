@@ -1,0 +1,8 @@
+#!/usr/bin/fish
+if [ $argv[1] = "up" ]
+    brillo -A 20% -u 100000
+else
+    brillo -U 20% -u 100000
+end
+
+bar-notification (brillo) "apps/preferences-system-brightness-lock.svg" 1000

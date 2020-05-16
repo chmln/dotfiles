@@ -1,0 +1,8 @@
+#!/usr/bin/fish
+if mullvad status | rg -q Connected
+    mullvad disconnect
+    notify-send "VPN disconnected"
+else
+    mullvad connect
+    notify-send "VPN connected"
+end

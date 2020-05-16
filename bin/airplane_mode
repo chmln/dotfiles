@@ -1,8 +1,9 @@
 #!/bin/fish
-if connmanctl technologies | rg --quiet "Powered = True"
-    connmanctl enable offline
-    notify-send "Airplane mode enabled"
-else
-    connmanctl disable offline
+set -l status (rfkill -J | jq -r ".\"\"[0].soft")
+if [ "$status" = "blocked" ]
+    rfkill unblock all
     notify-send "Airplane mode disabled"
+else
+    rfkill block all
+    notify-send "Airplane mode enabled"
 end
