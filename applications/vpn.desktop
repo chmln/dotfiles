@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=VPN Toggle
+Icon=airvpn
+Exec=vpn-toggle
+Categories=Network;
