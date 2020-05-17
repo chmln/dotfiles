@@ -22,7 +22,9 @@ augroup mygroup
   autocmd!
   autocmd CursorHold * silent call CocActionAsync('highlight')
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+  autocmd FileType rust highlight CocRustChainingHint ctermfg=gray
 augroup end
+
 
 " Code formatting
 Plug 'prettier/vim-prettier', { 'do': 'npm i' }

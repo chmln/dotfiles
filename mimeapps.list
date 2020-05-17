@@ -5,6 +5,7 @@ application/djvu=org.pwmt.zathura.desktop;
 application/pdf=org.pwmt.zathura.desktop;
 application/rtf=libreoffice.desktop;
 application/x-tex=nvim.desktop;
+image/png=feh.desktop;
 image/vnd.djvu=org.pwmt.zathura.desktop;
 inode/directory=lf.desktop;
 text/html=brave-nightly-bin.desktop;

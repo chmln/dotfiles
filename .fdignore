@@ -53,3 +53,4 @@ Workspace/uoft-archive
 __pycache__
 cache*
 node_modules
+/home/greg/.local/share/wine64/drive_c/windows

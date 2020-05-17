@@ -34,22 +34,6 @@ function fzf_autocomplete
   restore_state
 end
 
-function fzf_branch
-  set target (git branch | sd "[* ]" "" | fzf)
-	if [ -n "$target" ]
-    git checkout "$target"
-  end
-  restore_state
-end
-
-function fzf_kill
-  set target (ps ax |  fzf | sd '^\s+' '' | cut -f1 -d ' ')
-  if [ -n "$target" ]
-    kill "$target"
-  end
-  restore_state
-end
-
 function duplicate_term
   nohup terminal >/dev/null 2>&1 &
 end
@@ -75,6 +59,7 @@ function fish_user_key_bindings
   keybind \cn duplicate_term
   keybind \co "fzf_edit d"
   keybind \cp "fzf_edit f"
+  keybind \cx execute
 end
 
 # https://github.com/fish-shell/fish-shell/issues/3899

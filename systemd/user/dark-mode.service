@@ -1,5 +1,7 @@
 [Unit]
 Description=Dark Mode
+Wants=window-manager.service
+After=window-manager.service
 
 [Service]
 Environment=RUST_LOG=debug:night_mode

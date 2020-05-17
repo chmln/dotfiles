@@ -84,6 +84,8 @@ linux-clear-headers
 linux-clear-lts2019
 linux-clear-lts2019-headers
 linux-firmware
+linux-lts
+linux-lts-headers
 lld
 logrotate
 lostfiles
@@ -103,6 +105,7 @@ nano
 neofetch
 neomutt
 neovim
+neovim-plug-git
 nerd-fonts-source-code-pro
 nodejs
 notmuch
