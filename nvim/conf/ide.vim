@@ -1,37 +1,37 @@
-Plug 'neoclide/coc.nvim', {'do': 'npm i'}
-set updatetime=300
-set shortmess+=c
+Plug 'neovim/nvim-lsp'
+Plug 'haorenW1025/diagnostic-nvim'
+Plug 'haorenW1025/completion-nvim'
+
+let g:diagnostic_insert_delay = 1
+let g:diagnostic_show_sign = 0
 set signcolumn=yes
+
+let g:completion_trigger_character = ['.', '::']
+let g:completion_timer_cycle = 350
+let g:completion_max_items = 20
+
+set completeopt=menuone,noinsert,noselect
+set shortmess+=c
+
+nnoremap <silent> <F12> <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> <F10> :NextDiagnosticCycle<CR>
+nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ completion#trigger_completion()
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+function! RestartLsp()
+  lua vim.lsp.stop_client(vim.lsp.get_active_clients())                                                       
+  lua vim.lsp.stop_client(vim.lsp.get_active_clients())                                                       
+  sleep 100m
+  edit
 endfunction
-
-nmap <silent> <F10> <Plug>(coc-diagnostic-next)
-nnoremap <silent> K :call CocActionAsync("doHover")<CR>
-nmap <silent> <F12> <Plug>(coc-definition)
-nmap <leader>ac  <Plug>(coc-codeaction)
-
-augroup mygroup
-  autocmd!
-  autocmd CursorHold * silent call CocActionAsync('highlight')
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-  autocmd FileType rust highlight CocRustChainingHint ctermfg=gray
-augroup end
-
 
 " Code formatting
 Plug 'prettier/vim-prettier', { 'do': 'npm i' }
 let g:prettier#autoformat = 0
-
-let g:rustfmt_autosave = 0
-let g:rustfmt_options="--edition 2018"
 
 augroup fmt
   autocmd!

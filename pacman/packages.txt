@@ -104,7 +104,7 @@ mullvad-vpn-bin
 nano
 neofetch
 neomutt
-neovim
+neovim-nightly
 neovim-plug-git
 nerd-fonts-source-code-pro
 nodejs

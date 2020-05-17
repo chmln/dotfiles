@@ -1,4 +1,33 @@
+function setup_lsp()
+    local lsp = require "nvim_lsp"
+    local completion = require "completion"
+    local diagnostic = require "diagnostic"
 
+    function on_attach()
+        diagnostic.on_attach()
+        completion.on_attach()
+    end
+
+    lsp.cssls.setup { on_attach = on_attach }
+    lsp.html.setup { on_attach = on_attach }
+    lsp.jsonls.setup { on_attach = on_attach }
+    lsp.rust_analyzer.setup {
+        on_attach = on_attach,
+        settings = {
+            ["rust-analyzer"] = {
+                completion = {
+                    addCallArgumentSnippets = false,
+                    addCallParenthesis = false,
+                    postfix = {enable = false}
+                }
+            }
+        }
+    }
+    lsp.tsserver.setup {on_attach = on_attach}
+    lsp.vimls.setup { on_attach = on_attach }
+end
+
+setup_lsp()
 --require'nvim-treesitter.configs'.setup {
 --    highlight = {
 --        enable = true,                 -- false will disable the whole extension
