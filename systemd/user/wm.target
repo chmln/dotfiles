@@ -2,8 +2,8 @@
 Description=Window manager target
 Wants=xorg.target
 After=xorg.service
-Requires=dbus.socket
-BindsTo=graphical-session.target
+After=dbus.socket
+BindsTo=default.target
 AllowIsolate=true
 
 #[Install]

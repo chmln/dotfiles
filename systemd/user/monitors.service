@@ -1,13 +1,13 @@
 [Unit]
 Description=Setup monitors
-After=xorg.service
 Wants=xorg.service
+After=xorg.service
+
 
 [Service]
 ExecStart=enact -p top
-Type=oneshot
+#Type=oneshot
 Restart=on-failure
-RestartSec=0.1
 
 [Install]
 WantedBy=wm.target

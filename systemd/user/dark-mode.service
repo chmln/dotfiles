@@ -1,14 +1,15 @@
 [Unit]
 Description=Dark Mode
-Wants=window-manager.service
-After=window-manager.service
+Wants=xorg.service
+After=xorg.service
+Wants=systemd-networkd-wait-online.service
+After=systemd-networkd-wait-online.service
 
 [Service]
 Environment=RUST_LOG=debug:night_mode
+ExecCondition=i3 --get-socketpath
 ExecStart=%h/workspace/linux-utils/night-mode/target/release/night-mode
-ExecStop=bash -c 'rm /tmp/kitty* || true'
 Restart=always
-RestartSec=2
 
 [Install]
 WantedBy=wm.target

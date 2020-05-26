@@ -1,11 +1,10 @@
 [Unit]
 Description=Window Manager
-After=monitors.service
-Wants=monitors.service
+After=xorg.service
+Wants=xorg.service
 
 [Service]
 ExecStart=i3
-Restart=always
 ExecStopPost=loginctl terminate-user greg
 
 [Install]

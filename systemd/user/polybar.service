@@ -1,14 +1,12 @@
 [Unit]
 Description=Polybar
 After=window-manager.service
-Wants=window-manager.service
+Requires=window-manager.service
 
 [Service]
-#ExecCondition=bash -c 'test -e $(i3 --get-socketpath)'
-ExecStartPre=sleep 0.1
 ExecStart=polybar primary
 Restart=always
-RestartSec=1
+RestartSec=0.5
 
 [Install]
 WantedBy=wm.target

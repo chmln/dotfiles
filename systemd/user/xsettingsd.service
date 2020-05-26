@@ -1,12 +1,11 @@
 [Unit]
 Description=xsettingsd
-After=window-manager.service
-Wants=window-manager.service
+After=xorg.service
+Wants=xorg.service
 
 [Service]
 ExecStart=xsettingsd
 ExecReload=kill -HUP $MAINPID
-Restart=on-failure
 
 [Install]
 WantedBy=wm.target
