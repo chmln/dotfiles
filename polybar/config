@@ -21,11 +21,11 @@ border-top-color = #22ffffff
 line-size = 1
 line-color = #f00
 
-padding-left = 1
+padding-left = 0
 padding-right = 1
 
-module-margin-left = 1
-module-margin-right = 2
+module-margin-left = 0
+module-margin-right = 3
 
 font-0 = "Source Code Pro:size=11;2"
 font-1 = "Material Icons:size=12;3"
@@ -56,15 +56,15 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
-label-separator = " "
+label-separator = 
 
-label-mode-padding = 0
+label-mode-padding = 2
 label-mode-foreground = #000
 label-mode-background = ${colors.foreground}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-underline = ${colors.foreground}
+label-focused-underline = 
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
