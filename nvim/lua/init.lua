@@ -8,9 +8,10 @@ function setup_lsp()
         completion.on_attach()
     end
 
-    lsp.cssls.setup { on_attach = on_attach }
-    lsp.html.setup { on_attach = on_attach }
-    lsp.jsonls.setup { on_attach = on_attach }
+    lsp.cssls.setup { cmd= {"css-languageserver", "--node-ipc" }, on_attach = on_attach }
+    lsp.html.setup { cmd= {"html-languageserver", "--node-ipc" }, on_attach = on_attach }
+    lsp.jsonls.setup { cmd= {"json-languageserver", "--node-ipc"},  on_attach = on_attach }
+
     lsp.rust_analyzer.setup {
         on_attach = on_attach,
         settings = {

@@ -8,7 +8,10 @@ set signcolumn=yes
 
 let g:completion_trigger_character = ['.', '::']
 let g:completion_timer_cycle = 350
-let g:completion_max_items = 20
+let g:completion_max_items = 10
+let g:completion_enable_fuzzy_match = 1
+let g:completion_matching_ignore_case = 1
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
 set completeopt=menuone,noinsert,noselect
 set shortmess+=c
@@ -16,10 +19,7 @@ set shortmess+=c
 nnoremap <silent> <F12> <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> <F10> :NextDiagnosticCycle<CR>
 nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
-inoremap <silent><expr> <TAB>
-  \ pumvisible() ? "\<C-n>" :
-  \ <SID>check_back_space() ? "\<TAB>" :
-  \ completion#trigger_completion()
+inoremap <silent><expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 function! RestartLsp()
@@ -31,20 +31,12 @@ endfunction
 
 " Code formatting
 Plug 'prettier/vim-prettier', { 'do': 'npm i' }
-let g:prettier#autoformat = 0
+let g:prettier#autoformat = 1
+let g:prettier#exec_cmd_async = 1
+let g:rustfmt_autosave_if_config_present = 1
 
-augroup fmt
-  autocmd!
-  autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html PrettierAsync
-  autocmd BufWritePre *.rs RustFmt
-augroup END
-
-" Git
-Plug 'tpope/vim-fugitive'
-augroup fugitive_emptybuf
-    au!
-    au VimEnter * if &ft == '' | call FugitiveDetect(getcwd()) | endif
-augroup END
+Plug 'lambdalisue/gina.vim'
+Plug 'kdheepak/lazygit.vim'
 
 " Navigation
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
