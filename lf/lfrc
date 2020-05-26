@@ -3,8 +3,11 @@
 set icons
 set ratios "2:1"
 set hidden
+set period 1
 
-map D % rm -rf "$fx"
+map D ${{
+    rm -rf "$fx"
+}}
 set previewer preview
 
 cmd mkdir %{{
@@ -14,6 +17,18 @@ cmd mkdir %{{
     [ -n "$ans" ] && mkdir $ans
 }}
 
+cmd paste &{{
+    load=$(lf -remote 'load')
+    mode=$(echo "$load" | sed -n '1p')
+    list=$(echo "$load" | sed 1d)
+    if [ $mode = 'copy' ]; then
+        cp -Rfv $list . > /tmp/log 2>&1
+    elif [ $mode = 'move' ]; then
+        mv -n $list .
+    fi
+    lf -remote 'send reload'
+    lf -remote 'send clear'
+}}
 
 cmd fzf_jump ${{
    res="$(fd -H -a -t d '' / | fzf --height=30% --reverse --header='Jump to location')"
@@ -27,4 +42,5 @@ cmd fzf_edit ${{
 
 map <c-g> :fzf_jump
 map <c-p> :fzf_edit
+map p paste
 map <enter> % run xdg-open "$fx"
