@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Volume Control
-Exec=terminal -e alsamixer
-Terminal=false
-Type=Application
-Icon=audio-speakers
-Categories=Utilities;
