@@ -1,5 +1,5 @@
 function fzf_selector
-  fd -HF -d 10 -p $argv | sd -s '/home/greg' '~' | fzf --height 40% --preview "preview {}" | sd -s '~' '/home/greg'
+  fd -HF -d 10 -p $argv | sd -s '/home/greg' '~' | fzf --height 20% --preview "preview {}" | sd -s '~' '/home/greg'
 end
 
 function restore_state
@@ -27,7 +27,7 @@ function fzf_cd
 end
 
 function fzf_autocomplete
-  set target (fzf_selector -t f -t d "" /)
+  set target (fzf_selector -t f -t d -t l "" /)
   if [ -n "$target" ]
     commandline -it -- (string escape $target)
   end
