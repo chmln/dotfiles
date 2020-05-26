@@ -60,6 +60,7 @@ hdr_order from: to: cc: date: subject: # and in this order
 
 # keybinds
 macro index,pager D "<purge-message><sync-mailbox>"
+macro index <Return> "<display-message><sync-mailbox>"
 bind pager j next-line
 bind pager k previous-line
 bind pager \Cj next-undeleted
