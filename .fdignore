@@ -36,7 +36,6 @@
 /proc
 /run
 /sys
-/tmp/*
 /usr/include
 /usr/lib/*
 /usr/lib/modules
