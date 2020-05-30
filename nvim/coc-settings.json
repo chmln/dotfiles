@@ -1,0 +1,24 @@
+{
+     "coc.source.around.enable": false,
+     "coc.source.buffer.enable": false,
+     "coc.source.file.enable": false,
+     "rust-analyzer.completion.postfix.enable": false,
+     "rust-analyzer.serverPath": "rust-analyzer",
+     "explorer.icon.enableNerdfont": true,
+     "explorer.previewAction.onHover": false,
+     "explorer.keyMappingMode": "none",
+     "coc.preferences.rootPatterns": [".git", "Cargo.toml", "package.json"],
+     "explorer.width": 30,
+     "explorer.file.root.template": "[icon] [root]",
+     "explorer.sources": [{ "name": "file", "expand": true }],
+     "explorer.keyMappings": {
+          "<cr>": ["expandable?", ["expanded?", "collapse", "expand"], "open"],
+          "a": "addFile",
+          "A": "addDirectory",
+          "r": "rename",
+          "?": "help",
+          "q": "quit",
+          "m": "actionMenu",
+          "o": "open"
+     }
+}
