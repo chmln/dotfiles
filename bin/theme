@@ -1,9 +1,24 @@
-#!/bin/fish
-set -l i3 ~/.dotfiles/i3
+#!/usr/bin/fish
 if systemctl --user show-environment | rg -q IS_DAY=true
-    cat $i3/config.day $i3/config.base > $i3/config
+    set -g theme day
+    nvim-ctrl "set background=light"
 else
-    cat $i3/config.night $i3/config.base > $i3/config
+    set -g theme night
+    nvim-ctrl "set background=dark"
 end
 
-i3-msg restart
+set dots ~/.dotfiles
+
+cat $dots/i3/config.$theme $dots/i3/config.base > $dots/i3/config
+ln -sf $dots/gtk-3.0/settings.$theme.ini $dots/gtk-3.0/settings.ini
+ln -sf $dots/xsettingsd/xsettingsd.$theme.conf $dots/xsettingsd/xsettingsd.conf
+ln -sf $dots/kitty/$theme.conf $dots/kitty/active_theme.conf
+
+for s in /tmp/kitty-socket-*
+    kitty @ --to=unix:$s set-colors -a ~/.config/kitty/$theme.conf >/dev/null 2>&1 &
+end
+
+systemctl --user restart wallpaper 
+systemctl --user reload-or-restart xsettingsd
+
+i3-msg restart >/dev/null 

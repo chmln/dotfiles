@@ -11,3 +11,5 @@ i3/config
 fish/fish_variables
 i3/config
 applications/mimeinfo.cache
+xsettingsd/xsettingsd.conf
+gtk-3.0/settings.ini
