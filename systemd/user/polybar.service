@@ -1,12 +1,12 @@
 [Unit]
 Description=Polybar
 After=window-manager.service
-Requires=window-manager.service
 
 [Service]
+ExecStartPre=i3-msg
 ExecStart=polybar primary
+RestartSec=1
 Restart=always
-RestartSec=0.5
 
 [Install]
 WantedBy=wm.target
