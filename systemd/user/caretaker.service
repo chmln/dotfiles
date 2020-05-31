@@ -1,6 +1,5 @@
 [Unit]
 Description=Caretaker
-After=dark-mode.service
 
 [Service]
 ExecStartPre=sleep 5

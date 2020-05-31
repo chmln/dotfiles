@@ -1,0 +1,1 @@
+highlight CocRustChainingHint ctermfg=gray

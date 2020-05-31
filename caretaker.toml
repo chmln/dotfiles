@@ -12,7 +12,7 @@ command = "systemctl --user restart polybar"
 [[watch]]
 name = "i3"
 path = "/home/greg/.dotfiles/i3"
-command = "systemctl --user restart dark-mode"
+command = "/home/greg/.dotfiles/bin/theme"
 
 [[watch]]
 name = "nvim"
@@ -28,5 +28,3 @@ command = "nvim-ctrl \"source ~/.dotfiles/nvim/init.vim\""
 name = "systemd units"
 path = "/home/greg/.dotfiles/systemd/user"
 command = "systemctl --user daemon-reload"
-
-

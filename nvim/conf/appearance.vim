@@ -10,9 +10,6 @@ set laststatus=0
 set noruler
 set title
 
-" hide tilde signs. using lua to avoid space at the end getting trimmed
-lua vim.api.nvim_command('set fcs=eob:\\ ')
-
 " Keep cursor vertically centered
 augroup cursor_centered
   au BufEnter * let &scrolloff=winheight(win_getid())
@@ -60,6 +57,7 @@ let g:edge_disable_italic_comment = 1
 let g:edge_cursor = 'blue'
 
 function! s:customize_colorscheme()
+    lua vim.api.nvim_command('set fcs=eob:\\ ')
     hi link rustDerive SpecialComment
     hi link rustDeriveTrait SpecialComment
     hi link ClapFile ClapDisplay
@@ -74,4 +72,3 @@ augroup custom_colors
     au!
     au VimEnter * call s:customize_colorscheme()
 augroup END
-

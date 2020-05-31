@@ -179,6 +179,7 @@ unrar
 urlscan
 usb_modeswitch
 usbutils
+vidir
 vscode-css-languageserver-bin
 vscode-html-languageserver-bin
 vscode-json-languageserver-bin

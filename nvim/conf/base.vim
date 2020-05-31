@@ -7,24 +7,30 @@ set nobackup noswapfile
 " unbreak inotify
 set nowritebackup
 " disable intro msg
-set shortmess=I
+set shortmess+=I
 
 " allow resizing splits with mouse
 set mouse=a
+nnoremap <LeftMouse> ma<LeftMouse>`a
 
 " set correct working directory
 Plug 'airblade/vim-rooter'
 let g:rooter_patterns = ['.git/', 'Cargo.toml']
 let g:rooter_silent_chdir = 1
 
-Plug 'axelf4/vim-strip-trailing-whitespace'
+" Multiple Cursors
+Plug 'mg979/vim-visual-multi'
+let g:VM_default_mappings = 1
 
-Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
-Plug 'ciaranm/securemodelines'
+Plug 'mboughaba/vim-lessmess'
+let g:enable_lessmess_onsave = 0
+
 Plug 'xi/vim-indent-detect'
+Plug 'ryanoasis/vim-devicons'
 
 augroup misc
   au!
+  au BufWritePre * LessmessExecute
   " Update buffer on external changes
   au FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
 augroup END
@@ -39,14 +45,21 @@ nnoremap Q q
 noremap <silent> <C-s> :w!<CR>
 nnoremap <Tab> <C-W><C-W>
 
-Plug 'ryanoasis/vim-devicons'
-
-" sane terminal setup
+" sane terminal/split setup
 Plug 'vimlab/split-term.vim'
 set splitright splitbelow
+set fillchars=stl:―,stlnc:―
+
+augroup splits
+  au!
+  au! ColorScheme *
+        \ highlight StatusLine ctermbg=none ctermfg=0 |
+        \ highlight StatusLineNC ctermbg=none ctermfg=0
+augroup END
+
 augroup termstuff
   au!
-  autocmd TermEnter * setlocal nonumber norelativenumber
+  autocmd TermOpen * setlocal nonumber norelativenumber nocursorline
 augroup END
 
 " open external terminal

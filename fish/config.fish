@@ -9,4 +9,3 @@ if status --is-login
     systemctl --user start wm.target
   end
 end
-

@@ -1,4 +1,10 @@
-almel init fish | source
+if set -q NVIM_LISTEN_ADDRESS
+  function fish_prompt
+    echo '$ '
+  end
+else
+  almel init fish | source
+end
 
 function e
   sudoedit (realpath $argv[1])

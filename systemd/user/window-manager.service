@@ -4,7 +4,8 @@ After=xorg.service
 Wants=xorg.service
 
 [Service]
-ExecStart=i3
+ExecStartPre=sh -c 'cat %h/.dotfiles/i3/config.night %h/.dotfiles/i3/config.base > /tmp/i3config'
+ExecStart=i3 -c /tmp/i3config
 ExecStopPost=loginctl terminate-user greg
 
 [Install]

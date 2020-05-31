@@ -15,6 +15,10 @@ else
  set -gx FZF_DEFAULT_OPTS "--reverse"
 end
 
+set -gx KUBE_HOME /home/greg/.local/share/kube
+set -gx MINIKUBE_HOME /home/greg/.local/share/minikube
+set -gx KUBECONFIG $KUBE_HOME/config
+
 # fish customizations
 set -x fish_greeting
 set fish_cursor_default block

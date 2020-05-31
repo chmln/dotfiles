@@ -9,7 +9,7 @@ end
 
 set dots ~/.dotfiles
 
-cat $dots/i3/config.$theme $dots/i3/config.base > $dots/i3/config
+cat $dots/i3/config.$theme $dots/i3/config.base > /tmp/i3config
 ln -sf $dots/gtk-3.0/settings.$theme.ini $dots/gtk-3.0/settings.ini
 ln -sf $dots/xsettingsd/xsettingsd.$theme.conf $dots/xsettingsd/xsettingsd.conf
 ln -sf $dots/kitty/$theme.conf $dots/kitty/active_theme.conf
@@ -18,7 +18,7 @@ for s in /tmp/kitty-socket-*
     kitty @ --to=unix:$s set-colors -a ~/.config/kitty/$theme.conf >/dev/null 2>&1 &
 end
 
-systemctl --user restart wallpaper 
+systemctl --user restart wallpaper
 systemctl --user reload-or-restart xsettingsd
 
-i3-msg restart >/dev/null 
+i3-msg restart >/dev/null
