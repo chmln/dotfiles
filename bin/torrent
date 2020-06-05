@@ -1,9 +1,8 @@
 #!/bin/bash
 aria2c \
-    -d ~/.local/media \
-    --seed-time 0 \
+    -d ~/.local/share/movies \
     --bt-force-encryption \
-    --listen-port 51413 \
+    --listen-port 51413 --listen-port 51414 \
     -j8 \
     --summary-interval=0 \
     --log-level=warn \
