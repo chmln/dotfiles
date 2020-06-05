@@ -19,7 +19,7 @@ function fzf_edit
 end
 
 function fzf_cd
-  set target (fzf_selector -t d "" / )
+  set target (fzf_selector -t d -t s "" / )
   if [ -n "$target" ]
     cd "$target"
   end
