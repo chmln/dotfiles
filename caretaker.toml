@@ -17,7 +17,7 @@ command = "/home/greg/.dotfiles/bin/theme"
 [[watch]]
 name = "nvim"
 path = "/home/greg/.dotfiles/nvim"
-command = "nvim-ctrl \"source ~/.dotfiles/nvim/init.vim\""
+command = "nvim-ctrl \"source ~/.dotfiles/nvim/init.vim | let &ft=&ft\""
 
 #[[watch]]
 #name = "gtk"
