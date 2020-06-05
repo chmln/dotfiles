@@ -32,7 +32,7 @@ font-1 = "Material Icons:size=12;3"
 
 modules-left = i3
 modules-center = date
-modules-right = email alsa battery network vpn airplane_mode 
+modules-right = email alsa battery network vpn airplane_mode
 
 tray-position = right
 tray-padding = 4
@@ -56,7 +56,7 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
-label-separator = 
+label-separator =
 
 label-mode-padding = 2
 label-mode-foreground = #000
@@ -64,7 +64,7 @@ label-mode-background = ${colors.foreground}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-underline = 
+label-focused-underline =
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
