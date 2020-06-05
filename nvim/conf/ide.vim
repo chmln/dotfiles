@@ -36,13 +36,12 @@ augroup Fmt
   au! BufWritePre *.js,*.json,*.css,*.scss,*.less,*.ts,*.tsx PrettierAsync
 augroup END
 
-
 Plug 'kdheepak/lazygit.vim', { 'branch': 'nvim-v0.4.3', 'on': 'LazyGit' }
 
 " Navigation
-Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
-let g:clap_no_matches_msg = ''
-let g:clap_disable_run_rooter = v:false
-map <silent><C-p> :Clap files --hidden<CR>
-map <silent><C-f> :Clap grep<CR>
+Plug 'junegunn/fzf.vim'
+Plug 'chengzeyi/fzf-preview.vim'
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
 
+map <silent><C-p> :FZFFiles<CR>
+map <silent><C-f> :FZFRg<CR>

@@ -48,13 +48,12 @@ nnoremap <Tab> <C-W><C-W>
 " sane terminal/split setup
 Plug 'vimlab/split-term.vim'
 set splitright splitbelow
-set fillchars=stl:―,stlnc:―
+set fillchars=eob:\ ,stl:―,stlnc:―,vert:│
+set statusline=%a
 
 augroup splits
   au!
-  au! ColorScheme *
-        \ highlight StatusLine ctermbg=none ctermfg=0 |
-        \ highlight StatusLineNC ctermbg=none ctermfg=0
+  au! ColorScheme * highlight StatusLine ctermbg=none ctermfg=0 | highlight StatusLineNC ctermbg=none ctermfg=0
 augroup END
 
 augroup termstuff
