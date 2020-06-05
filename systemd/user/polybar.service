@@ -3,7 +3,7 @@ Description=Polybar
 After=window-manager.service
 
 [Service]
-ExecStartPre=i3 --get-socketpath
+ExecStartPre=sleep 0.1
 ExecStart=polybar primary
 RestartSec=1
 Restart=always
