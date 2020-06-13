@@ -63,8 +63,9 @@ macro index,pager D "<purge-message><sync-mailbox>"
 macro index <Return> "<display-message><sync-mailbox>"
 bind pager j next-line
 bind pager k previous-line
-bind pager \Cj next-undeleted
-bind pager \Ck previous-undeleted
+macro pager \Cj "<next-undeleted><sync-mailbox>"
+macro pager \Ck "<previous-undeleted><sync-mailbox>"
+
 
 # html/plaintext
 set mailcap_path = ~/.config/mutt/mailcap
