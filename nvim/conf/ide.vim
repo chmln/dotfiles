@@ -44,4 +44,5 @@ Plug 'chengzeyi/fzf-preview.vim'
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
 
 map <silent><C-p> :FZFFiles<CR>
+map <M-c> :FZFRg<CR>
 map <silent><C-f> :FZFRg<CR>
