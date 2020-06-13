@@ -1,7 +1,7 @@
 set hidden
 set clipboard=unnamedplus
 set ignorecase
-set nowrap
+set wrap
 set autoindent expandtab
 set nobackup noswapfile
 " unbreak inotify
