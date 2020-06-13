@@ -1,2 +1,2 @@
 #!/bin/sh
-realpath $(fd -H "$@" | rofi -dmenu -i -tokenize -width 800)
+realpath $(fd -H "$@" | rofi -dmenu -i -tokenize -width 800 -theme-str '#prompt { enabled: false; }')

@@ -1,2 +1,2 @@
 #!/bin/bash
-rofi -modi drun -show drun
+rofi -modi drun -show drun -theme-str '#prompt { enabled: false; }'
