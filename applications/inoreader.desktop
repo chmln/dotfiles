@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=InoReader
+Exec=handlr launch x-scheme-handler/http -- --new-window --app=https://inoreader.com
+Terminal=false
+Type=Application
+Icon=rssowl
+Categories=Network;
