@@ -12,9 +12,6 @@ configuration {
         drun-display-format: "{name}";
 }
 
-#prompt {
-        enabled: false;
-}
 #textbox-prompt-colon {
         enabled: false;
 }
