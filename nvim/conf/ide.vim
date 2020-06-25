@@ -1,28 +1,37 @@
-Plug 'neoclide/coc.nvim', {'do': 'npm i'}
-Plug 'neoclide/coc-tsserver', {'do': 'npx yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-json', {'do': 'npx yarn install --frozen-lockfile'}
-Plug 'fannheyward/coc-rust-analyzer', {'do': 'npm i'}
-Plug 'weirongxu/coc-explorer', {'do': 'npx yarn install --frozen-lockfile'}
-let g:loaded_netrw = 1
-let g:loaded_netrwPlugin = 1
+Plug 'neovim/nvim-lsp'
+
+Plug 'haorenW1025/diagnostic-nvim'
+let g:diagnostic_insert_delay = 1
+set signcolumn=yes
+call sign_define("LspDiagnosticsErrorSign", {"text" : "", "texthl" : "LspDiagnosticsError"})
+call sign_define("LspDiagnosticsWarningSign", {"text" : "", "texthl" : "LspDiagnosticsWarning"})
+call sign_define("LspDiagnosticInformationSign", {"text" : "", "texthl" : "LspDiagnosticsInformation"})
+
+Plug 'haorenW1025/completion-nvim'
+"let g:completion_trigger_character = ['.', '::']
+let g:completion_timer_cycle = 350
+let g:completion_max_items = 10
+let g:completion_enable_fuzzy_match = 1
+"let g:completion_trigger_on_delete = 1
+let g:completion_matching_ignore_case = 1
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+set completeopt=menuone,noinsert,noselect
 
 set updatetime=300
 set shortmess+=c
 
-nmap <silent> <F10> <Plug>(coc-diagnostic-next)
-nmap <silent> K :call CocActionAsync("doHover")<CR>
-nmap <silent> <F12> <Plug>(coc-definition)
-nmap <leader>ac  <Plug>(coc-codeaction)
-nmap <leader>qf  <Plug>(coc-fix-current)
-nmap <leader>f :CocCommand explorer<CR>
+nnoremap <silent> <F12> <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> <F10> :NextDiagnosticCycle<CR>
+nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+inoremap <silent><expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-augroup coc
-  autocmd!
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup END
+function! RestartLsp()
+  lua vim.lsp.stop_client(vim.lsp.get_active_clients())
+  lua vim.lsp.stop_client(vim.lsp.get_active_clients())
+  sleep 100m
+  edit
+endfunction
 
 " Code formatting
 Plug 'prettier/vim-prettier', { 'do': 'npm i' }
@@ -36,7 +45,22 @@ augroup Fmt
   au! BufWritePre *.js,*.json,*.css,*.scss,*.less,*.ts,*.tsx PrettierAsync
 augroup END
 
-Plug 'kdheepak/lazygit.vim', { 'branch': 'nvim-v0.4.3', 'on': 'LazyGit' }
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
+let g:lua_tree_follow = 1
+nnoremap <silent> <leader>f :LuaTreeToggle<CR>
+" ---------------
+" Plug 'scrooloose/nerdtree'
+" let g:NERDTreeShowHidden = 1
+" let g:NERDTreeMinimalUI = 1
+" let g:NERDTreeIgnore = []
+" let g:NERDTreeStatusline = ''
+" nnoremap <silent> <leader>f :NERDTreeToggle<CR>
+" " nerdtree: follow file
+" Plug 'unkiwii/vim-nerdtree-sync'
+" let g:nerdtree_sync_cursorline = 1
+
+Plug 'kdheepak/lazygit.vim', { 'on': 'LazyGit' }
 
 " Navigation
 Plug 'junegunn/fzf.vim'

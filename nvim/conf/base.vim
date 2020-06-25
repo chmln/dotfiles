@@ -4,10 +4,16 @@ set ignorecase
 set wrap
 set autoindent expandtab
 set nobackup noswapfile
+
 " unbreak inotify
 set nowritebackup
+
 " disable intro msg
 set shortmess+=I
+
+" disable netrw
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
 
 " allow resizing splits with mouse
 set mouse=a
@@ -26,7 +32,6 @@ Plug 'mboughaba/vim-lessmess'
 let g:enable_lessmess_onsave = 0
 
 Plug 'xi/vim-indent-detect'
-Plug 'ryanoasis/vim-devicons'
 
 augroup misc
   au!

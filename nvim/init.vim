@@ -3,3 +3,4 @@ runtime! conf/*.vim
 call plug#end()
 
 colorscheme edge
+lua require'init'
