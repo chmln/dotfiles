@@ -22,7 +22,7 @@
   "gitflags": "",
   "removemake": "yes",
   "requestsplitn": 150,
-  "sortmode": 0,
+  "sortmode": 1,
   "completionrefreshtime": 7,
   "sudoloop": true,
   "timeupdate": false,
@@ -35,6 +35,6 @@
   "cleanmenu": true,
   "diffmenu": true,
   "editmenu": false,
-  "combinedupgrade": false,
+  "combinedupgrade": true,
   "useask": false
 }
