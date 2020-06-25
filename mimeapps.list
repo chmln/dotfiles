@@ -1,9 +1,11 @@
 [Added Associations]
 
 [Default Applications]
+application/pdf=org.pwmt.zathura.desktop;
 application/rtf=libreoffice.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice.desktop;
 application/x-tex=nvim.desktop;
+audio/mpeg=vlc.desktop;
 inode/directory=lf.desktop;
 text/html=brave-nightly-bin.desktop;
 text/markdown=nvim.desktop;
