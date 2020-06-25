@@ -28,18 +28,17 @@ set smart_wrap
 set notilde
 unset markers
 
-set index_format="%Z %<[y?%<[m?%<[d?%[%H:%M ]&%[%a %d]>&%[%b %d]>&%[%m/%y ]> %-19.19L %s"
+set index_format="%?X?& ?%Z %<[y?%<[m?%<[d?%[%H:%M ]&%[%a %d]>&%[%b %d]>&%[%m/%y ]> %-19.19L %s"
 color index_date white default
-color index blue default "~U" # unread messages
+# unread messages
+color index blue default "~U"
 color indicator black white
-#color header white default .*
-#color status default black
 set status_format=""
 
 set help=no
 
 # autocomplete emails
-set query_command = "notmuch address from:%s"
+set query_command = "notmuch address 'from:%s'"
 set query_format="%4c %t %-70.70a %-70.70n %?e?(%e)?"
 bind editor <Tab> complete-query
 
