@@ -30,3 +30,5 @@
     keepBackup =  false
 [diff]
 	algorithm = histogram
+[pull]
+	rebase = false
