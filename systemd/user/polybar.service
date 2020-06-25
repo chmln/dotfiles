@@ -3,7 +3,7 @@ Description=Polybar
 After=window-manager.service
 
 [Service]
-ExecStartPre=sleep 0.5
+ExecStartPre=sleep 1
 ExecStart=polybar primary
 RestartSec=1
 Restart=always
