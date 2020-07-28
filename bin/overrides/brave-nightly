@@ -1,2 +1,3 @@
 #!/bin/sh
+sd -s '"exited_cleanly": false' '"exited_cleanly": true' ~/.config/BraveSoftware/Brave-Browser/Default/Preferences
 /usr/lib/brave-nightly-bin/brave $BRAVE_FLAGS "$@"

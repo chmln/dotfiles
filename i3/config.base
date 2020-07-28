@@ -19,6 +19,9 @@ gaps inner 15
 gaps outer 7
 
 for_window [class="^.*"] border pixel 2
+for_window [class="Nightly"] floating enable
+for_window [class="Nightly" window_role="browser"] floating disable
+for_window [class="firefox_app"] resize set width 50%
 
 # ============ MOVING AROUND
 bindsym $mod+h focus left
@@ -27,6 +30,7 @@ bindsym $mod+j focus down
 bindsym $mod+l focus right
 bindsym ctrl+$mod+h focus parent; focus left
 bindsym ctrl+$mod+l focus parent; focus right
+bindsym $mod+y exec --no-startup-id terminal -e fish -C xprop
 
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+k move up

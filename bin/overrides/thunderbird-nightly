@@ -1,0 +1,2 @@
+#!/bin/sh
+HOME=/home/greg/.local/share/thunderbird /usr/bin/thunderbird-nightly "$@"

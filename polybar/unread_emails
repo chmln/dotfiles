@@ -2,7 +2,7 @@
 num_unread=`notmuch search --format json "tag:unread AND date:7-days..+1mins" | jq 'length'`
 
 if [ "$num_unread" -gt 0 ]; then
-  echo -e "%{A1:terminal -e fish -C neomutt:} $num_unread%{A}\n\nunread"
+  echo -e "%{A1:terminal -e fish -C neomutt:} $num_unread%{A}"
 else
-  echo -e "\n\nread"
+  echo -e ""
 fi

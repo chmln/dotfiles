@@ -1,5 +1,5 @@
 function fzf_selector
-  fd -HF -d 10 -p $argv | sd -s '/home/greg' '~' | fzf --height 20% --preview "preview {}" | sd -s '~' '/home/greg'
+  fd -aHF -d 10 $argv | sd -s '/home/greg' '~' | fzf --height 20% --preview "preview {}" | sd -s '~' '/home/greg'
 end
 
 function restore_state

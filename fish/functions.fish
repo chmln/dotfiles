@@ -11,7 +11,7 @@ function e
 end
 
 function l
-  env COLUMNS=80 exa -a -1 --group-directories-first $argv --color=always | less -FR
+  lsd --icon always -A --group-dirs=first $argv --color=always
 end
 
 function maintenance
@@ -23,7 +23,7 @@ function maintenance
 end
 
 function updater
-  yay -Syu $argv[1] --noconfirm
+  sudo pikaur -Syu --noconfirm
   return 0
 end
 
@@ -41,7 +41,7 @@ function fish_greeting
 end
 
 function visual_mode
-  commandline -f forward-char
+  #commandline -f forward-char
   set fish_bind_mode visual
   commandline -f begin-selection
 end

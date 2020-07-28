@@ -17,11 +17,12 @@
     mergeoptions = --no-edit
     editor = nvim
     pager = delta --hunk-style plain | less --tabs=4 -RFX
+    autocrlf = input
 
 [user]
     email = gregory.mkv@gmail.com
     signingkey = 2E44FAEEDC94B1E2
-	name = Gregory
+    name = Gregory
 
 [commit]
     gpgsign = true
@@ -29,6 +30,6 @@
 [mergetool]
     keepBackup =  false
 [diff]
-	algorithm = histogram
+    algorithm = histogram
 [pull]
 	rebase = false

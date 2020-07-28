@@ -3,6 +3,19 @@ if mullvad status | rg -q Connected
     mullvad disconnect
     notify-send "VPN disconnected"
 else
+    echo "mullvad-vpn 500" | read n_icon n_id
+    bar-notification 0 $n_icon $n_id
+
     mullvad connect
-    notify-send "VPN connected"
+    bar-notification 50 $n_icon $n_id
+
+    sleep 0.5
+    bar-notification 75 $n_icon $n_id
+
+    if curl https://am.i.mullvad.net/connected | rg -q "are connected"
+        dunstify -r $n_id "VPN connected"
+    else
+        dunstify -r $n_id "Connection error"
+        mullvad disconnect
+    end
 end

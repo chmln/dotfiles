@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Neovim
-Exec=terminal -e fish -C "nvim %f"
+Exec=terminal -e fish -C "nvim '%f'"
 Icon=nvim
 Type=Application
 Keywords=Text;editor;

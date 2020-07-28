@@ -16,7 +16,7 @@
 
 .background {
   color: white;
-  background-color: #23252e; }
+  background-color: #111; }
 
 *:disabled {
   -gtk-icon-effect: dim; }

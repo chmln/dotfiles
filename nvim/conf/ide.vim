@@ -1,3 +1,9 @@
+Plug 'nvim-treesitter/nvim-treesitter'
+
+" lsp tags / classes / functions / etc
+Plug 'liuchengxu/vista.vim'
+let g:vista#renderer#enable_icon = 1
+
 Plug 'neovim/nvim-lsp'
 
 Plug 'haorenW1025/diagnostic-nvim'
@@ -48,6 +54,11 @@ augroup END
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 let g:lua_tree_follow = 1
+let g:lua_tree_show_icons = {
+    \ 'git': 0,
+    \ 'folders': 1,
+    \ 'files': 1,
+    \}
 nnoremap <silent> <leader>f :LuaTreeToggle<CR>
 " ---------------
 " Plug 'scrooloose/nerdtree'

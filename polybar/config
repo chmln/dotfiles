@@ -22,17 +22,16 @@ line-size = 1
 line-color = #f00
 
 padding-left = 0
-padding-right = 1
+padding-right = 3
 
 module-margin-left = 0
-module-margin-right = 3
+module-margin-right = 4
 
-font-0 = "SFMono Nerd Font:size=11;2"
-font-1 = "Material Icons:size=12;3"
+font-0 = "SauceCodePro Nerd Font:size=11;3"
 
 modules-left = i3
 modules-center = date
-modules-right = email alsa battery network vpn airplane_mode
+modules-right = email pulseaudio battery network vpn airplane_mode
 
 tray-position = right
 tray-padding = 4
@@ -82,41 +81,10 @@ label-urgent-padding = 2
 
 [module/date]
 type = internal/date
-interval = 5
 
-date = %A, %B %d
-date-alt = %Y-%m-%d
-
-time = %H:%M
-time-alt = %H:%M:%S
-
+date = %A, %B %dth, %I:%M %p
 format =<label>
-
-format-prefix =
-format-prefix-foreground = ${colors.foreground}
-
-label = %date%, %time%
-
-[module/alsa]
-type = internal/alsa
-mapped = true
-
-; `/proc/asound/cards`
-master-soundcard = hw:0
-; speaker-soundcard = hw:0
-; headphone-soundcard = hw:0
-
-master-mixer = Master
-
-interval = 5
-label-muted = 🔇 muted
-label-muted-foreground = #666
-
-format-volume = <ramp-volume> <label-volume>
-
-ramp-volume-0 =
-ramp-volume-1 =
-ramp-volume-2 =
+label =%date%
 
 [module/battery]
 type = internal/battery
@@ -125,12 +93,7 @@ adapter = ACAD
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-
 format-discharging = <ramp-capacity> <label-discharging>
-
-;format-full-prefix = "   "
-;format-full-prefix-foreground = ${colors.foreground}
-;format-full-underline = ${self.format-charging-underline}
 format-full =
 
 ramp-capacity-0 =
@@ -161,30 +124,14 @@ ping-interval = 3
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 
-; All labels support the following tokens:
-;   %ifname%    [wireless+wired]
-;   %local_ip%  [wireless+wired]
-;   %local_ip6% [wireless+wired]
-;   %essid%     [wireless]
-;   %signal%    [wireless]
-;   %upspeed%   [wireless+wired]
-;   %downspeed% [wireless+wired]
-;   %linkspeed% [wired]
-
-label-connected = "%{A1:rofi-iwd:} %essid%%{A}"
+label-connected = "%{A1:rofi-iwd:}直 %essid%%{A}"
 label-connected-foreground = #eefafafa
-
-; Default: (none)
-label-disconnected = disconnected
+label-disconnected = "%{A1:rofi-iwd:}睊disconnected%{A}"
 label-disconnected-foreground = #66ffffff
 
 [module/email]
 type = custom/script
 interval = 1
-
-; Available tokens:
-;   %counter%
-; Command to be executed (using "/usr/bin/env sh -c [command]")
 exec = ~/.dotfiles/polybar/unread_emails
 
 [module/vpn]
@@ -207,6 +154,6 @@ label-muted-foreground = #666
 
 format-volume = <ramp-volume> <label-volume>
 
-ramp-volume-0 =
-ramp-volume-1 =
-ramp-volume-2 =
+ramp-volume-0 =奔
+ramp-volume-1 =奔
+ramp-volume-2 =墳

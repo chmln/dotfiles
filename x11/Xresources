@@ -6,7 +6,7 @@ Xcursor.size: 30
  Ctrl <Key>V: insert-selection(CLIPBOARD) \n\
  Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 
-*faceName: SauceCodePro Nerd Font Mono: Semibold
+*faceName: SauceCodePro Nerd Font
 *faceSize: 14
 
 *borderWidth:0
