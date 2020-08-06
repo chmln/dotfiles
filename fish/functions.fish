@@ -1,10 +1,11 @@
-if set -q NVIM_LISTEN_ADDRESS
-  function fish_prompt
-    echo '$ '
-  end
-else
-  almel init fish | source
-end
+#if set -q NVIM_LISTEN_ADDRESS
+#  function fish_prompt
+#    echo '$ '
+#  end
+#else
+#  almel init fish | source
+#end
+almel init fish | source
 
 function e
   sudoedit (realpath $argv[1])
@@ -23,7 +24,7 @@ function maintenance
 end
 
 function updater
-  sudo pikaur -Syu --noconfirm
+  yay -Syu --noconfirm
   return 0
 end
 

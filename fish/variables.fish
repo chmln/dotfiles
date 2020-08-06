@@ -50,3 +50,9 @@ set -x fish_pager_color_completion normal --bold
 set -x fish_pager_color_description brwhite
 set -x fish_pager_color_prefix 'white' '--bold' '--underline'
 set -x fish_pager_color_progress 'brwhite' '--background=cyan'
+
+if set -q NVIM_LISTEN_ADDRESS
+    set -gx fish_color_command #000000
+    set -gx fish_color_param #000000
+    set -gx fish_color_error #777777
+end

@@ -1,5 +1,6 @@
 [Unit]
 Description=Mailbox synchronization service
+After=systemd-networkd-wait-online.service
 
 [Service]
 Type=oneshot

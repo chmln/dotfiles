@@ -1,2 +1,2 @@
-require "lsp"
+--require "lsp"
 --require "tree-sitter"

@@ -13,6 +13,8 @@ radius = 0
 fixed-center = true
 bottom = true
 
+wm-restack = i3
+
 background = ${colors.background}
 foreground = ${colors.foreground}
 border-top-size = 1

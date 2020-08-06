@@ -17,7 +17,7 @@
     mergeoptions = --no-edit
     editor = nvim
     pager = delta --hunk-style plain | less --tabs=4 -RFX
-    autocrlf = input
+	autocrlf = false
 
 [user]
     email = gregory.mkv@gmail.com

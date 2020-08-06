@@ -1,15 +1,16 @@
 [Unit]
 Description=Dark Mode
 After=xorg.service
+After=window-manager.service
 After=systemd-networkd-wait-online.service
 
 [Service]
 Environment=RUST_LOG=debug:night_mode
 Type=simple
-StartLimitIntervalSec=0
 ExecCondition=i3-msg
 ExecStart=%h/workspace/linux-utils/night-mode/target/release/night-mode
-Restart=on-failure
+Restart=always
+RestartSec=1
 
 [Install]
 WantedBy=wm.target

@@ -27,3 +27,4 @@ lsp.rust_analyzer.setup {
 }
 lsp.tsserver.setup { cmd = {"lsp-tsserver", "--stdio"}, on_attach = on_attach}
 lsp.vimls.setup { on_attach = on_attach }
+lsp.terraformls.setup{ on_attach = on_attach }

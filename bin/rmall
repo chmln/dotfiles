@@ -1,2 +1,2 @@
-#/bin/sh
-pacman -Rn $(yay -Qqs $1) --noconfirm
+#!/usr/bin/fish
+pacman -Rn (pikaur -Qqs $argv[1])
