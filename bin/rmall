@@ -1,2 +1,2 @@
 #!/usr/bin/fish
-pacman -Rn (pikaur -Qqs $argv[1])
+pacman -Rn (pacman -Qqs $argv[1])

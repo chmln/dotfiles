@@ -1,21 +1,24 @@
-Plug 'neoclide/coc.nvim', {'do': 'npm i'}
-Plug 'neoclide/coc-tsserver', {'do': 'npx yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-json', {'do': 'npx yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-python', {'do': 'npx yarn install --frozen-lockfile'}
-Plug 'fannheyward/coc-rust-analyzer', {'do': 'npm i'}
+Plug 'neoclide/coc.nvim', {'do': 'yarn'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn'}
+Plug 'neoclide/coc-json', {'do': 'yarn'}
+Plug 'neoclide/coc-python', {'do': 'yarn'}
+Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn'}
+Plug 'weirongxu/coc-explorer', {'do': 'yarn'}
+nnoremap <silent> <leader>f :CocCommand explorer<CR>
 
 Plug 'nvim-treesitter/nvim-treesitter'
 
 " lsp tags / classes / functions / etc
 Plug 'liuchengxu/vista.vim'
 let g:vista#renderer#enable_icon = 1
+let g:vista_ignore_kinds = ['Property']
 
 set updatetime=300
 set shortmess+=c
 
-nmap <silent> <F10> <Plug>(coc-diagnostic-next)
+nmap <silent> <leader>p <Plug>(coc-diagnostic-next)
 nmap <silent> K :call CocActionAsync("doHover")<CR>
-nmap <silent> <F12> <Plug>(coc-definition)
+nmap <silent> gd <Plug>(coc-definition)
 nmap <leader>ac  <Plug>(coc-codeaction)
 nmap <leader>qf  <Plug>(coc-fix-current)
 nmap <leader>rn <Plug>(coc-rename)
@@ -26,6 +29,7 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 augroup coc
   autocmd!
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+  autocmd CursorHold * silent call CocActionAsync('highlight')
 augroup END
 
 " Code formatting
@@ -40,17 +44,17 @@ augroup Fmt
   au! BufWritePre *.js,*.json,*.css,*.scss,*.less,*.ts,*.tsx PrettierAsync
 augroup END
 
-Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': ':UpdateRemotePlugins'}
-nnoremap <silent> <leader>f :CHADopen<CR>
+"Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': ':UpdateRemotePlugins'}
+"nnoremap <silent> <leader>f :CHADopen<CR>
 
 Plug 'kdheepak/lazygit.vim', { 'on': 'LazyGit' }
 nmap <leader>g :LazyGit<CR>
 
 " Navigation
 Plug 'junegunn/fzf.vim'
-Plug 'chengzeyi/fzf-preview.vim'
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+let g:fzf_preview_window = 'right:40%'
 
-map <silent><C-p> :FZFFiles<CR>
-map <M-c> :FZFRg<CR>
-map <silent><C-f> :FZFRg<CR>
+map <silent><C-p> :Files<CR>
+map <silent><C-f> :Rg<CR>
+"map <M-c> :Rg<CR>

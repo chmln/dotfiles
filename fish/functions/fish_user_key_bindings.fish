@@ -1,5 +1,5 @@
 function fzf_selector
-  fd -aHF -d 10 $argv | sd -s '/home/greg' '~' | fzf --height 20% --preview "preview {}" | sd -s '~' '/home/greg'
+  fd -aHF -d 6 $argv | sd -s '/home/greg' '~' | fzf --height 20% --preview "preview {}" | sd -s '~' '/home/greg'
 end
 
 function restore_state
@@ -44,7 +44,9 @@ function keybind
 end
 
 function fish_user_key_bindings
-  fish_vi_key_bindings
+  if ! set -q NVIM_LISTEN_ADDRESS
+    fish_vi_key_bindings
+  end
   bind -M insert \cl forward-char
   bind -M insert \ck history-search-backward
 

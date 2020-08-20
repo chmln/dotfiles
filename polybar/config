@@ -13,7 +13,7 @@ radius = 0
 fixed-center = true
 bottom = true
 
-wm-restack = i3
+override-redirect = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -29,7 +29,7 @@ padding-right = 3
 module-margin-left = 0
 module-margin-right = 4
 
-font-0 = "SauceCodePro Nerd Font:size=11;3"
+font-0 = "JetBrainsMono Nerd Font Mono:size=11;3"
 
 modules-left = i3
 modules-center = date

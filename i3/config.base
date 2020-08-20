@@ -3,7 +3,6 @@
 set $mod Mod1
 
 floating_modifier $mod
-
 default_orientation auto
 
 # ============ APPEARANCE
@@ -13,15 +12,12 @@ client.focused $active_color $active_color $inactive_color $active_color
 client.unfocused $inactive_color $inactive_color $active_color $inactive_color
 client.focused_inactive $inactive_color $inactive_color $active_color $inactive_color
 
-smart_gaps on
 smart_borders on
 gaps inner 15
 gaps outer 7
+gaps bottom 35
 
 for_window [class="^.*"] border pixel 2
-for_window [class="Nightly"] floating enable
-for_window [class="Nightly" window_role="browser"] floating disable
-for_window [class="firefox_app"] resize set width 50%
 
 # ============ MOVING AROUND
 bindsym $mod+h focus left
@@ -30,7 +26,6 @@ bindsym $mod+j focus down
 bindsym $mod+l focus right
 bindsym ctrl+$mod+h focus parent; focus left
 bindsym ctrl+$mod+l focus parent; focus right
-bindsym $mod+y exec --no-startup-id terminal -e fish -C xprop
 
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+k move up
@@ -43,6 +38,26 @@ bindsym $mod+n split h
 bindsym $mod+s layout stacking
 bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
+
+# ============ RESIZING
+mode "resize" {
+    bindsym h resize grow left 10 px
+    bindsym Shift+L resize shrink left 10 px
+
+    bindsym l resize grow right 10 px
+    bindsym Shift+H resize shrink right 10 px
+
+    bindsym k resize grow up 10 px
+    bindsym Shift+J resize shrink up 10 px
+
+    bindsym j resize grow down 10 px
+    bindsym Shift+K resize shrink down 10 px
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
 
 # ============ MISC
 bindsym $mod+Shift+q kill

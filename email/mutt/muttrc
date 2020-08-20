@@ -1,11 +1,11 @@
 set mbox_type = Maildir
 set sendmail = /usr/bin/msmtp
+set use_envelope_from=yes
 
 unset record
 
 set realname = "Gregory"
 set mail_check = 0
-set envelope_from
 
 unset move # gmail does that
 set delete # don't ask, just do
@@ -27,6 +27,9 @@ set menu_scroll
 set smart_wrap
 set notilde
 unset markers
+
+bind pager <up> previous-line
+bind pager <down> next-line 
 
 set index_format="%?X?& ?%Z %<[y?%<[m?%<[d?%[%H:%M ]&%[%a %d]>&%[%b %d]>&%[%m/%y ]> %-19.19L %s"
 color index_date white default
@@ -72,7 +75,7 @@ auto_view text/html
 alternative_order text/plain text/enriched text/html
 bind attach <return> view-mailcap
 # hide autoview notices
-set display_filter="sd -p '.*Autoview.*\]\n' ''"
+set display_filter="sd -p '.*(Autoview|\-\- Attachment|\-\- Type: ).*\]\n' ''"
 
 # -------------------------
 # NOTMUCH

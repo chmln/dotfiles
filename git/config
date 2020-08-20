@@ -16,8 +16,11 @@
 [core]
     mergeoptions = --no-edit
     editor = nvim
-    pager = delta --hunk-style plain | less --tabs=4 -RFX
-	autocrlf = false
+    pager = delta | less --tabs=4 -RFX
+    autocrlf = false
+[delta]
+    hunk-header-style = normal
+    hunk-header-decoration-style = normal
 
 [user]
     email = gregory.mkv@gmail.com
@@ -29,7 +32,7 @@
 
 [mergetool]
     keepBackup =  false
+[pull]
+    rebase = false
 [diff]
     algorithm = histogram
-[pull]
-	rebase = false

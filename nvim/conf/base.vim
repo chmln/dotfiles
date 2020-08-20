@@ -4,7 +4,8 @@ set ignorecase
 set nowrap
 set autoindent expandtab
 set nobackup noswapfile
-set termguicolors
+set notermguicolors
+set shell=/bin/dash
 
 " unbreak inotify
 set nowritebackup
@@ -29,20 +30,15 @@ let g:rooter_silent_chdir = 1
 Plug 'mg979/vim-visual-multi'
 let g:VM_default_mappings = 1
 
+" Trailing whitespace
 Plug 'mboughaba/vim-lessmess'
 let g:enable_lessmess_onsave = 0
 
 Plug 'xi/vim-indent-detect'
 
-"Plug 'nathanaelkane/vim-indent-guides'
-"Plug 'Yggdroot/indentLine'
-"Plug 'lukas-reineke/indent-blankline.nvim'
-"let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-"let g:indentLine_color_term = 33
-"let g:indentLine_setConceal = 0
-
 augroup misc
   au!
+  " Remove whitespace
   au BufWritePre * LessmessExecute
   " Update buffer on external changes
   au FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
@@ -75,8 +71,6 @@ augroup termstuff
 augroup END
 
 " open external terminal
-noremap <silent> <F4> :silent !nohup terminal >/dev/null 2>&1 &<CR>
+noremap <silent> <F4> :silent !nohup env -u NVIM_LISTEN_ADDRESS terminal >/dev/null 2>&1 &<CR>
 " open internal terminal
 nmap <F5> :Term 20<CR>
-
-Plug 'ryanoasis/vim-devicons'

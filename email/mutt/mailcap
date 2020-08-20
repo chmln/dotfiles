@@ -1,5 +1,4 @@
-text/html; august < %s | less -R
-text/html; w3m -I %{charset} -T text/html; copiousoutput;
+text/html; august < %s ; copiousoutput
 image/*; ~/.dotfiles/email/mutt/view-attachment %s
 application/*; ~/.dotfiles/email/mutt/view-attachment %s
 text/*; ~/.dotfiles/email/mutt/view-attachment %s

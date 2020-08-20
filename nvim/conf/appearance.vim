@@ -14,6 +14,9 @@ augroup END
 Plug 'sainnhe/edge'
 set notermguicolors
 
+" icons
+Plug 'ryanoasis/vim-devicons'
+
 if $IS_DAY == 'true'
     set background=light
 else
@@ -29,7 +32,7 @@ function! s:customize_colorscheme()
     hi link rustDeriveTrait SpecialComment
 
     if $IS_DAY == 'true'
-        hi CursorLine ctermbg=252
+        hi CursorLine ctermbg=255
         hi Visual ctermbg=white
     endif
 endfunction
@@ -38,9 +41,3 @@ augroup custom_colors
     au!
     au VimEnter * call s:customize_colorscheme()
 augroup END
-
-Plug 'luochen1990/rainbow'
-let g:rainbow_active = 0
-let lightcolors =  ['lightblue', 'lightyellow', 'red', 'darkgreen', 'darkyellow', 'lightred', 'yellow', 'cyan', 'magenta', 'white']
-let darkcolors = ['DarkBlue', 'Magenta', 'White', 'Red', 'DarkGray', 'DarkGreen', 'DarkYellow']
-let g:rainbow_conf = { 'ctermfgs': (&background=="light"? darkcolors : lightcolors)}

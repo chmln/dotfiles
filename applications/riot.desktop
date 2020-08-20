@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Riot
-Exec=brave-nightly --new-window --app=https://riot.im/app
+Exec=handlr launch x-scheme-handler/https -- --new-window --app=https://riot.im/app
 Terminal=false
 Type=Application
 Icon=riot

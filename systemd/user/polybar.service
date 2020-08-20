@@ -1,10 +1,11 @@
 [Unit]
 Description=Polybar
-After=window-manager.service
+After=monitors.service
+Requires=monitors.service
 
 [Service]
 ExecStartPre=sleep 1
-ExecStart=polybar primary
+ExecStart=polybar -l trace primary
 RestartSec=1
 Restart=always
 

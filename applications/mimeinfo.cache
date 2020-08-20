@@ -1,5 +1,6 @@
 [MIME Cache]
 application/vnd.mozilla.xul+xml=firefox-nightly.desktop;
+application/x-bittorrent=webtorrent-desktop.desktop;
 application/x-shellscript=nvim.desktop;
 application/xhtml+xml=firefox-nightly.desktop;
 image/bmp=feh.desktop;
@@ -39,4 +40,6 @@ text/x-tex=nvim.desktop;
 text/xml=firefox-nightly.desktop;
 x-scheme-handler/http=firefox-nightly.desktop;
 x-scheme-handler/https=firefox-nightly.desktop;
+x-scheme-handler/magnet=webtorrent-desktop.desktop;
+x-scheme-handler/stream-magnet=webtorrent-desktop.desktop;
 x-scheme-handler/tg=telegramdesktop.desktop;

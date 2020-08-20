@@ -1,7 +1,7 @@
 [Unit]
 Description=Window Manager
 After=xorg.service
-Wants=xorg.service
+Requires=xorg.service
 
 [Service]
 ExecStartPre=rm -rf /run/user/1000/i3
