@@ -1,21 +1,19 @@
 #!/usr/bin/fish
-if mullvad status | rg -q Connected
-    mullvad disconnect
+
+if set -l interface (ip link show | ug -P '(mullvad-.*):' --format='%1')
+    sudo wg-quick down $interface
     notify-send "VPN disconnected"
 else
-    echo "mullvad-vpn 500" | read n_icon n_id
-    bar-notification 0 $n_icon $n_id
+    echo "vpn 500" | read n_icon n_id
+    bar-notification 25 $n_icon $n_id
 
-    mullvad connect
-    bar-notification 50 $n_icon $n_id
-
-    sleep 0.5
+    sudo wg-quick up mullvad-ca10
     bar-notification 75 $n_icon $n_id
 
     if curl https://am.i.mullvad.net/connected | rg -q "are connected"
         dunstify -r $n_id "VPN connected"
     else
         dunstify -r $n_id "Connection error"
-        mullvad disconnect
+        sudo wg-quick down mullvad-ca10
     end
 end
