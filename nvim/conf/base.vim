@@ -73,4 +73,4 @@ augroup END
 " open external terminal
 noremap <silent> <F4> :silent !nohup env -u NVIM_LISTEN_ADDRESS terminal >/dev/null 2>&1 &<CR>
 " open internal terminal
-nmap <F5> :Term 20<CR>
+nmap <F5> :Term 20 fish<CR>

@@ -32,7 +32,7 @@ function! s:customize_colorscheme()
     hi link rustDeriveTrait SpecialComment
 
     if $IS_DAY == 'true'
-        hi CursorLine ctermbg=255
+        hi CursorLine ctermbg=253
         hi Visual ctermbg=white
     endif
 endfunction

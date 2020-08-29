@@ -38,6 +38,8 @@ let g:prettier#autoformat = 0
 let g:prettier#quickfix_enabled = 0
 let g:prettier#exec_cmd_async = 1
 let g:rustfmt_autosave_if_config_present = 1
+let g:rustfmt_options="--edition 2018"
+let g:rustfmt_command="rustup run nightly rustfmt"
 
 augroup Fmt
   au!
