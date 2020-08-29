@@ -21,6 +21,7 @@
 [delta]
     hunk-header-style = normal
     hunk-header-decoration-style = normal
+    line-numbers = false
 
 [user]
     email = gregory.mkv@gmail.com
