@@ -1,5 +1,4 @@
 acpi
-adobe-source-sans-pro-fonts
 alsa-utils
 android-tools
 android-udev
@@ -12,13 +11,13 @@ bat
 bitwarden-bin
 bottom-bin
 brave-dev-bin
+brave-nightly-bin
 brillo
 brscan4
 cairo
 calibre-installer
 cargo-edit
 cargo-release
-chromium-snapshot-bin
 cpupower
 crda
 cross
@@ -31,6 +30,7 @@ discord
 docker-bin
 docker-compose-bin
 downgrade
+dua-cli
 dunst
 earlyoom
 efibootmgr
@@ -61,8 +61,7 @@ grub-hook
 gtk3-mushrooms
 handlr-bin
 hyperfine
-i3-gaps
-i3status-rust
+i3-gaps-next-git
 imagemagick
 imlib2
 inetutils
@@ -73,6 +72,7 @@ isync
 iwd
 jdk-openj9-bin
 jq
+kernel-modules-hook
 kitty
 kubectl
 ladspa
@@ -89,10 +89,8 @@ libspectre
 libtool
 libva-vdpau-driver
 libvdpau
-linux-clear
-linux-clear-headers
-linux-clear-lts2019
-linux-clear-lts2019-headers
+linux-clear-current
+linux-clear-current-headers
 linux-firmware
 linux-lts
 linux-lts-headers
@@ -115,7 +113,7 @@ mkcert
 mpg123
 mpv-light
 msmtp
-mullvad-vpn-beta-bin
+ncdu
 neomutt
 neovim-nightly
 neovim-plug-git
@@ -164,13 +162,14 @@ rofi
 rsfetch-bin
 rust-analyzer
 rustup
-sccache-bin
+sccache
 sd
 slack-desktop
 smartmontools
 speex
 spotify-dev
 stack-bin
+standardnotes-desktop
 strace
 sudo
 syncthing
