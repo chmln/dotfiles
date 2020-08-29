@@ -42,7 +42,7 @@ tray-maxsize = 22
 cursor-click = pointer
 
 [settings]
-screenchange-reload = false
+screenchange-reload = true
 pseudo-transparency = true
 
 [global/wm]
@@ -139,8 +139,8 @@ exec = ~/.dotfiles/polybar/unread_emails
 [module/vpn]
 type = custom/script
 interval = 1
-exec-if = mullvad status | rg -q Connected
-exec = echo " %{A1:vpn-toggle:}VPN ON%{A}"
+exec-if = ip link show | rg -q mullvad
+exec = echo "嬨 %{A1:vpn-toggle:}VPN ON%{A}"
 
 [module/airplane_mode]
 type = custom/script
