@@ -1,0 +1,10 @@
+[Unit]
+Description=Setup monitors
+After=wm.target
+
+[Service]
+ExecStart=sccache --start-server
+Restart=on-failure
+
+[Install]
+WantedBy=wm.target
