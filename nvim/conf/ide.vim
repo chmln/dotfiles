@@ -1,12 +1,12 @@
 Plug 'neoclide/coc.nvim', {'do': 'yarn'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn'}
 Plug 'neoclide/coc-json', {'do': 'yarn'}
-Plug 'neoclide/coc-python', {'do': 'yarn'}
+Plug 'clangd/coc-clangd', {'do': 'yarn'}
 Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn'}
 Plug 'weirongxu/coc-explorer', {'do': 'yarn'}
 nnoremap <silent> <leader>f :CocCommand explorer<CR>
 
-Plug 'nvim-treesitter/nvim-treesitter'
+"Plug 'nvim-treesitter/nvim-treesitter'
 
 " lsp tags / classes / functions / etc
 Plug 'liuchengxu/vista.vim'
@@ -49,7 +49,7 @@ augroup END
 "Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': ':UpdateRemotePlugins'}
 "nnoremap <silent> <leader>f :CHADopen<CR>
 
-Plug 'kdheepak/lazygit.vim', { 'on': 'LazyGit' }
+Plug 'kdheepak/lazygit.vim', { 'on': 'LazyGit', 'branch': 'nvim-v0.4.3' }
 nmap <leader>g :LazyGit<CR>
 
 " Navigation
