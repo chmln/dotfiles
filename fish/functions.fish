@@ -6,6 +6,7 @@
 #  almel init fish | source
 #end
 almel init fish | source
+direnv hook fish | source
 
 function e
   sudoedit (realpath $argv[1])
