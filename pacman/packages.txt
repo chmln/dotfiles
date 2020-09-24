@@ -31,7 +31,7 @@ diff-so-fancy
 direnv
 discord-canary
 docker-bin
-docker-compose-bin
+docker-compose
 downgrade
 dua-cli
 dunst
@@ -42,7 +42,6 @@ fake-ms-fonts
 fd
 ffmpeg
 file-roller
-firefox-nightly
 fish
 fontconfig
 freetype2
@@ -76,7 +75,6 @@ isync
 iwd
 jdk-openj9-bin
 jq
-kernel-modules-hook
 kitty
 kubectl
 ladspa
@@ -119,7 +117,7 @@ mpv-light
 msmtp
 ncdu
 neomutt
-neovim
+neovim-nightly
 neovim-plug-git
 neovim-remote
 nerd-fonts-jetbrains-mono
@@ -136,8 +134,8 @@ nvidia-settings
 nvidia-utils
 openssh
 os-prober
+otf-san-francisco
 otf-san-francisco-mono
-otf-san-francisco-pro
 packer
 pacman-contrib
 pango
@@ -147,6 +145,7 @@ pavucontrol
 pdfgrep
 pkgconf
 pkgfile
+playerctl
 polkit-no-script-git
 polybar
 postgresql-libs
@@ -154,11 +153,15 @@ powertop
 pqiv
 prettier
 proton-ge-custom-bin
-pspg
 pulseaudio
 pulseaudio-alsa
-pycharm-professional
+python-appdirs
+python-ordered-set
+python-packaging
 python-pynvim
+python-pyparsing
+python-setuptools
+python-six
 redshift-minimal
 reflector
 repo
@@ -172,13 +175,14 @@ skim
 slack-desktop
 smartmontools
 speex
-spotify-dev
+spotify
 stack-bin
 strace
 sudo
 syncthing
 systemd-resolvconf
 tableplus
+tealdeer-bin
 teams
 telegram-desktop-bin
 terraform
@@ -212,6 +216,7 @@ xdotool
 xf86-video-intel
 xorg-setxkbmap
 xorg-xauth
+xorg-xev
 xorg-xinput
 xorg-xkbcomp
 xorg-xprop
