@@ -6,12 +6,12 @@ Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn'}
 Plug 'weirongxu/coc-explorer', {'do': 'yarn'}
 nnoremap <silent> <leader>f :CocCommand explorer<CR>
 
-"Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter'
 
 " lsp tags / classes / functions / etc
 Plug 'liuchengxu/vista.vim'
 let g:vista#renderer#enable_icon = 1
-let g:vista_ignore_kinds = ['Property']
+let g:vista_ignore_kinds = ['Property', 'Field', 'EnumMember']
 
 set updatetime=300
 set shortmess+=c
@@ -44,6 +44,7 @@ let g:rustfmt_command="rustup run nightly rustfmt"
 augroup Fmt
   au!
   au! BufWritePre *.js,*.json,*.css,*.scss,*.less,*.ts,*.tsx PrettierAsync
+  au! BufWritePre *.c call CocActionAsync("format")
 augroup END
 
 "Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': ':UpdateRemotePlugins'}
