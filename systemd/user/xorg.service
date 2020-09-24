@@ -5,3 +5,4 @@ Description=Xorg server at display
 SuccessExitStatus=0 1
 ExecStart=Xorg :0 -nolisten tcp -noreset -auth /tmp/.xauthority -verbose 2 vt1
 ExecStartPost=bash /home/greg/.dotfiles/bin/xorg-wait
+ExecStartPost=sleep 1
