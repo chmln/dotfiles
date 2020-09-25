@@ -1,5 +1,5 @@
 #!/bin/bash
-num_unread=`notmuch search --format json "tag:unread AND date:7-days..+1mins" | jq 'length'`
+num_unread=`notmuch search --format json "tag:inbox AND tag:unread AND date:7-days..+1mins" | jq 'length'`
 
 if [ "$num_unread" -gt 0 ]; then
   echo -e "%{A1:terminal -e fish -C neomutt:} $num_unread%{A}"
