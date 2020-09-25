@@ -119,7 +119,6 @@ ncdu
 neomutt
 neovim-nightly
 neovim-plug-git
-neovim-remote
 nerd-fonts-jetbrains-mono
 nerd-fonts-source-code-pro
 ngrok-bin
