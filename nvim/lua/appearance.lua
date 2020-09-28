@@ -44,7 +44,7 @@ vim.g.scrollbar_shape = {
 vim.api.nvim_command("augroup ScrollbarInit")
 vim.api.nvim_command("au!")
 vim.api.nvim_command("au WinEnter,FocusGained,CursorMoved,VimResized * silent! lua require('scrollbar').show()")
-vim.api.nvim_command("au WinLeave,FocusLost * silent! lua require('scrollbar').clear()")
+vim.api.nvim_command("au WinLeave,BufLeave,FocusLost * silent! lua require('scrollbar').clear()")
 vim.api.nvim_command("augroup end")
 
 -- distraction-free markdown editing

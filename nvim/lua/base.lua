@@ -21,7 +21,6 @@ vim.g.loaded_netrwPlugin = 1
 
 -- allow resizing splits with mouse
 vim.o.mouse = "a"
-vim.api.nvim_set_keymap("n", "<LeftMouse>", "ma<LeftMouse>`a", {})
 
 -- set correct working directory
 packer.use "airblade/vim-rooter"
