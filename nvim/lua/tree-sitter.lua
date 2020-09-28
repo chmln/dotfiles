@@ -1,13 +1,18 @@
+packer.use 'nvim-treesitter/nvim-treesitter'
+vim.cmd [[packadd nvim-treesitter]]
+
 require'nvim-treesitter.configs'.setup {
     highlight = {
         enable = true,
-        disable = {},
+    },
+    refactor = {
+        highlight_definitions = { enable = true },
     },
     incremental_selection = {             -- this enables incremental selection
-        enable = false,
+        enable = true,
         disable = { 'cpp', 'lua' },
         keymaps = {                       -- mappings for incremental selection (visual mappings)
-          node_incremental = "<leader>e", -- "grn" by default,
+          node_incremental = "gn", -- "grn" by default,
           scope_incremental = "<leader>f" -- "grc" by default
         }
     },
