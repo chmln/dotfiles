@@ -6,8 +6,9 @@ vim.o.clipboard = "unnamedplus"
 vim.o.autoindent = true
 vim.o.expandtab = true
 vim.o.backup = false
-vim.o.swapfile = false
 vim.o.shell = "/bin/dash"
+
+vim.cmd [[ set noswapfile ]]
 
 -- unbreak inotify
 vim.o.writebackup = false
@@ -20,7 +21,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- allow resizing splits with mouse
-vim.o.mouse = "a"
+-- vim.o.mouse = "a"
 
 -- set correct working directory
 packer.use "airblade/vim-rooter"

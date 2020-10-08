@@ -129,9 +129,12 @@ _packer_load = function(names, cause)
   end
 end
 
+-- Runtimepath customization
+
 -- Pre-load configuration
 -- Post-load configuration
 -- Conditional loads
+-- Load plugins in order defined by `after`
 vim._update_package_paths()
 END
 
@@ -139,9 +142,6 @@ function! s:load(names, cause) abort
 call luaeval('_packer_load(_A[1], _A[2])', [a:names, a:cause])
 endfunction
 
-" Runtimepath customization
-
-" Load plugins in order defined by `after`
 
 " Command lazy-loads
 command! -nargs=* -range -bang -complete=file LazyGit call s:load(['lazygit.vim'], { "cmd": "LazyGit", "l1": <line1>, "l2": <line2>, "bang": <q-bang>, "args": <q-args> })

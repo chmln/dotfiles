@@ -1,15 +1,24 @@
 vim.cmd [[packadd packer.nvim]]
 
 if not packer then
-   packer = require("packer")
-   packer.init()
-
-   packer.use("wbthomason/packer.nvim")
+  packer = require("packer")
+  packer.init()
+else
+  packer.reset()
 end
 
-require("base")
-require("lsp_config")
-require("tree-sitter")
-require("formatter")
-require("text")
-require("appearance")
+packer.use("wbthomason/packer.nvim")
+
+modules = {
+  "base",
+  "lsp_config",
+  "tree-sitter",
+  "formatter",
+  "text",
+  "appearance"
+}
+
+for _, m in ipairs(modules) do
+  package.loaded[m] = nil
+  require(m)
+end

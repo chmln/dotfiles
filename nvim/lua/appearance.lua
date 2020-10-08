@@ -5,11 +5,12 @@ vim.o.showmode = false
 vim.o.laststatus = 0
 vim.o.ruler = false
 vim.o.foldenable = false
-vim.o.cursorline = true
 vim.o.title = true
-vim.o.signcolumn = "yes"
-vim.o.winblend = 5
-vim.o.pumblend = 5
+vim.o.winblend = 7
+vim.o.pumblend = 7
+
+vim.wo.cursorline = true
+vim.wo.signcolumn = "yes"
 
 -- Keep cursor vertically centered
 vim.api.nvim_command("augroup cursor_centered")
@@ -19,7 +20,7 @@ vim.api.nvim_command("augroup END")
 -- icons
 packer.use "ryanoasis/vim-devicons"
 
-if os.getenv("IS_DAY") == "true" then
+if os.execute("sh -c 'systemctl --user show-environment | rg -q IS_DAY=true'") == 0 then
   vim.o.background = "light"
 else
   vim.o.background = "dark"
