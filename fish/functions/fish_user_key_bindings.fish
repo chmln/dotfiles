@@ -1,5 +1,6 @@
 function fzf_selector
-  fd -aHF -d 6 $argv | sd -s '/home/greg' '~' | fzf --height 20% --preview "preview {}" | sd -s '~' '/home/greg'
+  #fd -aHF -d 6 $argv | sd -s '/home/greg' '~' | fzf --height 20% --preview "preview {}" | sd -s '~' '/home/greg'
+  fd -aHF -d 6 $argv | sd "$PWD/" "" | sd -s '/home/greg' '~' |  sk --height 30% -t begin -e | sd -s '~' '/home/greg'
 end
 
 function restore_state

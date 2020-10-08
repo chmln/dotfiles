@@ -4,7 +4,7 @@ After=systemd-networkd-wait-online.service
 
 [Service]
 Type=oneshot
-ExecStart=fish -C 'mbsync -Va -c ~/.config/mbsync/config || true'
+ExecStart=fish -C 'mbsync -Va --pull -c ~/.config/mbsync/config || true'
 ExecStartPost=/usr/bin/fish /home/greg/.secconf/mbsync/postsync.sh
 
 [Install]

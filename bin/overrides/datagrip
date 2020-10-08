@@ -1,2 +1,2 @@
 #!/bin/sh
-GDMSESSION=gnome /opt/datagrip/bin/datagrip.sh "$@"
+env GDMSESSION=gnome /opt/datagrip/bin/datagrip.sh "$@"

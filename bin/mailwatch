@@ -1,0 +1,5 @@
+#!/usr/bin/env fish
+set -l mailbox $argv[1]
+imapnotify --config ~/.secconf/imapnotify/$mailbox.json &
+ts-node workspace/mailwatch-js/src/index.ts $mailbox &
+#watchexec --debounce 5000 --postpone --watch  ~/.local/share/mail/$mailbox "mbsync --config ~/.config/mbsync/config --push $mailbox:INBOX" &

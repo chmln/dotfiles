@@ -2,7 +2,8 @@
 Description=Email monitor: %i
 
 [Service]
-ExecStart=/home/greg/.local/share/npm/bin/imapnotify --config %h/.secconf/imapnotify/%i.json
+ExecStart=fish %h/.dotfiles/bin/mailwatch "%i"
+Type=forking
 Restart=always
 RestartSec=1
 

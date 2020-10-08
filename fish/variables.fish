@@ -14,6 +14,7 @@ else
  set -gx BAT_THEME "TwoDark"
  set -gx FZF_DEFAULT_OPTS "--reverse"
 end
+set -gx SKIM_DEFAULT_OPTIONS "--layout=reverse"
 
 set -gx KUBE_HOME /home/greg/.local/share/kube
 set -gx MINIKUBE_HOME /home/greg/.local/share/minikube
