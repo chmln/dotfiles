@@ -49,7 +49,7 @@ vim.api.nvim_set_keymap("n", "<Up>", "<Nop>", {})
 vim.api.nvim_set_keymap("n", "<Down>", "<Nop>", {})
 
 vim.api.nvim_set_keymap("n", "Q", "q", {noremap = true})
-vim.api.nvim_set_keymap("n", "<C-s>", ":w!<CR>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<C-s>", ":w!<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<Tab>", "<C-W><C-W>", {})
 
 -- sane terminal/split setup

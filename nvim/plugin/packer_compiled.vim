@@ -1,5 +1,9 @@
 " Automatically generated packer.nvim plugin loader code
 
+if !has('nvim')
+  finish
+endif
+
 lua << END
 local plugins = {
   ["lazygit.vim"] = {

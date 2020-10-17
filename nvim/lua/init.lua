@@ -11,11 +11,12 @@ packer.use("wbthomason/packer.nvim")
 
 modules = {
   "base",
-  "lsp_config",
+  "lsp_coc",
   "tree-sitter",
   "formatter",
   "text",
-  "appearance"
+  "appearance",
+  "navigation"
 }
 
 for _, m in ipairs(modules) do

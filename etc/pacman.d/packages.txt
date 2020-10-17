@@ -54,7 +54,6 @@ git-lfs-bin
 github-cli
 gnome-disk-utility
 gnome-keyring
-google-chrome
 graphviz
 grub
 grub-hook
@@ -174,7 +173,6 @@ rust-analyzer
 rustup
 sd
 skim
-slack-desktop
 smartmontools
 speex
 spotify
@@ -200,7 +198,6 @@ unrar
 usb_modeswitch
 usbutils
 vidir
-visual-studio-code-bin
 vscode-css-languageserver-bin
 vscode-html-languageserver-bin
 vscode-json-languageserver-bin
