@@ -16,3 +16,4 @@ gtk-3.0/settings.ini
 .uuid
 nvim/plugin/packer_compiled.vim
 gtk-3.0/bookmarks
+nvim/plugin/packer_compiled.vim
