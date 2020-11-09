@@ -1,6 +1,7 @@
 packer.use {"neoclide/coc.nvim", branch = "release"}
 packer.use {"neoclide/coc-tsserver", run = "yarn install --pure-lockfile"}
 packer.use {"neoclide/coc-json", run = "yarn install --pure-lockfile"}
+packer.use {"clangd/coc-clangd", run = "yarn install --pure-lockfile"}
 packer.use {"fannheyward/coc-rust-analyzer", run = "yarn install --pure-lockfile"}
 
 vim.api.nvim_command("noremap <silent> <leader>p :call CocActionAsync('diagnosticNext')<CR>")

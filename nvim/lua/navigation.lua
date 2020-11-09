@@ -1,9 +1,29 @@
 -- file tree
 packer.use "kyazdani42/nvim-web-devicons"
+require "nvim-web-devicons".setup {
+  default = true
+}
+
 packer.use "kyazdani42/nvim-tree.lua"
 vim.g.lua_tree_follow = 1
-vim.g.lua_tree_git_hl = 1
+vim.g.lua_tree_git_hl = 0
 vim.g.lua_tree_auto_close = 1
+vim.g.lua_tree_icons = {
+  default = "",
+  symlink = "",
+  git = {
+    unstaged = "✗",
+    staged = "✓",
+    unmerged = "",
+    renamed = "➜",
+    untracked = "★"
+  },
+  folder = {
+    default = "",
+    open = ""
+  }
+}
+
 vim.g.lua_tree_show_icons = {
   git = 0,
   folders = 1,

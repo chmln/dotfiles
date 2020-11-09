@@ -48,6 +48,14 @@ vim.api.nvim_command("au WinEnter,FocusGained,CursorMoved,VimResized * silent! l
 vim.api.nvim_command("au WinLeave,BufLeave,FocusLost * silent! lua require('scrollbar').clear()")
 vim.api.nvim_command("augroup end")
 
+vim.api.nvim_command("augroup CustomHighlights")
+vim.api.nvim_command("au!")
+vim.api.nvim_command("au BufEnter *.rs hi CocRustChainingHint guifg=#aaaaaa")
+vim.api.nvim_command(
+  "au BufEnter * if &background=='dark' | hi CursorLine guibg=#333333 | else | hi CursorLine guibg=#dddddd | endif"
+)
+vim.api.nvim_command("augroup end")
+
 -- distraction-free markdown editing
 packer.use "SidOfc/mkdx"
 packer.use "junegunn/goyo.vim"
