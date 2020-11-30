@@ -1,0 +1,2 @@
+#!/bin/bash
+HOME=$HOME/.config /usr/bin/terraform "$@"
