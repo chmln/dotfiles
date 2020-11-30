@@ -31,7 +31,7 @@
 #   CheckHostIP yes
 #   AddressFamily any
 #   ConnectTimeout 0
-#   StrictHostKeyChecking ask
+   StrictHostKeyChecking no
    IdentityFile ~/.config/ssh/id_rsa
    LogLevel FATAL
 #   IdentityFile ~/.ssh/id_dsa
