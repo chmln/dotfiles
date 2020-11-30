@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Adobe Photoshop
-Exec=env STEAM_COMPAT_DATA_PATH=/home/greg/.local/share/wine64 proton /home/greg/.local/share/wine64/drive_c/PhotoshopPortable/PhotoshopCS6Portable.exe
-Terminal=false
-Type=Application
-Icon=photoshop
-Categories=Graphics;
