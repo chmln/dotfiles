@@ -8,6 +8,7 @@ ExecStartPre=sh -c 'cat %h/.dotfiles/i3/config.night %h/.dotfiles/i3/config.base
 ExecStart=i3 -c /tmp/i3config
 ExecStopPost=loginctl terminate-user greg
 Restart=always
+RestartSec=1
 
 [Install]
 WantedBy=wm.target
