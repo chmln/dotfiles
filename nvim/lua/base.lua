@@ -32,6 +32,11 @@ vim.g.rooter_silent_chdir = 1
 packer.use "mboughaba/vim-lessmess"
 vim.g.enable_lessmess_onsave = 0
 
+-- Comments
+packer.use "noahares/nvim-commenter"
+vim.api.nvim_set_keymap("n", "<C-_>", ":SingleCommenterToggle<CR>", {})
+vim.api.nvim_set_keymap("v", "<C-_>", ":MultiCommenterToggle<CR>", {})
+
 packer.use "xi/vim-indent-detect"
 
 vim.api.nvim_command("augroup misc")
@@ -39,7 +44,9 @@ vim.api.nvim_command("au!")
 -- Remove whitespace
 vim.api.nvim_command("au BufWritePre * LessmessExecute")
 -- Update buffer on external changes
-vim.api.nvim_command("au FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif")
+vim.api.nvim_command(
+  "au FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif"
+)
 vim.api.nvim_command("augroup END")
 
 -- disable arrow keys
@@ -49,7 +56,12 @@ vim.api.nvim_set_keymap("n", "<Up>", "<Nop>", {})
 vim.api.nvim_set_keymap("n", "<Down>", "<Nop>", {})
 
 vim.api.nvim_set_keymap("n", "Q", "q", {noremap = true})
-vim.api.nvim_set_keymap("n", "<C-s>", ":w!<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap(
+  "n",
+  "<C-s>",
+  ":w!<CR>",
+  {noremap = true, silent = true}
+)
 vim.api.nvim_set_keymap("n", "<Tab>", "<C-W><C-W>", {})
 
 -- sane terminal/split setup
@@ -68,10 +80,17 @@ vim.api.nvim_command("augroup END")
 
 vim.api.nvim_command("augroup termstuff")
 vim.api.nvim_command("au!")
-vim.api.nvim_command("au! TermOpen * setlocal nonumber norelativenumber nocursorline")
+vim.api.nvim_command(
+  "au! TermOpen * setlocal nonumber norelativenumber nocursorline"
+)
 vim.api.nvim_command("augroup END")
 
 -- open external terminal
-vim.api.nvim_set_keymap("n", "<F4>", ":silent !nohup env -u NVIM_LISTEN_ADDRESS terminal >/dev/null 2>&1 &<CR>", {})
+vim.api.nvim_set_keymap(
+  "n",
+  "<F4>",
+  ":silent !nohup env -u NVIM_LISTEN_ADDRESS terminal >/dev/null 2>&1 &<CR>",
+  {}
+)
 -- open internal terminal
 vim.api.nvim_set_keymap("n", "<F5>", ":Term 20 fish<CR>", {})

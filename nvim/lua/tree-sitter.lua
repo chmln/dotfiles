@@ -1,32 +1,37 @@
-packer.use 'nvim-treesitter/nvim-treesitter'
+packer.use "jvirtanen/vim-hcl"
+packer.use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
 vim.cmd [[packadd nvim-treesitter]]
 
-require'nvim-treesitter.configs'.setup {
-    highlight = {
-        enable = true,
-    },
-    refactor = {
-        highlight_definitions = { enable = true },
-    },
-    incremental_selection = {             -- this enables incremental selection
-        enable = true,
-        disable = { 'cpp', 'lua' },
-        keymaps = {                       -- mappings for incremental selection (visual mappings)
-          node_incremental = "gn", -- "grn" by default,
-          scope_incremental = "<leader>f" -- "grc" by default
-        }
-    },
-    node_movement = {                           -- this cursor movement in node hierachy
-        enable = false,
-        disable = { 'cpp', 'rust' },
-        keymaps = {                       -- mappings for node movement (normal mappings)
-          move_up = "<a-k>",              -- default is to move with alt key hold
-          move_down = "<a-j>",
-          move_left = "<a-h>",
-          move_right = "<a-l>",
-        }
-    },
-    ensure_installed = 'all'
+require "nvim-treesitter.configs".setup {
+  highlight = {
+    enable = true
+  },
+  refactor = {
+    highlight_definitions = {enable = true}
+  },
+  incremental_selection = {
+    -- this enables incremental selection
+    enable = true,
+    disable = {"cpp", "lua"},
+    keymaps = {
+      -- mappings for incremental selection (visual mappings)
+      node_incremental = "gn", -- "grn" by default,
+      scope_incremental = "<leader>f" -- "grc" by default
+    }
+  },
+  node_movement = {
+    -- this cursor movement in node hierachy
+    enable = false,
+    disable = {"cpp", "rust"},
+    keymaps = {
+      -- mappings for node movement (normal mappings)
+      move_up = "<a-k>", -- default is to move with alt key hold
+      move_down = "<a-j>",
+      move_left = "<a-h>",
+      move_right = "<a-l>"
+    }
+  },
+  ensure_installed = "all"
 }
 
 require "nvim-treesitter.highlight"

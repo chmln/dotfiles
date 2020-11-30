@@ -9,15 +9,18 @@ end
 
 packer.use("wbthomason/packer.nvim")
 
-modules = {
-  "base",
-  "lsp_coc",
-  "tree-sitter",
-  "formatter",
-  "text",
-  "appearance",
-  "navigation"
-}
+function scandir(directory)
+  local i, t = 0, {}
+  for filename in io.popen("ls -1 " .. directory):lines() do
+    if filename ~= "init.lua" then
+      i = i + 1
+      t[i] = filename:match("(.+)%..+$")
+    end
+  end
+  return t
+end
+
+modules = scandir(vim.loop.os_homedir() .. "/.dotfiles/nvim/lua")
 
 for _, m in ipairs(modules) do
   package.loaded[m] = nil

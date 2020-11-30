@@ -10,27 +10,14 @@
   "rust-analyzer.serverPath": "rust-analyzer",
   "diagnostic.errorSign": "",
   "diagnostic.warningSign": "⚠",
-  "explorer.icon.enableNerdfont": true,
-  "explorer.previewAction.onHover": false,
-  "explorer.keyMappingMode": "none",
-  "explorer.width": 30,
-  "explorer.contentWidthType": "win-width",
-  "explorer.contentWidth": 80,
-  "explorer.file.root.template": "[icon] [root]",
-  "explorer.sources": [{ "name": "file", "expand": true }],
-  "explorer.file.showHiddenFiles": true,
-  "explorer.keyMappings": {
-    "<cr>": ["expandable?", ["expanded?", "collapse", "expand"], "open"],
-    "a": "addFile",
-    "A": "addDirectory",
-    "r": "rename",
-    "dd": "deleteForever",
-    "?": "help",
-    "q": "quit",
-    "m": "actionMenu",
-    "o": "open"
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": ["terraform", "tf"],
+      "initializationOptions": {}
+    }
   },
-
   "suggest.completionItemKindLabels": {
     "function": "\uf794",
     "method": "\uf6a6",

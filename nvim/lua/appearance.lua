@@ -12,6 +12,8 @@ vim.o.pumblend = 7
 vim.wo.cursorline = true
 vim.wo.signcolumn = "yes"
 
+packer.use("sainnhe/edge")
+
 -- Keep cursor vertically centered
 vim.api.nvim_command("augroup cursor_centered")
 vim.api.nvim_command("au BufEnter * let &scrolloff=winheight(win_getid())")
@@ -20,7 +22,8 @@ vim.api.nvim_command("augroup END")
 -- icons
 packer.use "ryanoasis/vim-devicons"
 
-if os.execute("sh -c 'systemctl --user show-environment | rg -q IS_DAY=true'") == 0 then
+if os.execute("sh -c 'systemctl --user show-environment | rg -q IS_DAY=true'")
+  == 0 then
   vim.o.background = "light"
 else
   vim.o.background = "dark"
@@ -34,25 +37,29 @@ vim.g.scrollbar_right_offset = 0
 vim.g.scrollbar_highlight = {
   head = "Comment",
   body = "Comment",
-  tail = "Comment"
+  tail = "Comment",
 }
-vim.g.scrollbar_shape = {
-  head = "",
-  body = "┃",
-  tail = ""
-}
+vim.g.scrollbar_shape = {head = "", body = "┃", tail = ""}
 
 vim.api.nvim_command("augroup ScrollbarInit")
 vim.api.nvim_command("au!")
-vim.api.nvim_command("au WinEnter,FocusGained,CursorMoved,VimResized * silent! lua require('scrollbar').show()")
-vim.api.nvim_command("au WinLeave,BufLeave,FocusLost * silent! lua require('scrollbar').clear()")
+vim.api.nvim_command(
+
+ 
+    "au WinEnter,FocusGained,CursorMoved,VimResized * silent! lua require('scrollbar').show()"
+)
+vim.api.nvim_command(
+  "au WinLeave,BufLeave,FocusLost * silent! lua require('scrollbar').clear()"
+)
 vim.api.nvim_command("augroup end")
 
 vim.api.nvim_command("augroup CustomHighlights")
 vim.api.nvim_command("au!")
 vim.api.nvim_command("au BufEnter *.rs hi CocRustChainingHint guifg=#aaaaaa")
 vim.api.nvim_command(
-  "au BufEnter * if &background=='dark' | hi CursorLine guibg=#333333 | else | hi CursorLine guibg=#dddddd | endif"
+
+ 
+    "au BufEnter * if &background=='dark' | hi CursorLine guibg=#333333 | else | hi CursorLine guibg=#dddddd | endif"
 )
 vim.api.nvim_command("augroup end")
 
