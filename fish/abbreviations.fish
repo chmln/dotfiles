@@ -1,5 +1,6 @@
 abbr -a get "yay -S --noconfirm"
 abbr -a r "sudo pacman -Rns"
+abbr -a rdd "sudo pacman -Rdd"
 abbr -a findpkg "pacman -Qss"
 abbr -a aur "yay"
 abbr -a rmall "sudo rmall"

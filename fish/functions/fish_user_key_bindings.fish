@@ -1,11 +1,10 @@
 function fzf_selector
-  #fd -aHF -d 6 $argv | sd -s '/home/greg' '~' | fzf --height 20% --preview "preview {}" | sd -s '~' '/home/greg'
-  fd -aHF -d 6 $argv | sd "$PWD/" "" | sd -s '/home/greg' '~' |  sk --height 30% -t begin -e | sd -s '~' '/home/greg'
+  fd -aHF -d 6 $argv | sd -s '/home/greg' '~' | fzf --height 30% --tiebreak=begin --preview "preview {}" | sd -s '~' '/home/greg'
 end
 
 function restore_state
- commandline -f repaint
- set fish_bind_mode insert
+  commandline -f repaint
+  set fish_bind_mode insert
 end
 
 function fzf_edit
@@ -20,10 +19,11 @@ function fzf_edit
 end
 
 function fzf_cd
-  set target (fzf_selector -t d -t s "" / )
+  set target (fzf_selector -t d -t s "" /)
   if [ -n "$target" ]
     cd "$target"
   end
+  commandline -f up-line
   restore_state
 end
 
