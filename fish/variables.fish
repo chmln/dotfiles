@@ -1,24 +1,6 @@
 # remove ? interpretation as glob
 set fish_features qmark-noglob
-
-if systemctl --user show-environment | rg -q IS_DAY=true
- set -gx IS_DAY true
-else
- set -gx IS_DAY false
-end
-
-if $IS_DAY
- set -gx BAT_THEME "OneHalfLight"
- set -gx FZF_DEFAULT_OPTS "--reverse --color=light"
-else
- set -gx BAT_THEME "TwoDark"
- set -gx FZF_DEFAULT_OPTS "--reverse"
-end
-set -gx SKIM_DEFAULT_OPTIONS "--layout=reverse"
-
-set -gx KUBE_HOME /home/greg/.local/share/kube
-set -gx MINIKUBE_HOME /home/greg/.local/share/minikube
-set -gx KUBECONFIG $KUBE_HOME/config
+set -gx FZF_DEFAULT_OPTS "--reverse"
 
 # fish customizations
 set -x fish_greeting
