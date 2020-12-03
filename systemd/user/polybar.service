@@ -5,7 +5,7 @@ Requires=monitors.service
 
 [Service]
 ExecStartPre=sleep 1
-ExecStart=polybar -l trace primary
+ExecStart=polybar -l info primary
 RestartSec=1
 Restart=always
 
