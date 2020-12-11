@@ -1,4 +1,4 @@
-#!/bin/fish
+#!/usr/bin/env fish
 if [ -f "$argv[1]" ]
     if string match -q -- "*.pdf" $argv[1]
         pdftotext -layout "$argv[1]" -l 1 -

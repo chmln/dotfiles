@@ -1,7 +1,2 @@
 #!/bin/sh
-THEME="dark"
-if systemctl --user show-environment | rg -q IS_DAY=true ; then
-    THEME="light"
-fi
-
-/usr/bin/fzf --color=$THEME "$@"
+wrap fzf --color=`get_theme` "$@"

@@ -1,2 +1,2 @@
 #!/bin/sh
-/usr/bin/fd --ignore-file /home/greg/.config/.fdignore "$@"
+wrap fd --ignore-file $HOME/.config/.fdignore "$@"

@@ -1,7 +1,6 @@
 #!/bin/sh
-THEME="TwoDark"
-if systemctl --user show-environment | rg -q IS_DAY=true ; then
-    THEME="OneHalfLight"
+BAT_THEME="OneHalfLight"
+if [ "$(get_theme)" == "dark" ]; then
+    BAT_THEME="TwoDark"
 fi
-
-env BAT_THEME=$THEME /usr/bin/bat "$@"
+BAT_THEME=$BAT_THEME wrap bat "$@"

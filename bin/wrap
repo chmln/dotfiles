@@ -1,0 +1,3 @@
+#!/bin/bash
+bin=`which -a $1 | sed -n 2p`
+$bin "${@:2}"

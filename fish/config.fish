@@ -1,4 +1,4 @@
-set DIR "/home/greg/.dotfiles/fish"
+set DIR "$HOME/.dotfiles/fish"
 source "$DIR/variables.fish"
 source "$DIR/abbreviations.fish"
 source "$DIR/functions.fish"
