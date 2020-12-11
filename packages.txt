@@ -13,9 +13,7 @@ brillo
 brscan4
 caretaker-bin
 cargo-edit
-cargo-flamegraph
 cargo-update
-cfssl
 clang
 consul-bin
 cpupower
@@ -51,9 +49,9 @@ ghostscript
 git
 git-delta-bin
 git-lfs-bin
-git-trim
 github-cli
 gnome-keyring
+gnu-netcat
 grub
 grub-hook
 gsettings-desktop-schemas
@@ -97,7 +95,6 @@ lostfiles
 lsd-bin
 lua-language-server-git
 mailcap
-mailspring
 maim
 make
 man-db
@@ -110,7 +107,7 @@ mpv-light
 msmtp
 ncdu
 neomutt
-neovim-git
+neovim-nightly
 neovim-plug-git
 nerd-fonts-jetbrains-mono
 nerd-fonts-source-code-pro
@@ -130,6 +127,7 @@ otf-san-francisco
 pacman-contrib
 pango
 papirus-icon-theme
+paru
 patch
 pipewire-gstfree
 pipewire-gstfree-alsa
@@ -158,18 +156,17 @@ sd
 skim
 smartmontools
 speex
+spotify
 sudo
 syncthing
 systemd-resolvconf
 tealdeer-bin
-teams-insiders
 telegram-desktop-bin
 terraform
 terraform-ls-bin
 terragrunt
 thermald
 time
-ttf-font-stub
 udevil
 udisks2
 ufw
@@ -211,5 +208,4 @@ xwallpaper
 yaml-language-server-bin
 yay-bin
 zathura
-zathura-pdf-poppler
-zoom
+zathura-pdf-mupdf

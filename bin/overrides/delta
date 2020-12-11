@@ -1,9 +1,6 @@
 #!/bin/bash
-if [ "$IS_DAY" == "true" ]; then
-    THM="--theme GitHub"
-    export BAT_THEME="OneHalfLight"
-else
-    export BAT_THEME="TwoDark"
-    THM="--dark"
+THM="OneHalfDark"
+if systemctl --user show-environment | rg -q IS_DAY=true; then
+    THM="OneHalfLight"
 fi
-/usr/bin/delta $THM "$@"
+/usr/bin/delta --theme $THM "$@"
