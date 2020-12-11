@@ -151,8 +151,9 @@ interval = 1
 [module/alsa]
 type = internal/alsa
 
-master-soundcard=hw:0
+master-soundcard = hw:0
 mapped = true
+master-mixer = Master
 
 interval = 5
 
