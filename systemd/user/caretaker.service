@@ -3,7 +3,7 @@ Description=Caretaker
 
 [Service]
 ExecStartPre=sleep 5
-ExecStart=%h/.local/share/cargo/bin/caretaker -w %h/.dotfiles/caretaker.toml
+ExecStart=caretaker -c %h/.dotfiles/caretaker.toml
 
 [Install]
 WantedBy=wm.target
