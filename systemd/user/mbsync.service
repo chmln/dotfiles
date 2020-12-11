@@ -1,15 +1,11 @@
 [Unit]
 Description=Mailbox synchronization service
 After=network-online.target
-After=systemd-networkd-wait-online.service
 Wants=network-online.target
 
 [Service]
-Type=oneshot
 ExecStart=fish -C 'mbsync -Va --pull -c ~/.config/mbsync/config || true'
 ExecStartPost=/usr/bin/fish /home/greg/.secconf/mbsync/postsync.sh
-Restart=on-failure
-RestartSec=1
 
 [Install]
 WantedBy=wm.target
