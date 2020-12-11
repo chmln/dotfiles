@@ -1,9 +1,9 @@
 #!/usr/bin/fish
 if [ "$argv[1]" = "up" ]
-    amixer sset Master 3%+
+    amixer -c 0 set Master 3%+
 else
-    amixer sset Master 3%-
+    amixer -c 0 set Master 3%-
 end
 
-set -l volume (amixer get -M Master | rg % | sd ".*\[(\d+)%\].*" '$1')
+set -l volume (amixer -c 0 get -M Master | rg % | head -n1 | sd ".*\[(\d+)%\].*" '$1')
 bar-notification $volume "apps/gnome-volume-control.svg" 2000
