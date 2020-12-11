@@ -1,10 +1,10 @@
 packer.use {"neoclide/coc.nvim", branch = "release"}
-packer.use {"neoclide/coc-tsserver", run = "yarn install --pure-lockfile"}
-packer.use {"neoclide/coc-json", run = "yarn install --pure-lockfile"}
-packer.use {"clangd/coc-clangd", run = "yarn install --pure-lockfile"}
+packer.use {"neoclide/coc-tsserver", run = "npm i"}
+packer.use {"neoclide/coc-json", run = "npm i"}
+packer.use {"clangd/coc-clangd", run = "npm i"}
 packer.use {
   "fannheyward/coc-rust-analyzer",
-  run = "yarn install --pure-lockfile"
+  run = "npm i"
 }
 
 vim.api.nvim_command(
