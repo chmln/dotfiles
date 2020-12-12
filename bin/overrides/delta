@@ -1,6 +1,2 @@
 #!/bin/bash
-THM="OneHalfDark"
-if systemctl --user show-environment | rg -q IS_DAY=true; then
-    THM="OneHalfLight"
-fi
-/usr/bin/delta --theme $THM "$@"
+wrap delta --theme $(get_theme OneHalfLight OneHalfDark) "$@"

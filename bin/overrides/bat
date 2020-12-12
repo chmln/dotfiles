@@ -1,6 +1,2 @@
-#!/bin/sh
-BAT_THEME="OneHalfLight"
-if [ "$(get_theme)" == "dark" ]; then
-    BAT_THEME="TwoDark"
-fi
-BAT_THEME=$BAT_THEME wrap bat "$@"
+#!/bin/dash
+wrap bat --theme=`get_theme OneHalfLight TwoDark` "$@"

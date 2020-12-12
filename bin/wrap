@@ -1,3 +1,4 @@
-#!/bin/bash
+#!/bin/dash
 bin=`which -a $1 | sed -n 2p`
-$bin "${@:2}"
+shift
+$bin "$@"

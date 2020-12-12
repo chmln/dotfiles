@@ -1,2 +1,0 @@
-#!/bin/bash
-HOME=$HOME/.config/yarn /home/greg/.local/share/npm/bin/yarn "$@"

@@ -1,9 +1,8 @@
 #!/bin/bash
-OS=`uname`
-THEME="dark"
-if [ "$OS" != "Darwin" ]; then
+THEME="${2:-dark}"
+if [ `uname` == "Linux" ]; then
     if systemctl --user show-environment | rg -q IS_DAY=true ; then
-        THEME="light"
+        THEME="${1:-light}"
     fi
 fi
 

@@ -1,8 +1,3 @@
-#!/bin/bash
-if systemctl --user show-environment | rg -q IS_DAY=true; then
-    THEME=~/.dotfiles/rofi/themes/Smoke.rasi
-else
-    THEME=~/.dotfiles/rofi/themes/Smoke-Dark.rasi
-fi
-
-/usr/bin/rofi -theme $THEME "$@"
+#!/bin/dash
+THEME=`get_theme Smoke Smoke-Dark`
+wrap rofi -theme "$HOME/.dotfiles/rofi/themes/$THEME.rasi" "$@"
