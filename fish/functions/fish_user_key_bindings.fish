@@ -1,5 +1,5 @@
 function fzf_selector
-  fd -aHF -d 6 $argv | sd -s '/home/greg' '~' | fzf --height 30% --tiebreak=begin --preview "preview {}" | sd -s '~' '/home/greg'
+  fd -aHF -d 6 $argv | sd -s "$HOME" '~' | fzf --height 30% --tiebreak=begin --preview "preview {}" | sd -s '~' '/home/greg'
 end
 
 function restore_state
