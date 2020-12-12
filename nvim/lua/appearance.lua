@@ -13,6 +13,9 @@ vim.wo.cursorline = true
 vim.wo.signcolumn = "yes"
 
 packer.use("sainnhe/edge")
+vim.g.edge_transparent_background = 1
+vim.g.edge_disable_italic_comment = 1
+vim.cmd [[ colorscheme edge ]]
 
 -- Keep cursor vertically centered
 vim.api.nvim_command("augroup cursor_centered")

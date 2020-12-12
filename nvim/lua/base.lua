@@ -64,6 +64,9 @@ vim.api.nvim_set_keymap(
 )
 vim.api.nvim_set_keymap("n", "<Tab>", "<C-W><C-W>", {})
 
+vim.cmd [[ inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : coc#refresh() ]]
+vim.cmd [[ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>" ]]
+
 -- sane terminal/split setup
 packer.use "vimlab/split-term.vim"
 vim.o.splitright = true
