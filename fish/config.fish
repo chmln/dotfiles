@@ -1,4 +1,6 @@
 set DIR "$HOME/.dotfiles/fish"
+
+source "$DIR/platform/_index.fish"
 source "$DIR/variables.fish"
 source "$DIR/abbreviations.fish"
 source "$DIR/functions.fish"

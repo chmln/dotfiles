@@ -1,17 +1,6 @@
 # remove ? interpretation as glob
 set fish_features qmark-noglob
 set -gx FZF_DEFAULT_OPTS "--reverse"
-set -gx PATH "$HOME/.dotfiles/bin/:$HOME/.dotfiles/bin/overrides/:$HOME/.local/bin/:$HOME/.local/share/cargo/bin:$HOME/.local/share/npm/bin:/usr/local/bin:/usr/bin:/bin"
-set -gx EDITOR "nvim"
-set -gx BAT_STYLE "plain"
-set -gx FZF_DEFAULT_COMMAND "fd -t f --hidden -E .git -E node_modules"
-set -gx GIT_SSH_COMMAND "ssh -q -F /etc/ssh/ssh_config"
-set -gx GNUPGHOME "/home/greg/.config/gnupg"
-set -gx LESSHISTFILE "/dev/null"
-set -gx NOTMUCH_CONFIG "/home/greg/.config/notmuch/config"
-set -gx NPM_CONFIG_USERCONFIG "~/.config/npm/npmrc"
-set -gx RUSTUP_HOME "/home/greg/.local/share/rustup"
-set -gx CARGO_HOME "/home/greg/.local/share/cargo"
 
 # fish customizations
 set -x fish_greeting
