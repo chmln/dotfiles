@@ -1,4 +1,5 @@
 packer.use "jvirtanen/vim-hcl"
+packer.use "dag/vim-fish"
 packer.use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
 vim.cmd [[packadd nvim-treesitter]]
 
