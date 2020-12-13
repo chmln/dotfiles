@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:snapshot-alpine "$@"

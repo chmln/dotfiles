@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-docker run jrottenberg/ffmpeg:snapshot-alpine --entrypoint='ffprobe' "$@"
