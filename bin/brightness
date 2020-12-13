@@ -1,8 +1,8 @@
-#!/usr/bin/fish
-if [ $argv[1] = "up" ]
+#!/bin/dash
+if [ $1 = "up" ]; then
     brillo -A 20% -u 100000
 else
     brillo -U 20% -u 100000
-end
+fi
 
-bar-notification (brillo) "apps/preferences-system-brightness-lock.svg" 1000
+bar-notification $(brillo) "apps/preferences-system-brightness-lock.svg" 1000
