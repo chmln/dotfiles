@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Log Out
-Exec=logout
+Exec=systemctl --user stop window-manager
 Icon=system-log-out
 Terminal=false
 Type=Application
