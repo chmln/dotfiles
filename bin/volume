@@ -1,9 +1,9 @@
-#!/usr/bin/fish
-if [ "$argv[1]" = "up" ]
+#!/bin/dash
+if [ "$1" = "up" ]; then
     amixer -c 0 set Master 3%+
 else
     amixer -c 0 set Master 3%-
-end
+fi
 
-set -l volume (amixer -c 0 get -M Master | rg % | head -n1 | sd ".*\[(\d+)%\].*" '$1')
+volume=$(amixer -c 0 get -M Master | rg % | head -n1 | sd ".*\[(\d+)%\].*" '$1')
 bar-notification $volume "apps/gnome-volume-control.svg" 2000

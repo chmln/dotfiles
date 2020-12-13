@@ -1,13 +1,8 @@
-#!/usr/bin/fish
-if systemctl --user show-environment | rg -q IS_DAY=true
-    set -g theme day
-    nvim-ctrl "set background=light"
-else
-    set -g theme night
-    nvim-ctrl "set background=dark"
-end
+#!/bin/dash
+theme=`get_theme day night`
+dots=~/.dotfiles
 
-set dots ~/.dotfiles
+nvim-ctrl "set background=$(get_theme light dark)"
 
 cat $dots/i3/config.$theme $dots/i3/config.base > /tmp/i3config
 ln -sf $dots/gtk-3.0/settings.$theme.ini $dots/gtk-3.0/settings.ini
@@ -15,10 +10,11 @@ ln -sf $dots/xsettingsd/xsettingsd.$theme.conf $dots/xsettingsd/xsettingsd.conf
 ln -sf $dots/kitty/$theme.conf $dots/kitty/active_theme.conf
 
 for s in /tmp/kitty-socket-*
+do
     kitty @ --to=unix:$s set-colors -a ~/.config/kitty/$theme.conf >/dev/null 2>&1 &
-end
+done
 
-gsettings set org.gnome.desktop.interface gtk-theme (ug -P 'gtk-theme-name=(.*)' --format='%1' < $dots/gtk-3.0/settings.ini)
+gsettings set org.gnome.desktop.interface gtk-theme $(ug -P 'gtk-theme-name=(.*)' --format='%1' < $dots/gtk-3.0/settings.ini)
 
 systemctl --user restart wallpaper
 systemctl --user reload-or-restart xsettingsd
