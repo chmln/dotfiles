@@ -108,7 +108,6 @@ msmtp
 ncdu
 neomutt
 neovim-nightly
-neovim-plug-git
 nerd-fonts-jetbrains-mono
 nerd-fonts-source-code-pro
 ngrok-bin
@@ -192,7 +191,6 @@ xdotool
 xf86-video-intel
 xorg-setxkbmap
 xorg-xauth
-xorg-xev
 xorg-xinput
 xorg-xkbcomp
 xorg-xprop
@@ -200,10 +198,8 @@ xorg-xrandr
 xorg-xrdb
 xorg-xset
 xorg-xsetroot
-xprintidle
 xsel
 xsettingsd
-xterm
 xwallpaper
 yaml-language-server-bin
 yay-bin
