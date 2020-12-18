@@ -1,9 +1,9 @@
-#!/bin/dash
-path=$(
+#!/bin/fish
+set -l path (
     fd -t d --max-depth 3 . ~/workspace\
     | sd "/home/greg/workspace/" ""\
     | rofi -i -dmenu -tokenize -theme-str '#prompt { enabled: false; }'
 )
-if [ -n "$path" ]; then
+if [ -n "$path" ]
     terminal -e nvim "/home/greg/workspace/$path"
-fi
+end
