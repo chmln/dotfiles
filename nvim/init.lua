@@ -9,18 +9,9 @@ end
 
 packer.use("wbthomason/packer.nvim")
 
-function scandir(directory)
-  local i, t = 0, {}
-  for filename in io.popen("ls -1 " .. directory):lines() do
-    i = i + 1
-    t[i] = filename:match("(.+)%..+$")
-  end
-  return t
-end
-
-modules = scandir(vim.loop.os_homedir() .. "/.dotfiles/nvim/lua")
-
-for _, m in ipairs(modules) do
-  package.loaded[m] = nil
-  require(m)
+-- load all the modules
+for filename in io.popen("ls -1 " .. vim.loop.os_homedir() .. "/.dotfiles/nvim/lua"):lines() do
+  local module = filename:match("(.+)%..+$")
+  package.loaded[module] = nil
+  require(module)
 end

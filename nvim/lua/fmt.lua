@@ -12,15 +12,15 @@ require("formatter.config").set_defaults(
   {
     logging = false,
     filetype = {
-      lua = {
-        function()
-          return {
-            exe = "lua-fmt-ext",
-            args = {"-l", "80", "-i", 2, "--stdin"},
-            stdin = true
-          }
-        end
-      },
+      --lua = {
+        --function()
+          --return {
+            --exe = "lua-fmt-ext",
+            --args = {"-l", "80", "-i", 2, "--stdin"},
+            --stdin = true
+          --}
+        --end
+      --},
       javascript = {prettier},
       typescript = {prettier},
       css = {prettier},

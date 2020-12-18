@@ -34,27 +34,8 @@ else
   vim.o.background = "dark"
 end
 
-packer.use "Xuyuanp/scrollbar.nvim"
-vim.g.scrollbar_excluded_filetypes = {"LuaTree"}
-vim.g.scrollbar_max_size = 15
-vim.g.scrollbar_min_size = 5
-vim.g.scrollbar_right_offset = 0
-vim.g.scrollbar_highlight = {
-  head = "Comment",
-  body = "Comment",
-  tail = "Comment"
-}
-vim.g.scrollbar_shape = {head = "", body = "┃", tail = ""}
-
-vim.api.nvim_command("augroup ScrollbarInit")
-vim.api.nvim_command("au!")
-vim.api.nvim_command(
-  "au WinEnter,FocusGained,CursorMoved,VimResized * silent! lua require('scrollbar').show()"
-)
-vim.api.nvim_command(
-  "au WinLeave,BufLeave,FocusLost * silent! lua require('scrollbar').clear()"
-)
-vim.api.nvim_command("augroup end")
+packer.use "dstein64/nvim-scrollview"
+vim.g.scrollview_excluded_filetypes = {"LuaTree", "markdown"}
 
 vim.api.nvim_command("augroup CustomHighlights")
 vim.api.nvim_command("au!")

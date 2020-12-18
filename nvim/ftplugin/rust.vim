@@ -1,3 +1,3 @@
-highlight CocRustChainingHint ctermfg=0
+highlight CocRustChainingHint SpecialComment
 hi link rustDerive SpecialComment
 hi link rustDeriveTrait SpecialComment
