@@ -17,7 +17,7 @@ command = "/home/greg/.dotfiles/bin/theme"
 [[watch]]
 name = "nvim"
 path = "/home/greg/.dotfiles/nvim"
-command = "nvim-ctrl \"luafile ~/.dofiles/nvim/init.lua | let &ft=&ft\""
+command = "nvim-ctrl \"luafile ~/.dofiles/nvim/init.lua\""
 
 #[[watch]]
 #name = "gtk"
