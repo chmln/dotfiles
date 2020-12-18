@@ -1,8 +1,8 @@
-abbr -a get "yay -S --noconfirm"
+abbr -a get "paru -S --noconfirm"
 abbr -a r "sudo pacman -Rns"
 abbr -a rdd "sudo pacman -Rdd"
 abbr -a findpkg "pacman -Qss"
-abbr -a aur "yay"
+abbr -a aur "paru"
 abbr -a rmall "sudo rmall"
 
 abbr -a sys "sudo systemctl"

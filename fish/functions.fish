@@ -25,7 +25,7 @@ function maintenance
 end
 
 function updater
-  yay -Syu --noconfirm
+  paru -Syu --noconfirm
   return 0
 end
 
