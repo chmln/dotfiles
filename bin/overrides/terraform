@@ -1,2 +1,0 @@
-#!/bin/dash
-HOME=$HOME/.config wrap terraform "$@"

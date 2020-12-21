@@ -1,6 +1,7 @@
 # remove ? interpretation as glob
 set fish_features qmark-noglob
 set -gx FZF_DEFAULT_OPTS "--reverse"
+set -gx FZF_DEFAULT_COMMAND "fd -t f --hidden -E .git -E node_modules"
 
 # fish customizations
 set -x fish_greeting

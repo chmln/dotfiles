@@ -24,9 +24,9 @@
     line-numbers = false
 
 [user]
-    email = gregory.mkv@gmail.com
+	email = gregory.mkv@gmail.com
     signingkey = 2E44FAEEDC94B1E2
-    name = Gregory
+	name = Gregory
 
 [commit]
     gpgsign = true
