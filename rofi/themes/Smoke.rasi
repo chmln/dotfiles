@@ -18,7 +18,7 @@
     lightbg:                     rgba ( 238, 232, 213, 100 % );
     selected-active-foreground:  rgba ( 194, 202, 208, 100 % );
     alternate-active-background: rgba ( 245, 245, 245, 100 % );
-    background:                  rgba ( 255, 255, 255, 100 % );
+    background:                  rgba ( 255, 255, 255, 95 % );
     bordercolor:                 rgba ( 245, 245, 245, 100 % );
     alternate-normal-foreground: @foreground;
     normal-background:           rgba ( 255, 255, 255, 100 % );
@@ -38,7 +38,8 @@
 #window {
     background-color: @background;
     border:           1;
-    padding:          5;
+    border-color: rgba(0,0,0,0.4);
+    padding:          0;
 }
 #mainbox {
     border:  0;
@@ -54,15 +55,15 @@
 }
 #listview {
     fixed-height: 0;
-    border:       2px 0px 0px ;
+    border:       1px 0px 0px ;
     border-color: @separatorcolor;
-    spacing:      2px ;
-    scrollbar:    true;
-    padding:      2px 0px 0px ;
+    spacing:      0px ;
+    scrollbar:    false;
+    padding:      0px 0px 0px ;
 }
 #element {
     border:  0;
-    padding: 1px ;
+    padding: 3px ;
 }
 #element.normal.normal {
     background-color: @normal-background;
@@ -89,16 +90,16 @@
     text-color:       @selected-active-foreground;
 }
 #element.alternate.normal {
-    background-color: @alternate-normal-background;
-    text-color:       @alternate-normal-foreground;
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
 }
 #element.alternate.urgent {
-    background-color: @alternate-urgent-background;
-    text-color:       @alternate-urgent-foreground;
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
 }
 #element.alternate.active {
-    background-color: @alternate-active-background;
-    text-color:       @alternate-active-foreground;
+    background-color: @active-background;
+    text-color:       @active-foreground;
 }
 #scrollbar {
     width:        4px ;
@@ -117,7 +118,7 @@
 #inputbar {
     spacing:    0;
     text-color: @normal-foreground;
-    padding:    1px ;
+    padding:    10px ;
 }
 #case-indicator {
     spacing:    0;
@@ -132,7 +133,7 @@
     text-color: @normal-foreground;
 }
 #inputbar {
-    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+    children:   [ prompt,textbox-prompt-colon,entry ];
 }
 #textbox-prompt-colon {
     expand:     false;

@@ -1,6 +1,6 @@
 configuration {
         bw: 0;
-        font: "SauceCodePro Nerd Font 16";
+        font: "JetBrainsMono Nerd Font 15";
         lines: 5;
         matching: "fuzzy";
         padding: 0;
