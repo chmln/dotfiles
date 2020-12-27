@@ -130,6 +130,6 @@ bindsym XF86RFKill exec airplane_mode
 
 bindsym $mod+Shift+s exec --no-startup-id screenshot
 bindsym $mod+Return exec --no-startup-id terminal
-bindsym $mod+d exec launcher
-bindsym $mod+p exec rofi_open
-bindsym $mod+o exec rofi_project
+bindsym $mod+d exec --no-startup-id launcher
+bindsym $mod+p exec --no-startup-id rofi_open
+bindsym $mod+o exec --no-startup-id rofi_project
