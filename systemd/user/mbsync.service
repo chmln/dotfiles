@@ -4,8 +4,8 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
-ExecStart=fish -C 'mbsync -Va --pull -c ~/.config/mbsync/config || true'
-ExecStartPost=/usr/bin/fish /home/greg/.secconf/mbsync/postsync.sh
+ExecStart=mbsync -Va --pull -c %h/.secconf/mbsync/config
+ExecStartPost=%h/.secconf/mbsync/postsync.sh
 
 [Install]
 WantedBy=wm.target

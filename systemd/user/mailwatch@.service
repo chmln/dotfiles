@@ -3,8 +3,7 @@ Description=Email monitor: %i
 After=systemd-networkd-wait-online.service
 
 [Service]
-ExecStart=fish %h/.dotfiles/bin/mailwatch "%i"
-Type=forking
+ExecStart=%h/workspace/mailwatch-js/mailwatch.ts "%i"
 Restart=always
 RestartSec=1
 
