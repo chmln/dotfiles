@@ -1,0 +1,10 @@
+[Unit]
+Description=Compositor
+After=xorg.service
+Wants=xorg.service
+
+[Service]
+ExecStart=xcompmgr -n
+
+[Install]
+WantedBy=wm.target
