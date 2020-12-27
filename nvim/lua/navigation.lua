@@ -29,7 +29,14 @@ vim.g.lua_tree_show_icons = {
   folders = 1,
   files = 1
 }
-vim.api.nvim_set_keymap("n", "<leader>f", ":LuaTreeToggle<CR>", {})
+vim.api.nvim_set_keymap("n", "<leader>f", ":NvimTreeToggle<CR>", {})
+vim.api.nvim_command("augroup luatree")
+vim.api.nvim_command("au!")
+vim.api.nvim_command(
+  "au CursorHold,CursorHoldI * silent! NvimTreeRefresh"
+)
+vim.api.nvim_command("augroup END")
+
 
 packer.use({"kdheepak/lazygit.vim", cmd = "LazyGit"})
 vim.api.nvim_set_keymap("n", "<leader>g", ":LazyGit<CR>", {})

@@ -23,6 +23,7 @@ vim.g.loaded_netrwPlugin = 1
 -- allow resizing splits with mouse
 -- vim.o.mouse = "a"
 
+vim.o.updatetime=2000
 -- set correct working directory
 packer.use "airblade/vim-rooter"
 vim.g.rooter_patterns = {".git/"}
@@ -45,7 +46,7 @@ vim.api.nvim_command("au!")
 vim.api.nvim_command("au BufWritePre * LessmessExecute")
 -- Update buffer on external changes
 vim.api.nvim_command(
-  "au FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif"
+  "au FocusGained,BufEnter,CursorHold * if mode() != 'c' | checktime | endif"
 )
 vim.api.nvim_command("augroup END")
 
@@ -64,7 +65,7 @@ vim.api.nvim_set_keymap(
 )
 vim.api.nvim_set_keymap("n", "<Tab>", "<C-W><C-W>", {})
 
-vim.cmd [[ inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : coc#refresh() ]]
+vim.cmd [[ inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>" ]]
 vim.cmd [[ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>" ]]
 
 -- sane terminal/split setup

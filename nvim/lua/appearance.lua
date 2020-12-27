@@ -34,8 +34,8 @@ else
   vim.o.background = "dark"
 end
 
-packer.use "dstein64/nvim-scrollview"
-vim.g.scrollview_excluded_filetypes = {"LuaTree", "markdown"}
+--packer.use "dstein64/nvim-scrollview"
+--vim.g.scrollview_excluded_filetypes = {"LuaTree", "markdown"}
 
 vim.api.nvim_command("augroup CustomHighlights")
 vim.api.nvim_command("au!")
