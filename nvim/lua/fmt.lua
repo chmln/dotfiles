@@ -23,6 +23,7 @@ require("formatter.config").set_defaults(
       --},
       javascript = {prettier},
       typescript = {prettier},
+      typescriptreact = {prettier},
       css = {prettier},
       json = {prettier},
       rust = {
