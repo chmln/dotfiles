@@ -19,10 +19,10 @@ name = "nvim"
 path = "/home/greg/.dotfiles/nvim"
 command = "nvim-ctrl \"luafile ~/.dofiles/nvim/init.lua\""
 
-#[[watch]]
-#name = "gtk"
-#path = "/home/greg/.dotfiles/gtk-3.0"
-#command = "systemctl --user reload xsettingsd"
+[[watch]]
+name = "gtk"
+path = "/home/greg/.dotfiles/xsettingsd/*.conf"
+command = "systemctl --user reload-or-restart xsettingsd"
 
 [[watch]]
 name = "systemd units"
