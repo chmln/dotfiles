@@ -2,12 +2,10 @@ acpi
 alsa-utils
 android-tools
 android-udev
-audacity
 autoconf
 automake
 base
 bat
-bitwarden-bin
 brave-nightly-bin
 brillo
 brscan4
@@ -15,6 +13,7 @@ caretaker-bin
 cargo-edit
 cargo-release
 cargo-update
+chromium-snapshot-bin
 clang
 cpupower
 crda
@@ -37,8 +36,9 @@ fake-ms-fonts
 fd
 ffmpeg
 figlet
-file-roller
+firefox-nightly
 fish
+flatpak
 fontconfig
 freetype2
 fuse2
@@ -102,13 +102,11 @@ man-db
 man-pages
 mesa
 mesa-vdpau
-minetime-bin
 mkcert
-mpv-light
 msmtp
 ncdu
 neomutt
-neovim-git
+neovim-nightly-bin
 nerd-fonts-jetbrains-mono
 nerd-fonts-source-code-pro
 ngrok-bin
@@ -147,7 +145,6 @@ reflector
 ripgrep
 rofi
 rsfetch-bin
-rsync
 rust-analyzer
 rustup
 sd
@@ -162,8 +159,10 @@ telegram-desktop-bin
 terraform
 terraform-ls-bin
 thermald
+thunderbird-nightly-bin
 time
 tokei
+ttf-font-stub
 ttf-material-design-icons
 udevil
 udisks2
@@ -201,10 +200,10 @@ xorg-xset
 xorg-xsetroot
 xsel
 xsettingsd
-xterm
 xwallpaper
 yaml-language-server-bin
 yay-git
 youtube-music-bin
 zathura
 zathura-pdf-poppler
+zola
