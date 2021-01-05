@@ -11,7 +11,7 @@ Type=simple
 ExecCondition=i3-msg
 ExecStart=%h/workspace/linux-utils/night-mode/target/release/night-mode
 Restart=always
-RestartSec=2
+RestartSec=0.5
 
 [Install]
 WantedBy=wm.target
