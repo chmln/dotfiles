@@ -1,4 +1,4 @@
-#!/usr/bin/env dash
+#!/usr/bin/dash
 path=$(
   /usr/bin/fd -t d -uu '.git$' ~/workspace -x dirname {} \
   | sd "/home/greg/workspace/" ""\

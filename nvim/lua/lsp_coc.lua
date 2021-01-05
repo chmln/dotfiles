@@ -1,10 +1,10 @@
 packer.use {"neoclide/coc.nvim", branch = "release"}
-packer.use {"neoclide/coc-tsserver", run = "npm i && git reset --hard"}
-packer.use {"neoclide/coc-json", run = "npm i && git reset --hard"}
-packer.use {"clangd/coc-clangd", run = "npm i && git reset --hard"}
+packer.use {"neoclide/coc-tsserver", run = "npm i --legacy-peer-deps && git reset --hard"}
+packer.use {"neoclide/coc-json", run = "npm i --legacy-peer-deps && git reset --hard"}
+packer.use {"clangd/coc-clangd", run = "npm i --legacy-peer-deps && git reset --hard"}
 packer.use {
   "fannheyward/coc-rust-analyzer",
-  run = "npm i && git reset --hard"
+  run = "npm i --legacy-peer-deps && git reset --hard && git clean -df"
 }
 
 vim.api.nvim_command(
