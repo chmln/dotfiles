@@ -1,0 +1,2 @@
+#!/bin/sh
+env HOME=/home/greg/.local/share/firefox-nightly wrap firefox-nightly "$@"
