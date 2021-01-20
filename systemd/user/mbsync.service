@@ -4,9 +4,9 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
-ExecStart=mbsync -Va --pull -c %h/.secconf/mbsync/config
+Type=oneshot
+ExecStart=sh -c 'mbsync -Va --pull -c %h/.secconf/mbsync/config || true'
 ExecStartPost=%h/.secconf/mbsync/postsync.sh
-Restart=always
 RestartSec=1
 
 [Install]

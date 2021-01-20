@@ -2,6 +2,8 @@
 Description=Polybar
 After=monitors.service
 Requires=monitors.service
+After=network-online.target
+Wants=network-online.target
 
 [Service]
 ExecStartPre=sleep 1

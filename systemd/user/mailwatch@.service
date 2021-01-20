@@ -1,9 +1,10 @@
 [Unit]
 Description=Email monitor: %i
-After=systemd-networkd-wait-online.service
+After=network-online.target
+Wants=network-online.target
 
 [Service]
-ExecStart=%h/workspace/mailwatch-js/mailwatch.ts "%i"
+ExecStart=%h/.dotfiles/bin/mailwatch "%i"
 Restart=always
 RestartSec=1
 
