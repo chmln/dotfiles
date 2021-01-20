@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Signal Beta
+Exec="/opt/Signal Beta/signal-desktop-beta" --no-sandbox --use-tray-icon %U
+Terminal=false
+Type=Application
+Icon=signal-desktop-beta
+StartupWMClass=Signal Beta
+Comment=Private messaging from your desktop
+MimeType=x-scheme-handler/sgnl;
+Categories=Network;InstantMessaging;Chat;
