@@ -3,7 +3,7 @@ vim.o.ignorecase = true
 vim.o.wrap = false
 vim.o.termguicolors = true
 vim.o.clipboard = "unnamedplus"
-vim.o.autoindent = true
+--vim.o.autoindent = true
 vim.o.expandtab = true
 vim.o.backup = false
 vim.o.shell = "/bin/dash"
@@ -17,8 +17,8 @@ vim.o.writebackup = false
 vim.o.shortmess = vim.o.shortmess .. "Ic"
 
 -- disable netrw
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+--vim.g.loaded_netrw = 1
+--vim.g.loaded_netrwPlugin = 1
 
 -- allow resizing splits with mouse
 -- vim.o.mouse = "a"
@@ -98,3 +98,13 @@ vim.api.nvim_set_keymap(
 )
 -- open internal terminal
 vim.api.nvim_set_keymap("n", "<F5>", ":Term 20 fish<CR>", {})
+
+-- icons
+packer.use {
+  "kyazdani42/nvim-web-devicons",
+  config = function()
+    require "nvim-web-devicons".setup {
+      default = true
+    }
+  end
+}
