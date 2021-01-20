@@ -2,11 +2,12 @@ acpi
 alsa-utils
 android-tools
 android-udev
+aurvote
 autoconf
 automake
 base
 bat
-brave-nightly-bin
+brave-dev-bin
 brillo
 brscan4
 caretaker-bin
@@ -21,8 +22,7 @@ csbooks
 cups
 dash
 datagrip
-direnv
-discord-canary
+direnv-bin
 docker-bin
 docker-compose-bin
 downgrade
@@ -51,6 +51,7 @@ git
 git-delta-bin
 git-lfs-bin
 github-cli
+gitui-bin
 gnome-keyring
 gnu-netcat
 grub
@@ -91,6 +92,7 @@ linux-firmware
 linux-lts
 linux-lts-headers
 lld
+lldb
 llvm
 logrotate
 lostfiles
@@ -105,6 +107,7 @@ mesa-vdpau
 mkcert
 msmtp
 ncdu
+ncspot
 neomutt
 neovim-nightly-bin
 nerd-fonts-jetbrains-mono
@@ -126,9 +129,9 @@ pacman-contrib
 pango
 papirus-icon-theme
 patch
-pipewire-gstfree
-pipewire-gstfree-alsa
-pipewire-gstfree-pulse
+pipewire
+pipewire-alsa
+pipewire-pulse
 pkgconf
 pkgfile
 playerctl
@@ -147,10 +150,13 @@ rofi
 rsfetch-bin
 rust-analyzer
 rustup
+sccache
 sd
+signal-desktop-beta-bin
 skim
 smartmontools
 speex
+spotify-tui-bin
 sudo
 syncthing
 systemd-resolvconf
