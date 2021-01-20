@@ -1,5 +1,4 @@
 {
-  "workspace.progressTarget":"statusline",
   "coc.preferences.rootPatterns": [".git"],
   "coc.source.around.enable": false,
   "coc.source.buffer.enable": false,
@@ -8,7 +7,7 @@
   "rust-analyzer.checkOnSave.enable": false,
   "suggest.lowPrioritySourceLimit": 1,
   "rust-analyzer.completion.postfix.enable": false,
-  "rust-analyzer.serverPath": "rust-analyzer",
+  "rust-analyzer.server.path": "rust-analyzer",
   "diagnostic.errorSign": "",
   "diagnostic.warningSign": "⚠",
   "languageserver": {
