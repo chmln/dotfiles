@@ -1,9 +1,9 @@
 #!/usr/bin/dash
 path=$(
-  /usr/bin/fd -t d -uu '.git$' ~/workspace -x dirname {} \
-  | sd "/home/greg/workspace/" ""\
+  /usr/bin/fd --type directory --max-depth 3 -uu '.git$' ~/workspace -x echo {//} \
+  | sd "$HOME/workspace/" ""\
   | rofi -i -dmenu -tokenize -theme-str '#prompt { enabled: false; }'
 )
 if [ -n "$path" ]; then
-  terminal -e fish -c "nvim \"/home/greg/workspace/$path\""
+  terminal -e fish -c "nvim \"$HOME/workspace/$path\""
 fi
