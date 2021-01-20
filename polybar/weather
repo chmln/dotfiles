@@ -1,2 +1,3 @@
 #!/bin/fish
+/usr/lib/systemd/systemd-networkd-wait-online
 wedder -f '<icon> <temperature_feels_like>°C' -k (cat ~/.secconf/openweathermap.txt) -i -1
