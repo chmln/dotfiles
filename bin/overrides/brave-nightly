@@ -1,2 +1,0 @@
-#!/bin/sh
-/opt/brave.com/brave-nightly/brave $BRAVE_FLAGS "$@"
