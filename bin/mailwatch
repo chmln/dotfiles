@@ -1,4 +1,4 @@
 #!/usr/bin/env fish
 set -l mailbox $argv[1]
 imapnotify --config ~/.secconf/imapnotify/$mailbox.json &
-ts-node workspace/mailwatch-js/src/index.ts $mailbox &
+~/workspace/mailwatch-js/mailwatch.ts $mailbox &
