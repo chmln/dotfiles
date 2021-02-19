@@ -4,7 +4,7 @@ Wants=xorg.target
 After=xorg.service
 After=dbus.socket
 BindsTo=default.target
-AllowIsolate=true
+#AllowIsolate=true
 
 #[Install]
 #Alias=default.target

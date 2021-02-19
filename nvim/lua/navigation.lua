@@ -1,11 +1,22 @@
 -- Telescope
 packer.use {
   'nvim-telescope/telescope.nvim',
-  requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
+  requires = {
+    {"nvim-telescope/telescope-frecency.nvim"},
+    {"tami5/sql.nvim"},
+    {'nvim-lua/popup.nvim'},
+    {'nvim-lua/plenary.nvim'}
+  },
   config = function()
     local telescope_actions = require("telescope.actions")
 
     require('telescope').setup({
+      extensions = {
+        frecency = {
+          show_scores = false,
+          ignore_patterns = {"*.git/*", "*node_modules/*"},
+        }
+      },
       defaults = {
         color_devicons = true,
         layout_defaults = {
@@ -23,7 +34,8 @@ packer.use {
         layout_strategy = "flex",
         prompt_position = "top",
         sorting_strategy = "ascending",
-        sorter = require("telescope.sorters").get_fzy_sorter,
+        file_sorter = require("telescope.sorters").get_fuzzy_file,
+        generic_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,
         file_previewer = require'telescope.previewers'.vim_buffer_cat.new, -- For buffer previewer use `require'telescope.previewers'.vim_buffer_cat.new`
         grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new, -- For buffer previewer use `require'telescope.previewers'.vim_buffer_vimgrep.new`
         qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new, -- For buffer previewer use `require'telescope.previewers'.vim_buffer_qflist.new`
@@ -39,7 +51,7 @@ packer.use {
         }
       }
     })
-    vim.api.nvim_set_keymap("n", "<C-p>", ":Telescope find_files<CR>", {})
+    vim.api.nvim_set_keymap("n", "<C-p>", ":Telescope find_files<CR>", { silent = true})
     vim.api.nvim_set_keymap("n", "<C-f>", ":Telescope live_grep<CR>", {})
   end
 }

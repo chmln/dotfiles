@@ -13,7 +13,7 @@ function e
 end
 
 function l
-  lsd --icon always -A --group-dirs=first -1 $argv --color=always
+  lsd --icon always -A -v --group-dirs=first -1 $argv --color=always
 end
 
 function maintenance

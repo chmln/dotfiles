@@ -1,2 +1,2 @@
 #!/bin/sh
-xdg-open $(rofi_path -t f -E workspace -E .config)
+xdg-open $(rofi_path -t f -E .config)

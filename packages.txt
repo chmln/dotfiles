@@ -2,6 +2,8 @@ acpi
 alsa-utils
 android-tools
 android-udev
+aria2
+asar
 aurvote
 autoconf
 automake
@@ -23,10 +25,10 @@ cups
 dash
 datagrip
 direnv-bin
+discord-canary
 docker-bin
 docker-compose-bin
 downgrade
-dua-cli
 dunst
 earlyoom
 efibootmgr
@@ -34,8 +36,10 @@ enact-bin
 exfat-utils
 fake-ms-fonts
 fd
+feh
 ffmpeg
 figlet
+figma-linux-font-helper
 firefox-nightly
 fish
 flatpak
@@ -168,6 +172,7 @@ thermald
 thunderbird-nightly-bin
 time
 tokei
+transmission-gtk
 ttf-font-stub
 ttf-material-design-icons
 udevil
@@ -178,8 +183,9 @@ unrar
 usb_modeswitch
 usbutils
 vidir
+virtualbox
+virtualbox-ext-oracle
 vscode-css-languageserver-bin
-vscode-html-languageserver-bin
 vscode-json-languageserver-bin
 vulkan-icd-loader
 watchexec
@@ -206,10 +212,9 @@ xorg-xset
 xorg-xsetroot
 xsel
 xsettingsd
-xwallpaper
-yaml-language-server-bin
 yay-git
 youtube-music-bin
 zathura
 zathura-pdf-poppler
+zip
 zola

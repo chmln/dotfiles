@@ -34,9 +34,12 @@ packer.use "mboughaba/vim-lessmess"
 vim.g.enable_lessmess_onsave = 0
 
 -- Comments
-packer.use "noahares/nvim-commenter"
-vim.api.nvim_set_keymap("n", "<C-_>", ":SingleCommenterToggle<CR>", {})
-vim.api.nvim_set_keymap("v", "<C-_>", ":MultiCommenterToggle<CR>", {})
+packer.use {
+  'terrortylor/nvim-comment',
+  config = function()
+    require('nvim_comment').setup()
+  end
+}
 
 packer.use "xi/vim-indent-detect"
 

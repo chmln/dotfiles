@@ -17,6 +17,14 @@ vim.g.edge_transparent_background = 1
 vim.g.edge_disable_italic_comment = 1
 vim.cmd [[ colorscheme edge ]]
 
+--packer.use {
+  --'Th3Whit3Wolf/one-nvim',
+  --config = function()
+    --vim.g.one_nvim_transparent_bg = true
+    --vim.cmd [[ colorscheme one-nvim ]]
+  --end
+-- }
+
 -- Keep cursor vertically centered
 vim.api.nvim_command("augroup cursor_centered")
 vim.api.nvim_command("au BufEnter * let &scrolloff=winheight(win_getid())")
@@ -46,5 +54,7 @@ vim.api.nvim_command(
 vim.api.nvim_command("augroup end")
 
 -- distraction-free markdown editing
-packer.use "SidOfc/mkdx"
+packer.use "plasticboy/vim-markdown"
+vim.g.vim_markdown_math = 1
+vim.g.vim_markdown_folding_disabled = 1
 packer.use "junegunn/goyo.vim"

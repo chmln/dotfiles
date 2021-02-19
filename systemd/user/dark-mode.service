@@ -8,7 +8,7 @@ Wants=network-online.target
 [Service]
 Environment=RUST_LOG=debug:night_mode
 Type=simple
-ExecCondition=i3-msg
+#ExecCondition=i3-msg
 ExecStart=%h/workspace/linux-utils/night-mode/target/release/night-mode
 Restart=always
 RestartSec=0.5
