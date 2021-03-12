@@ -21,8 +21,8 @@ require "nvim-treesitter.configs".setup {
     keymaps = {
       init_selection = "gnn",
       -- mappings for incremental selection (visual mappings)
-      node_incremental = "gn", -- "grn" by default,
-      scope_incremental = "<leader>f" -- "grc" by default
+      node_incremental = "gn",
+      scope_incremental = "<leader>f"
     }
   },
   indent = {
@@ -37,7 +37,6 @@ local hlmap = vim.treesitter.highlighter.hl_map
 hlmap.error = nil
 hlmap["punctuation.delimiter"] = "Delimiter"
 hlmap["punctuation.bracket"] = "Delimiter"
-
 -- Constants
 hlmap["constant"] = "Constant"
 hlmap["constant.builtin"] = "Type"
@@ -49,7 +48,6 @@ hlmap["character"] = "Character"
 hlmap["number"] = "Number"
 hlmap["boolean"] = "Boolean"
 hlmap["float"] = "Float"
-
 -- Functions
 hlmap["function"] = "Function"
 hlmap["function.builtin"] = "Special"
@@ -59,7 +57,6 @@ hlmap["method"] = "Function"
 hlmap["field"] = "Identifier"
 hlmap["property"] = "Identifier"
 hlmap["constructor"] = "Type"
-
 -- Keywords
 hlmap["conditional"] = "Conditional"
 hlmap["repeat"] = "Repeat"

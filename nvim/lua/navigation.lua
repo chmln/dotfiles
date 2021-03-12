@@ -2,8 +2,6 @@
 packer.use {
   'nvim-telescope/telescope.nvim',
   requires = {
-    {"nvim-telescope/telescope-frecency.nvim"},
-    {"tami5/sql.nvim"},
     {'nvim-lua/popup.nvim'},
     {'nvim-lua/plenary.nvim'}
   },
@@ -11,19 +9,12 @@ packer.use {
     local telescope_actions = require("telescope.actions")
 
     require('telescope').setup({
-      extensions = {
-        frecency = {
-          show_scores = false,
-          ignore_patterns = {"*.git/*", "*node_modules/*"},
-        }
-      },
       defaults = {
         color_devicons = true,
         layout_defaults = {
           flip_columns = 20,
           vertical = {
             width_padding = 0.1,
-            preview_width = 0.1,
           },
           horizontal = {
             width_padding = 0.1,
@@ -36,9 +27,6 @@ packer.use {
         sorting_strategy = "ascending",
         file_sorter = require("telescope.sorters").get_fuzzy_file,
         generic_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,
-        file_previewer = require'telescope.previewers'.vim_buffer_cat.new, -- For buffer previewer use `require'telescope.previewers'.vim_buffer_cat.new`
-        grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new, -- For buffer previewer use `require'telescope.previewers'.vim_buffer_vimgrep.new`
-        qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new, -- For buffer previewer use `require'telescope.previewers'.vim_buffer_qflist.new`
         mappings = {
           i = {
              ["<c-j>"] = telescope_actions.move_selection_next,
@@ -51,8 +39,8 @@ packer.use {
         }
       }
     })
-    vim.api.nvim_set_keymap("n", "<C-p>", ":Telescope find_files<CR>", { silent = true})
-    vim.api.nvim_set_keymap("n", "<C-f>", ":Telescope live_grep<CR>", {})
+    vim.api.nvim_set_keymap("n", "<C-p>", ":Telescope find_files hidden=true<CR>", { silent = true})
+    vim.api.nvim_set_keymap("n", "<C-f>", ":Telescope live_grep<CR>", { silent = true })
   end
 }
 
@@ -88,8 +76,5 @@ packer.use {
     vim.api.nvim_set_keymap("n", "<leader>f", ":NvimTreeToggle<CR>", {})
   end
 }
-
-packer.use({"kdheepak/lazygit.vim", cmd = "LazyGit"})
-vim.api.nvim_set_keymap("n", "<leader>g", ":LazyGit<CR>", {})
 
 --map <M-c> :Rg<CR>

@@ -15,3 +15,14 @@ packer.use({
       })
     end
 })
+
+packer.use {
+    "phaazon/hop.nvim",
+    config = function()
+        require'hop'.setup { keys = 'asdfghjklwertyuixcvbnm'}
+        vim.api.nvim_set_keymap('n', 's', "<cmd>lua require'hop'.hint_words()<cr>", {})
+        vim.api.nvim_set_keymap('n', '<S-s>', "<cmd>lua require'hop'.hint_lines()<cr>", {})
+        vim.api.nvim_set_keymap('v', 's', "<cmd>lua require'hop'.hint_words({ extend_visual = true })<cr>", {})
+        vim.api.nvim_set_keymap('v', '<S-s>', "<cmd>lua require'hop'.hint_lines({ extend_visual = true })<cr>", {})
+    end
+}
