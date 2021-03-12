@@ -36,7 +36,7 @@ font-3 = "Noto Color Emoji:size=11;2"
 
 modules-left = i3
 modules-center = date
-modules-right = weather email alsa battery network vpn airplane_mode
+modules-right = weather email pulseaudio battery network vpn airplane_mode
 
 tray-position = right
 tray-padding = 4
@@ -150,12 +150,12 @@ exec-if = rfkill -J | jq -r ".\"\"[0].soft" | rg -v "unblocked"
 exec = echo "%{A1:sudo airplane_mode:}%{A}"
 interval = 1
 
-[module/alsa]
-type = internal/alsa
+[module/pulseaudio]
+type = internal/pulseaudio
 
-master-soundcard = hw:0
-mapped = true
-master-mixer = Master
+; master-soundcard = default
+; mapped = true
+; master-mixer = Master
 
 interval = 5
 
