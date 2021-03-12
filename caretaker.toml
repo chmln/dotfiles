@@ -15,9 +15,9 @@ path = "/home/greg/.dotfiles/i3"
 command = "/home/greg/.dotfiles/bin/theme"
 
 [[watch]]
-name = "nvim"
-path = "/home/greg/.dotfiles/nvim"
-command = "nvim-ctrl \"luafile ~/.dotfiles/nvim/init.lua\""
+name = "nvim reload"
+path = "/home/greg/.dotfiles/nvim/lua/*.lua"
+command = "nvim-ctrl 'PackerCompile' && nvim-ctrl \"luafile ~/.dotfiles/nvim/init.lua\""
 
 [[watch]]
 name = "gtk"
