@@ -9,6 +9,7 @@ autoconf
 automake
 base
 bat
+bitwig-studio
 brave-dev-bin
 brillo
 brscan4
@@ -17,13 +18,13 @@ cargo-edit
 cargo-release
 cargo-update
 chromium-snapshot-bin
-clang
 cpupower
 crda
 csbooks
 cups
 dash
 datagrip
+dbus-broker
 direnv-bin
 discord-canary
 docker-bin
@@ -39,7 +40,6 @@ fd
 feh
 ffmpeg
 figlet
-figma-linux-font-helper
 firefox-nightly
 fish
 flatpak
@@ -57,7 +57,6 @@ git-lfs-bin
 github-cli
 gitui-bin
 gnome-keyring
-gnu-netcat
 grub
 grub-hook
 gsettings-desktop-schemas
@@ -77,8 +76,7 @@ iwd
 jdk-openj9-bin
 jq
 kitty
-ladspa
-lazygit
+lazygit-bin
 lf-bin
 libappindicator-gtk3
 libblockdev-lean
@@ -96,7 +94,6 @@ linux-firmware
 linux-lts
 linux-lts-headers
 lld
-lldb
 llvm
 logrotate
 lostfiles
@@ -128,13 +125,17 @@ nvidia-settings
 nvidia-utils
 openssh
 os-prober
+otf-literata
 otf-san-francisco
 pacman-contrib
 pango
 papirus-icon-theme
 patch
+pavucontrol
 pipewire
 pipewire-alsa
+pipewire-jack
+pipewire-jack-dropin
 pipewire-pulse
 pkgconf
 pkgfile
@@ -161,6 +162,7 @@ skim
 smartmontools
 speex
 spotify-tui-bin
+strace
 sudo
 syncthing
 systemd-resolvconf
@@ -174,6 +176,7 @@ time
 tokei
 transmission-gtk
 ttf-font-stub
+ttf-ibm-plex
 ttf-material-design-icons
 udevil
 udisks2
@@ -185,11 +188,8 @@ usbutils
 vidir
 virtualbox
 virtualbox-ext-oracle
-vscode-css-languageserver-bin
-vscode-json-languageserver-bin
 vulkan-icd-loader
 watchexec
-webtorrent-desktop-bin
 wedder-git
 wget
 which
@@ -198,6 +198,7 @@ xclip
 xcolor
 xcompmgr
 xcp
+xdg-desktop-portal
 xdg-utils-handlr
 xdotool
 xf86-video-intel
