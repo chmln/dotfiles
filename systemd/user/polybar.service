@@ -6,7 +6,7 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
-ExecStartPre=sleep 1
+ExecStartPre=sleep 2
 ExecStart=polybar -l info primary
 RestartSec=1
 Restart=always
