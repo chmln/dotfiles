@@ -4,11 +4,11 @@
 .git
 /boot
 /dev
-/home/greg/.config/Abricotine/
+/home/greg/.var
+/home/greg/.BitwigStudio
+/home/greg/Bitwig Studio
 /home/greg/.config/BraveSoftware
-/home/greg/.config/Mailspring
 /home/greg/.config/chromium
-/home/greg/.config/google-chrome
 /home/greg/.config/slack
 /home/greg/.config/discord
 /home/greg/.secconf/gnupg/*
@@ -48,5 +48,3 @@ yarn.lock
 package-lock.json
 Cargo.lock
 .repo
-/home/greg/.config/JetBrains/*
-/home/greg/.config/Postbird/*
