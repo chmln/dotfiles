@@ -1,0 +1,2 @@
+#!/bin/bash
+env HOME=/home/greg/.local/share/treesitter wrap tree-sitter "$@"
