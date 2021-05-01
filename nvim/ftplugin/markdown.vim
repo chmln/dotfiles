@@ -14,11 +14,11 @@ function! s:goyo_enter()
   nnoremap $ g$
   vnoremap $ g$
   setlocal nocursorline
-  Goyo 80
+  TZAtaraxis
 endfunction
 
 function! s:goyo_leave()
-  Goyo!
+  TZAtaraxis
   nnoremap j j
   vnoremap j j
   nnoremap k k

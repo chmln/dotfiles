@@ -99,7 +99,13 @@ packer.use {
 }
 
 packer.use {
-  "junegunn/goyo.vim",
+  "kdav5758/TrueZen.nvim",
   config = function()
+    require("true-zen").setup({
+      ataraxis = {
+        ideal_writing_area_width = 80,
+        top_padding = 1
+      }
+    })
   end
 }
