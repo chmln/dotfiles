@@ -9,14 +9,24 @@ function! s:goyo_enter()
   vnoremap j gj
   nnoremap k gk
   vnoremap k gk
+  nnoremap 0 g0
+  vnoremap 0 g0
+  nnoremap $ g$
+  vnoremap $ g$
   setlocal nocursorline
+  Goyo 80
 endfunction
 
 function! s:goyo_leave()
+  Goyo!
   nnoremap j j
   vnoremap j j
   nnoremap k k
   vnoremap k k
+  nnoremap 0 0
+  vnoremap 0 0
+  nnoremap $ $
+  vnoremap $ $
 endfunction
 
 augroup goyo_markdown
