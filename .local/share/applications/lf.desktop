@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=File Manager
-Exec=terminal -e lf %f
-Terminal=false
+Exec=lf %f
+Terminal=true
 Type=Application
 Icon=folder
 Categories=Utilities;
