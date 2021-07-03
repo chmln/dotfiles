@@ -1,0 +1,11 @@
+[Unit]
+Description=Automatic brightness management
+Wants=xorg.service
+After=xorg.service
+
+[Service]
+ExecStart=clight --lat=43.7 --lon=-79.4 --no-dpms --no-dimmer --no-kbd --night-temp=2500
+Restart=on-failure
+
+[Install]
+WantedBy=wm.target

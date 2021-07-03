@@ -6,6 +6,7 @@ vim.o.clipboard = "unnamedplus"
 vim.o.expandtab = true
 vim.o.backup = false
 vim.bo.swapfile = false
+vim.o.swapfile = false
 
 vim.o.splitright = true
 vim.o.splitbelow = true

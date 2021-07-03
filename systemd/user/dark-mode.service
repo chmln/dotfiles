@@ -2,6 +2,7 @@
 Description=Dark Mode
 After=xorg.service
 After=window-manager.service
+After=monitors.service
 After=network-online.target
 Wants=network-online.target
 
