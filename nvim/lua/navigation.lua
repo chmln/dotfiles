@@ -11,19 +11,10 @@ packer.use {
     require('telescope').setup({
       defaults = {
         color_devicons = true,
-        layout_defaults = {
-          flip_columns = 20,
-          vertical = {
-            width_padding = 0.1,
-          },
-          horizontal = {
-            width_padding = 0.1,
-            height_padding= 0.25
-          }
-
+        layout_config = {
+          prompt_position = "top",
         },
         layout_strategy = "flex",
-        prompt_position = "top",
         sorting_strategy = "ascending",
         file_sorter = require("telescope.sorters").get_fuzzy_file,
         generic_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,

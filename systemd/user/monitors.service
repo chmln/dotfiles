@@ -3,9 +3,10 @@ Description=Setup monitors
 Wants=xorg.service
 After=xorg.service
 
-
 [Service]
-ExecStart=enact -p top
+#ExecStart=xrandr --output DP-0 --mode 2560x1440 --pos 0x0 --output DP-4 --primary --mode 2560x1600 --pos 0x1440 --rate 165
+ExecStart=xrandr --dpi 128 --output HDMI-0 --mode 2560x1440 --scale 1.33333 --filter bilinear --pos 0x0 --output DP-4 --primary --mode 2560x1600 --scale 1 --pos 0x1920 --rate 165
+#ExecStart=xrandr --output eDP --mode 2560x1600
 #Type=oneshot
 Restart=on-failure
 

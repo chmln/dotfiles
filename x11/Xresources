@@ -1,5 +1,6 @@
 Xcursor.theme: Hackneyed
-Xcursor.size: 30
+Xcursor.size: 36
+Xft.dpi: 128
 
 *.vt100.translations: #override \n\
  <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\

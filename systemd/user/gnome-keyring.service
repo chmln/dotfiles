@@ -2,7 +2,7 @@
 Description=Gnome Keyring Daemon
 
 [Service]
-ExecStart=gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
+ExecStart=gnome-keyring-daemon --foreground --start --components=pkcs11,secrets,ssh
 Restart=on-failure
 RestartSec=1
 

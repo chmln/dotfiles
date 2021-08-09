@@ -1,12 +1,12 @@
 [Unit]
 Description=Polybar
 After=monitors.service
-Requires=monitors.service
 After=network-online.target
 Wants=network-online.target
 
 [Service]
-ExecStartPre=sleep 2
+ExecStartPre=i3 --get-socketpath
+ExecStartPre=sleep 1
 ExecStart=polybar -l info primary
 RestartSec=1
 Restart=always

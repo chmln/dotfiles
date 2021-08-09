@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=Suspend
-Exec=systemctl suspend 
+Name=Sleep
+Exec=systemctl suspend
 Icon=system-suspend
 Terminal=false
 Type=Application

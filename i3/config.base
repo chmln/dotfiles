@@ -14,8 +14,7 @@ client.focused_inactive $inactive_color $inactive_color $active_color $inactive_
 
 smart_borders on
 gaps inner 15
-gaps outer 7
-gaps bottom 35
+gaps outer 5
 
 for_window [class="^.*"] border pixel 2
 
@@ -87,16 +86,16 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-workspace $ws1 output eDP-1-1
-workspace $ws3 output eDP-1-1
-workspace $ws5 output eDP-1-1
-workspace $ws7 output eDP-1-1
-workspace $ws9 output eDP-1-1
-workspace $ws2 output HDMI-1-1
-workspace $ws4 output HDMI-1-1
-workspace $ws6 output HDMI-1-1
-workspace $ws8 output HDMI-1-1
-workspace $ws10 output HDMI-1-1
+workspace $ws1 output DP-4
+workspace $ws3 output DP-4
+workspace $ws5 output DP-4
+workspace $ws7 output DP-4
+workspace $ws9 output DP-4
+workspace $ws2 output HDMI-0
+workspace $ws4 output HDMI-0
+workspace $ws6 output HDMI-0
+workspace $ws8 output HDMI-0
+workspace $ws10 output HDMI-0
 
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2

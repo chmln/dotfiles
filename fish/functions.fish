@@ -5,7 +5,7 @@
 #else
 #  almel init fish | source
 #end
-almel init fish | source
+/home/greg/.local/share/cargo/bin/almel init fish | source
 direnv hook fish | source
 
 function e

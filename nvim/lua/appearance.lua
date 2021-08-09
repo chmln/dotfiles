@@ -84,7 +84,6 @@ vim.g.vim_markdown_folding_disabled = 1
 
 packer.use {
   "lukas-reineke/indent-blankline.nvim",
-  branch = "lua",
   config = function()
     vim.o.colorcolumn = '9999'
     vim.g.indent_blankline_enabled = true

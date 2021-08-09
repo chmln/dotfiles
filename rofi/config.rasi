@@ -6,7 +6,7 @@ configuration {
         padding: 0;
         show-icons: true;
         sort: true;
-        width: 500;
+        width: 600;
         tokenize: false;
         sorting-method: "fzf";
         drun-display-format: "{name}";
@@ -15,6 +15,7 @@ configuration {
         kb-accept-entry: "Return";
         kb-remove-to-eol: "Control+1";
         terminal: "handlr launch x-scheme-handler/terminal --";
+        dpi: 128;
 }
 
 #textbox-prompt-colon {

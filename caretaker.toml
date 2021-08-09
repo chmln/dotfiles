@@ -25,6 +25,12 @@ path = "/home/greg/.dotfiles/xsettingsd/*.conf"
 command = "systemctl --user reload-or-restart xsettingsd"
 
 [[watch]]
+name = "gtk"
+path = "/home/greg/.dotfiles/x11/Xresources"
+command = "systemctl --user restart xresources"
+
+
+[[watch]]
 name = "systemd units"
 path = "/home/greg/.dotfiles/systemd/user"
 command = "systemctl --user daemon-reload"

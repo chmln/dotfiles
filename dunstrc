@@ -2,7 +2,7 @@
     ### Display ###
 
     # Which monitor should the notifications be displayed on.
-    monitor = 0
+    #monitor = 0
 
     # Display notification on focused monitor.  Possible modes are:
     #   mouse: follow mouse pointer
@@ -247,8 +247,8 @@
     # If this setting is enabled the Xft.dpi value will be ignored and instead
     # dunst will attempt to calculate an appropriate dpi value for each monitor
     # using the resolution and physical size. This might be useful in setups
-    # where there are multiple screens with very different dpi values.
-    per_monitor_dpi = false
+    # where there are multiple screens with very different ddunstify --action="replyAction,reply" "Message received"pi values.
+    per_monitor_dpi = true
 
 [shortcuts]
 
